@@ -1,0 +1,34 @@
+// Animations
+
+// Fade in
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+
+// Fade out
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+
+// Fade in from left
+@keyframes slide-in-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+
+
+// Fade in from right
+@keyframes slide-in-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}

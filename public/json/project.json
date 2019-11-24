@@ -1,0 +1,134 @@
+{
+  "project": [
+    {
+      "id": 1,
+      "name": "Teads",
+      "role": "Front-end developer",
+      "timeframe": "2014-2018",
+      "url": "https://www.teads.tv/",
+      "thumbnail": {
+        "sources": {
+          "xs": "/assets/images/projects/movidiam/movidiam_poster_xs.jpg",
+          "sm": "/assets/images/projects/movidiam/movidiam_poster_sm.jpg",
+          "md": "/assets/images/projects/movidiam/movidiam_poster_md.jpg",
+          "lg": "/assets/images/projects/movidiam/movidiam_poster_lg.jpg",
+          "xl": "/assets/images/projects/movidiam/movidiam_poster_xl.jpg"
+        }
+      },
+      "projectContents": {
+        "hero": {
+          "video": {
+            "sources": {
+              "webm": "/assets/videos/projects/movidiam/movidiam_hero_720.webm",
+              "mp4": "/assets/videos/projects/movidiam/movidiam_hero_720.mp4"
+            }
+          },
+          "image": {
+            "sources": {
+              "xs": "/assets/images/projects/movidiam/movidiam_poster_xs.jpg",
+              "sm": "/assets/images/projects/movidiam/movidiam_poster_sm.jpg",
+              "md": "/assets/images/projects/movidiam/movidiam_poster_md.jpg",
+              "lg": "/assets/images/projects/movidiam/movidiam_poster_lg.jpg",
+              "xl": "/assets/images/projects/movidiam/movidiam_poster_xl.jpg"
+            }
+          }
+        },
+        "body": [
+          {
+            "type": "h2",
+            "content": "About Movidiam"
+          }, {
+            "type": "p",
+            "content": "Movidiam is designed to be a one stop shop for everything one might require during a media production project, be that talent, asset sharing or even management of the project at hand. It features social network profiling for freelancers to display their work, write blogs, post status updates as well as feature contact information for potential clients. This profiling also links in to a map based search system, allowing users to enter a search term such as \"Camera operator in New York\" which will then supply a list of results matching that criteria, in a similar manner and presentation to Air B&B's search page. Movidiam also offer a briefing system where users can contact Movidiam to request a specific type or multiple types of users to help them creating a production - the chosen responses coming from the 17K+ members of Movidiam."
+          }, {
+            "type": "h2",
+            "content": "Tech and responsibilities overview"
+          }, {
+            "type": "p",
+            "content": "I worked as a front-end developer for Movidiam working from a junior role through to senior over the course of 4 years, managing a small team of varying size as the project progressed. I helped shape the UI and UX of the platform through my experience and understanding of good user experience principals and worked with Sketch and Photoshop to convey these processes. I championed new technologies and methodologies to follow to enable a beautiful and functional interface while keeping the codebase reusable and concise. I worked on areas from email templates, Salesforce pages and the product itself, as well as an internal admin dashboard, all of which were accomplished with technologies such as Ember.js, Ember Data, Ember Animation/Liquid Fire, Docker and other core web-dev technologies. I worked with the back-end developers on a daily basis with REST API's and had some hand in server management with AWS S3 and EC2 instances."
+          }, {
+            "type": "ul",
+            "content": [
+              "HTML5",
+              "CSS3",
+              "Sass",
+              "Ember.js",
+              "Ember Data",
+              "Ember Animation / Liquid Fire",
+              "JavaScript and jQuery.",
+              "AWS EC2",
+              "AWS S3",
+              "Revamped the HTML markup to modern semantic standards, implemented Sass and established a code base standard for stylesheets and JavaScript.",
+              "Gradually transitioned CSS to modular implementation as an optimisation technique.",
+              "Led a small team of developers working within an Agile development process with daily scrums and retrospectives once a feature was live.",
+              "Worked with the Design team to vet designs against potential web technology limitations as well as help transition these designs to a responsive layout.",
+              "Created page templates for Salesforce which integrated submission forms and were consistent with the main website.",
+              "Developed responsive HTML email templates which improved click-through rates by an average of 20%."
+            ]
+          }, {
+            "type": "h2",
+            "content": "My role"
+          }, {
+            "type": "p",
+            "content": "I was initially hired as a junior front-end developer to aid with a team of other developers, transitioning the designs for each page into a functioning version within the EmberJS framework we used. I was promoted to senior front-end developer, managing a small team of front-end developers, establishing the codebase standards, implementing the <a href=\"http://getbem.com/introduction/\" target=\"_blank\" rel=\"noreferrer\">Blocks, Elements and Modifiers (BEM)</a> naming methodology as well as introducing <a href=\"https://sass-lang.com/\" target=\"_blank\" rel=\"noreferrer\">Sass</a> to the production pipeline."
+          }, {
+            "type": "p",
+            "content": "I worked closely with the back-end developers who created the API for each feature almost in parallel - with the back end having a minor head start so that we had at least some end points to work with. We both fed into the development cycle of potential requirements that may have been missed during the planning phase liaising with the product manager as and if these arose."
+          }, {
+            "type": "techGrid",
+            "content": [
+              {
+                "iconSrc": "fa-html5",
+                "title": "HTML5"
+              }, {
+                "iconSrc": "fa-css3",
+                "title": "CSS3"
+              }, {
+                "iconSrc": "fa-sass",
+                "title": "Sass"
+              }, {
+                "iconSrc": "fa-bootstrap",
+                "title": "Bootstrap"
+              }, {
+                "iconSrc": "fa-js",
+                "title": "JavaScript ES2016"
+              }, {
+                "iconSrc": "fa-ember",
+                "title": "Ember.js"
+              }, {
+                "iconSrc": "fa-ember",
+                "title": "Ember Data"
+              }, {
+                "iconSrc": "fa-ember",
+                "title": "Ember CLI"
+              }, {
+                "iconSrc": "fa-ember",
+                "title": "Ember Animation / Liquid Fire"
+              }, {
+                "iconSrc": "fa-aws",
+                "title": "AWS"
+              }, {
+                "iconSrc": "fa-jenkins",
+                "title": "Jenkins"
+              }, {
+                "iconSrc": "fa-npm",
+                "title": "NPM"
+              }, {
+                "iconSrc": "fa-github",
+                "title": "GitHub"
+              }
+            ]
+          }
+        ]
+      }
+    }, {
+      "id": 2,
+      "name": "Movidiam",
+      "url": "https://www.movidiam.com/"
+    }, {
+      "id": 3,
+      "name": "Loveholidays",
+      "url": "https://www.loveholidays.com/"
+    }
+  ]
+}

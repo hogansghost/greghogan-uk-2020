@@ -1,0 +1,9 @@
+<div class="tech-grid__body">
+  {{#each technology as |tech|}}
+    <div class="tech-grid__item">
+      <Project::Content::TechGrid::TechGridItem
+        @tech={{tech}}
+      />
+    </div>
+  {{/each}}
+</div>

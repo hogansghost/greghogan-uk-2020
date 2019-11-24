@@ -1,0 +1,39 @@
+.tech-grid-item {
+  flex: 1 1 auto;
+  min-height: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  opacity: 0;
+  transition: opacity 999ms;
+
+  &--visible {
+    opacity: 1;
+  }
+
+  &__header {
+    font-size: 4rem;
+    min-height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+  }
+
+  &__icon {
+    flex: 1 1 auto;
+    min-height: 0px;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1;
+  }
+
+  &__body {
+    flex: 0 0 auto;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid;
+  }
+}

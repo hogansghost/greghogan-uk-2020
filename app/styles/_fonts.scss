@@ -1,0 +1,192 @@
+/**
+ * Avenir LT Std
+ *
+ */
+
+ @font-face {
+  font-family: "Avenir LT Std 55 Roman";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 55 Roman"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-Roman.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Avenir LT Std 55 Oblique";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 55 Oblique"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-Oblique.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Avenir LT Std 35 Light";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 35 Light"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-Light.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Avenir LT Std 35 Light Oblique";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 35 Light Oblique"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-LightOblique.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Avenir LT Std 45 Book";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 45 Book"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-Book.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Avenir LT Std 45 Book Oblique";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 45 Book Oblique"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-BookOblique.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Avenir LT Std 65 Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 65 Medium"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-Medium.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Avenir LT Std 65 Medium Oblique";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 65 Medium Oblique"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-MediumOblique.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Avenir LT Std 85 Heavy";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 85 Heavy"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-Heavy.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Avenir LT Std 85 Heavy Oblique";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 85 Heavy Oblique"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-HeavyOblique.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Avenir LT Std 95 Black";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 95 Black"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-Black.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Avenir LT Std 95 Black Oblique";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Avenir LT Std 95 Black Oblique"), url("/assets/fonts/AvenirLTStd/AvenirLTStd-BlackOblique.woff") format("woff");
+}
+
+
+
+
+/**
+ * Font awesome
+ *
+ */
+
+/*!
+ * Font Awesome Free 5.2.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/FontAwesome.5.3.1/fa-brands-400.eot");
+  src: url("../assets/fonts/FontAwesome.5.3.1/fa-brands-400.eot?#iefix") format("embedded-opentype"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-brands-400.woff2") format("woff2"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-brands-400.woff") format("woff"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-brands-400.ttf") format("truetype"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/FontAwesome.5.3.1/fa-light-300.eot");
+  src: url("../assets/fonts/FontAwesome.5.3.1/fa-light-300.eot?#iefix") format("embedded-opentype"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-light-300.woff2") format("woff2"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-light-300.woff") format("woff"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-light-300.ttf") format("truetype"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-light-300.svg#fontawesome") format("svg");
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/FontAwesome.5.3.1/fa-regular-400.eot");
+  src: url("../assets/fonts/FontAwesome.5.3.1/fa-regular-400.eot?#iefix") format("embedded-opentype"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-regular-400.woff2") format("woff2"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-regular-400.woff") format("woff"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-regular-400.ttf") format("truetype"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../assets/fonts/FontAwesome.5.3.1/fa-solid-900.eot");
+  src: url("../assets/fonts/FontAwesome.5.3.1/fa-solid-900.eot?#iefix") format("embedded-opentype"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-solid-900.woff2") format("woff2"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-solid-900.woff") format("woff"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-solid-900.ttf") format("truetype"), 
+  url("../assets/fonts/FontAwesome.5.3.1/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+
+
+
+/**
+ * Material icons
+ *
+ */
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/MaterialIcons/MaterialIcons-Regular.eot"); /* For IE6-8 */
+  src: local("Material Icons"),
+       local("MaterialIcons-Regular"),
+       url("/assets/fonts/MaterialIcons/MaterialIcons-Regular.woff2") format("woff2"),
+       url("/assets/fonts/MaterialIcons/MaterialIcons-Regular.woff") format("woff"),
+       url("/assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf") format("truetype");
+}

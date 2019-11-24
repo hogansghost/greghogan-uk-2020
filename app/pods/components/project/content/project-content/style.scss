@@ -1,0 +1,14 @@
+.project-content {
+  $_self: &;
+
+  width: 1100px;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px 200px;
+  
+  &__body {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,21 @@
+<div
+  data-analytics-name={{analyticsLogName}}
+  class={{bem "page-section-sticky-title__inner"
+    isSticky=isSticky
+    isTitleFirst=isTitleFirst
+  }}
+>
+  <div
+    class={{bem "js__page-section-sticky-title__heading page-section-sticky-title__heading"
+      isTitleFirst=isTitleFirst
+      stateFixed=stateFixed
+      stateEnd=stateEnd
+    }}
+  >
+    <h3>{{title}}</h3>
+  </div>
+
+  <div class="page-section-sticky-title__content">
+    {{yield}}
+  </div>
+</div>

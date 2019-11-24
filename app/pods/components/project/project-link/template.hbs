@@ -1,0 +1,40 @@
+<div class="project-link__background">
+  <img
+    class="project-link__background-picture"
+    alt="Elva dressed as a fairy"
+    srcset="{{srcset.xs}} 320w,
+            {{srcset.sm}} 480w,
+            {{srcset.md}} 800w,
+            {{srcset.lg}} 800w"
+    sizes="(max-width: 320px) 280px,
+           (max-width: 480px) 440px,
+           800px"
+    src="{{srcset.md}}"
+  />
+</div>
+
+<div class="project-link__body">
+  <LinkTo
+    class="project-link__body-content-main"
+    @route="project"
+    @model={{id}}
+  >
+    <div class="project-link__card">
+      <div class="project-link__card-inner">
+        <div class="project-link__card-content">
+          <p class="project-link__card-content-name">{{name}}</p>
+          <p class="project-link__card-content-spacer">- // -</p>
+          <p class="project-link__card-content-role">{{role}}</p>
+        </div>
+      </div>
+    </div>
+  </LinkTo>
+
+  {{#if url}}
+    <a class="project-link__body-content-footer" href="{{url}}" target="_blank" rel="noreferrer">
+      <div class="project-link__link-external">
+        <p class="project-link__link-external-url">{{url}}</p>
+      </div>
+    </a>
+  {{/if}}
+</div>

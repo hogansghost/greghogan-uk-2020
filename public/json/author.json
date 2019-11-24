@@ -1,0 +1,104 @@
+{
+  "author": [{
+    "id": 1,
+    "name": "Greg Hogan",
+    "skills": {
+      "technical": [
+        {
+          "id": "1",
+          "name": "HTML5"
+        }, {
+          "id": "2",
+          "name": "JavaScript"
+        }, {
+          "id": "3",
+          "name": "jQuery"
+        }, {
+          "id": "4",
+          "name": "CSS3"
+        }, {
+          "id": "5",
+          "name": "Sass,"
+        }, {
+          "id": "6",
+          "name": "Ember.js (Ember CLI)"
+        }, {
+          "id": "7",
+          "name": "Ember Data"
+        }, {
+          "id": "8",
+          "name": "Liquid Fire"
+        }, {
+          "id": "9",
+          "name": "Green Sock Animation"
+        }, {
+          "id": "10",
+          "name": "MochaJS"
+        }, {
+          "id": "11",
+          "name": "NPM"
+        }, {
+          "id": "12",
+          "name": "Gulp"
+        }, {
+          "id": "13",
+          "name": "Bootstrap"
+        }, {
+          "id": "14",
+          "name": "BEM"
+        }
+      ],
+      "sourceControl": [
+        {
+          "id": "1",
+          "name": "Git"
+        }, {
+          "id": "2",
+          "name": "GitHub"
+        }, {
+          "id": "3",
+          "name": "Jenkins"
+        }, {
+          "id": "4",
+          "name": "JIRA"
+        }, {
+          "id": "5",
+          "name": "Trello"
+        }
+      ],
+      "graphicsSoftware": [
+        {
+          "id": "1",
+          "name": "Photoshop"
+        }, {
+          "id": "2",
+          "name": "Illustrator"
+        }, {
+          "id": "3",
+          "name": "Sketch"
+        }, {
+          "id": "4",
+          "name": "Final Cut Pro"
+        }
+      ],
+      "experience": [
+        {
+          "id": "1",
+          "name": "Angular"
+        }, {
+          "id": "2",
+          "name": "ReactJS"
+        }, {
+          "id": "3",
+          "name": "Redux"
+        }, {
+          "id": "4",
+          "name": "Webpack"
+        }, {
+          "id": "5",
+          "name": "Accessibility"
+        }
+      ]
+    }
+  }]
+}

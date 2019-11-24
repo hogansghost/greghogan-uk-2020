@@ -1,5 +1,16 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+{{#if shouldShowCookieBar}}
+    <Ui::CookieBar />
+{{/if}}
 
-{{outlet}}
+{{liquid-outlet enableGrowth=false class="lf__main content-main"}}
+{{!--
+<PageWrapper>
+  <PageSection>
+    <HomeContentHeader />
+  </PageSection>
+
+  <PageSection>
+    {{liquid-outlet enableGrowth=false class="lf__main content-main"}}
+  </PageSection>
+</PageWrapper>
+--}}

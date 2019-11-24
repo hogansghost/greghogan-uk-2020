@@ -1,0 +1,101 @@
+// Base imports
+@import "colors";
+@import "variables";
+@import "mixins";
+@import "normalise";
+@import "fonts";
+@import "icons";
+
+
+// Base styling
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ffffff;
+  font-family: $text-typeface;
+  font-size: $text-font-size;
+  color: rgba($text-color, 0.87);
+  line-height: $text-line-height;
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+
+  @media screen and ( max-width:768px ) {
+    font-size: 1.1em;
+  }
+}
+
+
+a {
+  // border-bottom: 1px dashed rgba($ui-color-primary, 0.25);
+  // -webkit-transition: color $ui-standard-transition-duration, border-color $ui-standard-transition-duration;
+  // transition: color $ui-standard-transition-duration, border-color $ui-standard-transition-duration;
+  &[rel="noreferrer"] {
+    // @include link-decoration;
+  }
+}
+
+
+ul[class], ol[class] {
+  margin: 0;
+  padding: 0;
+}
+
+
+// Component imports
+@import "app/pods/components/ui/cookie-bar/style";
+
+@import "app/pods/components/layout/hero-primary/style";
+@import "app/pods/components/layout/page-sections/page-wrapper/style";
+@import "app/pods/components/layout/page-sections/page-section-sticky-title/style";
+
+@import "app/pods/components/project/project-link/style";
+@import "app/pods/components/project/content/project-content/style";
+@import "app/pods/components/project/content/tech-grid/style";
+@import "app/pods/components/project/content/tech-grid/tech-grid-item/style";
+
+
+
+
+
+.grid {
+  padding: 0px !important;
+  border: 0 !important;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+
+  &-item {
+    padding-top: calc(50% - 0.5em);
+    padding-bottom: calc(50% - 0.5em);
+    border: 1px solid rgba(white, 0.2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+
+
+      color: white;
+    a {
+      color: white;
+    }
+    &:nth-child(3) {
+
+    }
+
+    @for $i from 1 through 20 {
+      $t: $i * 2;
+      &:nth-child(#{1 * $i}) {
+        background-color: darken(#8218c1, percentage($i * 0.01)) !important;
+      }
+    }
+  }
+}
+
+
+

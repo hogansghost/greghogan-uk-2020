@@ -1,0 +1,91 @@
+.page-section-sticky-title {
+  $_this: &;
+
+  position: relative;
+
+  &__inner {
+    position: relative;
+    background-color: $color-primary;
+
+    &--is-sticky {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-flow: row nowrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "left-column right-column";
+    }
+
+    &--is-title-first {
+      grid-template-areas: "right-column left-column";
+    }
+  }
+
+  &__content,
+  &__heading {
+    // flex: 0 0 auto;
+    // width: 50%;
+    min-height: 100vh;
+  }
+
+  &__content {
+    grid-area: left-column;
+    background-color: $color-backing-primary
+  }
+
+  &__heading {
+    grid-area: right-column;
+    position: static;
+    right: 0;
+    height: 100vh;
+    background-color: $color-primary;
+    transition: background 500ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.20em;
+
+    &--is-title-first {
+      right: auto;
+      left: 0;
+    }
+
+    &--state-fixed {
+    }
+
+    &--state-fixed {
+      background-color: darken($color-primary, 10%);
+      position: fixed;
+      top: 0;
+      width: 50%;
+    }
+
+    &--state-end {
+      background-color: darken($color-primary, 20%);
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    #{$_this}__inner--is-sticky & {
+      flex: 0 0 auto;
+      order: 1;
+    }
+
+    @include media($media-sm) {
+      position: relative;
+      background-color: darken($color-primary, 30%);
+      width: 100%;
+    }
+  }
+}
+
+
+.lf__main {
+  transform: none !important;
+}

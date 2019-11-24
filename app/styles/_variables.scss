@@ -1,0 +1,95 @@
+/**
+ * Typography
+ *
+ */
+
+$text-typeface-fallback: "Helvetica", "Arial", sans-serif;
+$text-typeface: "Avenir LT Std 35 Light", Times New Roman, "Avenir LT Std 45 Book", $text-typeface-fallback;
+$text-color: rgba($black, 0.65);
+$text-font-size: 16px;
+$text-line-height: 1.8;
+
+
+
+
+/**
+ * Branding colours
+ *
+ */
+
+$color-backing-primary: $white;
+$color-backing-secondary: #fafafa;
+$color-primary: $london-red; // #00CC99; // $rusty-red;
+$color-secondary: $deep-carmine;
+$color-tirtiary: $acajou;
+$color-accent-primary: $charleston-green;
+$color-accent-secondary: $smoky-black;
+
+$ui-color-success: $bright-turquoise;
+
+
+
+
+// Z-index
+$z-index: (
+  sticky: 5,
+);
+
+
+
+/**
+ * Interface basics, padding, gutters, 
+ * animation durations, etc.
+ *
+ */
+
+$ui-standard-padding: 20px;
+$ui-standard-transition-duration: 240ms;
+$ui-core-transition-duration: 840ms;
+
+
+
+
+/**
+ * Media breakpoints
+ *
+ */
+
+$media-width-xs: 480px;
+$media-width-xs-max: $media-width-xs - 1;
+$media-width-sm: 768px;
+$media-width-sm-max: $media-width-sm - 1;
+$media-width-md: 992px;
+$media-width-md-max: $media-width-md - 1;
+$media-width-lg: 1200px;
+$media-width-lg-max: $media-width-lg - 1;
+$media-width-xl: 1420px;
+$media-width-xl-max: $media-width-xl - 1;
+$media-width-xxl: 1660px;
+$media-width-xxl-max: $media-width-xxl - 1;
+
+
+
+
+/**
+ * Content width breakpoints
+ *
+ */
+
+$content-width-xs: 0px;
+$content-width-sm: 768px;
+$content-width-md: 992px;
+$content-width-lg: 1100px;
+$content-width-xl: 1400px;
+$content-width-xxl: 1660px;
+
+
+
+
+
+
+
+
+
+// $text-color: rgb(14, 40, 75);
+// $color-primary: rgb(1, 203, 198);

@@ -1,0 +1,920 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"employmentStat",
+				"employmentStatusTermCurrent"
+			],
+			[
+				"employment",
+				"employmentStatusList"
+			],
+			[
+				"project-link",
+				"_project-link"
+			],
+			[
+				"p",
+				"padding-top"
+			],
+			[
+				"status",
+				"status"
+			],
+			[
+				"em",
+				"employmentStatus"
+			],
+			[
+				"ui-stand",
+				"ui-standard-transition-duration"
+			],
+			[
+				"xs",
+				"xs"
+			],
+			[
+				"clear",
+				"clearfix"
+			],
+			[
+				"cona",
+				"containerElementPositionBottom"
+			],
+			[
+				"conta",
+				"containerElementPositionTop"
+			],
+			[
+				"ca",
+				"carouselLength"
+			],
+			[
+				"query",
+				"querySelector"
+			],
+			[
+				"Em",
+				"EmberAppConfig"
+			],
+			[
+				"qu",
+				"querySelectorAll"
+			],
+			[
+				"pro",
+				"projectImageToClone"
+			],
+			[
+				"gall",
+				"galleryList"
+			],
+			[
+				"proj",
+				"projectLength"
+			],
+			[
+				"set",
+				"setAnimationStateEnd"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 119.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"jshint",
+				"JSHint: Set Plugin Options"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/greg/Work/Ember/greghogan-uk-2019"
+	],
+	"file_history":
+	[
+		"/Users/greg/Work/Ember/greghogan-uk/app/templates/application.js",
+		"/Users/greg/Work/Ember/greghogan-uk/tests/unit/services/tracking-test.js",
+		"/Users/greg/Work/Ember/greghogan-uk/app/services/tracking.js",
+		"/Users/greg/Work/Ember/greghogan-uk/.gitignore",
+		"/Users/greg/Work/greghogan-uk/app/components/content/about-me/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-project/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-screen-grid/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-screen-grid/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/description-image-grid/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/description-image-grid/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/description-image/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/description-image-grid/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/project-link/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/projects/movidiam/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/styles/_animations.scss",
+		"/Users/greg/Work/greghogan-uk/app/styles/app.scss",
+		"/Users/greg/Work/greghogan-uk/app/projects/teads/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/description-image/template.hbs",
+		"/Users/greg/Desktop/controller 23-41-09-709.js",
+		"/Users/greg/Work/greghogan-uk/app/projects/resident-evil/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/content/about-me/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/projects/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/not-found/route.js",
+		"/Users/greg/Work/greghogan-uk/app/not-found/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/home/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/transitions.js",
+		"/Users/greg/Library/Application Support/Sublime Text 3/Packages/User/ESLint.sublime-settings",
+		"/Users/greg/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
+		"/Users/greg/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
+		"/Users/greg/Work/greghogan-uk/tests/integration/components/layout/projects/section-hero-banner/component-test.js",
+		"/Users/greg/Work/greghogan-uk/tests/unit/projets/codepen/route-test.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/fixed-content/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/fixed-content/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/styles/_variables.scss",
+		"/Users/greg/Work/greghogan-uk/app/styles/_colors.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-hero-banner/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-hero-banner/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/home/section-hero/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/home/section-hero/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/content/about-me/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-tech-stack/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/content/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/content/contact-me/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/content/contact-me/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/content/contact-me/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/styles/_typography.scss",
+		"/Users/greg/Work/greghogan-uk/public/robots.txt",
+		"/Users/greg/Work/greghogan-uk/config/environment.js",
+		"/Users/greg/Work/greghogan-uk/app/styles/_icons.scss",
+		"/Users/greg/Work/greghogan-uk/app/index.html",
+		"/Users/greg/Work/greghogan-uk/app/error.html",
+		"/Users/greg/Work/greghogan-uk/ember-cli-build.js",
+		"/Users/greg/Work/greghogan-uk/.ember-cli",
+		"/Users/greg/Work/greghogan-uk-placeholder-v2/dist/index.html",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/home/section-hero/style.scss",
+		"/Users/greg/Work/greghogan-uk/package-lock.json",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-hero-banner/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/description-image/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-description/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/styles/_fonts.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/interface/footer-main/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/home/controller.js",
+		"/Users/greg/Work/greghogan-uk/app/home/route.js",
+		"/Users/greg/Work/greghogan-uk/app/projects/controller.js",
+		"/Users/greg/Work/greghogan-uk/app/router.js",
+		"/Users/greg/Work/greghogan-uk/app/transitions/scroll-fade.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-screen-grid/component.js",
+		"/Users/greg/Work/greghogan-uk/app/projects/sthuthi-ramesh/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/interface/footer-main/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/interface/footer-main/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-description/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-tech-stack/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-tech-stack/section-tech-stack-icon/component.js",
+		"/Users/greg/Work/greghogan-uk/app/templates/application.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/project-link/style.scss",
+		"/Users/greg/Work/greghogan-uk/app/styles/_normalize.scss",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/project-link/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-slide-in-screens/template.hbs",
+		"/Users/greg/Desktop/controller.js",
+		"/Users/greg/Work/greghogan-uk/tests/integration/components/content/about-me/component-test.js",
+		"/Users/greg/Work/greghogan-uk/app/projects/sthuthi-ramesh/controller.js",
+		"/Users/greg/Work/greghogan-uk/app/projects/resident-evil/controller.js",
+		"/Users/greg/Work/greghogan-uk/app/projects/movidiam/controller.js",
+		"/Users/greg/Desktop/snake.html",
+		"/Users/greg/Work/greghogan-uk/app/projects/teads/controller.js",
+		"/Users/greg/Work/pubsub-demo-gulp/pubsub-gulp.sublime-project",
+		"/Users/greg/Desktop/AWS commands.txt",
+		"/Users/greg/Work/greghogan-uk/.gitignore",
+		"/Users/greg/Work/greghogan/index.html",
+		"/Users/greg/Work/hogans-me-placeholder/index.html",
+		"/Users/greg/Work/greghogan-uk/AWS commands",
+		"/Users/greg/Work/greghogan-uk/FFMPEG commands",
+		"/Users/greg/Work/greghogan-uk/greghogan-uk.sublime-project",
+		"/Users/greg/Work/greghogan-uk/node_modules/material-design-icons/iconfont/material-icons.css",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-description/template.hbs",
+		"/Users/greg/Downloads/fontawesome-free-5.2.0-web/scss/solid.scss",
+		"/Users/greg/Downloads/fontawesome-free-5.2.0-web/scss/fontawesome.scss",
+		"/Users/greg/Downloads/fontawesome-free-5.2.0-web/scss/_variables.scss",
+		"/Users/greg/Downloads/fontawesome-free-5.2.0-web/scss/_icons.scss",
+		"/Users/greg/Downloads/fontawesome-free-5.2.0-web/scss/brands.scss",
+		"/Users/greg/Work/greghogan-uk/app/mixins/onscreen.js",
+		"/Users/greg/Work/greghogan-uk/app/projects/movidiam/route.js",
+		"/Users/greg/Work/greghogan-uk/app/projects/route.js",
+		"/Users/greg/Work/Movidiam web.sublime-project",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/home/lets-go/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/home/lets-go/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/home/lets-go/style.scss",
+		"/Users/greg/Desktop/Project - Thumbnails - Readme",
+		"/Users/greg/Work/hogans-me-placeholder/style.css",
+		"/Users/greg/Work/greghogan/style.css",
+		"/Users/greg/Desktop/Teads/thing/index.html",
+		"/Users/greg/Desktop/Teads/thing/style.css",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-project/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-project/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-tech-stack/section-tech-stack-icon/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-slide-in-screens/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-tech-stack/template.hbs",
+		"/Users/greg/Desktop/FFMPEG commands",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/slide-in-screens/style.scss",
+		"/Users/greg/Desktop/greghogan-uk-commands",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/projects/section-slide-in-screens/style.scss",
+		"/Users/greg/Work/greghogan-uk/package.json",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/fixed-content/fixed-content-fluid/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/fixed-content/fixed-content-static/component.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/fixed-content/template.hbs",
+		"/Users/greg/Work/greghogan-uk/app/components/interface/footer-main.js",
+		"/Users/greg/Work/greghogan-uk/app/components/layout/fixed-content/fixed-content-static/template.hbs"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 108.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "greghogan-uk-2019.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"applicationhbs",
+				"greghogan-uk/app/templates/application.hbs"
+			],
+			[
+				"inde",
+				"greghogan-uk/app/index.html"
+			],
+			[
+				"normali",
+				"greghogan-uk/app/styles/_normalize.scss"
+			],
+			[
+				"appscss",
+				"greghogan-uk/app/styles/app.scss"
+			],
+			[
+				"color",
+				"greghogan-uk/app/styles/_colors.scss"
+			],
+			[
+				"embercli",
+				"greghogan-uk/ember-cli-build.js"
+			],
+			[
+				"config",
+				"greghogan-uk/config/environment.js"
+			],
+			[
+				"apsc",
+				"greghogan-uk/app/styles/app.scss"
+			],
+			[
+				"cookies",
+				"greghogan-uk/app/cookies/service.js"
+			],
+			[
+				"appliatio",
+				"greghogan-uk/app/controllers/application.js"
+			],
+			[
+				"onscreen",
+				"greghogan-uk/app/mixins/onscreen.js"
+			],
+			[
+				"app",
+				"greghogan-uk/app/templates/application.hbs"
+			],
+			[
+				"home",
+				"greghogan-uk/app/home/template.hbs"
+			],
+			[
+				"service",
+				"greghogan-uk/app/cookies/service.js"
+			],
+			[
+				"description image",
+				"greghogan-uk/app/components/layout/projects/description-image/style.scss"
+			],
+			[
+				"image",
+				"greghogan-uk/app/components/layout/projects/description-image/template.hbs"
+			],
+			[
+				"teads",
+				"greghogan-uk/app/projects/teads/template.hbs"
+			],
+			[
+				"movidiam",
+				"greghogan-uk/app/projects/movidiam/template.hbs"
+			],
+			[
+				"loveholidays",
+				"greghogan-uk/app/projects/love-holidays/template.hbs"
+			],
+			[
+				"about me style",
+				"greghogan-uk/app/components/content/about-me/style.scss"
+			],
+			[
+				"about me",
+				"greghogan-uk/app/components/content/about-me/template.hbs"
+			],
+			[
+				"about",
+				"greghogan-uk/app/components/content/about-me/template.hbs"
+			],
+			[
+				"footer",
+				"greghogan-uk/app/components/interface/footer-main/template.hbs"
+			],
+			[
+				"contactme",
+				"greghogan-uk/app/components/content/contact-me/style.scss"
+			],
+			[
+				"techst",
+				"greghogan-uk/app/components/layout/projects/section-tech-stack/style.scss"
+			],
+			[
+				"projectlinktemplate",
+				"greghogan-uk/app/components/layout/projects/project-link/template.hbs"
+			],
+			[
+				"projectlink",
+				"greghogan-uk/app/components/layout/projects/project-link/style.scss"
+			],
+			[
+				"apscs",
+				"greghogan-uk/app/styles/app.scss"
+			],
+			[
+				"icon",
+				"greghogan-uk/app/styles/_icons.scss"
+			],
+			[
+				"link",
+				"greghogan-uk/app/components/layout/projects/project-link/template.hbs"
+			],
+			[
+				"cookiebartempl",
+				"greghogan-uk/app/components/interface/cookie-bar/template.hbs"
+			],
+			[
+				"cookie",
+				"greghogan-uk/app/components/interface/cookie-bar/style.scss"
+			],
+			[
+				"lovehol",
+				"greghogan-uk/app/projects/love-holidays/template.hbs"
+			],
+			[
+				"build",
+				"greghogan-uk/ember-cli-build.js"
+			],
+			[
+				"not",
+				"greghogan-uk/app/not-found/template.hbs"
+			],
+			[
+				"var",
+				"greghogan-uk/app/styles/_variables.scss"
+			],
+			[
+				"template",
+				"greghogan-uk/app/projects/template.hbs"
+			],
+			[
+				"router",
+				"greghogan-uk/app/router.js"
+			],
+			[
+				"projectlink ",
+				"greghogan-uk/app/components/layout/projects/project-link/style.scss"
+			],
+			[
+				"interfacecookietempalte",
+				"greghogan-uk/app/components/interface/cookie-bar/template.hbs"
+			],
+			[
+				"cookiestyle",
+				"greghogan-uk/app/components/interface/cookie-bar/style.scss"
+			],
+			[
+				"service ",
+				"greghogan-uk/app/cookies/service.js"
+			],
+			[
+				"application.js",
+				"greghogan-uk/app/templates/application.js"
+			],
+			[
+				"appjs",
+				"greghogan-uk/app/app.js"
+			],
+			[
+				"application com",
+				"greghogan-uk/app/components/layout/fixed-content/fixed-content-static/component.js"
+			],
+			[
+				"apphbs",
+				"greghogan-uk/app/templates/application.hbs"
+			],
+			[
+				"app template",
+				"greghogan-uk/app/projects/template.hbs"
+			],
+			[
+				"cookiebar tem",
+				"greghogan-uk/app/components/interface/cookie-bar/template.hbs"
+			],
+			[
+				"cookies bar",
+				"greghogan-uk/app/components/interface/cookie-bar/component.js"
+			],
+			[
+				"cookiebarcom",
+				"greghogan-uk/app/components/interface/cookie-bar/component.js"
+			],
+			[
+				"cookiebartem",
+				"greghogan-uk/app/components/interface/cookie-bar/template.hbs"
+			],
+			[
+				"cooiebarsl",
+				"greghogan-uk/app/components/interface/cookie-bar/style.scss"
+			],
+			[
+				"apptemplate",
+				"greghogan-uk/app/projects/template.hbs"
+			],
+			[
+				"home herotemplate",
+				"greghogan-uk/app/components/layout/home/section-hero/template.hbs"
+			],
+			[
+				"contact me",
+				"greghogan-uk/app/components/content/contact-me/template.hbs"
+			],
+			[
+				"home template",
+				"greghogan-uk/app/home/template.hbs"
+			],
+			[
+				"cookiebar",
+				"greghogan-uk/app/components/interface/cookie-bar/template.hbs"
+			],
+			[
+				"icons",
+				"greghogan-uk/app/styles/_icons.scss"
+			],
+			[
+				"home ro",
+				"greghogan-uk/app/home/route.js"
+			],
+			[
+				"project link template",
+				"greghogan-uk/app/components/layout/projects/project-link/template.hbs"
+			],
+			[
+				"pack",
+				"greghogan-uk/package.json"
+			],
+			[
+				"projectlinkscss",
+				"greghogan-uk/app/components/layout/projects/project-link/style.scss"
+			],
+			[
+				"section hero compo",
+				"greghogan-uk/app/components/layout/home/section-hero/component.js"
+			],
+			[
+				"movidiam template",
+				"greghogan-uk/app/projects/movidiam/template.hbs"
+			],
+			[
+				"love holidays template",
+				"greghogan-uk/app/projects/love-holidays/template.hbs"
+			],
+			[
+				"home route",
+				"greghogan-uk/app/home/route.js"
+			],
+			[
+				"home controll",
+				"greghogan-uk/app/home/controller.js"
+			],
+			[
+				"section hero",
+				"greghogan-uk/app/components/layout/home/section-hero/template.hbs"
+			],
+			[
+				"home tempate",
+				"greghogan-uk/app/home/template.hbs"
+			],
+			[
+				"link styl",
+				"greghogan-uk/app/components/layout/projects/project-link/style.scss"
+			],
+			[
+				"index",
+				"greghogan-uk/app/index.html"
+			],
+			[
+				"tracking",
+				"greghogan-uk/tests/unit/services/tracking-test.js"
+			],
+			[
+				"home te",
+				"greghogan-uk/app/home/template.hbs"
+			],
+			[
+				"fixed content component",
+				"greghogan-uk/app/components/layout/fixed-content/component.js"
+			],
+			[
+				"project linkcom",
+				"greghogan-uk/app/components/layout/projects/project-link/component.js"
+			],
+			[
+				"project link",
+				"greghogan-uk/app/components/layout/projects/project-link/style.scss"
+			],
+			[
+				"home teplate",
+				"greghogan-uk/app/home/template.hbs"
+			],
+			[
+				"fixed",
+				"greghogan-uk/app/components/layout/fixed-content/component.js"
+			],
+			[
+				"humani",
+				"greghogan-uk/app/helpers/strings/humaniser.js"
+			],
+			[
+				"projectl ink te",
+				"greghogan-uk/app/components/layout/projects/project-link/template.hbs"
+			],
+			[
+				"gitig",
+				"greghogan-uk/.gitignore"
+			],
+			[
+				"font",
+				"greghogan-uk/app/styles/_fonts.scss"
+			],
+			[
+				"norma",
+				"greghogan-uk/app/styles/_normalize.scss"
+			],
+			[
+				"greg",
+				"greghogan-uk/greghogan-uk.sublime-project"
+			],
+			[
+				"home controller",
+				"greghogan-uk/app/home/controller.js"
+			],
+			[
+				"contact me template",
+				"greghogan-uk/app/components/content/contact-me/template.hbs"
+			],
+			[
+				"footer template",
+				"greghogan-uk/app/components/interface/footer-main/template.hbs"
+			],
+			[
+				"about me tem",
+				"greghogan-uk/app/components/content/about-me/template.hbs"
+			],
+			[
+				"hro template",
+				"greghogan-uk/app/components/layout/projects/section-hero-banner/template.hbs"
+			],
+			[
+				"home hero template",
+				"greghogan-uk/app/components/layout/home/section-hero/template.hbs"
+			],
+			[
+				"home hero style",
+				"greghogan-uk/app/components/layout/home/section-hero/style.scss"
+			],
+			[
+				"typ",
+				"greghogan-uk/app/styles/_typography.scss"
+			],
+			[
+				"ember cli",
+				"greghogan-uk/.ember-cli"
+			],
+			[
+				"cli buil",
+				"greghogan-uk/ember-cli-build.js"
+			],
+			[
+				"sthuthi",
+				"greghogan-uk/app/projects/sthuthi-ramesh/template.hbs"
+			],
+			[
+				"resident evil template",
+				"greghogan-uk/app/projects/resident-evil/template.hbs"
+			],
+			[
+				"tead template",
+				"greghogan-uk/app/projects/teads/template.hbs"
+			],
+			[
+				"ember cli bu",
+				"greghogan-uk/ember-cli-build.js"
+			],
+			[
+				"about me te",
+				"greghogan-uk/app/components/content/about-me/template.hbs"
+			],
+			[
+				"fonts",
+				"greghogan-uk/app/styles/_fonts.scss"
+			],
+			[
+				"colo",
+				"greghogan-uk/app/styles/_colors.scss"
+			],
+			[
+				"section hero component",
+				"greghogan-uk/app/components/layout/home/section-hero/component.js"
+			],
+			[
+				"home hero component",
+				"greghogan-uk/app/components/layout/home/section-hero/component.js"
+			],
+			[
+				"screen grid com",
+				"greghogan-uk/app/components/layout/projects/section-screen-grid/component.js"
+			],
+			[
+				"scrollfade",
+				"greghogan-uk/app/transitions/scroll-fade.js"
+			],
+			[
+				"app router",
+				"greghogan-uk/app/router.js"
+			],
+			[
+				"projects controller",
+				"greghogan-uk/app/projects/controller.js"
+			],
+			[
+				"tech stack icon com",
+				"greghogan-uk/app/components/layout/projects/section-tech-stack/section-tech-stack-icon/component.js"
+			],
+			[
+				"tech stack com",
+				"greghogan-uk/app/components/layout/projects/section-tech-stack/component.js"
+			],
+			[
+				"hero style",
+				"greghogan-uk/app/components/layout/home/section-hero/style.scss"
+			],
+			[
+				"packagelock",
+				"greghogan-uk/package-lock.json"
+			],
+			[
+				"not found tem",
+				"greghogan-uk/app/not-found/template.hbs"
+			],
+			[
+				"sthuth",
+				"greghogan-uk/app/projects/sthuthi-ramesh/template.hbs"
+			],
+			[
+				"teads template",
+				"greghogan-uk/app/projects/teads/template.hbs"
+			],
+			[
+				"hero banner template",
+				"greghogan-uk/app/components/layout/projects/section-hero-banner/template.hbs"
+			],
+			[
+				"project hero style",
+				"greghogan-uk/app/components/layout/projects/section-hero-banner/style.scss"
+			],
+			[
+				"footer tem",
+				"greghogan-uk/app/components/interface/footer-main/template.hbs"
+			],
+			[
+				"footer style",
+				"greghogan-uk/app/components/interface/footer-main/style.scss"
+			],
+			[
+				"about me sty",
+				"greghogan-uk/app/components/content/about-me/style.scss"
+			],
+			[
+				"home hero s",
+				"greghogan-uk/app/components/layout/home/section-hero/style.scss"
+			],
+			[
+				"about me template",
+				"greghogan-uk/app/components/content/about-me/template.hbs"
+			],
+			[
+				"movidiam tempalte",
+				"greghogan-uk/app/projects/movidiam/template.hbs"
+			],
+			[
+				"section hero banner com",
+				"greghogan-uk/app/components/layout/projects/section-hero-banner/component.js"
+			],
+			[
+				"tech style",
+				"greghogan-uk/app/components/layout/projects/section-tech-stack/style.scss"
+			],
+			[
+				"project link style",
+				"greghogan-uk/app/components/layout/projects/project-link/style.scss"
+			],
+			[
+				"description style scss",
+				"greghogan-uk/app/components/layout/projects/description-image-grid/style.scss"
+			],
+			[
+				"slide in screens template",
+				"greghogan-uk/app/components/layout/projects/section-slide-in-screens/template.hbs"
+			],
+			[
+				"mov tem",
+				"greghogan-uk/app/projects/movidiam/template.hbs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 241.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
