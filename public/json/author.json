@@ -1,104 +1,124 @@
 {
-  "author": [{
+  "author": {
     "id": 1,
     "name": "Greg Hogan",
+    "subtitle": "A creative front-end developer with 5 years of professional experience based in London, enjoys following current trends and experimenting with future technologies of web development.",
+    "description": [
+      "I have worked extensively on building single page applications with the Ember.js framework over the last few years, creating simplistic as well as more complex websites, the most recent example of which is the Movidiam platform spanning over 17K users Worldwide, where I was the senior front-end developer.",
+      "I have a solid background in modern front-end techniques such as ES6 JavaScript and Sass pre-processor utilising the BEM methodology as well as working with GULP task runner and Webpack in my work-flow to accelerate development. I have a proficient understanding of and experience with building cross-browser and cross-platform compatible solutions with meticulous attention to detail and the desire to get the little things just right.",
+      "I am experienced in working with, as well as leading, teams and have excellent communication skills for technical and non-technical audience. I have worked with REST API's and have a good understanding / familiarity with the command line, NPM package management, source control via Git as well as the using Jenkins and AWS S3 buckets and EC2 instances.",
+      "I work with a mobile first, responsive approach and have a passion for building beautiful, simple experiences that are functional first and foremost. While I am a perfectionist at heart when it comes to creating designs or merely converting them to working code, I know when to draw the line between pursuing perfection and delivering a feature in a timely fashion.",
+      "In keeping with my passion to self improve, I have recently begun teaching myself ReactJS because of the opportunities it will open as well as the challenge of learning something so different from Ember.js."
+    ],
     "skills": {
-      "technical": [
-        {
-          "id": "1",
-          "name": "HTML5"
-        }, {
-          "id": "2",
-          "name": "JavaScript"
-        }, {
-          "id": "3",
-          "name": "jQuery"
-        }, {
-          "id": "4",
-          "name": "CSS3"
-        }, {
-          "id": "5",
-          "name": "Sass,"
-        }, {
-          "id": "6",
-          "name": "Ember.js (Ember CLI)"
-        }, {
-          "id": "7",
-          "name": "Ember Data"
-        }, {
-          "id": "8",
-          "name": "Liquid Fire"
-        }, {
-          "id": "9",
-          "name": "Green Sock Animation"
-        }, {
-          "id": "10",
-          "name": "MochaJS"
-        }, {
-          "id": "11",
-          "name": "NPM"
-        }, {
-          "id": "12",
-          "name": "Gulp"
-        }, {
-          "id": "13",
-          "name": "Bootstrap"
-        }, {
-          "id": "14",
-          "name": "BEM"
-        }
-      ],
-      "sourceControl": [
-        {
-          "id": "1",
-          "name": "Git"
-        }, {
-          "id": "2",
-          "name": "GitHub"
-        }, {
-          "id": "3",
-          "name": "Jenkins"
-        }, {
-          "id": "4",
-          "name": "JIRA"
-        }, {
-          "id": "5",
-          "name": "Trello"
-        }
-      ],
-      "graphicsSoftware": [
-        {
-          "id": "1",
-          "name": "Photoshop"
-        }, {
-          "id": "2",
-          "name": "Illustrator"
-        }, {
-          "id": "3",
-          "name": "Sketch"
-        }, {
-          "id": "4",
-          "name": "Final Cut Pro"
-        }
-      ],
-      "experience": [
-        {
-          "id": "1",
-          "name": "Angular"
-        }, {
-          "id": "2",
-          "name": "ReactJS"
-        }, {
-          "id": "3",
-          "name": "Redux"
-        }, {
-          "id": "4",
-          "name": "Webpack"
-        }, {
-          "id": "5",
-          "name": "Accessibility"
-        }
-      ]
+      "technical": {
+        "title": "Technical",
+        "list": [
+          {
+            "id": "1",
+            "name": "HTML5"
+          }, {
+            "id": "2",
+            "name": "JavaScript"
+          }, {
+            "id": "3",
+            "name": "jQuery"
+          }, {
+            "id": "4",
+            "name": "CSS3"
+          }, {
+            "id": "5",
+            "name": "Sass,"
+          }, {
+            "id": "6",
+            "name": "Ember.js (Ember CLI)"
+          }, {
+            "id": "7",
+            "name": "Ember Data"
+          }, {
+            "id": "8",
+            "name": "Liquid Fire"
+          }, {
+            "id": "9",
+            "name": "Green Sock Animation"
+          }, {
+            "id": "10",
+            "name": "MochaJS"
+          }, {
+            "id": "11",
+            "name": "NPM"
+          }, {
+            "id": "12",
+            "name": "Gulp"
+          }, {
+            "id": "13",
+            "name": "Bootstrap"
+          }, {
+            "id": "14",
+            "name": "BEM"
+          }
+        ]
+      },
+      "sourceControl": {
+        "title": "Source control",
+        "list": [
+          {
+            "id": "1",
+            "name": "Git"
+          }, {
+            "id": "2",
+            "name": "GitHub"
+          }, {
+            "id": "3",
+            "name": "Jenkins"
+          }, {
+            "id": "4",
+            "name": "JIRA"
+          }, {
+            "id": "5",
+            "name": "Trello"
+          }
+        ]
+      },
+      "graphicsSoftware": {
+        "title": "Graphic software",
+        "list": [
+          {
+            "id": "1",
+            "name": "Photoshop"
+          }, {
+            "id": "2",
+            "name": "Illustrator"
+          }, {
+            "id": "3",
+            "name": "Sketch"
+          }, {
+            "id": "4",
+            "name": "Final Cut Pro"
+          }
+        ]
+      },
+      "experience": {
+        "title": "Experience with...",
+        "list": [
+          {
+            "id": "1",
+            "name": "Angular"
+          }, {
+            "id": "2",
+            "name": "ReactJS"
+          }, {
+            "id": "3",
+            "name": "Redux"
+          }, {
+            "id": "4",
+            "name": "Webpack"
+          }, {
+            "id": "5",
+            "name": "Accessibility"
+          }
+        ]
+      }
     }
-  }]
+  }
 }
