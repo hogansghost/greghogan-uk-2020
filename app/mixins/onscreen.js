@@ -40,9 +40,9 @@ export default Mixin.create({
   },
 
   onScreenCheck() {
-    const componentElement = this.element || {};
+    const componentElement = this.element || this.element.firstChild;
     const componentElementHeight = componentElement.offsetHeight;
-    const componentElementRect = componentElement.getBoundingClientRect();
+    const componentElementRect = componentElement && componentElement.getBoundingClientRect();
     const componentElementRectTop = componentElementRect.top;
     const componentElementFullOffset = componentElementRectTop + componentElementHeight;
 
