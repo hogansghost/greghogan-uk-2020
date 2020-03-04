@@ -1,7 +1,7 @@
 import { helper } from '@ember/component/helper';
 
 export const hyphenCase = (...strings) => {
-  const filteredParams = strings.filter(string => typeof string === 'string' && string.trim() !== '').join(' ');
+  const filteredParams = strings.filter((string) => typeof string === 'string' && string.trim() !== '').join(' ');
 
   // Replace anything not a letter, number or dash with a dash.
   // Replace lowerCase followed by upperCase and sequential upperCase followed by lowerCase with a dash.
@@ -14,9 +14,22 @@ export const hyphenCase = (...strings) => {
 
 export function bem(baseClass = '', modifierList = {}) {
   // console.warn('F I X :: Bem util, tidy up and make the string utils file'); //eslint-disable-line no-console
-  const modifierClasses = Object.entries(modifierList).map((bemClass) => (
-    bemClass[1] ? `${baseClass}--${hyphenCase(bemClass[0])}` : ''
-  )).filter(Boolean).join(' ');
+  const modifierClasses = Object.entries(modifierList).map((bemEntry) => {
+    const [
+      bemKey,
+      bemValue,
+    ] = bemEntry;
+
+    let classNameString = '';
+
+    if (bemValue !== true && bemValue !== false) {
+      classNameString = `${baseClass}--${hyphenCase(bemValue)}`;
+    } else if (bemValue === true) {
+      classNameString = `${baseClass}--${hyphenCase(bemKey)}`;
+    }
+
+    return classNameString;
+  }).filter(Boolean).join(' ');
 
   return `${baseClass} ${modifierClasses}`.trim();
 }
