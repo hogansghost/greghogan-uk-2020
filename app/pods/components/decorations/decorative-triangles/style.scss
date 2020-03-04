@@ -14,10 +14,12 @@
   position: absolute;
   top: 0;
   left: 70%;
+  animation: slide-in-fade-from-top 660ms ease both;
 
   &--first {
     background-color: $color-primary;
     transform: translate(-65%, -50%);
+    animation-delay: 100ms;
   }
 
   &--second {
@@ -25,6 +27,7 @@
     width: 50vw;
     transform: translate(-35%, -60%);
     opacity: 0.8;
+    animation-delay: 200ms;
   }
 
 

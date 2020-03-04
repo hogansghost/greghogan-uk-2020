@@ -13,7 +13,7 @@ export default Component.extend(Onscreen, {
   offsetSrcSet: EmberObject.create({}),
 
   didInsertElement() {
-    debugger;
+    // debugger;
   },
 
   shouldSetSrc: observer('isOnscreen', function(sender, key, value, rev) {
@@ -25,7 +25,6 @@ export default Component.extend(Onscreen, {
   actions: {
     setHasLoadedState() {
       set(this, 'hasLoaded', true);
-      console.log('hasLoaded');
     },
   },
 });
