@@ -2,13 +2,16 @@
   "project": [
     {
       "id": 1,
-      "name": "Teads",
-      "role": "Front-end developer",
-      "timeframe": "2014-2018",
-      "url": "https://www.teads.tv/",
+      "name": "Movidiam",
+      "role": "Senior Frontend Developer",
+      "timeframe": {
+        "start": "2014",
+        "end": "2018"
+      },
+      "url": "https://www.movidiam.com/",
       "thumbnail": {
         "srcSet": {
-          "placeholder": "/assets/images/projects/movidiam/movidiam_poster_pl.jpg",
+          "pl": "/assets/images/projects/movidiam/movidiam_poster_pl.jpg",
           "xs": "/assets/images/projects/movidiam/movidiam_poster_xs.jpg",
           "sm": "/assets/images/projects/movidiam/movidiam_poster_sm.jpg",
           "md": "/assets/images/projects/movidiam/movidiam_poster_md.jpg",
@@ -17,22 +20,18 @@
         }
       },
       "projectContents": {
-        "hero": {
-          "video": {
-            "sources": {
-              "webm": "/assets/videos/projects/movidiam/movidiam_hero_720.webm",
-              "mp4": "/assets/videos/projects/movidiam/movidiam_hero_720.mp4"
-            }
+        "projectVideo": {
+          "videoSrcSet": {
+            "webm": "/assets/videos/projects/movidiam/movidiam_hero_720.webm",
+            "mp4": "/assets/videos/projects/movidiam/movidiam_hero_720.mp4"
           },
-          "image": {
-            "srcSet": {
-              "placeholder": "/assets/images/projects/movidiam/movidiam_poster_pl.jpg",
-              "xs": "/assets/images/projects/movidiam/movidiam_poster_xs.jpg",
-              "sm": "/assets/images/projects/movidiam/movidiam_poster_sm.jpg",
-              "md": "/assets/images/projects/movidiam/movidiam_poster_md.jpg",
-              "lg": "/assets/images/projects/movidiam/movidiam_poster_lg.jpg",
-              "xl": "/assets/images/projects/movidiam/movidiam_poster_xl.jpg"
-            }
+          "thumbnailSrcSet": {
+            "pl": "/assets/images/projects/movidiam/movidiam_poster_pl.jpg",
+            "xs": "/assets/images/projects/movidiam/movidiam_poster_xs.jpg",
+            "sm": "/assets/images/projects/movidiam/movidiam_poster_sm.jpg",
+            "md": "/assets/images/projects/movidiam/movidiam_poster_md.jpg",
+            "lg": "/assets/images/projects/movidiam/movidiam_poster_lg.jpg",
+            "xl": "/assets/images/projects/movidiam/movidiam_poster_xl.jpg"
           }
         },
         "body": [
@@ -127,7 +126,7 @@
               {
                 "alt": "One",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_screen_4_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_screen_4_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_screen_4_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_screen_4_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_screen_4_md.jpg",
@@ -137,7 +136,7 @@
               }, {
                 "alt": "Two",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_screen_7_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_screen_7_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_screen_7_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_screen_7_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_screen_7_md.jpg",
@@ -147,7 +146,7 @@
               }, {
                 "alt": "Three",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_screen_6_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_screen_6_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_screen_6_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_screen_6_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_screen_6_md.jpg",
@@ -157,7 +156,7 @@
               }, {
                 "alt": "Four",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_screen_5_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_screen_5_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_screen_5_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_screen_5_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_screen_5_md.jpg",
@@ -173,7 +172,7 @@
               {
                 "alt": "One",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_salesforce_01_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_salesforce_01_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_salesforce_01_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_salesforce_01_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_salesforce_01_md.jpg",
@@ -183,7 +182,7 @@
               }, {
                 "alt": "Two",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_salesforce_02_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_salesforce_02_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_salesforce_02_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_salesforce_02_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_salesforce_02_md.jpg",
@@ -193,7 +192,7 @@
               }, {
                 "alt": "Three",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_salesforce_03_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_salesforce_03_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_salesforce_03_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_salesforce_03_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_salesforce_03_md.jpg",
@@ -203,7 +202,7 @@
               }, {
                 "alt": "Four",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_salesforce_04_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_salesforce_04_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_salesforce_04_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_salesforce_04_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_salesforce_04_md.jpg",
@@ -219,7 +218,7 @@
               {
                 "alt": "",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_01_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_01_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_01_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_01_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_01_md.jpg",
@@ -229,7 +228,7 @@
               }, {
                 "alt": "",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_02_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_02_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_02_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_02_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_02_md.jpg",
@@ -239,7 +238,7 @@
               }, {
                 "alt": "",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_03_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_03_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_03_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_03_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_03_md.jpg",
@@ -249,7 +248,7 @@
               }, {
                 "alt": "",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_04_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_04_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_04_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_04_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_04_md.jpg",
@@ -259,7 +258,7 @@
               }, {
                 "alt": "",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_emails_message_2016_01_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_emails_message_2016_01_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_emails_message_2016_01_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_emails_message_2016_01_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_emails_message_2016_01_md.jpg",
@@ -269,7 +268,7 @@
               }, {
                 "alt": "",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_01_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_01_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_01_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_01_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_01_md.jpg",
@@ -279,7 +278,7 @@
               }, {
                 "alt": "",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_02_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_02_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_02_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_02_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_02_md.jpg",
@@ -289,7 +288,7 @@
               }, {
                 "alt": "",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_03_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_03_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_03_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_03_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_03_md.jpg",
@@ -304,7 +303,7 @@
               {
                 "alt": "",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_product_1_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_product_1_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_product_1_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_product_1_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_product_1_md.jpg",
@@ -314,7 +313,7 @@
               }, {
                 "alt": "",
                 "srcSet": {
-                  "placeholder": "/assets/images/projects/movidiam/movidiam_product_2_pl.jpg",
+                  "pl": "/assets/images/projects/movidiam/movidiam_product_2_pl.jpg",
                   "xs": "/assets/images/projects/movidiam/movidiam_product_2_xs.jpg",
                   "sm": "/assets/images/projects/movidiam/movidiam_product_2_sm.jpg",
                   "md": "/assets/images/projects/movidiam/movidiam_product_2_md.jpg",

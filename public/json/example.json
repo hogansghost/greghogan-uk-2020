@@ -1,0 +1,20 @@
+{
+  "example": {
+    "id": 1,
+    "codepen": [
+      {
+        "id": 1,
+        "name": "Infinite scroller",
+        "url": "https://codepen.io/greghogan/pen/xzMpqQ"
+      }, {
+        "id": 2,
+        "name": "Button Sass mixin",
+        "url": "https://codepen.io/greghogan/pen/ajyMOz"
+      }, {
+        "id": 3,
+        "name": "Aspect ratios",
+        "url": "https://codepen.io/greghogan/pen/gqJmyM"
+      }
+    ]
+  }
+}
