@@ -32,3 +32,26 @@
     transform: translateX(200px);
   }
 }
+
+// Slide animations
+// Slide in from  top
+@keyframes slide-in-from-top {
+  from {
+    transform: translateY(-50%);
+  }
+  from {
+    transform: translateY(0%);
+  }
+}
+
+// Slide in from top while fading in
+@keyframes slide-in-fade-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
