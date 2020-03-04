@@ -1,0 +1,62 @@
+.about-me {
+  @extend %body-copy-formatting !optional;
+
+  &__inner {
+    width: 900px;
+    max-width: 100%;
+    padding: 60px 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0 auto;
+  }
+
+  &__section {
+    &:nth-child(n+2) {
+      margin-top: 3em;
+    }
+  }
+
+
+  // Name and description
+  &__name {
+
+  }
+
+  &__description-subtitle {
+    @include copy-color-light;
+    // color: #989898;
+  }
+
+  &__description {
+  }
+
+
+  // Skill list
+  &__skills {
+    columns: 3 200px;
+  }
+
+  &__skills-section {
+    columns: 1 auto;
+    padding-right: 20px;
+    page-break-inside: avoid;
+
+    &:nth-child(n+2) {
+      margin-top: 1.4em;
+    }
+  }
+
+  &_skill-list-title {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__skill-list {
+    margin: 0;
+    padding: 0 0 0 1em;
+
+    &:nth-child(n+2) {
+      margin-top: 1.6em;
+    }
+  }
+}

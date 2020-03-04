@@ -1,0 +1,59 @@
+<div class="about-me">
+  <div class="about-me__inner">
+    <div class="about-me__section">
+      <h1 class="about-me__name">{{author.name}}</h1>
+
+      <h2 class="about-me__description-subtitle">{{author.subtitle}}</h2>
+
+      <div class="about-me__description">
+        {{#each author.description as |paragraph|}}
+          <p>{{paragraph}}</p>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="about-me__section">
+      <div class="about-me__skills">
+        <div class="about-me__skills-section">
+          <h3 class="about-me__skill-list-title">{{author.skills.technical.title}}</h3>
+
+          <ul class="about-me__skill-list">
+            {{#each author.skills.technical.list as |technical|}}
+              <li>{{technical.name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <div class="about-me__skills-section">
+          <h3 class="about-me__skill-list-title">{{author.skills.graphicsSoftware.title}}</h3>
+
+          <ul class="about-me__skill-list">
+            {{#each author.skills.graphicsSoftware.list as |graphicsSoftware|}}
+              <li>{{graphicsSoftware.name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <div class="about-me__skills-section">
+          <h3 class="about-me__skill-list-title">{{author.skills.sourceControl.title}}</h3>
+
+          <ul class="about-me__skill-list">
+            {{#each author.skills.sourceControl.list as |sourceControl|}}
+              <li>{{sourceControl.name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <div class="about-me__skills-section">
+          <h3 class="about-me__skill-list-title">{{author.skills.experience.title}}</h3>
+
+          <ul class="about-me__skill-list">
+            {{#each author.skills.experience.list as |experience|}}
+              <li>{{experience.name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
