@@ -20,7 +20,7 @@ $text-line-height: 1.8;
 $color-backing-primary: $white;
 $color-backing-secondary: #fafafa;
 $color-primary: $london-red; // #00CC99; // $rusty-red;
-$color-secondary: $deep-carmine;
+$color-secondary: $bright-turquoise; //$deep-carmine;
 $color-tirtiary: $acajou;
 $color-accent-primary: $charleston-green;
 $color-accent-secondary: $smoky-black;
@@ -33,6 +33,13 @@ $ui-color-success: $bright-turquoise;
 // Z-index
 $z-index: (
   sticky: 5,
+  navigation: 6,
+);
+
+// Drop shadows
+$z-index: (
+  cards: 5,
+  navigation: 6,
 );
 
 
@@ -82,6 +89,9 @@ $content-width-md: 992px;
 $content-width-lg: 1100px;
 $content-width-xl: 1400px;
 $content-width-xxl: 1660px;
+
+// Restrict content on ultra wide screens so not to look odd.
+$content-restriction-uhd: 850px;
 
 
 

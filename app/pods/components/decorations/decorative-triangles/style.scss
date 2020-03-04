@@ -1,0 +1,40 @@
+// Parent wrapper
+.decorative-triangles {
+  position: relative;
+  opacity: 0.5;
+}
+
+
+// Individual items
+.decorative-triangle {
+  clip-path: url("#clip-path-triangle");
+  mix-blend-mode: exclusion;
+  width: 60vw;
+  background-color: $white;
+  position: absolute;
+  top: 0;
+  left: 70%;
+
+  &--first {
+    background-color: $color-primary;
+    transform: translate(-65%, -50%);
+  }
+
+  &--second {
+    background-color: $color-secondary;
+    width: 50vw;
+    transform: translate(-35%, -60%);
+    opacity: 0.8;
+  }
+
+
+  &__inner {
+    display: block;
+
+    &::after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+}

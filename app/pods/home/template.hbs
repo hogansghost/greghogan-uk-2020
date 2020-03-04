@@ -4,65 +4,27 @@
   <h1>Home</h1>
 
   <div>
-    <h1>Name: {{model.author.name}}</h1>
-
-    <ul>
-      {{#each model.author.skills.technical as |technical|}}
-        <li>{{technical.name}}</li>
-      {{/each}}
-    </ul>
-
-    <ul>
-      {{#each model.author.skills.graphicsSoftware as |graphicsSoftware|}}
-        <li>{{graphicsSoftware.name}}</li>
-      {{/each}}
-    </ul>
-
-    <ul>
-      {{#each model.author.skills.sourceControl as |sourceControl|}}
-        <li>{{sourceControl.name}}</li>
-      {{/each}}
-    </ul>
-
-    <ul>
-      {{#each model.author.skills.experience as |experience|}}
-        <li>{{experience.name}}</li>
-      {{/each}}
-    </ul>
+    <AboutMe @author={{model.author}} />
   </div>
 
 
-  <div class="grid" style="background:red; padding: 40px;border: 1px solid black">
-    {{#each model.test as |test|}}
-      <a class="grid-item" href={{test.url}} target="_blank" rel="noreferrer" style="background:orange;">
-        test {{test.name}}
-      </a>
-      <a class="grid-item" href={{test.url}} target="_blank" rel="noreferrer" style="background:orange;">
-        test {{test.name}}
-      </a>
-      <a class="grid-item" href={{test.url}} target="_blank" rel="noreferrer" style="background:orange;">
-        test {{test.name}}
-      </a>
-      <a class="grid-item" href={{test.url}} target="_blank" rel="noreferrer" style="background:orange;">
-        test {{test.name}}
-      </a>
-      <a class="grid-item" href={{test.url}} target="_blank" rel="noreferrer" style="background:orange;">
-        test {{test.name}}
-      </a>
-      <a class="grid-item" href={{test.url}} target="_blank" rel="noreferrer" style="background:orange;">
-        test {{test.name}}
+  <div class="grid">
+    {{#each model.example.codepen as |codepen|}}
+      <a class="grid-item" href={{codepen.url}} target="_blank" rel="noreferrer">
+        {{codepen.name}}
       </a>
     {{/each}}
   </div>
-
+{{log "PageSectionStickyTitlePosition.Left" PageSectionStickyTitlePosition.Left}}
   <Layout::PageSections::PageSectionStickyTitle
-    @title="Content section"
-    @titlePosition={{PageSectionStickyTitlePosition.left}}
+    @title="Projects"
+    @titlePosition="right"
+    @titleTheme="primary"
     @onEntryToViewport={{action "sendGoogleEvent" "message"}}
   >
     {{#each model.project as |project|}}
     <Project::ProjectLink
-      @srcset={{project.thumbnail.sources}}
+      @srcset={{project.thumbnail.srcSet}}
       @name={{project.name}}
       @role={{project.role}}
       @id={{project.id}}
@@ -72,8 +34,9 @@
   </Layout::PageSections::PageSectionStickyTitle>
 
   <Layout::PageSections::PageSectionStickyTitle
-    @title="Content section"
+    @title="Contact"
     @titlePosition="left"
+    @titleTheme="secondary"
   >
     {{#each model.project as |project|}}
       <p><LinkTo @route="project" @model={{project.id}}><h1>{{project.name}}</h1></LinkTo></p>

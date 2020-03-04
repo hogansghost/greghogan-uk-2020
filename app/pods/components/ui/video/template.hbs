@@ -1,0 +1,5 @@
+<video class="video" autoplay muted playsinline loop poster={{videoPosterSrcSet.pl}}>
+  {{#each videoSrcSetList as |videoSrc|}}
+    <source src={{videoSrc.source}} type={{videoSrc.type}}>
+  {{/each}}
+</video>

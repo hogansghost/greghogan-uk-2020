@@ -26,6 +26,17 @@
 
 
 
+.fa-link-back::before {
+  @extend .fa;
+  content: "\f060";
+}
+
+.fa-link-external::before {
+  @extend .fa;
+  content: "\f08e";
+}
+
+
 .fa-coffee::before {
   @extend .fa;
   content: "\f0f4";

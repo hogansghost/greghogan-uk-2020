@@ -1,0 +1,24 @@
+.image-grid {
+  $_self: &;
+  $_tech-stack-duration: $ui-core-transition-duration;
+
+  position: relative;
+  color: inherit;
+
+  &__body {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    width: 25%;
+
+    @include media($media-xl) {
+      width: 20%;
+    }
+  }
+}

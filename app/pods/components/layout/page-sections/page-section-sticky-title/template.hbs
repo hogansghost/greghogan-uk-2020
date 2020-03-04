@@ -3,6 +3,7 @@
   class={{bem "page-section-sticky-title__inner"
     isSticky=isSticky
     isTitleFirst=isTitleFirst
+    titleTheme=(concat 'theme-' titleTheme)
   }}
 >
   <div
@@ -12,7 +13,9 @@
       stateEnd=stateEnd
     }}
   >
-    <h3>{{title}}</h3>
+    <div class="page-section-sticky-title__heading-content-width">
+      <h3 class="page-section-sticky-title__heading-title">{{title}}</h3>
+    </div>
   </div>
 
   <div class="page-section-sticky-title__content">

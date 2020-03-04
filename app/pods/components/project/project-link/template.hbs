@@ -1,7 +1,7 @@
 <div class="project-link__background">
   <img
     class="project-link__background-picture"
-    alt="Elva dressed as a fairy"
+    alt=""
     srcset="{{srcset.xs}} 320w,
             {{srcset.sm}} 480w,
             {{srcset.md}} 800w,
@@ -22,8 +22,8 @@
     <div class="project-link__card">
       <div class="project-link__card-inner">
         <div class="project-link__card-content">
-          <p class="project-link__card-content-name">{{name}}</p>
-          <p class="project-link__card-content-spacer">- // -</p>
+          <h3 class="project-link__card-content-name">{{name}}</h3>
+          <hr class="project-link__card-content-spacer" />
           <p class="project-link__card-content-role">{{role}}</p>
         </div>
       </div>
@@ -31,10 +31,10 @@
   </LinkTo>
 
   {{#if url}}
-    <a class="project-link__body-content-footer" href="{{url}}" target="_blank" rel="noreferrer">
-      <div class="project-link__link-external">
-        <p class="project-link__link-external-url">{{url}}</p>
+    <div class="project-link__body-content-footer">
+      <div class="project-link__body-content-footer-inner">
+        <Ui::LinkExternal @href={{url}}>{{url}}</Ui::LinkExternal>
       </div>
-    </a>
+    </div>
   {{/if}}
 </div>

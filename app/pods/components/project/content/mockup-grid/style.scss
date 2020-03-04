@@ -1,0 +1,38 @@
+.mockup-grid {
+  $_self: &;
+  $_tech-stack-duration: $ui-core-transition-duration;
+
+  position: relative;
+  color: inherit;
+
+  &__body {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    flex: 0 0 auto;
+    width: 100%;
+
+    &:nth-child(even) {
+      justify-content: flex-end;
+    }
+
+    &:nth-child(n+2) {
+      transform: translateY(-20px);
+    }
+  }
+
+  &__item-inner {
+    flex: 0 0 auto;
+    width: calc(50% + 10px);
+    position: relative;
+  }
+}

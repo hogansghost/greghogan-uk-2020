@@ -1,0 +1,57 @@
+<div class="hero-video-banner">
+  <div class="hero-video-banner__background">
+    {{#if projectVideo}}
+      <div class="hero-video-banner__background-video">
+        <Ui::Video
+          @videoPosterSrcSet={{projectVideoPlaceholder}}
+          @videoSrcSet={{projectVideo}}
+        />
+      </div>
+    {{/if}}
+
+    {{#each thumbnailSrcSet as |src|}}
+      <div class="hero-video-banner__background-image"></div>
+    {{/each}}
+  </div>
+
+  <div class="hero-video-banner__decoration">
+    <Decorations::DecorativeTriangles />
+  </div>
+
+  <div class="hero-video-banner__content">
+    <div class="hero-video-banner__details">
+      {{#if projectTimeframe}}
+        <h2 class="hero-video-banner__details-timeframe">
+          {{#if projectTimeframe.start}}
+            <span class="hero-video-banner__details-timeframe-start">{{projectTimeframe.start}}</span>
+          {{/if}}
+
+          {{#if (and projectTimeframe.start projectTimeframe.end)}}
+            <span class="hero-video-banner__details-timeframe-divider">to</span>
+          {{/if}}
+
+          {{#if projectTimeframe.end}}
+            <span class="hero-video-banner__details-timeframe-end">{{projectTimeframe.end}}</span>
+          {{/if}}
+        </h2>
+      {{/if}}
+
+      <div class="hero-video-banner__details-content">
+        <h1 class="hero-video-banner__details-title">{{projectTitle}}</h1>
+        <h2 class="hero-video-banner__details-sub-title">{{projectRole}}</h2>
+      </div>
+    </div>
+  </div>
+
+  {{#if projectLink}}
+    <div class="hero-video-banner__footer">
+      <div class="hero-video-banner__footer-section">
+        <hr />
+      </div>
+
+      <div class="hero-video-banner__footer-section">
+        <Ui::LinkExternal @href={{projectLink}}>{{projectLink}}</Ui::LinkExternal>
+      </div>
+    </div>
+  {{/if}}
+</div>

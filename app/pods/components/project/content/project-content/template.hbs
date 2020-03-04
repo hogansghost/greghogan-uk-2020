@@ -1,3 +1,67 @@
-<div class="project-content__body">
-  {{yield}}
-</div>
+<article class="project-content__body">
+  {{#each content.body as |bodyContent|}}
+    {{!-- Sub heading --}}
+    {{#if (does-equal bodyContent.type "h2")}}
+      <div class={{bem "project-content__body-section" readableWidth=true}} data-content-type="h2">
+        <h2>{{bodyContent.content}}</h2>
+      </div>
+    {{/if}}
+
+    {{!-- Paragraph copy --}}
+    {{#if (does-equal bodyContent.type "p")}}
+      <div class={{bem "project-content__body-section" readableWidth=true}} data-content-type="p">
+        <p>{{{bodyContent.content}}}</p>
+      </div>
+    {{/if}}
+
+    {{!-- Bullet point list unordered --}}
+    {{#if (does-equal bodyContent.type "ul")}}
+      <div class={{bem "project-content__body-section" readableWidth=true}} data-content-type="ul">
+        <ul>
+          {{#each bodyContent.content as |listItem|}}
+            <li>{{{listItem}}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/if}}
+
+    {{!-- Bullet point list ordered --}}
+    {{#if (does-equal bodyContent.type "ol")}}
+      <div class={{bem "project-content__body-section" readableWidth=true}} data-content-type="ol">
+        <ol>
+          {{#each bodyContent.content as |listItem|}}
+            <li>{{{listItem}}}</li>
+          {{/each}}
+        </ol>
+      </div>
+    {{/if}}
+
+    {{!-- Image Grid --}}
+    {{#if (does-equal bodyContent.type "imageGrid")}}
+      <figure class={{bem "project-content__body-section" mediaWidth=true}}>
+        <Project::Content::ImageGrid
+          @colCount={{bodyContent.colCount}}
+          @media={{bodyContent.content}}
+        />
+      </figure>
+    {{/if}}
+
+    {{!-- Image Grid --}}
+    {{#if (does-equal bodyContent.type "mockupGrid")}}
+      <figure class={{bem "project-content__body-section" mediaWidth=true}}>
+        <Project::Content::MockupGrid
+          @media={{bodyContent.content}}
+        />
+      </figure>
+    {{/if}}
+
+    {{!-- Tech Grid --}}
+    {{#if (does-equal bodyContent.type "techGrid")}}
+      <div class={{bem "project-content__body-section" fullWidth=true backgroundPrimary=true}}>
+        <Project::Content::TechGrid
+          @technology={{bodyContent.content}}
+        />
+      </div>
+    {{/if}}
+  {{/each}}
+</article>

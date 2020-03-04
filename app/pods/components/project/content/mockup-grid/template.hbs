@@ -1,0 +1,13 @@
+<div class="mockup-grid__body">
+  {{#each media as |mediaItem|}}
+    <div class="mockup-grid__item">
+      <div class="mockup-grid__item-inner">
+        <Project::Content::MockupGrid::MockupGridItem
+          @alt={{mediaItem.alt}}
+          @colCount={{colCount}}
+          @srcSet={{mediaItem.srcSet}}
+        />
+      </div>
+    </div>
+  {{/each}}
+</div>

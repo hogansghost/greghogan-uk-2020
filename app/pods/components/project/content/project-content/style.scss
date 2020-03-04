@@ -1,14 +1,96 @@
 .project-content {
   $_self: &;
 
-  width: 1100px;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 30px 200px;
+
   
   &__body {
     margin-right: auto;
     margin-left: auto;
+
+  }
+
+  &__body-section {
+    $_self-section: &;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $ui-standard-padding;
+    padding-left: $ui-standard-padding;
+
+    @include body-copy-formatting;
+
+    &--media-width {
+      width: $content-width-lg;
+    }
+
+    &--readable-width {
+      width: $content-width-sm;
+      max-width: 80vw;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      & + :not(&) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+
+    &--full-width {
+      width: 100%;
+      max-width: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-right: calc(50vw - #{$content-width-xxl / 2} + #{$ui-standard-padding});
+      padding-left: calc(50vw - #{$content-width-xxl / 2} + #{$ui-standard-padding});
+    }
+
+    &--background-primary {
+      background-color: $color-primary !important;
+      color: #fff;
+      margin-top: calc(3vw + 120px);
+      margin-bottom: calc(3vw + 120px);
+      position: relative;
+      z-index: 1;
+
+      #{$_self-section}--readable-width + & {
+        // margin-top: calc(3vw + 90px);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: -2vw;
+        bottom: -2vw;
+        left: 0;
+        width: 100%;
+        background-color: inherit;
+      }
+
+      &::before {
+        transform: skewY(3deg);
+
+        transform: perspective(900px) rotateY(5deg);
+        transform-origin: 100% 50%;
+        width: 50%;
+        left: 0px;
+        right: auto;
+        background-color: mix($color-primary, $black, 90%) !important;
+      }
+
+      &::after {
+        transform: skewY(-3deg);
+
+
+        transform: perspective(900px) rotateY(-5deg);
+        transform-origin: 0% 50%;
+        width: 50%;
+        left: auto;
+        right: 0px;
+      }
+    }
   }
 }

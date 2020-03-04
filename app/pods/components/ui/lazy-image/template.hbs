@@ -1,0 +1,11 @@
+{{#if srcSet.pl}}
+  <img class="lazy-image__placeholder" src={{srcSet.pl}} />
+{{/if}}
+
+<img
+  alt={{alt}}
+  class="{{className}} {{bem "lazy-image__main" loaded=hasLoaded hasPlaceholder=placeholder}}"
+  onLoad={{action "setHasLoadedState"}}
+  src={{offsetSrcSet.md}}
+  srcset={{offsetSrcSet.md}}
+/>

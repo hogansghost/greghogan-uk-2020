@@ -1,0 +1,9 @@
+<div class="image-grid__body">
+  {{#each media as |mediaItem|}}
+    <Project::Content::ImageGrid::ImageGridItem
+      @alt={{mediaItem.alt}}
+      @colCount={{colCount}}
+      @srcSet={{mediaItem.srcSet}}
+    />
+  {{/each}}
+</div>

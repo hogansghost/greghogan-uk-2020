@@ -7,6 +7,12 @@
 @import "icons";
 
 
+// Color variables
+:root {
+--color-primary: #e4012c; // $london-red: ; $color-primary;
+--color-accent-primary: #282828; // $london-red: ; $color-primary;
+}
+
 // Base styling
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
@@ -14,7 +20,7 @@
 }
 
 html {
-  background-color: #ffffff;
+  background-color: $color-backing-primary;
   font-family: $text-typeface;
   font-size: $text-font-size;
   color: rgba($text-color, 0.87);
@@ -38,24 +44,77 @@ a {
   }
 }
 
+hr {
+  border: 0;
+  background: none;
+  margin: 1em 0;
+  line-height: 1;
+  font-size: 0.5em;
+  opacity: 0.75;
+  height: auto;
 
-ul[class], ol[class] {
+  &::before {
+    content: "- // -";
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+}
+
+
+ul[class], ol[class], figure {
   margin: 0;
   padding: 0;
 }
 
 
-// Component imports
-@import "app/pods/components/ui/cookie-bar/style";
+// SVG storage area for clip paths and svg use references.
+.svg-yard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
 
+
+// Component imports
+@import "app/pods/components/about-me/style";
+
+// Decorative elements
+@import "app/pods/components/decorations/decorative-triangles/style";
+
+// UI generic component elements
+@import "app/pods/components/ui/cookie-bar/style";
+@import "app/pods/components/ui/lazy-image/style";
+@import "app/pods/components/ui/link-external/style";
+@import "app/pods/components/ui/link-to-home/style";
+@import "app/pods/components/ui/video/style";
+
+// Layout specific components
 @import "app/pods/components/layout/hero-primary/style";
 @import "app/pods/components/layout/page-sections/page-wrapper/style";
+@import "app/pods/components/layout/page-sections/page-wrapper/page-wrapper-section/style";
 @import "app/pods/components/layout/page-sections/page-section-sticky-title/style";
 
+// Project specific components
 @import "app/pods/components/project/project-link/style";
+
+@import "app/pods/components/project/hero-video-banner/style";
 @import "app/pods/components/project/content/project-content/style";
+
 @import "app/pods/components/project/content/tech-grid/style";
 @import "app/pods/components/project/content/tech-grid/tech-grid-item/style";
+
+@import "app/pods/components/project/content/image-grid/style";
+@import "app/pods/components/project/content/image-grid/image-grid-item/style";
+
+@import "app/pods/components/project/content/mockup-grid/style";
+@import "app/pods/components/project/content/mockup-grid/mockup-grid-item/style";
 
 
 
@@ -79,11 +138,12 @@ ul[class], ol[class] {
     padding-right: 10px;
     text-align: center;
 
+    color: white;
 
-      color: white;
     a {
       color: white;
     }
+
     &:nth-child(3) {
 
     }

@@ -1,0 +1,51 @@
+.page-wrapper-section {
+  position: relative;
+  background-color: $color-backing-primary;
+
+  // Overlap previous section
+  &--has-overlap {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      padding-bottom: 5%;
+      background-color: inherit;
+    }
+
+    &::before {
+      transform-origin: 0% 0%;
+      transform: translate(-100%, -100%) skewY(5deg);
+    }
+
+    &::after {
+      transform-origin: 100% 0%;
+      transform: translate(0%, -100%) skewY(-5deg);
+    }
+  }
+
+  // Vertical spacing
+  &--gutter-vertical-sm {
+    &:nth-child(n+2) {
+      padding-top: 40px;
+    }}
+
+  &--gutter-vertical-md {
+    &:nth-child(n+2) {
+      padding-top: 60px;
+    }
+  }
+
+  &--gutter-vertical-lg {
+    &:nth-child(n+2) {
+      padding-top: 80px;
+    }
+  }
+
+
+  &__inner {
+    position: relative;
+  }
+}

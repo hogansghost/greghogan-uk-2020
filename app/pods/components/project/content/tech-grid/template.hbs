@@ -1,9 +1,15 @@
-<div class="tech-grid__body">
-  {{#each technology as |tech|}}
-    <div class="tech-grid__item">
-      <Project::Content::TechGrid::TechGridItem
-        @tech={{tech}}
-      />
-    </div>
-  {{/each}}
+<div class="tech-grid__inner">
+  <div class="tech-grid__header">
+    <h2 class="tech-grid__header-title">Tech stack</h2>
+  </div>
+
+  <div class="tech-grid__body">
+    <ul class="tech-grid__list">
+      {{#each technology as |tech|}}
+        <Project::Content::TechGrid::TechGridItem
+          @tech={{tech}}
+        />
+      {{/each}}
+    </ul>
+  </div>
 </div>

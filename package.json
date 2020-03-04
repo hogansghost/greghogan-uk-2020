@@ -1,11 +1,11 @@
 {
-  "name": "greghogan-uk-2019",
+  "name": "greghogan-uk-2020",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for greghogan-uk-2019 goes here",
+  "description": "Portfolio of work for Greg Hogan",
   "repository": "",
   "license": "MIT",
-  "author": "",
+  "author": "Greg Hogan",
   "directories": {
     "doc": "doc",
     "test": "tests"

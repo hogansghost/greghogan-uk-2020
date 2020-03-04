@@ -1,0 +1,22 @@
+.link-external {
+  display: inline-block;
+  cursor: pointer;
+  @include link-decoration;
+  
+  &__content {
+    display: inline-block;
+    vertical-align: text-top;
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-left: 0.5em;
+    @extend .fa-link-external;
+    vertical-align: text-top;
+
+    &::before {
+      display: block;
+      font-size: 0.9em;
+    }
+  }
+}

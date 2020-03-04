@@ -29,12 +29,13 @@ $media-xl: "xl";
 @mixin link-decoration {
   position: relative;
   display: inline-block;
-  // border-bottom: 1px solid rgba($color-primary, 1);
   background-image: linear-gradient($color-primary, $color-primary);
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 1px;
   transition: background-size 300ms;
+  color: inherit;
+  text-decoration: none;
 
   &::before {
     content: "";
@@ -50,4 +51,75 @@ $media-xl: "xl";
     border-color: $color-primary;
     background-size: 100% 2px;
   }
+}
+
+
+
+
+
+
+
+@mixin copy-color-light {
+  opacity: 0.7;
+}
+
+
+@mixin heading-letter-spacing-formatting {
+  letter-spacing: 0.15em;
+}
+
+@mixin heading-formatting {
+  line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
+  @include heading-letter-spacing-formatting;
+}
+
+@mixin heading-sub-formatting {
+    font-size: .65em;
+    line-height: 1.5;
+    margin: 0;
+    text-transform: lowercase;
+    @include copy-color-light;
+    @include heading-letter-spacing-formatting;
+}
+
+@mixin body-copy-formatting {
+  h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  &[data-content-type="h1"],
+  &[data-content-type="h2"],
+  &[data-content-type="h3"],
+  &[data-content-type="h4"],
+  &[data-content-type="h5"],
+  &[data-content-type="h6"] {
+    &:nth-child(n+2) {
+      margin-top: 3em;
+    }
+  }
+
+  p, ul, ol,
+  &[data-content-type="p"],
+  &[data-content-type="ul"],
+  &[data-content-type="ol"] {
+    &:nth-child(n+2) {
+      margin-top: 1em;
+    }
+  }
+}
+
+%body-copy-formatting {
+  @include body-copy-formatting;
 }

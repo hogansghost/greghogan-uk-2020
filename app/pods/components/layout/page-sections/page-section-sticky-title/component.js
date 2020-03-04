@@ -3,6 +3,7 @@ import { get, set } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { throttle } from '@ember/runloop';
 
+
 export default Component.extend({
   tagName: 'section',
   classNames: ['page-section-sticky-title'],
@@ -13,6 +14,7 @@ export default Component.extend({
   stateEnd: false,
   title: '',
   titlePosition: 'right',
+  titleTheme: 'primary',
   hasEnteredView: false,
   isTitleFirst: equal('titlePosition', 'left'),
 

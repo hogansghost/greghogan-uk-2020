@@ -1,40 +1,27 @@
-<LinkTo @route="home"><h1>Home</h1></LinkTo>
+<Ui::LinkToHome />
 
 <Layout::PageSections::PageWrapper @upperMargin={{true}}>
-  <h1>{{model.name}}</h1>
-  <h1>{{model.date}}</h1>
-  <h1>{{model.url}}</h1>
+  <Layout::PageSections::PageWrapper::PageWrapperSection>
+    <Project::HeroVideoBanner
+      @projectLink={{model.url}}
+      @projectRole={{model.role}}
+      @projectTimeframe={{model.timeframe}}
+      @projectTitle={{model.name}}
+      @projectVideo={{model.projectContents.projectVideo.videoSrcSet}}
+      @projectVideoPlaceholder={{model.projectContents.projectVideo.thumbnailSrcSet}}
+    />
+  </Layout::PageSections::PageWrapper::PageWrapperSection>
 
+  <Layout::PageSections::PageWrapper::PageWrapperSection @hasOverlap={{true}}>
+    <Project::Content::ProjectDetails
+      @projectLink={{model.url}}
+      @projectRole={{model.role}}
+      @projectTimeframe={{model.timeframe}}
+      @projectTitle={{model.name}}
+    />
+  </Layout::PageSections::PageWrapper::PageWrapperSection>
 
-  <div>
-  <Project::Content::ProjectContent>
-
-        <h1>{{model.name}} lol</h1>
-        {{#each model.projectContents.body as |bodyContent|}}
-          {{#if (does-equal bodyContent.type "h2")}}
-            <h2>{{bodyContent.content}}</h2>
-          {{/if}}
-
-          {{#if (does-equal bodyContent.type "p")}}
-            <p>{{{bodyContent.content}}}</p>
-          {{/if}}
-
-          {{#if (does-equal bodyContent.type "ul")}}
-            <ul>
-              {{#each bodyContent.content as |listItem|}}
-                <li>{{{listItem}}}</li>
-              {{/each}}
-            </ul>
-          {{/if}}
-
-          {{#if (does-equal bodyContent.type "techGrid")}}
-            <Project::Content::TechGrid
-              @technology={{bodyContent.content}}
-            />
-          {{/if}}
-        {{/each}}
-
-      </Project::Content::ProjectContent>
-  </div>
-
+  <Layout::PageSections::PageWrapper::PageWrapperSection>
+    <Project::Content::ProjectContent @content={{model.projectContents}} />
+  </Layout::PageSections::PageWrapper::PageWrapperSection>
 </Layout::PageSections::PageWrapper>
