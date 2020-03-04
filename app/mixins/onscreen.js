@@ -41,27 +41,32 @@ export default Mixin.create({
 
   onScreenCheck() {
     const componentElement = this.element;
-    const componentElementHeight = componentElement.offsetHeight;
-    const componentElementRect = componentElement && componentElement.getBoundingClientRect();
-    const componentElementRectTop = componentElementRect.top;
-    const componentElementFullOffset = componentElementRectTop + componentElementHeight;
 
-    const onlyRunOnce = get(this, 'isOnscreenOnce');
-    const windowHeight  = window && window.innerHeight || 0;
+    if (componentElement) {
+      const componentElementHeight = componentElement.offsetHeight;
+      const componentElementRect = componentElement && componentElement.getBoundingClientRect();
+      const componentElementRectTop = componentElementRect.top;
+      const componentElementFullOffset = componentElementRectTop + componentElementHeight;
 
-    set(this, 'topPosition', componentElementRectTop);
-    set(this, 'bottomPosition', componentElementFullOffset);
+      const onlyRunOnce = get(this, 'isOnscreenOnce');
+      const windowHeight  = window && window.innerHeight || 0;
 
-    const isElementOnScreen = componentElementRectTop - (windowHeight * 0.9) <= 0 && componentElementFullOffset >= 0;
+      set(this, 'topPosition', componentElementRectTop);
+      set(this, 'bottomPosition', componentElementFullOffset);
 
-    if( isElementOnScreen && onlyRunOnce ) {
-      set(this, 'isOnscreen', true);
+      const isElementOnScreen = componentElementRectTop - (windowHeight * 0.9) <= 0 && componentElementFullOffset >= 0;
 
-      this.detachListeners();
-    } else if( isElementOnScreen ) {
-      set(this, 'isOnscreen', true);
+      if( isElementOnScreen && onlyRunOnce ) {
+        set(this, 'isOnscreen', true);
+
+        this.detachListeners();
+      } else if( isElementOnScreen ) {
+        set(this, 'isOnscreen', true);
+      } else {
+        set(this, 'isOnscreen', false);
+      }
     } else {
-      set(this, 'isOnscreen', false);
+      console.warn('WARN :: Element not found');
     }
   },
 });
