@@ -39,19 +39,25 @@
     {{!-- Image Grid --}}
     {{#if (does-equal bodyContent.type "imageGrid")}}
       <figure class={{bem "project-content__body-section" mediaWidth=true}}>
-        <Project::Content::ImageGrid
-          @colCount={{bodyContent.colCount}}
-          @media={{bodyContent.content}}
-        />
+        <Ui::isCurrentlyVisible as |isCurrentlyVisible|>
+          <Project::Content::ImageGrid
+            @isCurrentlyVisible={{isCurrentlyVisible}}
+            @colCount={{bodyContent.colCount}}
+            @media={{bodyContent.content}}
+          />
+        </Ui::isCurrentlyVisible>
       </figure>
     {{/if}}
 
     {{!-- Image Grid --}}
     {{#if (does-equal bodyContent.type "mockupGrid")}}
       <figure class={{bem "project-content__body-section" mediaWidth=true}}>
-        <Project::Content::MockupGrid
-          @media={{bodyContent.content}}
-        />
+
+          <Project::Content::MockupGrid
+            @isCurrentlyVisible={{true}}
+            @media={{bodyContent.content}}
+          />
+
       </figure>
     {{/if}}
 

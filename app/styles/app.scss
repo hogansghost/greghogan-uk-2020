@@ -28,21 +28,6 @@ html {
   line-height: $text-line-height;
   word-break: break-word;
   overflow-wrap: break-word;
-
-
-  @media screen and ( max-width:768px ) {
-    font-size: 1.1em;
-  }
-}
-
-
-a {
-  // border-bottom: 1px dashed rgba($ui-color-primary, 0.25);
-  // -webkit-transition: color $ui-standard-transition-duration, border-color $ui-standard-transition-duration;
-  // transition: color $ui-standard-transition-duration, border-color $ui-standard-transition-duration;
-  &[rel="noreferrer"] {
-    // @include link-decoration;
-  }
 }
 
 hr {
@@ -50,12 +35,43 @@ hr {
   background: none;
   margin: 1em 0;
   line-height: 1;
-  font-size: 0.5em;
+  font-size: 1.875rem;
   opacity: 0.75;
   height: auto;
 
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    margin: auto;
+    position: relative;
+    -webkit-clip-path: url("#clip-path-triangle");
+    clip-path: url("#clip-path-triangle");
+    mix-blend-mode: exclusion;
+    width: 1em;
+    height: 1em;
+    opacity: 0.8;
+
+    @supports not (clip-path: url("#clip-path-triangle")) {
+      transform: rotate(45deg);
+    }
+  }
+
   &::before {
-    content: "- // -";
+    background-color: $color-primary;
+    width: 0.65em;
+    height: 0.65em;
+    z-index: 1;
+  }
+
+  &::after {
+    margin-top: -0.5em;
+    background-color: $color-secondary;
+
+    @supports not (clip-path: url("#clip-path-triangle")) {
+      margin-top: 0;
+      transform: rotate(45deg) scale(1.5) translate(-10%, -10%);
+    }
   }
 }
 
@@ -83,80 +99,53 @@ ul[class], ol[class], figure {
 }
 
 
+// Transition containers for LiquidFire.
+.lf__main {
+  transform: none !important;
+  position: relative !important;
+
+  .liquid-child {
+    &:last-child {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+    }
+  }
+}
+
+@import "app/pods/not-found/style";
+
 // Component imports
 @import "app/pods/components/about-me/style";
+@import "app/pods/components/contact-me/style";
+@import "app/pods/components/example/example-grid/style";
+@import "app/pods/components/example/example-grid/example-grid-item/style";
 
 // Decorative elements
 @import "app/pods/components/decorations/decorative-triangles/style";
 
 // UI generic component elements
 @import "app/pods/components/ui/cookie-bar/style";
+@import "app/pods/components/ui/is-currently-visible/style";
 @import "app/pods/components/ui/lazy-image/style";
 @import "app/pods/components/ui/link-external/style";
 @import "app/pods/components/ui/link-to-home/style";
 @import "app/pods/components/ui/video/style";
 
 // Layout specific components
-@import "app/pods/components/layout/hero-primary/style";
+@import "app/pods/components/layout/hero-banner/style";
 @import "app/pods/components/layout/page-sections/page-wrapper/style";
 @import "app/pods/components/layout/page-sections/page-wrapper/page-wrapper-section/style";
 @import "app/pods/components/layout/page-sections/page-section-sticky-title/style";
 
 // Project specific components
 @import "app/pods/components/project/project-link/style";
-
 @import "app/pods/components/project/hero-video-banner/style";
 @import "app/pods/components/project/content/project-content/style";
-
+@import "app/pods/components/project/content/project-details/style";
 @import "app/pods/components/project/content/tech-grid/style";
 @import "app/pods/components/project/content/tech-grid/tech-grid-item/style";
-
 @import "app/pods/components/project/content/image-grid/style";
 @import "app/pods/components/project/content/image-grid/image-grid-item/style";
-
 @import "app/pods/components/project/content/mockup-grid/style";
 @import "app/pods/components/project/content/mockup-grid/mockup-grid-item/style";
-
-
-
-
-
-.grid {
-  padding: 0px !important;
-  border: 0 !important;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
-
-  &-item {
-    padding-top: calc(50% - 0.5em);
-    padding-bottom: calc(50% - 0.5em);
-    border: 1px solid rgba(white, 0.2);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
-
-    color: white;
-
-    a {
-      color: white;
-    }
-
-    &:nth-child(3) {
-
-    }
-
-    @for $i from 1 through 20 {
-      $t: $i * 2;
-      &:nth-child(#{1 * $i}) {
-        background-color: darken(#8218c1, percentage($i * 0.01)) !important;
-      }
-    }
-  }
-}
-
-
-

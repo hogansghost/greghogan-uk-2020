@@ -170,23 +170,3 @@
   url("../assets/fonts/FontAwesome.5.3.1/fa-solid-900.ttf") format("truetype"), 
   url("../assets/fonts/FontAwesome.5.3.1/fa-solid-900.svg#fontawesome") format("svg");
 }
-
-
-
-
-/**
- * Material icons
- *
- */
-
-@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/assets/fonts/MaterialIcons/MaterialIcons-Regular.eot"); /* For IE6-8 */
-  src: local("Material Icons"),
-       local("MaterialIcons-Regular"),
-       url("/assets/fonts/MaterialIcons/MaterialIcons-Regular.woff2") format("woff2"),
-       url("/assets/fonts/MaterialIcons/MaterialIcons-Regular.woff") format("woff"),
-       url("/assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf") format("truetype");
-}

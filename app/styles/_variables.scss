@@ -4,10 +4,10 @@
  */
 
 $text-typeface-fallback: "Helvetica", "Arial", sans-serif;
-$text-typeface: "Avenir LT Std 35 Light", Times New Roman, "Avenir LT Std 45 Book", $text-typeface-fallback;
+$text-typeface: "Avenir LT Std 45 Book", $text-typeface-fallback;
 $text-color: rgba($black, 0.65);
 $text-font-size: 16px;
-$text-line-height: 1.8;
+$text-line-height: 1.4;
 
 
 
@@ -37,7 +37,7 @@ $z-index: (
 );
 
 // Drop shadows
-$z-index: (
+$drop-shadows: (
   cards: 5,
   navigation: 6,
 );
@@ -50,9 +50,16 @@ $z-index: (
  *
  */
 
-$ui-standard-padding: 20px;
-$ui-standard-transition-duration: 240ms;
-$ui-core-transition-duration: 840ms;
+// Content spacers (think padding around copy, etc. to space content from edges.
+$ui-content-padding-xs: 10px;
+$ui-content-padding-sm: 20px;
+$ui-content-padding-md: 40px;
+$ui-content-padding-lg: 60px;
+$ui-content-padding-xl: 80px;
+
+$ui-transition-duration-short: 240ms;
+$ui-transition-duration-medium: 540ms;
+$ui-transition-duration-long: 840ms;
 
 
 
@@ -80,7 +87,7 @@ $media-width-xxl-max: $media-width-xxl - 1;
 
 /**
  * Content width breakpoints
- *
+ * Use these to limit content, rather than the actual window breakpoint.
  */
 
 $content-width-xs: 0px;
@@ -90,16 +97,9 @@ $content-width-lg: 1100px;
 $content-width-xl: 1400px;
 $content-width-xxl: 1660px;
 
+// Content restriction to make sure paragraphs aren't too wide.
+$content-width-readable: 800px;
+
 // Restrict content on ultra wide screens so not to look odd.
-$content-restriction-uhd: 850px;
+$content-restriction-uhd: $content-width-xxl / 2;
 
-
-
-
-
-
-
-
-
-// $text-color: rgb(14, 40, 75);
-// $color-primary: rgb(1, 203, 198);

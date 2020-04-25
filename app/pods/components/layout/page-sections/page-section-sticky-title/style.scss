@@ -31,8 +31,6 @@
 
   &__content,
   &__heading {
-    // flex: 0 0 auto;
-    // width: 50%;
     min-height: 100vh;
   }
 
@@ -43,7 +41,7 @@
 
   &__heading {
     grid-area: right-column;
-    position: static;
+    position: relative;
     right: 0;
     height: 100vh;
     background-color: inherit;
@@ -51,8 +49,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
-    color: white;
+    padding: $ui-content-padding-md;
+    color: $white;
+
+    @include media($media-sm) {
+      position: static;
+      width: 100%;
+    }
 
 
     // Position
@@ -81,11 +84,6 @@
       flex: 0 0 auto;
       order: 1;
     }
-
-    @include media($media-sm) {
-      position: relative;
-      width: 100%;
-    }
   }
 
 
@@ -112,8 +110,4 @@
       margin-left: auto;
     }
   }
-}
-
-.lf__main {
-  transform: none !important;
 }

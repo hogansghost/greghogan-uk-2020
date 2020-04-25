@@ -122,7 +122,7 @@
     justify-content: center;
     flex: 1 1 auto;
     min-height: 0px;
-    padding: 20px;
+    padding: $ui-content-padding-sm;
 
     width: $content-restriction-uhd;
     max-width: 100%;
@@ -134,8 +134,8 @@
 
   &__body-content-footer {
     flex: 0 0 auto;
-    padding: 10px 0px;
-    color: rgba(#fff, 0.8);
+    padding: $ui-content-padding-xs $ui-content-padding-sm;
+    color: rgba($white, 0.8);
     width: 100%;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
   }
@@ -161,12 +161,10 @@
     max-width: 100%;
     margin: auto;
     display: inline-block;
-    width: auto;
+    width: 90%;
     color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.7em;
     z-index: 1;
     border: none;
 
@@ -180,7 +178,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 60px;
+    padding: $ui-content-padding-lg $ui-content-padding-md;
     font-size: 2em;
     border: none !important;
 
@@ -198,7 +196,7 @@
       z-index: -1;
       
 
-      @media screen and ( min-width:768px) {
+      @include media($media-sm) {
         opacity: 0;
         transform: translateY(25%) scale(0.7);
         transition: all 450ms cubic-bezier(.4,0,0,1);
@@ -226,6 +224,12 @@
 
   &__card-content {
     display: block;
+
+    hr {
+      font-size: 25px;
+      margin-top: 0.5em;
+      margin-bottom: 0.75em;
+    }
   }
 
   &__card-content-name {

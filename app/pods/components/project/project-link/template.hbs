@@ -1,5 +1,10 @@
 <div class="project-link__background">
-  <img
+  <Ui::LazyImage
+    alt=""
+    srcSet={{srcset}}
+  />
+  
+  {{!-- <img
     class="project-link__background-picture"
     alt=""
     srcset="{{srcset.xs}} 320w,
@@ -10,7 +15,7 @@
            (max-width: 480px) 440px,
            800px"
     src="{{srcset.md}}"
-  />
+  /> --}}
 </div>
 
 <div class="project-link__body">
@@ -30,10 +35,12 @@
     </div>
   </LinkTo>
 
-  {{#if url}}
+  {{#if url.length}}
     <div class="project-link__body-content-footer">
       <div class="project-link__body-content-footer-inner">
-        <Ui::LinkExternal @href={{url}}>{{url}}</Ui::LinkExternal>
+        {{#each url as |url|}}
+          <Ui::LinkExternal @href={{url.href}}>{{url.label}}</Ui::LinkExternal>
+        {{/each}}
       </div>
     </div>
   {{/if}}

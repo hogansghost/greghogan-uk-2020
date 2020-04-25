@@ -1,10 +1,22 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  name: DS.attr(),
-  projectContents: DS.attr(),
-  role: DS.attr(),
-  thumbnail: DS.attr(),
-  timeframe: DS.attr(),
-  url: DS.attr(),
+  name: DS.attr('string'),
+  projectContents: DS.attr({
+    defaultValue() {
+      return {};
+    }
+  }),
+  role: DS.attr('string'),
+  thumbnail: DS.attr({
+    defaultValue() {
+      return {};
+    }
+  }),
+  timeframe: DS.attr({
+    defaultValue() {
+      return {};
+    }
+  }),
+  url: DS.attr('string'),
 });

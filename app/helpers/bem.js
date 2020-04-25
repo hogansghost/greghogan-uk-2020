@@ -22,7 +22,7 @@ export function bem(baseClass = '', modifierList = {}) {
 
     let classNameString = '';
 
-    if (bemValue !== true && bemValue !== false) {
+    if (![true, false, undefined].includes(bemValue)) {
       classNameString = `${baseClass}--${hyphenCase(bemValue)}`;
     } else if (bemValue === true) {
       classNameString = `${baseClass}--${hyphenCase(bemKey)}`;

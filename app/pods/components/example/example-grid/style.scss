@@ -1,0 +1,51 @@
+.example-grid {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+
+  @include media($media-sm) {
+    overflow: hidden;
+  }
+
+
+  // Inner content
+  &__inner {
+    margin: 0 auto;
+  }
+  
+  
+  // Header and heading
+  &__header {
+    margin: 0 auto;
+    max-width: 100%;
+    width: $content-width-readable;
+    padding-right: $ui-content-padding-md;
+    padding-left: $ui-content-padding-md;
+  }
+  
+  &__heading {
+    @include heading-formatting;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  
+  
+  // Body
+  &__body {
+    background-color: rgba($black, 0.95);
+  }
+
+  &__body-content {
+    margin: 0 auto;
+    align-items: stretch;
+    box-shadow: 0 0 20px -3px rgba($black, 0.2), 0 0 30px -5px rgba($black, 0.35);
+    display: flex;
+    justify-content: flex-start;
+    
+    @include media($media-sm) {
+      flex-flow: row wrap;
+      max-width: 100%;
+      width: $content-width-xxl;
+    }
+  }
+}

@@ -9,22 +9,12 @@
 </div>
 
 
-
 {{#if shouldShowCookieBar}}
     <Ui::CookieBar />
 {{/if}}
 
+
 <Layout::PageSections::PageWrapper>
   {{liquid-outlet enableGrowth=false class="lf__main content-main"}}
+  {{!-- {{outlet class="content-main"}} --}}
 </Layout::PageSections::PageWrapper>
-{{!--
-<PageWrapper>
-  <PageSection>
-    <HomeContentHeader />
-  </PageSection>
-
-  <PageSection>
-    {{liquid-outlet enableGrowth=false class="lf__main content-main"}}
-  </PageSection>
-</PageWrapper>
---}}

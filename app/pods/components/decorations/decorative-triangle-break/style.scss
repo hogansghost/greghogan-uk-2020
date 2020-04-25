@@ -1,0 +1,53 @@
+// Parent wrapper
+.decorative-triangles {
+  position: relative;
+  opacity: 0.5;
+}
+
+.decorative-triangles-item {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  &--first {
+    transform: translate(-35%, -50%);
+  }
+
+  &--second {
+    transform: translate(0%, -60%);
+    opacity: 0.8;
+  }
+}
+
+
+// Individual items
+.decorative-triangle {
+  position: relative;
+  clip-path: url("#clip-path-triangle");
+  mix-blend-mode: exclusion;
+  width: 60vw;
+  background-color: $white;
+  animation: slide-in-fade-from-top 1320ms ease both;
+
+  &--first {
+    background-color: $color-primary;
+    animation-delay: 100ms;
+  }
+
+  &--second {
+    background-color: $color-secondary;
+    width: 50vw;
+    animation-delay: 200ms;
+  }
+
+
+  &__inner {
+    display: block;
+
+    &::after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+}

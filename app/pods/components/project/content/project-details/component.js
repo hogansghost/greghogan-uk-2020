@@ -3,7 +3,7 @@ import Component from '@ember/component';
 export default Component.extend({
   tagName: '',
 
-  projectLink: '',
+  projectLink: null,
   projectRole: '',
   projectTimeframe: '',
   projectTitle: '',

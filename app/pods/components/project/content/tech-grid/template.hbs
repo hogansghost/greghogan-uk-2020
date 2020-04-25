@@ -6,9 +6,12 @@
   <div class="tech-grid__body">
     <ul class="tech-grid__list">
       {{#each technology as |tech|}}
-        <Project::Content::TechGrid::TechGridItem
-          @tech={{tech}}
-        />
+        <Ui::isCurrentlyVisible class="tech-grid__list-item" as |isCurrentlyVisible|>
+          <Project::Content::TechGrid::TechGridItem
+            @isCurrentlyVisible={{isCurrentlyVisible}}
+            @tech={{tech}}
+          />
+        </Ui::isCurrentlyVisible>
       {{/each}}
     </ul>
   </div>

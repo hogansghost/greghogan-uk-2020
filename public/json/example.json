@@ -4,7 +4,7 @@
     "codepen": [
       {
         "id": 1,
-        "name": "Infinite scroller",
+        "name": "Infinite carousel",
         "url": "https://codepen.io/greghogan/pen/xzMpqQ"
       }, {
         "id": 2,
@@ -14,6 +14,14 @@
         "id": 3,
         "name": "Aspect ratios",
         "url": "https://codepen.io/greghogan/pen/gqJmyM"
+      }, {
+        "id": 4,
+        "name": "SVG <use>",
+        "url": "https://codepen.io/greghogan/pen/zYxMaEd"
+      }, {
+        "id": 5,
+        "name": "Validating email domain example",
+        "url": "https://codepen.io/greghogan/pen/ExjWbWp"
       }
     ]
   }

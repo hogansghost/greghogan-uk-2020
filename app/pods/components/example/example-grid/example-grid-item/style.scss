@@ -1,0 +1,94 @@
+.example-grid-item {
+  $_self: &;
+
+  @include link-normalise;
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 75%;
+  background: rgba($black, 0.9);
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  border-color: rgba($white, 0.2); // #9c27b0;
+  scroll-snap-align: start;
+  color: $white;
+  
+  @include media($media-sm, max) {
+    &:last-child {
+      border-right-width: 0;
+    }
+  }
+
+  @include media($media-sm) {
+    width: 25%;
+
+    &:nth-child(4n+4) {
+      border-right: 0;
+    }
+
+    &:nth-last-child(-n+4) {
+      border-bottom-width: 1px;
+    }
+  }
+  
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: $ui-content-padding-md;
+    position: relative;
+    color: $white;
+    @include heading-formatting;
+
+    &::before {
+      content: '';
+      position: relative;
+      display: block;
+      flex: 0 0 auto;
+      width: 0px;
+      padding-bottom: 125%;
+
+      @include media($media-sm) {
+        padding-bottom: 100%;
+      }
+    }
+
+    span {
+      display: inline-block;
+      flex: 0 1 auto;
+      min-width: 0;
+      padding: 0.25em;
+      @include link-decoration;
+
+      #{$_self}:focus &,
+      #{$_self}:hover & {
+        border-bottom-color: $color-primary;
+        background-size: 100% 2px;
+      }
+    }
+  }
+}

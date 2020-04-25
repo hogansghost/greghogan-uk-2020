@@ -1,5 +1,5 @@
-<nav class="link-to-home">
-  <a aria-label="Go Home" class="link-to-home__anchor" href="/" onClick={{action "goBack"}}>
+<div class="link-to-home__inner">
+  <LinkTo @route="home" aria-label="Go Home" class="link-to-home__anchor">
     <span class="link-to-home__anchor-inner fa-link-back"></span>
-  </a>
-</nav>
+  </LinkTo>
+</div>

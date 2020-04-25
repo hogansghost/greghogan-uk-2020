@@ -138,12 +138,9 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/greg/Work/Ember/greghogan-uk-2019"
-	],
 	"file_history":
 	[
+		"/Users/greg/Work/Movidiam web.sublime-project",
 		"/Users/greg/Work/Ember/greghogan-uk/app/templates/application.js",
 		"/Users/greg/Work/Ember/greghogan-uk/tests/unit/services/tracking-test.js",
 		"/Users/greg/Work/Ember/greghogan-uk/app/services/tracking.js",
@@ -248,7 +245,6 @@
 		"/Users/greg/Work/greghogan-uk/app/mixins/onscreen.js",
 		"/Users/greg/Work/greghogan-uk/app/projects/movidiam/route.js",
 		"/Users/greg/Work/greghogan-uk/app/projects/route.js",
-		"/Users/greg/Work/Movidiam web.sublime-project",
 		"/Users/greg/Work/greghogan-uk/app/components/layout/home/lets-go/template.hbs",
 		"/Users/greg/Work/greghogan-uk/app/components/layout/home/lets-go/component.js",
 		"/Users/greg/Work/greghogan-uk/app/components/layout/home/lets-go/style.scss",
@@ -372,6 +368,70 @@
 		"selected_items":
 		[
 			[
+				"project sectionscss",
+				"greghogan-uk/app/components/layout/projects/section-description/style.scss"
+			],
+			[
+				"appscss",
+				"greghogan-uk/app/styles/app.scss"
+			],
+			[
+				"projec link styles",
+				"greghogan-uk/app/components/layout/projects/project-link/style.scss"
+			],
+			[
+				"apscss",
+				"greghogan-uk/app/styles/app.scss"
+			],
+			[
+				"font",
+				"greghogan-uk/app/styles/_fonts.scss"
+			],
+			[
+				"home tem",
+				"greghogan-uk/app/home/template.hbs"
+			],
+			[
+				"ico",
+				"greghogan-uk/app/styles/_icons.scss"
+			],
+			[
+				"Fonts",
+				"greghogan-uk/app/styles/_fonts.scss"
+			],
+			[
+				"techstackite",
+				"greghogan-uk/app/components/layout/projects/section-tech-stack/section-tech-stack-icon/template.hbs"
+			],
+			[
+				"onscreen",
+				"greghogan-uk/app/mixins/onscreen.js"
+			],
+			[
+				"section-tech-stack",
+				"greghogan-uk/app/components/layout/projects/section-tech-stack/component.js"
+			],
+			[
+				"movidiam",
+				"greghogan-uk/app/projects/movidiam/template.hbs"
+			],
+			[
+				"homerou",
+				"greghogan-uk/app/home/route.js"
+			],
+			[
+				"home",
+				"greghogan-uk/app/home/template.hbs"
+			],
+			[
+				"fixed",
+				"greghogan-uk/app/components/layout/fixed-content/component.js"
+			],
+			[
+				"hero",
+				"greghogan-uk/app/components/layout/home/section-hero/style.scss"
+			],
+			[
 				"applicationhbs",
 				"greghogan-uk/app/templates/application.hbs"
 			],
@@ -382,10 +442,6 @@
 			[
 				"normali",
 				"greghogan-uk/app/styles/_normalize.scss"
-			],
-			[
-				"appscss",
-				"greghogan-uk/app/styles/app.scss"
 			],
 			[
 				"color",
@@ -412,16 +468,8 @@
 				"greghogan-uk/app/controllers/application.js"
 			],
 			[
-				"onscreen",
-				"greghogan-uk/app/mixins/onscreen.js"
-			],
-			[
 				"app",
 				"greghogan-uk/app/templates/application.hbs"
-			],
-			[
-				"home",
-				"greghogan-uk/app/home/template.hbs"
 			],
 			[
 				"service",
@@ -438,10 +486,6 @@
 			[
 				"teads",
 				"greghogan-uk/app/projects/teads/template.hbs"
-			],
-			[
-				"movidiam",
-				"greghogan-uk/app/projects/movidiam/template.hbs"
 			],
 			[
 				"loveholidays",
@@ -680,10 +724,6 @@
 				"greghogan-uk/app/home/template.hbs"
 			],
 			[
-				"fixed",
-				"greghogan-uk/app/components/layout/fixed-content/component.js"
-			],
-			[
 				"humani",
 				"greghogan-uk/app/helpers/strings/humaniser.js"
 			],
@@ -694,10 +734,6 @@
 			[
 				"gitig",
 				"greghogan-uk/.gitignore"
-			],
-			[
-				"font",
-				"greghogan-uk/app/styles/_fonts.scss"
 			],
 			[
 				"norma",
@@ -842,46 +878,6 @@
 			[
 				"footer style",
 				"greghogan-uk/app/components/interface/footer-main/style.scss"
-			],
-			[
-				"about me sty",
-				"greghogan-uk/app/components/content/about-me/style.scss"
-			],
-			[
-				"home hero s",
-				"greghogan-uk/app/components/layout/home/section-hero/style.scss"
-			],
-			[
-				"about me template",
-				"greghogan-uk/app/components/content/about-me/template.hbs"
-			],
-			[
-				"movidiam tempalte",
-				"greghogan-uk/app/projects/movidiam/template.hbs"
-			],
-			[
-				"section hero banner com",
-				"greghogan-uk/app/components/layout/projects/section-hero-banner/component.js"
-			],
-			[
-				"tech style",
-				"greghogan-uk/app/components/layout/projects/section-tech-stack/style.scss"
-			],
-			[
-				"project link style",
-				"greghogan-uk/app/components/layout/projects/project-link/style.scss"
-			],
-			[
-				"description style scss",
-				"greghogan-uk/app/components/layout/projects/description-image-grid/style.scss"
-			],
-			[
-				"slide in screens template",
-				"greghogan-uk/app/components/layout/projects/section-slide-in-screens/template.hbs"
-			],
-			[
-				"mov tem",
-				"greghogan-uk/app/projects/movidiam/template.hbs"
 			]
 		],
 		"width": 0.0

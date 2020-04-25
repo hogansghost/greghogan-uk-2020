@@ -1,6 +1,6 @@
 .image-grid {
   $_self: &;
-  $_tech-stack-duration: $ui-core-transition-duration;
+  $_tech-stack-duration: $ui-transition-duration-long;
 
   position: relative;
   color: inherit;

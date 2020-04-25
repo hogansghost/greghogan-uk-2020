@@ -4,37 +4,50 @@
   opacity: 0.5;
 }
 
+.decorative-triangles-item {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  &--first {
+    transform: translate(-30%, -50%);
+  }
+
+  &--second {
+    transform: translate(95%, -50%);
+    opacity: 0.55;
+  }
+}
+
 
 // Individual items
 .decorative-triangle {
-  clip-path: url("#clip-path-triangle");
+  $_self: &;
+
+  position: relative;
   mix-blend-mode: exclusion;
-  width: 60vw;
-  background-color: $white;
-  position: absolute;
-  top: 0;
-  left: 70%;
-  animation: slide-in-fade-from-top 660ms ease both;
+  width: 40vh;
+  animation: slide-in-fade-from-top 1320ms ease both;
+  color: $color-primary;
+
 
   &--first {
-    background-color: $color-primary;
-    transform: translate(-65%, -50%);
     animation-delay: 100ms;
   }
 
   &--second {
-    background-color: $color-secondary;
-    width: 50vw;
-    transform: translate(-35%, -60%);
-    opacity: 0.8;
     animation-delay: 200ms;
+    color: $color-secondary;
+    width: 25vh;
   }
 
 
   &__inner {
     display: block;
+    background-color: currentColor;
+    transform: rotate(45deg);
 
-    &::after {
+    &::before {
       content: "";
       display: block;
       padding-bottom: 100%;

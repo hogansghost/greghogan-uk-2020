@@ -1,12 +1,10 @@
 .about-me {
-  @extend %body-copy-formatting !optional;
+  @extend %body-copy-formatting;
 
   &__inner {
-    width: 900px;
+    width: $content-width-readable;
     max-width: 100%;
-    padding: 60px 30px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: $ui-content-padding-lg $ui-content-padding-md;
     margin: 0 auto;
   }
 
@@ -24,7 +22,6 @@
 
   &__description-subtitle {
     @include copy-color-light;
-    // color: #989898;
   }
 
   &__description {
@@ -33,13 +30,19 @@
 
   // Skill list
   &__skills {
-    columns: 3 200px;
+    columns: 3 250px;
   }
 
   &__skills-section {
     columns: 1 auto;
     padding-right: 20px;
+
+    page-break-after: avoid;
+    break-after: avoid;
+    page-break-before: avoid;
+    break-before: avoid;
     page-break-inside: avoid;
+    break-inside: avoid;
 
     &:nth-child(n+2) {
       margin-top: 1.4em;

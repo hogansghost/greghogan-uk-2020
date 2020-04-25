@@ -1,10 +1,9 @@
 import Component from '@ember/component';
-import Onscreen from 'greghogan-uk-2020/mixins/onscreen';
 
-export default Component.extend(Onscreen, {
+export default Component.extend({
   tagName: 'li',
   classNames: ['tech-grid-item'],
-  classNameBindings: ['isOnscreen:tech-grid-item--visible:tech-grid-item--hidden'],
+  classNameBindings: ['isCurrentlyVisible:tech-grid-item--visible:tech-grid-item--nudda'],
 
   tech: null,
 });

@@ -1,6 +1,6 @@
 .mockup-grid {
   $_self: &;
-  $_tech-stack-duration: $ui-core-transition-duration;
+  $_tech-stack-duration: $ui-transition-duration-long;
 
   position: relative;
   color: inherit;
@@ -14,6 +14,8 @@
   }
 
   &__item {
+    $_self-item: &;
+
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
@@ -28,6 +30,21 @@
     &:nth-child(n+2) {
       transform: translateY(-20px);
     }
+
+    // Divider
+    hr {
+      position: absolute;
+      bottom: 0%;
+      right: 0%;
+      transform: translate(50%, 50%);
+      z-index: 1;
+    }
+
+    &:nth-child(even) {
+      hr {
+        display: none;
+      }
+    }
   }
 
   &__item-inner {
@@ -35,4 +52,5 @@
     width: calc(50% + 10px);
     position: relative;
   }
+
 }

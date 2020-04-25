@@ -1,46 +1,60 @@
 <Layout::PageSections::PageWrapper @upperMargin={{true}}>
-  <Layout::HeroPrimary />
-
-  <h1>Home</h1>
-
-  <div>
-    <AboutMe @author={{model.author}} />
-  </div>
-
-
-  <div class="grid">
-    {{#each model.example.codepen as |codepen|}}
-      <a class="grid-item" href={{codepen.url}} target="_blank" rel="noreferrer">
-        {{codepen.name}}
-      </a>
-    {{/each}}
-  </div>
-{{log "PageSectionStickyTitlePosition.Left" PageSectionStickyTitlePosition.Left}}
-  <Layout::PageSections::PageSectionStickyTitle
-    @title="Projects"
-    @titlePosition="right"
-    @titleTheme="primary"
-    @onEntryToViewport={{action "sendGoogleEvent" "message"}}
-  >
-    {{#each model.project as |project|}}
-    <Project::ProjectLink
-      @srcset={{project.thumbnail.srcSet}}
-      @name={{project.name}}
-      @role={{project.role}}
-      @id={{project.id}}
-      @url={{project.url}}
+  <Layout::PageSections::PageWrapper::PageWrapperSection>
+    <Layout::HeroBanner
+      @author={{model.author}}
+      @backgroundSrcSet={{model.project.firstObject.thumbnail.srcSet}}
+      @project={{model.project}}
     />
-    {{/each}}
-  </Layout::PageSections::PageSectionStickyTitle>
+  </Layout::PageSections::PageWrapper::PageWrapperSection>
 
-  <Layout::PageSections::PageSectionStickyTitle
-    @title="Contact"
-    @titlePosition="left"
-    @titleTheme="secondary"
+  <Layout::PageSections::PageWrapper::PageWrapperSection
+    @hasOverlap={{true}}
   >
-    {{#each model.project as |project|}}
-      <p><LinkTo @route="project" @model={{project.id}}><h1>{{project.name}}</h1></LinkTo></p>
-    {{/each}}
+    <AboutMe
+      @author={{model.author}}
+    />
+  </Layout::PageSections::PageWrapper::PageWrapperSection>
 
-  </Layout::PageSections::PageSectionStickyTitle>
+
+  <Layout::PageSections::PageWrapper::PageWrapperSection
+    @gutterVertical="none"
+  >
+    <Example::ExampleGrid
+      @heading="Code and CSS snippets"
+      @examples={{model.example.codepen}}
+    />
+  </Layout::PageSections::PageWrapper::PageWrapperSection>
+
+
+  <Layout::PageSections::PageWrapper::PageWrapperSection
+    @gutterVertical="none"
+  >
+    <Layout::PageSections::PageSectionStickyTitle
+      @title="Projects"
+      @titlePosition="right"
+      @titleTheme="primary"
+      @onEntryToViewport={{action "sendGoogleEvent" "message"}}
+    >
+      {{#each projectList as |project|}}
+        <Project::ProjectLink
+          @srcset={{project.thumbnail.srcSet}}
+          @name={{project.name}}
+          @role={{project.role}}
+          @id={{project.id}}
+          @url={{project.url}}
+        />
+      {{/each}}
+    </Layout::PageSections::PageSectionStickyTitle>
+
+    <Layout::PageSections::PageSectionStickyTitle
+      @title="Contact"
+      @titlePosition="left"
+      @titleTheme="secondary"
+    >
+      <ContactMe
+        @description={{model.author.contactDescription}}
+        @links={{model.author.profileLinks}}
+      />
+    </Layout::PageSections::PageSectionStickyTitle>
+  </Layout::PageSections::PageWrapper::PageWrapperSection>
 </Layout::PageSections::PageWrapper>

@@ -1,0 +1,23 @@
+<div class="contact-me">
+  <div class="contact-me__inner">
+    {{#if description.length}}
+      {{#each description as |paragraph|}}
+        <p class="contact-me__description">{{paragraph}}</p>
+      {{/each}}
+    {{/if}}
+
+    {{#if (and description.length contactLinks.length)}}
+      <hr />
+    {{/if}}
+
+    {{#if contactLinks.length}}
+      <ul class="contact-me__link-list">
+        {{#each contactLinks as |link|}}
+          <li class="contact-me__link-list-item">
+            <a class="contact-me__link" href={{link.href}} target={{link.target}}>{{link.label}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+</div>

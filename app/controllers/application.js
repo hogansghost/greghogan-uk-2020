@@ -1,9 +1,10 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
-import { get, set } from '@ember/object';
+import { set } from '@ember/object';
 import { not } from '@ember/object/computed';
 
 export default Controller.extend({
+  cookies: service(),
   cookies: service(),
 
   shouldShowCookieBar: not('cookies.hasAcceptedAllCookies'),
@@ -11,10 +12,18 @@ export default Controller.extend({
   init() {
     this._super(...arguments);
 
+    this.setScrollHandlingToManual();
     this.setCookieAcceptanceState();
   },
 
-  setCookieAcceptanceState() {
-    this.set('cookies.hasAcceptedAllCookies', this.cookies.checkIfCookiesAccepted());
+  setScrollHandlingToManual() {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
   },
+
+  setCookieAcceptanceState() {
+    set(this, 'cookies.hasAcceptedAllCookies', this.cookies.checkIfCookiesAccepted());
+  },
+
 });

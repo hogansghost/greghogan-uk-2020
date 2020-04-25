@@ -1,11 +1,16 @@
-{{#if srcSet.pl}}
-  <img class="lazy-image__placeholder" src={{srcSet.pl}} />
+{{#if this.placeholderSrc}}
+  <img
+    alt=""
+    class="js__lazy-placeholder {{bem "lazy-image__placeholder" placeholderError=hasErroredPlaceholder}}"
+    src={{this.placeholderSrc}}
+  />
 {{/if}}
 
 <img
-  alt={{alt}}
-  class="{{className}} {{bem "lazy-image__main" loaded=hasLoaded hasPlaceholder=placeholder}}"
-  onLoad={{action "setHasLoadedState"}}
-  src={{offsetSrcSet.md}}
-  srcset={{offsetSrcSet.md}}
+  alt={{@alt}}
+  class="{{@className}} js__lazy-main {{bem "lazy-image__main" loaded=hasLoaded hasPlaceholder=hasPlaceholder}}"
+  src={{this.offsetSrc}}
+  srcset={{this.offsetSrcSet}}
+  sizes={{this.offsetSizes}}
+/>
 />

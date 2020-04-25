@@ -17,6 +17,14 @@ export default Mixin.create({
     this.onScreenCheck();
   },
 
+  pageScroll() {
+    let isOnscreen = isElementVisible(this.element);
+  },
+
+  isElementVisible(something) {
+    console.log(something);
+  },
+
   willDestroyElement() {
     this._super(...arguments);
 
@@ -60,8 +68,10 @@ export default Mixin.create({
         set(this, 'isOnscreen', true);
 
         this.detachListeners();
-      } else if( isElementOnScreen ) {
+      } else if (isElementOnScreen) {
         set(this, 'isOnscreen', true);
+      } else if (!isElementOnScreen && get(this, 'isOnscreen')) {
+        set(this, 'isOnscreen', false);
       } else {
         set(this, 'isOnscreen', false);
       }

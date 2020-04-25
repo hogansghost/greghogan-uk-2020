@@ -1,24 +1,18 @@
 .project-content {
   $_self: &;
 
-
-  
   &__body {
     margin-right: auto;
     margin-left: auto;
-
   }
 
   &__body-section {
     $_self-section: &;
 
-    padding-top: 30px;
-    padding-bottom: 30px;
     max-width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: $ui-standard-padding;
-    padding-left: $ui-standard-padding;
+    padding: $ui-content-padding-md;
 
     @include body-copy-formatting;
 
@@ -27,7 +21,7 @@
     }
 
     &--readable-width {
-      width: $content-width-sm;
+      width: $content-width-readable;
       max-width: 80vw;
       padding-top: 0;
       padding-bottom: 0;
@@ -43,21 +37,17 @@
       max-width: 100%;
       padding-top: 0;
       padding-bottom: 0;
-      padding-right: calc(50vw - #{$content-width-xxl / 2} + #{$ui-standard-padding});
-      padding-left: calc(50vw - #{$content-width-xxl / 2} + #{$ui-standard-padding});
+      padding-right: calc(50vw - #{$content-width-xxl / 2} + #{$ui-content-padding-md});
+      padding-left: calc(50vw - #{$content-width-xxl / 2} + #{$ui-content-padding-md});
     }
 
     &--background-primary {
       background-color: $color-primary !important;
-      color: #fff;
+      color: $white;
       margin-top: calc(3vw + 120px);
       margin-bottom: calc(3vw + 120px);
       position: relative;
       z-index: 1;
-
-      #{$_self-section}--readable-width + & {
-        // margin-top: calc(3vw + 90px);
-      }
 
       &::before,
       &::after {

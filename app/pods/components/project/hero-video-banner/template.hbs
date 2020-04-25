@@ -34,6 +34,8 @@
             <span class="hero-video-banner__details-timeframe-end">{{projectTimeframe.end}}</span>
           {{/if}}
         </h2>
+
+        <div class="hero-video-banner__details-divider" />
       {{/if}}
 
       <div class="hero-video-banner__details-content">
@@ -50,7 +52,9 @@
       </div>
 
       <div class="hero-video-banner__footer-section">
-        <Ui::LinkExternal @href={{projectLink}}>{{projectLink}}</Ui::LinkExternal>
+        {{#each projectLink as |projectLink|}}
+          <Ui::LinkExternal @href={{projectLink}}>{{projectLink}}</Ui::LinkExternal>
+        {{/each}}
       </div>
     </div>
   {{/if}}

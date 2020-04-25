@@ -1,0 +1,19 @@
+<div class="example-grid">
+  <div class="example-grid__inner">
+    {{#if heading}}
+      <div class="example-grid__header">
+        <h2 class="example-grid__heading">{{heading}}</h2>
+      </div>
+    {{/if}}
+
+    <div class="example-grid__body">
+      <div class="example-grid__body-content">
+        {{#each examples as |example|}}
+          <Example::ExampleGrid::ExampleGridItem
+            @example={{example}}
+          />      
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
