@@ -37,7 +37,8 @@
     >
       {{#each projectList as |project|}}
         <Project::ProjectLink
-          @srcset={{project.thumbnail.srcSet}}
+          @srcSet={{project.thumbnail.srcSet}}
+          @sizes={{project.thumbnail.sizes}}
           @name={{project.name}}
           @role={{project.role}}
           @id={{project.id}}

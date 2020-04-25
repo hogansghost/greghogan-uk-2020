@@ -4,6 +4,7 @@ import { set } from '@ember/object';
 export default Component.extend({
   tagName: '',
 
+  isCurrentlyVisible: false,
   example: null,
   randomisedBackgroundSrcSet: '',
   randomisedBackgroundSizes: '',

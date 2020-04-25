@@ -5,8 +5,11 @@ import EmberObject from '@ember/object';
 export default Component.extend(Onscreen, {
   tagName: 'article',
   classNames: ['project-link'],
-  classNameBindings: ['isOnscreen:project-link--visible:project-link--nudda'],
-
+  classNameBindings: ['isOnscreen:project-link--visible:project-link--hidden'],
+  
+  id: '',
   name: '',
-  srcSet: EmberObject.create({}),
+  role: '',
+  srcSet: null,
+  url: '',
 });

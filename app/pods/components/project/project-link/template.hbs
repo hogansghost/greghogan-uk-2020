@@ -1,22 +1,13 @@
-<div class="project-link__background">
+<Ui::IsCurrentlyVisible class="project-link__background" as |isCurrentlyVisible|>
   <Ui::LazyImage
-    alt=""
-    srcSet={{srcset}}
+    class="project-link__background-image"
+    @alt=""
+    @isCurrentlyVisible={{isCurrentlyVisible}}
+    @shouldImageCover={{true}}
+    @srcSet={{srcSet}}
+    @sizes={{sizes}}
   />
-  
-  {{!-- <img
-    class="project-link__background-picture"
-    alt=""
-    srcset="{{srcset.xs}} 320w,
-            {{srcset.sm}} 480w,
-            {{srcset.md}} 800w,
-            {{srcset.lg}} 800w"
-    sizes="(max-width: 320px) 280px,
-           (max-width: 480px) 440px,
-           800px"
-    src="{{srcset.md}}"
-  /> --}}
-</div>
+</Ui::IsCurrentlyVisible>
 
 <div class="project-link__body">
   <LinkTo

@@ -39,13 +39,13 @@
     {{!-- Image Grid --}}
     {{#if (does-equal bodyContent.type "imageGrid")}}
       <figure class={{bem "project-content__body-section" mediaWidth=true}}>
-        <Ui::isCurrentlyVisible as |isCurrentlyVisible|>
+        <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
           <Project::Content::ImageGrid
             @isCurrentlyVisible={{isCurrentlyVisible}}
             @colCount={{bodyContent.colCount}}
             @media={{bodyContent.content}}
           />
-        </Ui::isCurrentlyVisible>
+        </Ui::IsCurrentlyVisible>
       </figure>
     {{/if}}
 

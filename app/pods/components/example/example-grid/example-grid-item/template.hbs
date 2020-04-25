@@ -1,20 +1,11 @@
 <a class="example-grid-item" href={{@example.url}} target="_blank" rel="noopener noreferrer">
   <div class="example-grid-item__background">
-    <img
-      class="example-grid-item__background-image"
-      alt=""
-      src={{this.randomisedBackgroundSrcSet.md.src}}
-      srcSet={{this.randomisedBackgroundSrcSet}}
-      sizes={{this.randomisedBackgroundSizes}}
-    />
-
     <Ui::LazyImage
       class="example-grid-item__background-image"
-      @isCurrentlyVisible={{true}}
-      @alt=""
-      src={{this.randomisedBackgroundSrcSet.md.src}}
-      srcSet={{this.randomisedBackgroundSrcSet}}
-      sizes={{this.randomisedBackgroundSizes}}
+      @isCurrentlyVisible={{isCurrentlyVisible}}
+      @shouldImageCover={{true}}
+      @sizes={{this.randomisedBackgroundSizes}}
+      @srcSet={{this.randomisedBackgroundSrcSet}}
     />
   </div>
 
