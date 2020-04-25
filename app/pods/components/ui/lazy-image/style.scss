@@ -3,12 +3,21 @@
   display: block;
   width: 100%;
 
+  &--image-cover {
+    height: 100%;
+  }
+
   &__placeholder,
   &__main {
     display: block;
     width: 100%;
     max-width: 100%;
     object-fit: cover;
+
+    &--should-image-cover {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__placeholder {
