@@ -75,7 +75,7 @@ export default Component.extend({
     const placeholderSrc = srcSet?.pl?.src || '';
     const mainSrc = srcSet?.md?.src || srcMainObj[0]?.src || '';
     const mainSrcSet = this.stringifySrc(srcMainObj);
-    const mainSizes = `${get(this, 'sizes')}, 100w`.replace(/^, /g, '');
+    const mainSizes = `${get(this, 'sizes')}, 100w`.replace(/^, /g, '').replace(/, 100w, 100w$/g, ', 100w');
 
     set(this, 'placeholderSrc', placeholderSrc);
     set(this, 'offsetSrc', mainSrc);

@@ -163,10 +163,11 @@ $media-xl: "xl";
     }
   }
 
-  ul, ol {
+  ul, ol,
+  ul[class], ol[class] {
     margin-right: 0;
     margin-left: 0;
-    padding-left: 1em;
+    padding-left: 1.45em;
     padding-right: 0;
     columns: 2 300px;
 
