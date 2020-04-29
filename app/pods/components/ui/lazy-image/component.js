@@ -7,11 +7,13 @@ export default Component.extend({
   classNameBindings: ['shouldImageCover:lazy-image--image-cover:lazy-image--image-default'],
   
   alt: '',
-  srcSet: '',
+  role: '',
+  srcSet: null,
   sizes: '',
-  isCurrentlyVisible: false,
+  isCurrentlyVisible: true,
   shouldImageCover: false,
 
+  forceCurrentlyVisible: false,
   hasLoaded: false,
   hasPlaceholder: false,
   hasErroredPlaceholder: false,
@@ -31,6 +33,7 @@ export default Component.extend({
     this._super();
     
     this.bindEvents();
+    this.checkPlaceholderExists();
   },
   
   willDestroyElement() {
@@ -64,7 +67,7 @@ export default Component.extend({
     }
     
     if (lazyImagePlaceholder) {
-      lazyImagePlaceholder.removeEventListener('error', this._setPlaceholderError);
+      lazyImagePlaceholder.removeEventListener('error', this.setPlaceholderError);
     }
   },
 
@@ -91,14 +94,26 @@ export default Component.extend({
     )).join(', ').trim();
   },
 
+  checkPlaceholderExists() {
+    if (!get(this, 'hasPlaceholder')) {
+      this.setForceCurrentlyVisible();
+    }
+  },
+  
+  setForceCurrentlyVisible() {
+    set(this, 'forceCurrentlyVisible', true);
+  },
+  
   setStateHasLoaded() {
     set(this, 'hasLoaded', true);
-
+    
     this.unbindEvents();
   },
-
+  
   setPlaceholderError() {
     set(this, 'hasErroredPlaceholder', true);
     set(this, 'hasPlaceholder', false);
+
+    this.setForceCurrentlyVisible();
   },
 });

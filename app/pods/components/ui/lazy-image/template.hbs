@@ -1,14 +1,15 @@
-{{#if this.placeholderSrc}}
+{{#if (and this.placeholderSrc (not this.hasErroredPlaceholder))}}
   <img
     alt=""
     class="
       js__lazy-placeholder
       {{bem
         "lazy-image__placeholder"
-        placeholderError=hasErroredPlaceholder
-        shouldImageCover=shouldImageCover
+        placeholderError=@hasErroredPlaceholder
+        shouldImageCover=@shouldImageCover
       }}
     "
+    role="presentation"
     src={{this.placeholderSrc}}
   />
 {{/if}}
@@ -20,13 +21,13 @@
     js__lazy-main
     {{bem
       "lazy-image__main"
-      loaded=hasLoaded
-      hasPlaceholder=hasPlaceholder
-      shouldImageCover=shouldImageCover
+      loaded=this.hasLoaded
+      hasPlaceholder=this.hasPlaceholder
+      shouldImageCover=@shouldImageCover
     }}
   "
-  src={{if this.isCurrentlyVisible this.offsetSrc ''}}
-  srcset={{if this.isCurrentlyVisible this.offsetSrcSet ''}}
-  sizes={{if this.isCurrentlyVisible this.offsetSizes ''}}
-/>
+  role={{@role}}
+  src={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSrc ''}}
+  srcset={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSrcSet ''}}
+  sizes={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSizes ''}}
 />
