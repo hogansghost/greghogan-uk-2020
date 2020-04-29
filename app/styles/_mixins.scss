@@ -1,9 +1,10 @@
 /**
 * Media width mixins, standard screen and min-width.
-* @size: $media-sm | $media-md | $media-lg | $media-xl
+* @size: $media-xs | $media-sm | $media-md | $media-lg | $media-xl
 *
 */
 
+$media-xs: "xs";
 $media-sm: "sm";
 $media-md: "md";
 $media-lg: "lg";
@@ -16,16 +17,20 @@ $media-xl: "xl";
     $mediaWidthRule: max-width;
   }
 
-  @if $size == $media-sm {
-    @media screen and ($mediaWidthRule:$media-width-sm) {
+  @if $size == $media-xs {
+    @media screen and ($mediaWidthRule:$media-width-xs-max) {
+      @content;
+    }
+  } @else if $size == $media-sm {
+    @media screen and ($mediaWidthRule:$media-width-sm-max) {
       @content;
     }
   } @else if $size == $media-md {
-    @media screen and ($mediaWidthRule:$media-width-md - 1) {
+    @media screen and ($mediaWidthRule:$media-width-md-max) {
       @content;
     }
   } @else if $size == $media-lg {
-    @media screen and ($mediaWidthRule:$media-width-lg - 1) {
+    @media screen and ($mediaWidthRule:$media-width-lg-max) {
       @content;
     }
   } @else if $size == $media-xl {
@@ -52,6 +57,11 @@ $media-xl: "xl";
   }
 }
 
+@mixin link-decoration-active-state {
+  border-bottom-color: $color-primary;
+  background-size: 100% 2px;
+}
+
 @mixin link-decoration {
   position: relative;
   display: inline-block;
@@ -73,8 +83,7 @@ $media-xl: "xl";
 
   &:hover,
   &:focus {
-    border-bottom-color: $color-primary;
-    background-size: 100% 2px;
+    @include link-decoration-active-state;
   }
 }
 
@@ -88,6 +97,10 @@ $media-xl: "xl";
 // Copy - light colour formatting
 @mixin copy-color-light {
   opacity: 0.7;
+}
+
+@mixin copy-size-small {
+  font-size: 0.75em;
 }
 
 
@@ -163,8 +176,7 @@ $media-xl: "xl";
     }
   }
 
-  ul, ol,
-  ul[class], ol[class] {
+  ul:not([class]), ol:not([class]) {
     margin-right: 0;
     margin-left: 0;
     padding-left: 1.45em;
@@ -172,7 +184,7 @@ $media-xl: "xl";
     columns: 2 300px;
 
     li {
-      padding-right: 30px;
+      padding-right: $ui-content-padding-md;
       page-break-after: avoid;
       break-after: avoid;
       page-break-before: avoid;
@@ -180,6 +192,10 @@ $media-xl: "xl";
       page-break-inside: avoid;
       break-inside: avoid;
     }
+  }
+
+  a {
+    @include link-decoration;
   }
 }
 

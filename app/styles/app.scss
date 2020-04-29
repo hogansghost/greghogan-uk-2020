@@ -75,6 +75,11 @@ hr {
   }
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   letter-spacing: 0.2em;
@@ -146,5 +151,8 @@ ul[class], ol[class], figure {
 @import "app/pods/components/project/content/tech-grid/tech-grid-item/style";
 @import "app/pods/components/project/content/image-grid/style";
 @import "app/pods/components/project/content/image-grid/image-grid-item/style";
+@import "app/pods/components/project/content/image-grid-slanted/style";
+@import "app/pods/components/project/content/image-grid-slanted/image-grid-slanted-item/style";
 @import "app/pods/components/project/content/mockup-grid/style";
 @import "app/pods/components/project/content/mockup-grid/mockup-grid-item/style";
+@import "app/pods/components/project/footer/style";
