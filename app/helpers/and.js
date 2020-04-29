@@ -1,15 +1,7 @@
 import { helper } from '@ember/component/helper';
 
-export function and(params, hash) {
-  let currentStatus = true;
-
-  for (let i = 1; i < params.length; i++) {
-    if (!params[i]) {
-      currentStatus = false;
-    }
-  }
-
-  return currentStatus;
+export function and(params) {
+  return [...params].every((prop) => !!prop);
 }
 
 export default helper(and);
