@@ -297,9 +297,126 @@
               }
             ]
           }, {
-            "type": "imageGrid",
+            "type": "imageGridSlanted",
             "colCount": 2,
             "content": [
+              {
+                "alt": "One",
+                "srcSet": {
+                  "pl": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_pl.jpg",
+                    "width": ""
+                  },
+                  "xs": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_xs.jpg",
+                    "width": ""
+                  },
+                  "sm": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_sm.jpg",
+                    "width": ""
+                  },
+                  "md": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_md.jpg",
+                    "width": ""
+                  },
+                  "lg": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_lg.jpg",
+                    "width": ""
+                  },
+                  "xl": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_xl.jpg",
+                    "width": ""
+                  }
+                }
+              }, {
+                "alt": "Two",
+                "srcSet": {
+                  "pl": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_pl.jpg",
+                    "width": ""
+                  },
+                  "xs": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_xs.jpg",
+                    "width": ""
+                  },
+                  "sm": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_sm.jpg",
+                    "width": ""
+                  },
+                  "md": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_md.jpg",
+                    "width": ""
+                  },
+                  "lg": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_lg.jpg",
+                    "width": ""
+                  },
+                  "xl": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_xl.jpg",
+                    "width": ""
+                  }
+                }
+              }, {
+                "alt": "Three",
+                "srcSet": {
+                  "pl": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_pl.jpg",
+                    "width": ""
+                  },
+                  "xs": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_xs.jpg",
+                    "width": ""
+                  },
+                  "sm": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_sm.jpg",
+                    "width": ""
+                  },
+                  "md": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_md.jpg",
+                    "width": ""
+                  },
+                  "lg": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_lg.jpg",
+                    "width": ""
+                  },
+                  "xl": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_xl.jpg",
+                    "width": ""
+                  }
+                }
+              }, {
+                "alt": "Four",
+                "srcSet": {
+                  "pl": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_pl.jpg",
+                    "width": ""
+                  },
+                  "xs": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_xs.jpg",
+                    "width": ""
+                  },
+                  "sm": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_sm.jpg",
+                    "width": ""
+                  },
+                  "md": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_md.jpg",
+                    "width": ""
+                  },
+                  "lg": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_lg.jpg",
+                    "width": ""
+                  },
+                  "xl": {
+                    "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_xl.jpg",
+                    "width": ""
+                  }
+                }
+              },
+
+
+
+              
               {
                 "alt": "One",
                 "srcSet": {

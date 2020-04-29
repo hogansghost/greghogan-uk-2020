@@ -2,6 +2,7 @@
   "author": {
     "id": 1,
     "name": "Greg Hogan",
+    "copyright": "2018 - 2020",
     "role": "Front-end developer",
     "details": [
       {
@@ -12,6 +13,86 @@
         "label": "Not a Robot"
       }
     ],
+    "images": {
+      "author": {
+        "alt": "The developer, holding a beer stein.",
+        "role": "img",
+        "srcSet": {
+          "pl": {
+            "src": "/assets/images/four_thirsty_pl.jpg",
+            "width": "100w"
+          },
+          "xs": {
+            "src": "/assets/images/four_thirsty_xs.jpg",
+            "width": "200w"
+          },
+          "sm": {
+            "src": "/assets/images/four_thirsty_sm.jpg",
+            "width": "300w"
+          },
+          "md": {
+            "src": "/assets/images/four_thirsty_md.jpg",
+            "width": "400w"
+          },
+          "lg": {
+            "src": "/assets/images/four_thirsty_lg.jpg",
+            "width": "600w"
+          },
+          "xl": {
+            "src": "/assets/images/four_thirsty_xl.jpg",
+            "width": "700w"
+          }
+        },
+        "sizes": ""
+      },
+      "secondary": [
+        {
+          "alt": "",
+          "role": "presentation",
+          "srcSet": {
+            "pl": {
+              "src": "/assets/images/coffee_pl.jpg",
+              "width": ""
+            },
+            "sm": {
+              "src": "/assets/images/coffee_sm.jpg",
+              "width": ""
+            },
+            "md": {
+              "src": "/assets/images/coffee_md.jpg",
+              "width": ""
+            },
+            "lg": {
+              "src": "/assets/images/coffee_lg.jpg",
+              "width": ""
+            }
+          },
+          "sizes": ""
+        }, {
+          "alt": "",
+          "role": "presentation",
+          "srcSet": {
+            "pl": {
+              "src": "/assets/images/old_hogan_pl.jpg",
+              "width": ""
+            },
+            "sm": {
+              "src": "/assets/images/old_hogan_sm.jpg",
+              "width": ""
+            },
+            "md": {
+              "src": "/assets/images/old_hogan_md.jpg",
+              "width": ""
+            },
+            "lg": {
+              "src": "/assets/images/old_hogan_lg.jpg",
+              "width": ""
+            }
+          },
+          "sizes": ""
+        }
+      ]
+    },
     "subtitle": "A creative front-end developer with 5 years of professional experience based in London, enjoys following current trends and experimenting with future technologies of web development.",
     "description": [
       "I have worked extensively on building single page applications with the Ember.js framework over the last few years, creating simplistic as well as more complex websites, the most recent example of which is the Movidiam platform spanning over 17K users Worldwide, where I was the senior front-end developer.",
@@ -23,6 +104,9 @@
     "contactDescription": [
       "Whoa, kudos for making it this far! Hopefully, you've just looked over this portfolio and thought to yourself, \"Hey, this wasn't half bad...\"",
       "If this sounds like you and you're looking to contact me, for any reason really but preferably in regards to employment, please use one of the methods below"
+    ],
+    "footerDescription": [
+      "If you're looking for a front-end developer that looks like a Hipster, drinks cheap instant coffee and likes craft beers (but knows nothing about them) then please, can contact me via one of the methods below..."
     ],
     "profileLinks": [
       {
