@@ -1,16 +1,16 @@
 <div class="example-grid">
   <div class="example-grid__inner">
-    {{#if heading}}
+    {{#if @heading}}
       <div class="example-grid__header">
-        <h2 class="example-grid__heading">{{heading}}</h2>
+        <h2 class="example-grid__heading">{{@heading}}</h2>
       </div>
     {{/if}}
 
     <Ui::IsCurrentlyVisible class="example-grid__body" as |isCurrentlyVisible|>
       <div class="example-grid__body-content">
-        {{#each examples as |example|}}
+        {{#each @examples as |example|}}
           <Example::ExampleGrid::ExampleGridItem
-            @example={{example}}
+            @example={{@example}}
             @isCurrentlyVisible={{isCurrentlyVisible}}
           />      
         {{/each}}
