@@ -52,4 +52,4 @@ export default function() {
     this.toRoute('project'),
     this.use('toProject'),
   );
-};
+}

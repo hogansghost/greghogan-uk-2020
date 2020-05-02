@@ -1,15 +1,11 @@
-<div class="mockup-grid__body">
+<Ui::IsCurrentlyVisible class="mockup-grid__body" as |isCurrentlyVisible|>
   {{#each media as |mediaItem|}}
     <div class="mockup-grid__item">
-      <div class="mockup-grid__item-inner">
-        <Ui::LazyImage
-          @isCurrentlyVisible={{true}}
-          @srcSet={{mediaItem.srcSet}}
-          @alt={{mediaItem.alt}}
-        />
-
-        <hr />
-      </div>
+      <Project::Content::MockupGrid::MockupGridItem
+        @alt={{mediaItem.alt}}
+        @isCurrentlyVisible={{isCurrentlyVisible}}
+        @srcSet={{mediaItem.srcSet}}
+      />
     </div>
   {{/each}}
-</div>
+</Ui::IsCurrentlyVisible>

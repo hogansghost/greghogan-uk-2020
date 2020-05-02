@@ -1,7 +1,4 @@
 .image-grid {
-  $_self: &;
-  $_tech-stack-duration: $ui-transition-duration-long;
-
   position: relative;
   color: inherit;
 
@@ -11,6 +8,8 @@
     align-items: stretch;
     justify-content: center;
     flex-flow: row wrap;
+    margin-right: -#{$ui-content-padding-xs};
+    margin-left: -#{$ui-content-padding-xs};
   }
 
   &__item {

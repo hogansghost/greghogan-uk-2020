@@ -13,7 +13,7 @@
 
   // Background image
   &__background {
-    opacity: 0.4;
+    opacity: 0.25;
     position: absolute;
     overflow: hidden;
     top: 0;
@@ -158,7 +158,7 @@
 
   &__body-divider {
     flex: 0 0 auto;
-    padding: 10vh 30px;
+    padding: 10vh $ui-content-padding-md;
   }
 
   &__body-links {

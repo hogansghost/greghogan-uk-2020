@@ -1,11 +1,4 @@
 .example-grid {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-
-  @include media($media-sm) {
-    overflow: hidden;
-  }
 
 
   // Inner content
@@ -32,7 +25,14 @@
   
   // Body
   &__body {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
     background-color: rgba($black, 0.95);
+  
+    @include media($media-sm) {
+      overflow: hidden;
+    }
   }
 
   &__body-content {

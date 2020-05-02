@@ -1,0 +1,62 @@
+.image-grid-slanted {
+  $_product-screen-grid: &;
+  $_product-screen-grid-gutter: 5%;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: #{$_product-screen-grid-gutter};
+  padding-left: #{$_product-screen-grid-gutter};
+  width: calc(1860px + #{$_product-screen-grid-gutter * 2});
+  max-width: 100%;
+  
+  
+  &__body {
+    position: relative;
+    margin: auto;
+    padding-top: 25%;
+    padding-bottom: 15%;
+    width: 500%;
+    transform: translateX(-30%);
+
+    @include media($media-sm) {
+      width: 275%;
+    }
+  }
+
+
+  &__row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    transform: rotateX(50deg) rotateY(0) rotateZ(45deg);
+    
+    $_translateXStart: 8.25;
+    $_translateXDiff: 0.35; // 0.75; // 4.75;
+    $_translateYStart: 26;
+    $_translateYDiff: 8.25; // 2.25;
+    
+    @for $nth-child from 2 through 15 {
+      &:nth-child(#{$nth-child}) {
+        transform: translate(#{($_translateXStart - ($_translateXDiff * ($nth-child - 1))) * -1 + '%'}, #{($_translateYStart + ($_translateYDiff * ($nth-child - 1))) * -1 + '%'}) rotateX(50deg) rotateY(0) rotateZ(45deg);
+      }
+    }
+  }
+
+  &__item {
+    align-items: stretch;
+    display: flex;
+    flex: 0 1 auto;
+    margin: 0;
+    padding: 15px;
+    position: relative;
+    width: 33.33%;
+
+    &::before {
+      content: '';
+      display: block;
+      flex: 0 0 auto;
+      width: 0;
+      padding-bottom: 56.9%;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+<div class="footer">
+  <div class="footer__inner">
+    <div class="footer__body">
+
+      <div class="footer__coffee">
+        <div class="footer__coffee-body">
+          <div class="footer__coffee-images">
+            <Ui::LazyImage
+              class={{bem "footer__coffee-image" main=true}}
+              @alt={{@author.images.author.alt}}
+              @role={{@author.images.author.role}}
+              @sizes={{@author.images.author.sizes}}
+              @srcSet={{@author.images.author.srcSet}}
+            />
+
+            {{#each @author.images.secondary as |secondaryImage|}}
+              <Ui::LazyImage
+                class={{bem "footer__coffee-image" secondary=true}}
+                @alt={{secondaryImage.alt}}
+                @role={{secondaryImage.role}}
+                @sizes={{secondaryImage.sizes}}
+                @srcSet={{secondaryImage.srcSet}}
+              />
+            {{/each}}
+          </div>
+
+          {{#if @author.footerDescription.length}}
+            {{#each @author.footerDescription as |paragraph|}}
+              <p class="footer__coffee-description">{{paragraph}}</p>
+            {{/each}}
+          {{/if}}
+        </div>
+      </div>
+
+
+      {{#if this.contactLinks.length}}
+      <div class="footer__links">
+        <ul class="footer__links-list">
+          {{#each this.contactLinks as |contactLink|}}
+            <li class="footer__links-list-item">
+              <span class="footer__links-list-item-icon {{contactLink.labelIconClass}}" />
+              <a 
+                class="footer__links-list-item-label"
+                href={{contactLink.href}}
+                target={{contactLink.target}}
+                rel="noreferrer"
+              >
+                {{contactLink.label}}
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/if}}
+    </div>
+
+    <div class="footer__footer">
+      <p class="footer__footer-copy">{{@author.name}} &copy; {{@author.copyright}}</p>
+    </div>
+  </div>
+</div>

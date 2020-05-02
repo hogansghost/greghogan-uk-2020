@@ -18,5 +18,9 @@ export default DS.Model.extend({
       return {};
     }
   }),
-  url: DS.attr('string'),
+  url: DS.attr({
+    defaultValue() {
+      return [];
+    }
+  }),
 });

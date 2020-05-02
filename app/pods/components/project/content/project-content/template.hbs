@@ -36,7 +36,7 @@
       </div>
     {{/if}}
 
-    {{!-- Image Grid --}}
+    {{!-- Image grid --}}
     {{#if (does-equal bodyContent.type "imageGrid")}}
       <figure class={{bem "project-content__body-section" mediaWidth=true}}>
         <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
@@ -49,9 +49,22 @@
       </figure>
     {{/if}}
 
-    {{!-- Image Grid --}}
-    {{#if (does-equal bodyContent.type "mockupGrid")}}
+    {{!-- Image grid slanted --}}
+    {{#if (does-equal bodyContent.type "imageGridSlanted")}}
       <figure class={{bem "project-content__body-section" mediaWidth=true}}>
+        <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
+          <Project::Content::ImageGridSlanted
+            @isCurrentlyVisible={{isCurrentlyVisible}}
+            @colCount={{bodyContent.colCount}}
+            @media={{bodyContent.content}}
+          />
+        </Ui::IsCurrentlyVisible>
+      </figure>
+    {{/if}}
+
+    {{!-- Mockup grid --}}
+    {{#if (does-equal bodyContent.type "mockupGrid")}}
+      <figure class={{bem "project-content__body-section" fullWidth=true}}>
 
           <Project::Content::MockupGrid
             @isCurrentlyVisible={{true}}

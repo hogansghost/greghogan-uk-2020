@@ -5,7 +5,6 @@ import { not } from '@ember/object/computed';
 
 export default Controller.extend({
   cookies: service(),
-  cookies: service(),
 
   shouldShowCookieBar: not('cookies.hasAcceptedAllCookies'),
 
@@ -25,5 +24,4 @@ export default Controller.extend({
   setCookieAcceptanceState() {
     set(this, 'cookies.hasAcceptedAllCookies', this.cookies.checkIfCookiesAccepted());
   },
-
 });

@@ -1,11 +1,11 @@
 <div class="project-details">
-  <p class={{bem "project-details__item" title="title"}}>{{projectTitle}}</p>
-
-  <p class={{bem "project-details__item" role="role"}}>{{projectRole}}</p>
+  <h2 class={{bem "project-details__item" role="role"}}>{{projectRole}}</h2>
 
   <p class={{bem "project-details__item" timeframe="timeframe"}}>{{projectTimeframe.start}} / {{projectTimeframe.end}}</p>
 
-  {{#each projectLink as |projectLink|}}
-    <p class={{bem "project-details__item" link="link"}}>{{projectLink}}</p>
-  {{/each}}
+  <div class="project-details__links">
+    {{#each projectLink as |projectLink|}}
+      <Ui::LinkExternal @href={{projectLink.href}}>{{projectLink.label}}</Ui::LinkExternal>
+    {{/each}}
+  </div>
 </div>

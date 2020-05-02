@@ -12,26 +12,35 @@ export const hyphenCase = (...strings) => {
     .toLowerCase();
 };
 
-export function bem(baseClass = '', modifierList = {}) {
-  // console.warn('F I X :: Bem util, tidy up and make the string utils file'); //eslint-disable-line no-console
-  const modifierClasses = Object.entries(modifierList).map((bemEntry) => {
-    const [
-      bemKey,
-      bemValue,
-    ] = bemEntry;
+export function bem(baseClass = '', modifierList) {
+  let modifierClasses = [];
 
-    let classNameString = '';
+  if (baseClass.length >= 2) {
+    let modifiers = baseClass.slice(1);
+    
+    modifiers.map((className) => {
+      modifierClasses.push(`${baseClass[0]}--${hyphenCase(className)}`);
+    });
+  } else {
+    modifierClasses = Object.entries(modifierList).map((bemEntry) => {
+      const [
+        bemKey,
+        bemValue,
+      ] = bemEntry;
 
-    if (![true, false, undefined].includes(bemValue)) {
-      classNameString = `${baseClass}--${hyphenCase(bemValue)}`;
-    } else if (bemValue === true) {
-      classNameString = `${baseClass}--${hyphenCase(bemKey)}`;
-    }
+      let classNameString = '';
 
-    return classNameString;
-  }).filter(Boolean).join(' ');
+      if (![true, false, undefined].includes(bemValue)) {
+        classNameString = `${baseClass}--${hyphenCase(bemValue)}`;
+      } else if (bemValue === true) {
+        classNameString = `${baseClass}--${hyphenCase(bemKey)}`;
+      }
 
-  return `${baseClass} ${modifierClasses}`.trim();
+      return classNameString;
+    });
+  }
+
+  return `${baseClass[0]} ${modifierClasses.filter(Boolean).join(' ')}`.trim();
 }
 
 export default helper(bem);

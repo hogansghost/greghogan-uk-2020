@@ -1,10 +1,12 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  projectLink: '',
+  projectLink: [],
   projectRole: '',
   projectTimeframe: '',
   projectTitle: '',
   projectVideo: null,
   projectVideoPlaceholder: null,
+  projectImageSrcSet: null,
+  projectImageSizes: '',
 });

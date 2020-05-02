@@ -5,4 +5,6 @@ export default Component.extend({
 
   gutterVertical: 'md',
   hasOverlap: false,
+  gutterVerticalTopOnly: false,
+  gutterVerticalBottomOnly: false,
 });

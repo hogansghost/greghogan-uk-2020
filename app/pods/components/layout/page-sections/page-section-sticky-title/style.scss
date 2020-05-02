@@ -36,7 +36,7 @@
 
   &__content {
     grid-area: left-column;
-    background-color: $color-backing-primary;
+    background-color: var(--color-backing-primary);
   }
 
   &__heading {

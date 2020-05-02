@@ -10,8 +10,19 @@
 
 // Color variables
 :root {
---color-primary: #e4012c; // $london-red: ; $color-primary;
---color-accent-primary: #282828; // $london-red: ; $color-primary;
+  --color-primary: #{$color-primary};
+  --color-accent-primary: #{$color-accent-primary};
+  --color-backing-primary: #{$color-backing-primary};
+  --color-backing-secondary: #{$color-backing-secondary};
+  --text-color: #{$text-color};
+  
+  @media (prefers-color-scheme: dark) {
+    // --color-primary: #{$color-primary-dark-mode};
+    // --color-accent-primary: #{$color-accent-primary-dark-mode};
+    // --color-backing-primary: #{$color-backing-primary-dark-mode};
+    // --color-backing-secondary: #{$color-backing-secondary-dark-mode};
+    // --text-color: #{$text-color-dark-mode};
+  }
 }
 
 // Base styling
@@ -21,13 +32,15 @@
 }
 
 html {
-  background-color: $color-backing-primary;
+  background-color: $white;
+  background-color: var(--color-backing-primary);
   font-family: $text-typeface;
   font-size: $text-font-size;
-  color: rgba($text-color, 0.87);
+  color: var(--text-color);
   line-height: $text-line-height;
   word-break: break-word;
   overflow-wrap: break-word;
+  transition: background-color #{$ui-transition-duration-medium};
 }
 
 hr {

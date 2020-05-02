@@ -1,17 +1,24 @@
 <div class="hero-video-banner">
   <div class="hero-video-banner__background">
-    {{#if projectVideo}}
-      <div class="hero-video-banner__background-video">
-        <Ui::Video
-          @videoPosterSrcSet={{projectVideoPlaceholder}}
-          @videoSrcSet={{projectVideo}}
+    {{#if projectImageSrcSet}}
+      <div class="hero-video-banner__background-image">
+        <Ui::LazyImage
+          @role="presentation"
+          @shouldImageCover={{true}}
+          @sizes={{projectImageSizes}}
+          @srcSet={{projectImageSrcSet}}
         />
       </div>
     {{/if}}
 
-    {{#each thumbnailSrcSet as |src|}}
-      <div class="hero-video-banner__background-image"></div>
-    {{/each}}
+    {{#if projectVideo}}
+      <div class="hero-video-banner__background-video">
+        <Ui::Video
+          @videoPosterSrcSet={{projectImageSrcSet.md.src}}
+          @videoSrcSet={{projectVideo}}
+        />
+      </div>
+    {{/if}}
   </div>
 
   <div class="hero-video-banner__decoration">
@@ -53,7 +60,7 @@
 
       <div class="hero-video-banner__footer-section">
         {{#each projectLink as |projectLink|}}
-          <Ui::LinkExternal @href={{projectLink}}>{{projectLink}}</Ui::LinkExternal>
+          <Ui::LinkExternal @href={{projectLink.href}}>{{projectLink.label}}</Ui::LinkExternal>
         {{/each}}
       </div>
     </div>

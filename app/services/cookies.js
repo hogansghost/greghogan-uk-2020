@@ -1,8 +1,7 @@
 import Service from '@ember/service';
-import { alias } from '@ember/object/computed';
 
 export default Service.extend({
-  readCookie(cookie, callback = f => f) {
+  readCookie(cookie) {
     return document.cookie.split(';').filter((item) => item.trim().startsWith(`${cookie}=`));
   },
 

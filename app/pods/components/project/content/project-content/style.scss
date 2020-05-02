@@ -13,22 +13,29 @@
     margin-right: auto;
     margin-left: auto;
     padding: $ui-content-padding-md;
-
     @include body-copy-formatting;
 
     &--media-width {
       width: $content-width-lg;
+
+      @include media($media-sm, max) {
+        padding-right: $ui-content-padding-sm;
+        padding-left: $ui-content-padding-sm;
+      }
     }
 
     &--readable-width {
-      width: $content-width-readable;
-      max-width: 80vw;
       padding-top: 0;
       padding-bottom: 0;
-
+      width: $content-width-readable;
+      
       & + :not(&) {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: $ui-content-padding-md;
+        padding-bottom: $ui-content-padding-md;
+      }
+      
+      @include media($media-sm) {
+        max-width: 80vw;
       }
     }
 

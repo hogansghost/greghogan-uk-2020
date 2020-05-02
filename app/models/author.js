@@ -34,6 +34,7 @@ export default DS.Model.extend({
     }
   }),
   role: DS.attr('string'),
+  subtitle: DS.attr('string'),
   skills: DS.attr({
     defaultValue() {
       return {};

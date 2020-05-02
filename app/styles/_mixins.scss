@@ -160,7 +160,7 @@ $media-xl: "xl";
   &[data-content-type="h4"],
   &[data-content-type="h5"],
   &[data-content-type="h6"] {
-    &:nth-child(n+2) {
+    &:nth-child(n+2):not(:empty) {
       margin-top: 3em;
     }
   }
@@ -176,10 +176,13 @@ $media-xl: "xl";
     }
   }
 
+  ul, ol {
+    padding-left: 1.15em;
+  }
+
   ul:not([class]), ol:not([class]) {
     margin-right: 0;
     margin-left: 0;
-    padding-left: 1.45em;
     padding-right: 0;
     columns: 2 300px;
 

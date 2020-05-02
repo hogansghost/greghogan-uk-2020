@@ -37,14 +37,24 @@
     }
   }
 
-  &__background-video {
+  &__background-video,
+  &__background-image {
     position: absolute;
-    top: 50%;
-    left: 50%;
     width: 100%;
     height: 100%;
+  }
+
+  &__background-image {
+    top: 0;
+    left: 0;
+  }
+  
+  &__background-video {
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
+    z-index: 1;
   }
 
 
@@ -56,7 +66,7 @@
     text-align: left;
     color: $white;
     padding: 25vh $ui-content-padding-md 15vh $ui-content-padding-md;
-    z-index: 1;
+    z-index: 2;
   }
 
 

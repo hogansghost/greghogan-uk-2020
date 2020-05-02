@@ -1,12 +1,22 @@
 <div class="about-me">
   <div class="about-me__inner">
     <div class="about-me__section">
-      <h1 class="about-me__name">{{author.name}}</h1>
+      <div class="about-me__author-image">
+        <Ui::LazyImage
+          class="about-me__author-image-base"
+          @alt={{@author.images.author.alt}}
+          @role={{@author.images.author.role}}
+          @sizes={{@author.images.author.sizes}}
+          @srcSet={{@author.images.author.srcSet}}
+        />
+      </div>
 
-      <h2 class="about-me__description-subtitle">{{author.subtitle}}</h2>
+      <h1 class="about-me__name">{{@author.name}}</h1>
+
+      <p class="about-me__description-subtitle">{{@author.subtitle}}</p>
 
       <div class="about-me__description">
-        {{#each author.description as |paragraph|}}
+        {{#each @author.description as |paragraph|}}
           <p>{{paragraph}}</p>
         {{/each}}
       </div>
@@ -15,40 +25,40 @@
     <div class="about-me__section">
       <div class="about-me__skills">
         <div class="about-me__skills-section">
-          <h3 class="about-me__skill-list-title">{{author.skills.technical.title}}</h3>
+          <h3 class="about-me__skill-list-title">{{@author.skills.technical.title}}</h3>
 
           <ul class="about-me__skill-list">
-            {{#each author.skills.technical.list as |technical|}}
+            {{#each @author.skills.technical.list as |technical|}}
               <li>{{technical.name}}</li>
             {{/each}}
           </ul>
         </div>
 
         <div class="about-me__skills-section">
-          <h3 class="about-me__skill-list-title">{{author.skills.graphicsSoftware.title}}</h3>
+          <h3 class="about-me__skill-list-title">{{@author.skills.graphicsSoftware.title}}</h3>
 
           <ul class="about-me__skill-list">
-            {{#each author.skills.graphicsSoftware.list as |graphicsSoftware|}}
+            {{#each @author.skills.graphicsSoftware.list as |graphicsSoftware|}}
               <li>{{graphicsSoftware.name}}</li>
             {{/each}}
           </ul>
         </div>
 
         <div class="about-me__skills-section">
-          <h3 class="about-me__skill-list-title">{{author.skills.sourceControl.title}}</h3>
+          <h3 class="about-me__skill-list-title">{{@author.skills.sourceControl.title}}</h3>
 
           <ul class="about-me__skill-list">
-            {{#each author.skills.sourceControl.list as |sourceControl|}}
+            {{#each @author.skills.sourceControl.list as |sourceControl|}}
               <li>{{sourceControl.name}}</li>
             {{/each}}
           </ul>
         </div>
 
         <div class="about-me__skills-section">
-          <h3 class="about-me__skill-list-title">{{author.skills.experience.title}}</h3>
+          <h3 class="about-me__skill-list-title">{{@author.skills.experience.title}}</h3>
 
           <ul class="about-me__skill-list">
-            {{#each author.skills.experience.list as |experience|}}
+            {{#each @author.skills.experience.list as |experience|}}
               <li>{{experience.name}}</li>
             {{/each}}
           </ul>

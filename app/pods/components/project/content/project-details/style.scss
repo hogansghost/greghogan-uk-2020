@@ -4,29 +4,30 @@
   margin: 0 auto;
   padding-right: $ui-content-padding-md;
   padding-left: $ui-content-padding-md;
-  font-size: 2.2em;
+  font-size: 1.8em;
+      
+  @include media($media-sm) {
+    max-width: 80vw;
+  }
   
   &__item {
     margin: 0;
     line-height: 1.3;
-    
-    &--title {
-      font-size: 0.9em;
-    }
+    font-size: 1em;
+    letter-spacing: normal;
 
     &--role {
-      font-size: 1em;
-      font-weight: 600;
+
     }
 
     &--timeframe {
       @include copy-color-light;
-      font-size: 0.7em;
+      font-size: 0.55em;
     }
-    
-    &--link {
-      @include copy-color-light;
-      font-size: 0.7em;
-    }
+  }
+  
+  &__links {
+    @include copy-color-light;
+    font-size: 0.55em;
   }
 }

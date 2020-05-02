@@ -1,11 +1,11 @@
 import Component from '@ember/component';
-import EmberObject, { computed, get } from '@ember/object';
+import { computed, get } from '@ember/object';
 
 export default Component.extend({
   tagName: '',
 
-  videoPosterSrcSet: EmberObject.create({}),
-  videoSrcSet: EmberObject.create({}),
+  videoPosterSrcSet: null,
+  videoSrcSet: null,
 
   videoSrcSetList: computed('videoSrcSet.[]', function() {
     const videoSrcSet = Object.entries(get(this, 'videoSrcSet'));
@@ -22,7 +22,7 @@ export default Component.extend({
         source,
         type: `video/${type}`,
       });
-    })
+    });
 
     return sourceList;
   }),

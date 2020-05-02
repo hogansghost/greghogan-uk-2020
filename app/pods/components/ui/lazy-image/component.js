@@ -7,7 +7,7 @@ export default Component.extend({
   classNameBindings: ['shouldImageCover:lazy-image--image-cover:lazy-image--image-default'],
   
   alt: '',
-  role: '',
+  role: 'img',
   srcSet: null,
   sizes: '',
   isCurrentlyVisible: true,
@@ -101,19 +101,25 @@ export default Component.extend({
   },
   
   setForceCurrentlyVisible() {
-    set(this, 'forceCurrentlyVisible', true);
+    if (this._state === 'inDOM') {
+      set(this, 'forceCurrentlyVisible', true);
+    }
   },
   
   setStateHasLoaded() {
-    set(this, 'hasLoaded', true);
+    if (this._state === 'inDOM') {
+      set(this, 'hasLoaded', true);
+    }
     
     this.unbindEvents();
   },
   
   setPlaceholderError() {
-    set(this, 'hasErroredPlaceholder', true);
-    set(this, 'hasPlaceholder', false);
+    if (this._state === 'inDOM') {
+      set(this, 'hasErroredPlaceholder', true);
+      set(this, 'hasPlaceholder', false);
 
-    this.setForceCurrentlyVisible();
+      this.setForceCurrentlyVisible();
+    }
   },
 });

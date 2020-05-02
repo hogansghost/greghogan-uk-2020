@@ -1,9 +1,9 @@
 <Layout::PageSections::PageWrapper @upperMargin={{true}}>
   <Layout::PageSections::PageWrapper::PageWrapperSection>
     <Layout::HeroBanner
-      @author={{model.author}}
-      @backgroundSrcSet={{model.project.firstObject.thumbnail.srcSet}}
-      @project={{model.project}}
+      @author={{@model.author}}
+      @backgroundSrcSet={{this.projectList.lastObject.thumbnail.srcSet}}
+      @project={{@model.project}}
     />
   </Layout::PageSections::PageWrapper::PageWrapperSection>
 
@@ -11,17 +11,17 @@
     @hasOverlap={{true}}
   >
     <AboutMe
-      @author={{model.author}}
+      @author={{@model.author}}
     />
   </Layout::PageSections::PageWrapper::PageWrapperSection>
 
 
   <Layout::PageSections::PageWrapper::PageWrapperSection
-    @gutterVertical="none"
+    @gutterVerticalTopOnly={{true}}
   >
     <Example::ExampleGrid
       @heading="Code and CSS snippets"
-      @examples={{model.example.codepen}}
+      @examples={{@model.example.codepen}}
     />
   </Layout::PageSections::PageWrapper::PageWrapperSection>
 
@@ -35,7 +35,7 @@
       @titleTheme="primary"
       @onEntryToViewport={{action "sendGoogleEvent" "message"}}
     >
-      {{#each projectList as |project|}}
+      {{#each this.projectList as |project|}}
         <Project::ProjectLink
           @srcSet={{project.thumbnail.srcSet}}
           @sizes={{project.thumbnail.sizes}}
@@ -53,8 +53,8 @@
       @titleTheme="secondary"
     >
       <ContactMe
-        @description={{model.author.contactDescription}}
-        @links={{model.author.profileLinks}}
+        @description={{@model.author.contactDescription}}
+        @links={{@model.author.profileLinks}}
       />
     </Layout::PageSections::PageSectionStickyTitle>
   </Layout::PageSections::PageWrapper::PageWrapperSection>

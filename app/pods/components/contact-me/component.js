@@ -8,8 +8,6 @@ export default Component.extend({
   links: [],
 
   contactLinks: computed('links', function() {
-    const contactLinks = get(this, 'links').filter((link) => link.type === 'personal');
-
-    return contactLinks;
+    return get(this, 'links').filter((link) => link.type === 'personal');
   }),
 });

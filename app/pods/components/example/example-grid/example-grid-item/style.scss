@@ -1,6 +1,6 @@
 .example-grid-item {
   $_self: &;
-
+  
   @include link-normalise;
   position: relative;
   display: block;
@@ -9,9 +9,9 @@
   background: rgba($black, 0.9);
   border-width: 1px 1px 0 0;
   border-style: solid;
-  border-color: rgba($white, 0.2); // #9c27b0;
+  border-color: rgba($white, 0.2);
   scroll-snap-align: start;
-  color: $white;
+  color: $white !important;
   
   @include media($media-sm, max) {
     &:last-child {
@@ -55,9 +55,9 @@
     text-align: center;
     padding: $ui-content-padding-md;
     position: relative;
-    color: $white;
     @include heading-formatting;
     z-index: 1;
+    color: inherit;
 
     &::before {
       content: '';
@@ -81,9 +81,25 @@
 
       #{$_self}:focus &,
       #{$_self}:hover & {
-        border-bottom-color: $color-primary;
-        background-size: 100% 2px;
+        @include link-decoration-active-state;
       }
+    }
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    @extend .fa-link-external;
+    opacity: 0.6;
+    color: inherit;
+    z-index: 1;
+    font-size: 0.8em;
+
+    &::before {
+      display: block;
+      font-size: 0.9em;
     }
   }
 }

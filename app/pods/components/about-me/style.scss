@@ -5,6 +5,7 @@
     width: $content-width-readable;
     max-width: 100%;
     padding: $ui-content-padding-lg $ui-content-padding-md;
+    padding: 0 $ui-content-padding-md;
     margin: 0 auto;
   }
 
@@ -14,17 +15,41 @@
     }
   }
 
-
   // Name and description
   &__name {
-
+    margin: 0 !important;
   }
 
   &__description-subtitle {
     @include copy-color-light;
+    font-size: 1.35em;
   }
 
   &__description {
+    margin-top: 2em;
+  }
+
+
+
+  // Author image
+  &__author-image {
+    width: 220px;
+    margin: $ui-content-padding-sm auto $ui-content-padding-lg auto;
+    overflow: hidden;
+    border-radius: 50%;
+    transform: rotate(7deg);
+    border: 4px solid $white;
+    box-shadow: 0px 1px 5px rgba($black, 0.2), 0px 4px 15px -5px rgba($black, 0.2);
+    
+    @include media($media-sm) {
+      float: right;
+      margin: $ui-content-padding-md;
+    }
+  }
+  
+  &__author-image-base {
+    overflow: hidden;
+    border-radius: inherit;
   }
 
 

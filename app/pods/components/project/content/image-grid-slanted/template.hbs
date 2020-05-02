@@ -1,0 +1,15 @@
+<div class="image-grid-slanted__body">
+  {{#each mediaRowList as |mediaRow|}}
+    <div class="image-grid-slanted__row">
+      {{#each mediaRow as |mediaItem|}}
+        <div class="image-grid-slanted__item">
+          <Project::Content::ImageGridSlanted::ImageGridSlantedItem
+            @alt={{mediaItem.alt}}
+            @role={{role}}
+            @srcSet={{mediaItem.srcSet}}
+          />
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
+</div>

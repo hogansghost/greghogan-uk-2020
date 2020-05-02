@@ -6,6 +6,7 @@
 $text-typeface-fallback: "Helvetica", "Arial", sans-serif;
 $text-typeface: "Avenir LT Std 45 Book", $text-typeface-fallback;
 $text-color: rgba($black, 0.65);
+$text-color-dark-mode: rgba(255,255,255, 0.65);
 $text-font-size: 16px;
 $text-line-height: 1.4;
 
@@ -18,14 +19,27 @@ $text-line-height: 1.4;
  */
 
 $color-backing-primary: $white;
+$color-backing-primary-dark-mode: $cod-gray;
+
 $color-backing-secondary: #fafafa;
-$color-primary: $london-red; // #00CC99; // $rusty-red;
-$color-secondary: $bright-turquoise; //$deep-carmine;
+$color-backing-secondary-dark-mode: $black;
+
+$color-primary: $london-red;
+$color-primary-dark-mode: mix($black, $london-red, 70%);
+
+$color-secondary: $bright-turquoise;
+$color-secondary-dark-mode: $bright-turquoise;
+
 $color-tirtiary: $acajou;
+
 $color-accent-primary: $charleston-green;
+$color-accent-primary-dark-mode: mix($black, $charleston-green, 70%);
+
 $color-accent-secondary: $smoky-black;
+$color-accent-secondary-dark-mode: $smoky-black;
 
 $color-image-background: #d7d6e0;
+$color-image-background-dark-mode: #d7d6e0;
 
 $ui-color-success: $bright-turquoise;
 

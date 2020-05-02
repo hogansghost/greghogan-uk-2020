@@ -1,6 +1,5 @@
 import Component from '@ember/component';
-import { equal } from '@ember/object/computed';
-import EmberObject, { get, computed, observer, set } from '@ember/object';
+import { get, set } from '@ember/object';
 import { next } from '@ember/runloop';
 import { inject as service } from '@ember/service';
 

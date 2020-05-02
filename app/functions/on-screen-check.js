@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 export function onScreenCheck(element, offsetAmount = 0.9) {
   const windowHeight  = window && window.innerHeight || 0;
 
@@ -30,4 +31,4 @@ export function onScreenCheck(element, offsetAmount = 0.9) {
   }
 
   return onscreenCurrently;
-};
+}

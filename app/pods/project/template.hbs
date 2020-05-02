@@ -3,25 +3,24 @@
 <Layout::PageSections::PageWrapper @upperMargin={{true}}>
   <Layout::PageSections::PageWrapper::PageWrapperSection>
     <Project::HeroVideoBanner
-      @projectLink={{model.url}}
-      @projectRole={{model.role}}
-      @projectTimeframe={{model.timeframe}}
-      @projectTitle={{model.name}}
-      @projectVideo={{model.projectContents.projectVideo.videoSrcSet}}
-      @projectVideoPlaceholder={{model.projectContents.projectVideo.thumbnailSrcSet}}
+      @projectLink={{@model.project.url}}
+      @projectRole={{@model.project.role}}
+      @projectTimeframe={{@model.project.timeframe}}
+      @projectTitle={{@model.project.name}}
+      @projectImageSrcSet={{@model.project.projectContents.projectVideo.thumbnailSrcSet}}
+      @projectImageSizes={{@model.project.projectContents.projectVideo.thumbnailSizes}}
+      @projectVideo={{@model.project.projectContents.projectVideo.videoSrcSet}}
+      @projectVideoPlaceholder={{@model.project.projectContents.projectVideo.thumbnailSrcSet}}
     />
   </Layout::PageSections::PageWrapper::PageWrapperSection>
 
   <Layout::PageSections::PageWrapper::PageWrapperSection @hasOverlap={{true}}>
-    <Project::Content::ProjectDetails
-      @projectLink={{model.url}}
-      @projectRole={{model.role}}
-      @projectTimeframe={{model.timeframe}}
-      @projectTitle={{model.name}}
-    />
+    <Project::Content::ProjectContent @content={{@model.project.projectContents}} />
   </Layout::PageSections::PageWrapper::PageWrapperSection>
 
   <Layout::PageSections::PageWrapper::PageWrapperSection>
-    <Project::Content::ProjectContent @content={{model.projectContents}} />
+    <Project::Footer
+      @author={{@model.author}}
+    />
   </Layout::PageSections::PageWrapper::PageWrapperSection>
 </Layout::PageSections::PageWrapper>
