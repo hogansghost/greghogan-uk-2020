@@ -1,21 +1,21 @@
 <div class="hero-video-banner">
   <div class="hero-video-banner__background">
-    {{#if projectImageSrcSet}}
+    {{#if @projectImageSrcSet}}
       <div class="hero-video-banner__background-image">
         <Ui::LazyImage
           @role="presentation"
           @shouldImageCover={{true}}
-          @sizes={{projectImageSizes}}
-          @srcSet={{projectImageSrcSet}}
+          @sizes={{@projectImageSizes}}
+          @srcSet={{@projectImageSrcSet}}
         />
       </div>
     {{/if}}
 
-    {{#if projectVideo}}
+    {{#if @projectVideo}}
       <div class="hero-video-banner__background-video">
         <Ui::Video
-          @videoPosterSrcSet={{projectImageSrcSet.md.src}}
-          @videoSrcSet={{projectVideo}}
+          @videoPosterSrcSet={{@projectImageSrcSet.md.src}}
+          @videoSrcSet={{@projectVideo}}
         />
       </div>
     {{/if}}
@@ -27,18 +27,18 @@
 
   <div class="hero-video-banner__content">
     <div class="hero-video-banner__details">
-      {{#if projectTimeframe}}
+      {{#if @projectTimeframe}}
         <h2 class="hero-video-banner__details-timeframe">
-          {{#if projectTimeframe.start}}
-            <span class="hero-video-banner__details-timeframe-start">{{projectTimeframe.start}}</span>
+          {{#if @projectTimeframe.start}}
+            <span class="hero-video-banner__details-timeframe-start">{{@projectTimeframe.start}}</span>
           {{/if}}
 
-          {{#if (and projectTimeframe.start projectTimeframe.end)}}
+          {{#if (and @projectTimeframe.start @projectTimeframe.end)}}
             <span class="hero-video-banner__details-timeframe-divider">to</span>
           {{/if}}
 
-          {{#if projectTimeframe.end}}
-            <span class="hero-video-banner__details-timeframe-end">{{projectTimeframe.end}}</span>
+          {{#if @projectTimeframe.end}}
+            <span class="hero-video-banner__details-timeframe-end">{{@projectTimeframe.end}}</span>
           {{/if}}
         </h2>
 
@@ -46,21 +46,21 @@
       {{/if}}
 
       <div class="hero-video-banner__details-content">
-        <h1 class="hero-video-banner__details-title">{{projectTitle}}</h1>
-        <h2 class="hero-video-banner__details-sub-title">{{projectRole}}</h2>
+        <h1 class="hero-video-banner__details-title">{{@projectTitle}}</h1>
+        <h2 class="hero-video-banner__details-sub-title">{{@projectRole}}</h2>
       </div>
     </div>
   </div>
 
-  {{#if projectLink}}
+  {{#if @projectLink}}
     <div class="hero-video-banner__footer">
       <div class="hero-video-banner__footer-section">
         <hr />
       </div>
 
       <div class="hero-video-banner__footer-section">
-        {{#each projectLink as |projectLink|}}
-          <Ui::LinkExternal @href={{projectLink.href}}>{{projectLink.label}}</Ui::LinkExternal>
+        {{#each @projectLink as |projectLink|}}
+          <Ui::LinkExternal @href={{@projectLink.href}}>{{@projectLink.label}}</Ui::LinkExternal>
         {{/each}}
       </div>
     </div>

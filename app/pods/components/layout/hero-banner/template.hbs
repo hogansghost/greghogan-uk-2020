@@ -6,7 +6,7 @@
         @alt=""
         @isCurrentlyVisible={{true}}
         @shouldImageCover={{true}}
-        @srcSet={{backgroundSrcSet}}
+        @srcSet={{@backgroundSrcSet}}
       />
     </div>
 
@@ -14,14 +14,14 @@
     <div class="hero-banner__header">
       <div class="hero-banner__header-inner">
         <div class="hero-banner__header-inner-section">
-          <h2 class="hero-banner__author-role">{{author.role}}</h2>
-          <h1 class="hero-banner__author-name">{{author.name}}</h1>
+          <h2 class="hero-banner__author-role">{{@author.role}}</h2>
+          <h1 class="hero-banner__author-name">{{@author.name}}</h1>
         </div>
         
-        {{#if author.details.length}}
+        {{#if @author.details.length}}
         <div class="hero-banner__header-inner-section">
           <div class="hero-banner__author-detail">
-            {{#each author.details as |authorDetail|}}
+            {{#each @author.details as |authorDetail|}}
               <h3 class="hero-banner__author-detail-item">
                 {{#if authorDetail.iconClass}}
                   <span class="hero-banner__author-detail-item-icon {{authorDetail.iconClass}}" />
@@ -44,7 +44,7 @@
 
         <div class="hero-banner__body-links">
           <ul class="hero-banner__profile-links">
-            {{#each author.profileLinks as |profileLink|}}
+            {{#each @author.profileLinks as |profileLink|}}
               <li class="hero-banner__profile-links-item">
                 <a
                   href={{profileLink.href}}
