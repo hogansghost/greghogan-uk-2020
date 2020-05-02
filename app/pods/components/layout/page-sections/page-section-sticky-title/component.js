@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { get, set } from '@ember/object';
+import { set } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { throttle } from '@ember/runloop';
 
@@ -18,7 +18,7 @@ export default Component.extend({
   hasEnteredView: false,
   isTitleFirst: equal('titlePosition', 'left'),
 
-  onEntryToViewport: (f) => console.log('original'),
+  onEntryToViewport: (message) => console.log(`original ${message}`), //eslint-disable-line no-console
   
   didInsertElement() {
     this._super(...arguments);

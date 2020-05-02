@@ -1,20 +1,20 @@
 <div
   data-analytics-name={{analyticsLogName}}
   class={{bem "page-section-sticky-title__inner"
-    isSticky=isSticky
-    isTitleFirst=isTitleFirst
-    titleTheme=(concat 'theme-' titleTheme)
+    isSticky=@isSticky
+    isTitleFirst=@isTitleFirst
+    titleTheme=(concat 'theme-' @titleTheme)
   }}
 >
   <div
     class={{bem "js__page-section-sticky-title__heading page-section-sticky-title__heading"
-      isTitleFirst=isTitleFirst
-      stateFixed=stateFixed
-      stateEnd=stateEnd
+      isTitleFirst=@isTitleFirst
+      stateFixed=this.stateFixed
+      stateEnd=this.stateEnd
     }}
   >
     <div class="page-section-sticky-title__heading-content-width">
-      <h3 class="page-section-sticky-title__heading-title">{{title}}</h3>
+      <h3 class="page-section-sticky-title__heading-title">{{@title}}</h3>
     </div>
   </div>
 
