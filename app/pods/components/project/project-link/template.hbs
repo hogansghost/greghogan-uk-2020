@@ -4,8 +4,8 @@
     @alt=""
     @isCurrentlyVisible={{isCurrentlyVisible}}
     @shouldImageCover={{true}}
-    @srcSet={{srcSet}}
-    @sizes={{sizes}}
+    @srcSet={{@srcSet}}
+    @sizes={{@sizes}}
   />
 </Ui::IsCurrentlyVisible>
 
@@ -13,24 +13,24 @@
   <LinkTo
     class="project-link__body-content-main"
     @route="project"
-    @model={{id}}
+    @model={{@id}}
   >
     <div class="project-link__card">
       <div class="project-link__card-inner">
         <div class="project-link__card-content">
-          <h3 class="project-link__card-content-name">{{name}}</h3>
+          <h3 class="project-link__card-content-name">{{@name}}</h3>
           <hr class="project-link__card-content-spacer" />
-          <p class="project-link__card-content-role">{{role}}</p>
+          <p class="project-link__card-content-role">{{@role}}</p>
         </div>
       </div>
     </div>
   </LinkTo>
 
-  {{#if url.length}}
+  {{#if @url.length}}
     <div class="project-link__body-content-footer">
       <div class="project-link__body-content-footer-inner">
-        {{#each url as |url|}}
-          <Ui::LinkExternal @href={{url.href}}>{{url.label}}</Ui::LinkExternal>
+        {{#each @url as |url|}}
+          <Ui::LinkExternal @href={{@url.href}}>{{@url.label}}</Ui::LinkExternal>
         {{/each}}
       </div>
     </div>
