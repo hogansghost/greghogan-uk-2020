@@ -1,6 +1,6 @@
 <div class="contact-me">
   <div class="contact-me__inner">
-    {{#if @description.length}}
+    {{#if @description}}
       {{#each @description as |paragraph|}}
         <p class="contact-me__description">{{paragraph}}</p>
       {{/each}}
@@ -10,7 +10,7 @@
       <hr />
     {{/if}}
 
-    {{#if @contactLinks.length}}
+    {{#if @contactLinks}}
       <ul class="contact-me__link-list">
         {{#each @contactLinks as |link|}}
           <li class="contact-me__link-list-item">

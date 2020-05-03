@@ -1,11 +1,11 @@
 <div class="tech-grid__inner">
   <div class="tech-grid__header">
-    <h2 class="tech-grid__header-title">Tech stack</h2>
+    <h2 class="tech-grid__header-title">{{@title}}</h2>
   </div>
 
   <div class="tech-grid__body">
     <ul class="tech-grid__list">
-      {{#each technology as |tech|}}
+      {{#each @technology as |tech|}}
         <Ui::IsCurrentlyVisible class="tech-grid__list-item" as |isCurrentlyVisible|>
           <Project::Content::TechGrid::TechGridItem
             @isCurrentlyVisible={{isCurrentlyVisible}}

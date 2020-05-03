@@ -4,5 +4,5 @@ export default Component.extend({
   tagName: '',
 
   heading: '',
-  examples: [],
+  examples: null,
 });

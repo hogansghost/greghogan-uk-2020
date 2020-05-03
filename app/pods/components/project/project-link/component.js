@@ -1,12 +1,12 @@
 import Component from '@ember/component';
-import Onscreen from 'greghogan-uk-2020/mixins/onscreen';
 
-export default Component.extend(Onscreen, {
+export default Component.extend({
   tagName: 'article',
   classNames: ['project-link'],
-  classNameBindings: ['isOnscreen:project-link--visible:project-link--hidden'],
+  classNameBindings: ['isCurrentlyVisible:project-link--visible:project-link--hidden'],
   
   id: '',
+  isCurrentlyVisible: false,
   name: '',
   role: '',
   srcSet: null,

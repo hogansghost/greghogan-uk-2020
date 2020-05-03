@@ -4,10 +4,12 @@ import { computed, get } from '@ember/object';
 export default Component.extend({
   tagName: '',
 
-  description: [],
-  links: [],
+  description: null,
+  links: null,
 
   contactLinks: computed('links', function() {
-    return get(this, 'links').filter((link) => link.type === 'personal');
+    const links = get(this, 'links') || [];
+
+    return links.filter((link) => link.type === 'personal');
   }),
 });

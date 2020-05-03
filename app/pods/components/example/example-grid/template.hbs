@@ -6,15 +6,17 @@
       </div>
     {{/if}}
 
-    <Ui::IsCurrentlyVisible class="example-grid__body" as |isCurrentlyVisible|>
-      <div class="example-grid__body-content">
-        {{#each @examples as |example|}}
-          <Example::ExampleGrid::ExampleGridItem
-            @example={{example}}
-            @isCurrentlyVisible={{isCurrentlyVisible}}
-          />      
-        {{/each}}
-      </div>
-    </Ui::IsCurrentlyVisible>
+    {{#if @examples}}
+      <Ui::IsCurrentlyVisible class="example-grid__body" as |isCurrentlyVisible|>
+        <div class="example-grid__body-content">
+          {{#each @examples as |example|}}
+            <Example::ExampleGrid::ExampleGridItem
+              @example={{example}}
+              @isCurrentlyVisible={{isCurrentlyVisible}}
+            />      
+          {{/each}}
+        </div>
+      </Ui::IsCurrentlyVisible>
+    {{/if}}
   </div>
 </div>

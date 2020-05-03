@@ -1,6 +1,6 @@
 import { helper } from '@ember/component/helper';
 
-export function or(params, hash) {
+export function or(params) {
   return [...params].some((prop) => !!prop);
 }
 

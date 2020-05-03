@@ -30,7 +30,7 @@
     <div class="project-link__body-content-footer">
       <div class="project-link__body-content-footer-inner">
         {{#each @url as |url|}}
-          <Ui::LinkExternal @href={{@url.href}}>{{@url.label}}</Ui::LinkExternal>
+          <Ui::LinkExternal @href={{url.href}}>{{url.label}}</Ui::LinkExternal>
         {{/each}}
       </div>
     </div>

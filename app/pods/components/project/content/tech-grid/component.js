@@ -5,4 +5,5 @@ export default Component.extend({
   classNames: ['tech-grid'],
 
   technology: null,
+  title: 'Tech stack',
 });

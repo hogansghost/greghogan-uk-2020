@@ -3,9 +3,11 @@
 
   <p class={{bem "project-details__item" timeframe="timeframe"}}>{{@projectTimeframe.start}} / {{@projectTimeframe.end}}</p>
 
-  <div class="project-details__links">
-    {{#each @projectLink as |projectLink|}}
-      <Ui::LinkExternal @href={{projectLink.href}}>{{projectLink.label}}</Ui::LinkExternal>
-    {{/each}}
-  </div>
+  {{#if @projectLink}}
+    <div class="project-details__links">
+      {{#each @projectLink as |projectLink|}}
+        <Ui::LinkExternal @href={{projectLink.href}}>{{projectLink.label}}</Ui::LinkExternal>
+      {{/each}}
+    </div>
+  {{/if}}
 </div>
