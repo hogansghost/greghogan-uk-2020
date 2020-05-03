@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { set } from '@ember/object';
+import { computed, get, set } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { throttle } from '@ember/runloop';
 
@@ -17,6 +17,12 @@ export default Component.extend({
   titleTheme: 'primary',
   hasEnteredView: false,
   isTitleFirst: equal('titlePosition', 'left'),
+
+  bemTitleTheme: computed('titleTheme', function() {
+    const titleTheme = get(this, 'titleTheme');
+
+    return `theme-${titleTheme}`;
+  }),
 
   onEntryToViewport: (message) => console.log(`original ${message}`), //eslint-disable-line no-console
   

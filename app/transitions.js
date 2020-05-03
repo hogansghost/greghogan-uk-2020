@@ -39,9 +39,9 @@ window.defaultTransitionDuration = 550;
 window.currentTransitionDuration = window.defaultTransitionDuration
 
 export default function() {
-  this.transition(
-    this.use('toProject'),
-  );
+  // this.transition(
+  //   this.use('toProject'),
+  // );
 
   this.transition(
     this.toRoute('home'),

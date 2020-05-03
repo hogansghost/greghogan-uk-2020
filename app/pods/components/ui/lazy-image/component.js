@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { get, set } from '@ember/object';
+import { computed, get, set } from '@ember/object';
 
 
 export default Component.extend({
@@ -7,7 +7,7 @@ export default Component.extend({
   classNameBindings: ['shouldImageCover:lazy-image--image-cover:lazy-image--image-default'],
   
   alt: '',
-  role: 'img',
+  role: '',
   srcSet: null,
   sizes: '',
   isCurrentlyVisible: true,
@@ -21,6 +21,13 @@ export default Component.extend({
   offsetSrcSet: '',
   offsetSizes: '100w',
   offsetPlaceholderSrc: '',
+
+  mainRole: computed('role', 'alt', function() {
+    const alt = get(this, 'alt');
+    const role = get(this, 'role') || 'img';
+
+    return alt ? role : 'presentation';
+  }),
 
   init() {
     this._super();

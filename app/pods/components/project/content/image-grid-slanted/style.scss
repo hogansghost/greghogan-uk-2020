@@ -1,5 +1,4 @@
 .image-grid-slanted {
-  $_product-screen-grid: &;
   $_product-screen-grid-gutter: 5%;
 
   margin-right: auto;
@@ -31,11 +30,11 @@
     transform: rotateX(50deg) rotateY(0) rotateZ(45deg);
     
     $_translateXStart: 8.25;
-    $_translateXDiff: 0.35; // 0.75; // 4.75;
+    $_translateXDiff: 0.35;
     $_translateYStart: 26;
-    $_translateYDiff: 8.25; // 2.25;
+    $_translateYDiff: 8.25;
     
-    @for $nth-child from 2 through 15 {
+    @for $nth-child from 2 through 5 {
       &:nth-child(#{$nth-child}) {
         transform: translate(#{($_translateXStart - ($_translateXDiff * ($nth-child - 1))) * -1 + '%'}, #{($_translateYStart + ($_translateYDiff * ($nth-child - 1))) * -1 + '%'}) rotateX(50deg) rotateY(0) rotateZ(45deg);
       }

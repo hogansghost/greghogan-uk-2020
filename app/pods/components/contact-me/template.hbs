@@ -6,13 +6,13 @@
       {{/each}}
     {{/if}}
 
-    {{#if (and @description.length @contactLinks.length)}}
+    {{#if (and @description.length this.contactLinks)}}
       <hr />
     {{/if}}
 
-    {{#if @contactLinks}}
+    {{#if this.contactLinks}}
       <ul class="contact-me__link-list">
-        {{#each @contactLinks as |link|}}
+        {{#each this.contactLinks as |link|}}
           <li class="contact-me__link-list-item">
             <a class="contact-me__link" href={{link.href}} target={{link.target}}>{{link.label}}</a>
           </li>

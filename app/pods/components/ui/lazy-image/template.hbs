@@ -26,7 +26,7 @@
       shouldImageCover=@shouldImageCover
     }}
   "
-  role={{@role}}
+  role={{this.mainRole}}
   src={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSrc ''}}
   srcset={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSrcSet ''}}
   sizes={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSizes ''}}
