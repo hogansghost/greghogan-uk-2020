@@ -1,9 +1,9 @@
-<div class="image-grid-item" data-columns={{colCount}}>
+<div class="image-grid-item" data-columns={{@colCount}}>
   <Ui::IsCurrentlyVisible class="image-grid-item__image" as |isCurrentlyVisible|>
     <Ui::LazyImage
       @isCurrentlyVisible={{isCurrentlyVisible}}
-      @srcSet={{srcSet}}
-      @alt={{alt}}
+      @srcSet={{@srcSet}}
+      @alt={{@alt}}
     />
   </Ui::IsCurrentlyVisible>
 </div>

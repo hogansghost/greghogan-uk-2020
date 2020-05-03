@@ -1,5 +1,5 @@
 <article class="project-content__body">
-  {{#each content.body as |bodyContent|}}
+  {{#each @content.body as |bodyContent|}}
     {{!-- Sub heading --}}
     {{#if (does-equal bodyContent.type "h2")}}
       <div class={{bem "project-content__body-section" readableWidth=true}} data-content-type="h2">

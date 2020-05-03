@@ -1,12 +1,12 @@
-import Component from '@ember/component';
+import Component from "@glimmer/component";
 import { inject as service } from '@ember/service';
+import { action } from "@ember/object";
 
-export default Component.extend({
-  cookies: service(),
+export default class CookieBar extends Component {
+  @service cookies;
 
-  actions: {
-    acceptCookie() {
-      this.cookies.acceptAllCookies();
-    },
-  },
-});
+  @action
+  acceptCookie() {
+    this.cookies.acceptAllCookies();
+  }
+}

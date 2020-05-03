@@ -1,5 +1,11 @@
 'use strict';
 
 module.exports = {
-  extends: 'octane'
+  extends: 'octane',
+  rules: {
+    'no-triple-curlies': false,
+    'no-curly-component-invocation': {
+      allow: ['liquid-outlet'],
+    },
+  },
 };

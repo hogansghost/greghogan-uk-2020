@@ -1,6 +1,5 @@
 import Component from '@ember/component';
 import Onscreen from 'greghogan-uk-2020/mixins/onscreen';
-import EmberObject from '@ember/object';
 
 export default Component.extend(Onscreen, {
   tagName: 'article',

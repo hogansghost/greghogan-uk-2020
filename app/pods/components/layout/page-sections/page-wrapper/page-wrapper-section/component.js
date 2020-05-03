@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { computed, get } from '@ember/object';
 
 export default Component.extend({
   tagName: '',
@@ -7,4 +8,8 @@ export default Component.extend({
   hasOverlap: false,
   gutterVerticalTopOnly: false,
   gutterVerticalBottomOnly: false,
+
+  gutterVerticalSpacer: computed('gutterVertical', function() {
+    return `gutter-vertical-${get(this, 'gutterVertical')}`;
+  }),
 });

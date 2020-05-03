@@ -1,11 +1,11 @@
-<div class="image-grid-slanted-item" data-columns={{colCount}}>
+<div class="image-grid-slanted-item">
   <Ui::IsCurrentlyVisible class="image-grid-slanted-item__image" as |isCurrentlyVisible|>
     <Ui::LazyImage
-      @alt={{alt}}
+      @alt={{@alt}}
       @isCurrentlyVisible={{isCurrentlyVisible}}
       @shouldImageCover={{true}}
-      @role={{role}}
-      @srcSet={{srcSet}}
+      @role={{@role}}
+      @srcSet={{@srcSet}}
     />
   </Ui::IsCurrentlyVisible>
 </div>

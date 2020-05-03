@@ -104,24 +104,14 @@ ul[class], ol[class], figure {
 }
 
 
-// SVG storage area for clip paths and svg use references.
-.svg-yard {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-}
-
-
 // Transition containers for LiquidFire.
+// !important !important !important
 .lf__main {
   transform: none !important;
   position: relative !important;
 
   .liquid-child {
+    // visibility: visible !important;
     &:last-child {
       position: relative !important;
       top: auto !important;
@@ -154,6 +144,7 @@ ul[class], ol[class], figure {
 @import "app/pods/components/layout/page-sections/page-wrapper/style";
 @import "app/pods/components/layout/page-sections/page-wrapper/page-wrapper-section/style";
 @import "app/pods/components/layout/page-sections/page-section-sticky-title/style";
+@import "app/pods/components/layout/svg-yard/style";
 
 // Project specific components
 @import "app/pods/components/project/project-link/style";

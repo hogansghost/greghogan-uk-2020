@@ -1,8 +1,8 @@
 <div class="image-grid__body">
-  {{#each media as |mediaItem|}}
+  {{#each @media as |mediaItem|}}
     <Project::Content::ImageGrid::ImageGridItem
       @alt={{mediaItem.alt}}
-      @colCount={{colCount}}
+      @colCount={{@colCount}}
       @srcSet={{mediaItem.srcSet}}
     />
   {{/each}}

@@ -6,7 +6,7 @@
       </div>
 
       <div class="cookie-bar__action">
-        <button class="cookie-bar__button" {{action "acceptCookie"}}>Accept cookies</button>
+        <button class="cookie-bar__button" {{on "click" (fn this.acceptCookie)}} type="button">Accept cookies</button>
       </div>
     </div>
   </div>
