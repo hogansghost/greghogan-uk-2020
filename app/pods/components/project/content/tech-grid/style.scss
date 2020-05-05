@@ -24,7 +24,7 @@
     position: relative;
 
     &:nth-child(n+2) {
-      margin-top: 20px;
+      margin-top: $ui-content-padding-lg;
     }
   }
 
@@ -35,7 +35,7 @@
     justify-content: center;
     flex-flow: row wrap;
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
     list-style: none;
   }
 

@@ -24,7 +24,7 @@
 }
 
 
-
+// Font awesome pro
 
 .fa-link-back::before {
   @extend .fa;
@@ -57,9 +57,28 @@
   content: "\f3c5";
 }
 
-.fab {
-  font-family: 'Font Awesome 5 Brands';
+.fa-photoshop::before {
+  @extend .fa;
+  content: "\f03e";
 }
+
+.fa-illustrator::before {
+  @extend .fa;
+  content: "\f55b";
+}
+
+.fa-greensock::before {
+  @extend .fa;
+  content: "\f696";
+}
+
+.fa-checkbox::before {
+  @extend .fa;
+  content: "\f14a";
+}
+
+
+// Fontawesome Brands
 
 .fa-linkedin::before {
   @extend .fab;
@@ -96,16 +115,6 @@
   content: "\f41b";
 }
 
-.fa-bootstrap::before {
-  content: "B";
-  display: inline-block;
-  padding: 0.2em 0.25em 0em 0.25em;
-  border: 1px solid;
-  border-radius: 0.2em;
-  font-size: 0.7em;
-  line-height: 1;
-}
-
 .fa-js::before {
   @extend .fab;
   content: "\f3b8";
@@ -131,22 +140,7 @@
   content: "\f09b";
 }
 
-.fa-photoshop::before {
-  @extend .fa;
-  content: "\f03e";
-}
-
-.fa-illustrator::before {
-  @extend .fa;
-  content: "\f55b";
-}
-
-.fa-greensock::before {
-  @extend .fa;
-  content: "\f696";
-}
-
-.fa-checkbox::before {
-  @extend .fa;
-  content: "\f14a";
+.fa-bootstrap::before {
+  @extend .fab;
+  content: "\f836";
 }

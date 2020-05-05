@@ -12,12 +12,13 @@
   &__body {
     position: relative;
     margin: auto;
-    padding-top: 25%;
+    padding-top: 50%;
     padding-bottom: 15%;
     width: 500%;
     transform: translateX(-30%);
-
+    
     @include media($media-sm) {
+      padding-top: 25%;
       width: 275%;
     }
   }
