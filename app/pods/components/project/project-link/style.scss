@@ -8,15 +8,11 @@
   background-color: $color-accent-secondary;
   min-height: 100vh;
 
-  &:nth-child(n+2) {
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-
   &::after {
-    content: "";
+    content: '';
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     width: 250%;
     height: 100%;
     background-color: $color-primary;

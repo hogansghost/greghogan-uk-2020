@@ -6,12 +6,14 @@
   <div class="tech-grid__body">
     <ul class="tech-grid__list">
       {{#each @technology as |tech|}}
-        <Ui::IsCurrentlyVisible class="tech-grid__list-item" as |isCurrentlyVisible|>
-          <Project::Content::TechGrid::TechGridItem
-            @isCurrentlyVisible={{isCurrentlyVisible}}
-            @tech={{tech}}
-          />
-        </Ui::IsCurrentlyVisible>
+        <li class="tech-grid__list-item">
+          <Ui::IsCurrentlyVisible class="tech-grid__list-item-inner" as |isCurrentlyVisible|>
+            <Project::Content::TechGrid::TechGridItem
+              @isCurrentlyVisible={{isCurrentlyVisible}}
+              @tech={{tech}}
+            />
+          </Ui::IsCurrentlyVisible>
+        </li>
       {{/each}}
     </ul>
   </div>

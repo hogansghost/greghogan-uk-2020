@@ -65,6 +65,7 @@
         left: 0;
         width: 100%;
         background-color: inherit;
+        backface-visibility: hidden;
       }
 
       &::before {

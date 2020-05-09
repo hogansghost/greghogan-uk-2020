@@ -1,4 +1,6 @@
 .page-wrapper-section {
+  $_self: &;
+
   position: relative;
   background-color: inherit;
   background-color: var(--color-backing-primary);
@@ -62,5 +64,9 @@
 
   &__inner {
     position: relative;
+
+    #{$_self}--has-overlap & {
+      padding-top: 5vw;
+    }
   }
 }

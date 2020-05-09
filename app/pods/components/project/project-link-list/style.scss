@@ -1,0 +1,26 @@
+.project-link-list {
+  &__item {
+    position: relative;
+    background: $black;
+    
+    &:nth-child(n+2) {
+      border-top: 1px solid rgba(255,255,255,0.1);
+  
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        width: 7%;
+        padding-bottom: 7%;
+        background-color: var(--color-primary);
+        transform: translate(51%, -50%) rotate(45deg);
+        
+        @include media($media-sm) {
+          right: 0;
+          transform: translate(51%, -50%) rotate(45deg);
+        }
+      }
+    }
+  }
+}
