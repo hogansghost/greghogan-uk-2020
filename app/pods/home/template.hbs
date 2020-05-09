@@ -35,19 +35,9 @@
       @titleTheme="primary"
       @onEntryToViewport={{action "sendGoogleEvent" "message"}}
     >
-      {{#each this.projectList as |project|}}
-        <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
-          <Project::ProjectLink
-            @isCurrentlyVisible={{isCurrentlyVisible}}
-            @srcSet={{project.thumbnail.srcSet}}
-            @sizes={{project.thumbnail.sizes}}
-            @name={{project.name}}
-            @role={{project.role}}
-            @id={{project.id}}
-            @url={{project.url}}
-          />
-        </Ui::IsCurrentlyVisible>
-      {{/each}}
+      <Project::ProjectLinkList
+        @projects={{this.projectList}}
+      />
     </Layout::PageSections::PageSectionStickyTitle>
 
     <Layout::PageSections::PageSectionStickyTitle
