@@ -18,7 +18,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.25;
+    opacity: 0.15;
 
     &::after {
       content: "";
@@ -47,6 +47,7 @@
   &__background-image {
     top: 0;
     left: 0;
+    opacity: 0.8;
   }
   
   &__background-video {
@@ -55,6 +56,7 @@
     transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: 1;
+    opacity: 0.8;
   }
 
 
@@ -181,12 +183,20 @@
 
   &__details-title {
     @include heading-formatting;
-    font-size: 2.5em;
+    font-size: 1.9em;
+    
+    @include media($media-sm) {
+      font-size: 2.5em;
+    }
   }
 
   &__details-sub-title {
     @include heading-sub-formatting;
-    font-size: 1.2em;
+    font-size: 1em;
+    
+    @include media($media-sm) {
+      font-size: 1.2em;
+    }
   }
 
 

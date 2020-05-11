@@ -7,6 +7,7 @@
   position: relative;
   background-color: $color-accent-secondary;
   min-height: 100vh;
+  font-size: 1rem;
 
   &::after {
     content: '';
@@ -54,6 +55,7 @@
     left: 0px;
     width: 100%;
     height: 100%;
+    background-color: $black;
   }
 
   &__background-image {
@@ -68,6 +70,7 @@
     object-fit: cover;
     display: block;
     border: 0;
+    opacity: 0.45;
 
     &::after {
       content: "";
@@ -112,10 +115,15 @@
 
   &__body-content-footer {
     flex: 0 0 auto;
-    padding: $ui-content-padding-xs $ui-content-padding-sm;
+    padding: 10% $ui-content-padding-sm;
     color: rgba($white, 0.8);
     width: 100%;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+
+    @include media($media-sm) {
+      padding-top: $ui-content-padding-md;
+      padding-bottom: $ui-content-padding-md;
+    }
   }
 
   &__body-content-footer-inner {
@@ -213,10 +221,20 @@
   &__card-content-name {
     margin: 0;
     @include heading-formatting;
+    font-size: 1em;
+      
+    @include media($media-sm) {
+      font-size: 1.4em;
+    }
   }
 
   &__card-content-role {
     @include heading-sub-formatting;
+    font-size: 0.65em;
+      
+    @include media($media-sm) {
+      font-size: 1em;
+    }
   }
 
 
