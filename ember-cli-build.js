@@ -5,18 +5,11 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     fingerprint: {
-      enabled: true,
+      enabled: false,
       generateAssetMap: false,
       extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'json'],
       replaceExtensions: ['html', 'css', 'js', 'json']
     },
-    // fontawesome: {
-    //   icons: {
-    //     'pro-solid-svg-icons': [
-    //       'bootstrap'
-    //     ]
-    //   }
-    // },
     sassOptions: {
       includePaths: [
         'app/components'
