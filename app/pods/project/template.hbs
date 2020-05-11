@@ -14,11 +14,16 @@
     />
   </Layout::PageSections::PageWrapper::PageWrapperSection>
 
-  <Layout::PageSections::PageWrapper::PageWrapperSection @hasOverlap={{true}}>
+  <Layout::PageSections::PageWrapper::PageWrapperSection
+    @hasOverlap={{true}}
+  >
     <Project::Content::ProjectContent @content={{@model.project.projectContents}} />
   </Layout::PageSections::PageWrapper::PageWrapperSection>
 
-  <Layout::PageSections::PageWrapper::PageWrapperSection>
+  <Layout::PageSections::PageWrapper::PageWrapperSection
+    @gutterVertical="none"
+    @gutterVerticalTopOnly={{true}}
+  >
     <Project::Footer
       @author={{@model.author}}
     />

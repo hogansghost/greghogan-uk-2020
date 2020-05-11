@@ -59,9 +59,13 @@
       </div>
 
       <div class="hero-video-banner__footer-section">
-        {{#each @projectLink as |projectLink|}}
-          <Ui::LinkExternal @href={{projectLink.href}}>{{projectLink.label}}</Ui::LinkExternal>
-        {{/each}}
+        <ul class="hero-video-banner__link-list">
+          {{#each @projectLink as |projectLink|}}
+            <li class="hero-video-banner__link-list-item">
+              <Ui::LinkExternal @href={{projectLink.href}}>{{projectLink.label}}</Ui::LinkExternal>
+            </li>
+          {{/each}}
+        </ul>
       </div>
     </div>
   {{/if}}

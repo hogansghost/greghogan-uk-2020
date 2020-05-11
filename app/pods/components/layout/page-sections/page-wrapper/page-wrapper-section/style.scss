@@ -49,6 +49,12 @@
     }
   }
 
+  &--gutter-vertical-xl {
+    &:nth-child(n+2) {
+      padding-top: 120px;
+    }
+  }
+
   &--gutter-vertical-top-only {
     &:nth-child(n+2) {
       padding-bottom: 0px !important;
