@@ -1,11 +1,12 @@
 .image-grid-slanted {
-  $_product-screen-grid-gutter: 5%;
+  $_self: &;
+  $_self-grid-gutter: 5%;
 
   margin-right: auto;
   margin-left: auto;
-  padding-right: #{$_product-screen-grid-gutter};
-  padding-left: #{$_product-screen-grid-gutter};
-  width: calc(1860px + #{$_product-screen-grid-gutter * 2});
+  padding-right: #{$_self-grid-gutter};
+  padding-left: #{$_self-grid-gutter};
+  width: calc(1860px + #{$_self-grid-gutter * 2});
   max-width: 100%;
   
   
@@ -45,19 +46,30 @@
   }
 
   &__item {
-    align-items: stretch;
-    display: flex;
+    $_self-item: &;
+
     flex: 0 1 auto;
     margin: 0;
-    padding: 15px;
     position: relative;
     width: 33.33%;
 
+    
+    
     &::before {
       content: '';
       display: block;
-      flex: 0 0 auto;
-      width: 0;
+      padding-bottom: 56.9%;
+    }
+    
+    &--custom::before {
+      padding-bottom: 62.67%;
+    }
+    
+    &--3-2::before {
+      padding-bottom: 66.67%;
+    }
+    
+    &--16-9::before {
       padding-bottom: 56.9%;
     }
   }

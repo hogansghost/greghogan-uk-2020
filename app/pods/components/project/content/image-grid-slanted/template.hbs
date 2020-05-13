@@ -2,7 +2,12 @@
   {{#each this.mediaRowList as |mediaRow|}}
     <div class="image-grid-slanted__row">
       {{#each mediaRow as |mediaItem|}}
-        <div class="image-grid-slanted__item">
+        <div
+          class={{bem
+            "image-grid-slanted__item"
+            this.imageAspectRatio
+          }}
+        >
           <Project::Content::ImageGridSlanted::ImageGridSlantedItem
             @alt={{mediaItem.alt}}
             @role={{@role}}

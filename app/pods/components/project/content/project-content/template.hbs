@@ -54,8 +54,8 @@
       <figure class={{bem "project-content__body-section" mediaWidth=true}}>
         <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
           <Project::Content::ImageGridSlanted
+            @imageAspect={{bodyContent.imageAspect}}
             @isCurrentlyVisible={{isCurrentlyVisible}}
-            @colCount={{bodyContent.colCount}}
             @media={{bodyContent.content}}
           />
         </Ui::IsCurrentlyVisible>

@@ -7,6 +7,11 @@ export default Component.extend({
 
   media: null,
   limitCount: 12,
+  imageAspect: '',
+
+  imageAspectRatio: computed('imageAspect', function() {
+    return get(this, 'imageAspect') || '16-9';
+  }),
 
   mediaRowList: computed('media.[]', function() {
     const media = this.limitMedia();
