@@ -495,7 +495,193 @@
             "content": "About Teads"
           }, {
             "type": "p",
-            "content": "Teads, previously Ebuzzing, is an advertising company specialising in video advertising, primarily their proprietary native video format. Teads native video format injects video advertisements within the content of the website itself creating minimal disruption for the end user while creating value for the client."
+            "content": "Teads, previously Ebuzzing, is an advertising company specialising in video advertising, primarily their proprietary native video format. Teads native video format injects video advertisements within the content of the website itself creating \"minimal disruption for the end user\" while still creating value for the client."
+          }, {
+            "type": "imageGridSlanted",
+            "imageAspect": "custom",
+            "content": [
+              {
+                "alt": "B&Q advertisement first page",
+                "srcSet": {
+                  "pl": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_home_pl.jpg",
+                    "width": ""
+                  },
+                  "xs": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_home_xs.jpg",
+                    "width": ""
+                  },
+                  "sm": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_home_sm.jpg",
+                    "width": ""
+                  },
+                  "md": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_home_md.jpg",
+                    "width": ""
+                  },
+                  "lg": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_home_lg.jpg",
+                    "width": ""
+                  },
+                  "xl": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_home_xl.jpg",
+                    "width": "1660w"
+                  }
+                }
+              }, {
+                "alt": "B&Q advertisement video page",
+                "srcSet": {
+                  "pl": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_video_pl.jpg",
+                    "width": "100w"
+                  },
+                  "xs": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_video_xs.jpg",
+                    "width": "768w"
+                  },
+                  "sm": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_video_sm.jpg",
+                    "width": "992w"
+                  },
+                  "md": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_video_md.jpg",
+                    "width": "1100w"
+                  },
+                  "lg": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_video_lg.jpg",
+                    "width": "1400w"
+                  },
+                  "xl": {
+                    "src": "/assets/images/projects/teads/microsite_bandq_video_xl.jpg",
+                    "width": "1660w"
+                  }
+                },
+                "sizes": "(min-width: 700px) 768px, (min-width: 900px) 992px, (min-width: 1050px) 1100px, (min-width: 1300px) 1400px, (min-width: 1550px) 1660px, 100vw"
+              }, {
+                "alt": "OKA advertisement first page",
+                "srcSet": {
+                  "pl": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_pl.jpg",
+                    "width": ""
+                  },
+                  "xs": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_xs.jpg",
+                    "width": ""
+                  },
+                  "sm": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_sm.jpg",
+                    "width": ""
+                  },
+                  "md": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_md.jpg",
+                    "width": ""
+                  },
+                  "lg": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_lg.jpg",
+                    "width": ""
+                  },
+                  "xl": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_xl.jpg",
+                    "width": "1660w"
+                  }
+                }
+              }, {
+                "alt": "OKA advertisement product information modal",
+                "srcSet": {
+                  "pl": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_overlay_pl.jpg",
+                    "width": "100w"
+                  },
+                  "xs": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_overlay_xs.jpg",
+                    "width": "768w"
+                  },
+                  "sm": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_overlay_sm.jpg",
+                    "width": "992w"
+                  },
+                  "md": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_overlay_md.jpg",
+                    "width": "1100w"
+                  },
+                  "lg": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_overlay_lg.jpg",
+                    "width": "1400w"
+                  },
+                  "xl": {
+                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_overlay_xl.jpg",
+                    "width": "1660w"
+                  }
+                },
+                "sizes": "(min-width: 700px) 768px, (min-width: 900px) 992px, (min-width: 1050px) 1100px, (min-width: 1300px) 1400px, (min-width: 1550px) 1660px, 100vw"
+              }, {
+                "alt": "OKA advertisement product information modal",
+                "srcSet": {
+                  "pl": {
+                    "src": "/assets/images/projects/teads/microsite_elites_pl.jpg",
+                    "width": "100w"
+                  },
+                  "sm": {
+                    "src": "/assets/images/projects/teads/microsite_elites_sm.jpg",
+                    "width": "992w"
+                  },
+                  "md": {
+                    "src": "/assets/images/projects/teads/microsite_elites_md.jpg",
+                    "width": "1100w"
+                  },
+                  "lg": {
+                    "src": "/assets/images/projects/teads/microsite_elites_lg.jpg",
+                    "width": "1400w"
+                  }
+                },
+                "sizes": "(min-width: 450px) 500px, (min-width: 650px) 700px, (min-width: 850px) 900px, 100vw"
+              }, {
+                "alt": "OKA advertisement product information modal",
+                "srcSet": {
+                  "pl": {
+                    "src": "/assets/images/projects/teads/microsite_elites_overlay_pl.jpg",
+                    "width": "100w"
+                  },
+                  "sm": {
+                    "src": "/assets/images/projects/teads/microsite_elites_overlay_sm.jpg",
+                    "width": "992w"
+                  },
+                  "md": {
+                    "src": "/assets/images/projects/teads/microsite_elites_overlay_md.jpg",
+                    "width": "1100w"
+                  },
+                  "lg": {
+                    "src": "/assets/images/projects/teads/microsite_elites_overlay_lg.jpg",
+                    "width": "1400w"
+                  }
+                },
+                "sizes": "(min-width: 450px) 500px, (min-width: 650px) 700px, (min-width: 850px) 900px, 100vw"
+              }
+            ]
+          }, {
+            "type": "h2",
+            "content": "Tech and responsibilities overview"
+          }, {
+            "type": "p",
+            "content": "I worked as a designer and developer for varying types of mobile and desktop advertisements, as well as responsive creatives, working with animation frameworks, pure CSS3 animations and various elements of video implementation and tracking to form submissions, to create compelling adverts for clients."
+          }, {
+            "type": "ul",
+            "content": [
+              "Created templates for basic carousel micro-sites and image \"takeovers\".",
+              "Varying degree of complexity responsive micro-sites for numerous products.",
+              "Mobile animated footer advertisements.",
+              "Mobile full screen takeover advertisements.",
+              "Desktop full screen takeover advertisements."
+            ]
+          }, {
+            "type": "p",
+            "content": "My role at Teads was that of developer, primarily for mobile creatives however I also worked with desktop scale micro-sites, created responsive advertisements that could be used across the board and also static graphics for video content surrounds. Tech wise I worked with Flash on occasion but was hired to allow Teads to transition more heavily into HTML5 creatives, especially due in part to the slow removal of Flash support from browsers that had begun at the time."
+          }, {
+            "type": "p",
+            "content": "The majority of the micro-sites were usually some variety of a content carousel allowing for the inclusion of tracked video as well as more in depth content and CTA's. Sometimes clients would come to us with a design and assets and other times we would pitch differing designs for the client to choose from/adjust to their needs before supplying us the required assets."
+          }, {
+            "type": "p",
+            "content": "For these types of creative, I built a boilerplate that implemented in-depth tracking for videos included within the creative (that could scale to the number of videos included) that had unique identifiers for each media. This could tie into a Google Analytics account if the client wished but was primarily linked to the internal Teads tracking software, recording things such as whether a video was played, paused (for how long and how often), whether the user trigged the pause or whether it was because they had changed into a different page of the carousel, timestamps, etc. I often acted as as development support for other branches of Teads with my knowledge of JavaScript and GreenSock and, quite often as well, responsive elements of advertisements, offering knowledge and tips frequently to the Spanish and German team."
           }
         ]
       }
@@ -585,7 +771,7 @@
             "content": "Movidiam is designed to be a one stop shop for everything one might require during a media production project, be that talent, asset sharing or even management of the project at hand. It features social network profiling for freelancers to display their work, write blogs, post status updates as well as feature contact information for potential clients. This profiling also links into a map-based search system, allowing users to enter a search term such as \"Camera operator in New York\" which will then supply a list of results matching that criteria, in a similar manner to Airbnb’s search page. Movidiam also offer a briefing system where users can contact Movidiam to request a specific type or multiple types of users to help them creating a production - the chosen responses coming from the 20K+ freelancers registered to the service."
           }, {
             "type": "imageGridSlanted",
-            "colCount": 2,
+            "imageAspect": "16-9",
             "content": [
               {
                 "alt": "One",
@@ -1476,7 +1662,7 @@
             "content": "Loveholidays, \"the fastest growing online travel agency in the UK\", is a UK based package holiday website. Loveholidays specialises in allowing users to search without a specific date or destination in mind, but rather, by a series of different filters such as budget, board basis, temperature, etc. as well as offering flexible payment methods."
           }, {
             "type": "imageGridSlanted",
-            "colCount": 2,
+            "imageAspect": "16-9",
             "content": [
               {
                 "alt": "One",
@@ -1761,7 +1947,7 @@
             "content": "checkpoint, \"the fastest growing online travel agency in the UK\", is a UK based package holiday website. checkpoint specialises in allowing users to search without a specific date or destination in mind, but rather, by a series of different filters such as budget, board basis, temperature, etc. as well as offering flexible payment methods."
           }, {
             "type": "imageGridSlanted",
-            "colCount": 2,
+            "imageAspect": "16-9",
             "content": [
               {
                 "alt": "One",
