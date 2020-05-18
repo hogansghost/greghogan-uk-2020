@@ -28,11 +28,13 @@
 
   {{#if @url.length}}
     <div class="project-link__body-content-footer">
-      <div class="project-link__body-content-footer-inner">
+      <ul class="project-link__body-content-footer-inner util-spaced-list">
         {{#each @url as |url|}}
-          <Ui::LinkExternal @href={{url.href}}>{{url.label}}</Ui::LinkExternal>
+          <li class="project-link__body-content-footer-inner-item">
+            <Ui::LinkExternal @href={{url.href}}>{{url.label}}</Ui::LinkExternal>
+          </li>
         {{/each}}
-      </div>
+      </ul>
     </div>
   {{/if}}
 </div>

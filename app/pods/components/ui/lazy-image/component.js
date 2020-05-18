@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import { computed, get, set } from '@ember/object';
+import { not } from '@ember/object/computed';
 
 
 export default Component.extend({
@@ -7,12 +8,15 @@ export default Component.extend({
   classNameBindings: ['shouldImageCover:lazy-image--image-cover:lazy-image--image-default'],
   
   alt: '',
+  caption: '',
+  hasBorder: true,
   role: '',
   srcSet: null,
   sizes: '',
   isCurrentlyVisible: true,
   shouldImageCover: false,
-
+  
+  noBorder: not('hasBorder'),
   forceCurrentlyVisible: false,
   hasLoaded: false,
   hasPlaceholder: false,

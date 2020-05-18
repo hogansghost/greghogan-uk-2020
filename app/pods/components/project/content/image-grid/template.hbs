@@ -2,6 +2,7 @@
   {{#each @media as |mediaItem|}}
     <Project::Content::ImageGrid::ImageGridItem
       @alt={{mediaItem.alt}}
+      @caption={{mediaItem.caption}}
       @colCount={{@colCount}}
       @srcSet={{mediaItem.srcSet}}
     />

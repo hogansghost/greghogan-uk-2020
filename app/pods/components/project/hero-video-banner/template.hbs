@@ -3,6 +3,7 @@
     {{#if @projectImageSrcSet}}
       <div class="hero-video-banner__background-image">
         <Ui::LazyImage
+          @hasBorder={{false}}
           @role="presentation"
           @shouldImageCover={{true}}
           @sizes={{@projectImageSizes}}
@@ -59,7 +60,7 @@
       </div>
 
       <div class="hero-video-banner__footer-section">
-        <ul class="hero-video-banner__link-list">
+        <ul class="hero-video-banner__link-list util-spaced-list">
           {{#each @projectLink as |projectLink|}}
             <li class="hero-video-banner__link-list-item">
               <Ui::LinkExternal @href={{projectLink.href}}>{{projectLink.label}}</Ui::LinkExternal>

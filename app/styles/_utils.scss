@@ -1,0 +1,12 @@
+.util-spaced-list {
+  list-style: none;
+  padding: 0 !important;
+
+  > li {
+    margin-top: 0.85em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

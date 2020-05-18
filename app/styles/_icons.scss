@@ -115,9 +115,39 @@
   content: "\f41b";
 }
 
+.fa-styled-components::before {
+  @extend .fab;
+  content: "\f41b";
+}
+
+.fa-redux::before {
+  @extend .fal;
+  content: "\f5d3";
+}
+
 .fa-js::before {
   @extend .fab;
-  content: "\f3b8";
+  content: "\f3b9";
+}
+
+.fa-ts::before {
+  @extend .fab;
+  content: "\f3b9";
+}
+
+.fa-enzyme::before {
+  @extend .fal;
+  content: "\f492";
+}
+
+.fa-jest::before {
+  @extend .fal;
+  content: "\f492";
+}
+
+.fa-mocha::before {
+  @extend .fal;
+  content: "\f492";
 }
 
 .fa-jenkins::before {
@@ -128,6 +158,11 @@
 .fa-aws::before {
   @extend .fab;
   content: "\f375";
+}
+
+.fa-yarn::before {
+  @extend .fab;
+  content: "\f7e3";
 }
 
 .fa-npm::before {

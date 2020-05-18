@@ -2,9 +2,20 @@
   position: relative;
   display: block;
   width: 100%;
-
+  
   &--image-cover {
     height: 100%;
+  }
+
+  &__body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba($black, 0.1);
+
+    &--no-border {
+      border: 0;
+    }
   }
 
   &__placeholder,
@@ -49,5 +60,12 @@
     &:not([src]) {
       display: none;
     }
+  }
+
+  &__caption {
+    text-align: center;
+    padding: 0.3em;
+    @include copy-color-light;
+    @include copy-size-small;
   }
 }

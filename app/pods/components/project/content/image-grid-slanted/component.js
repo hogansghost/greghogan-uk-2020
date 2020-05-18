@@ -36,7 +36,7 @@ export default Component.extend({
     const limit = get(this, 'limitCount');
     const media = get(this, 'media') || [];
 
-    if (limit > media.length) {
+    if (media.length > limit) {
       console.warn('W A R N :: You have passed too many images to the slanted grid and the media has been limited.'); // eslint-disable-line no-console
     }
 

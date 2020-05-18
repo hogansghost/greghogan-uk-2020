@@ -20,18 +20,19 @@ Router.reopen({
 
   hasTransitioned: false,
 
-  willTransition(transition) {
+  init() {
     this._super(...arguments);
 
-    this.acceptCookieOnPageChange(transition);
+    this.on('routeWillChange', (transition) => {
+      this.acceptCookieOnPageChange(transition);
+    });
+
+    this.on('routeDidChange', (transition) => {
+      this.captureFirstTransitionOntoSite();
+      this.logGoogleAnalyticsOnPageChange(transition);
+    });
   },
 
-  didTransition(transition) {
-    this._super(...arguments);
-
-    this.captureFirstTransitionOntoSite();
-    this.logGoogleAnalyticsOnPageChange(transition);
-  },
 
   captureFirstTransitionOntoSite() {
     set(this, 'hasTransitioned', true);

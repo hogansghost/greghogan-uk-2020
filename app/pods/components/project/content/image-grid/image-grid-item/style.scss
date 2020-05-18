@@ -2,10 +2,6 @@
   flex: 1 1 auto;
   min-height: 0px;
   color: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column nowrap;
   padding: $ui-content-padding-xs;
   min-width: 200px;
 
@@ -33,6 +29,5 @@
   &__image {
     display: block;
     width: 100%;
-    border: 1px solid rgba($black, 0.1);
   }
 }
