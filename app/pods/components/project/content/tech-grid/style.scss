@@ -9,10 +9,6 @@
   }
 
 
-  &__header {
-    text-align: center;
-  }
-
   &__header-title {
     letter-spacing: 0.2em;
     font-weight: 100;
@@ -42,6 +38,7 @@
   &__list-item {
     flex: 0 0 auto;
     width: 50%;
+    width: 33.3333%;
 
     @include media($media-xs) {
       width: 33.3333%;

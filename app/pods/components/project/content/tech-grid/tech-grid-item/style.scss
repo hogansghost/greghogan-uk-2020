@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  padding: $ui-content-padding-md;
+  padding: $ui-content-padding-md $ui-content-padding-sm;
   margin: 0;
   opacity: 0;
   transition: opacity 440ms;
@@ -15,7 +15,7 @@
   }
 
   &__header {
-    font-size: 3em;
+    font-size: 2.25em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +27,7 @@
     display: block;
     text-align: center;
     line-height: 1;
-    opacity: 0.65;
+    opacity: 0.75;
 
     &::before {
       display: block;
@@ -37,6 +37,7 @@
 
   &__body {
     margin-top: 1em;
+    font-size: 0.8em;
     flex: 0 0 auto;
     text-align: center;
   }

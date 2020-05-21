@@ -76,10 +76,9 @@
 
     {{!-- Tech Grid --}}
     {{#if (does-equal bodyContent.type "techGrid")}}
-      <div class={{bem "project-content__body-section" fullWidth=true backgroundPrimary=true}}>
+      <div class={{bem "project-content__body-section" mediaWidth=true}}>
         <Project::Content::TechGrid
           @technology={{bodyContent.content}}
-          @title="Tech stack"
         />
       </div>
     {{/if}}
