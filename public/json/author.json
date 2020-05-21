@@ -95,11 +95,10 @@
     },
     "subtitle": "A creative front-end developer with 5 years of professional experience based in London, enjoys following current trends and experimenting with future technologies of web development.",
     "description": [
-      "I have worked extensively on building single page applications with the Ember.js framework over the last few years, creating simplistic as well as more complex websites, the most recent example of which is the Movidiam platform spanning over 17K users Worldwide, where I was the senior front-end developer.",
-      "I have a solid background in modern front-end techniques such as ES6 JavaScript and Sass pre-processor utilising the BEM methodology as well as working with GULP task runner and Webpack in my work-flow to accelerate development. I have a proficient understanding of and experience with building cross-browser and cross-platform compatible solutions with meticulous attention to detail and the desire to get the little things just right.",
-      "I am experienced in working with, as well as leading, teams and have excellent communication skills for technical and non-technical audience. I have worked with REST API's and have a good understanding / familiarity with the command line, NPM package management, source control via Git as well as the using Jenkins and AWS S3 buckets and EC2 instances.",
-      "I work with a mobile first, responsive approach and have a passion for building beautiful, simple experiences that are functional first and foremost. While I am a perfectionist at heart when it comes to creating designs or merely converting them to working code, I know when to draw the line between pursuing perfection and delivering a feature in a timely fashion.",
-      "In keeping with my passion to self improve, I have recently begun teaching myself ReactJS because of the opportunities it will open as well as the challenge of learning something so different from Ember.js."
+      "I have worked extensively on building single page applications with React as well as Ember and Angular frameworks over the last few years, working on ecommerce and social media platforms to project management suites.",
+      "I have a solid background in modern front-end technologies such as ES2020 features in JavaScript as well as working with Sass, utilising the BEM methodology  and working with Webpack in my work-flow to accelerate development. I have a proficient understanding of and experience with building cross-browser and cross-platform compatible solutions with meticulous attention to detail and the desire to get the little things just right.",
+      "I am experienced in working with, as well as leading, teams and have excellent communication skills for technical and non-technical audience. I have worked with REST API's and have a good understanding / familiarity with the command line, NPM and Yarn package management, source control via Git.",
+      "I work with a mobile first, responsive approach and have a passion for building beautiful, simple experiences that are functional first and foremost. While I am a perfectionist at heart when it comes to creating designs or merely converting them to working code, I know when to draw the line between pursuing perfection and delivering a feature in a timely fashion."
     ],
     "contactDescription": [
       "Whoa, kudos for making it this far! Hopefully, you've just looked over this portfolio and thought to yourself, \"Hey, this wasn't half bad...\"",
@@ -118,7 +117,7 @@
       }, {
         "label": "C.V.",
         "labelIconClass": "fa-cv",
-        "href": "Greg_Hogan_2018.pdf",
+        "href": "https://hogan-cv.s3.amazonaws.com/Greg+Hogan+-+CV.pdf",
         "target": "_blank",
         "type": "personal"
       }, {
@@ -140,46 +139,49 @@
         "title": "Technical",
         "list": [
           {
-            "id": "1",
+            "id": 1,
             "name": "HTML5"
           }, {
-            "id": "2",
+            "id": 2,
             "name": "JavaScript"
           }, {
-            "id": "3",
-            "name": "jQuery"
-          }, {
-            "id": "4",
+            "id": 4,
             "name": "CSS3"
           }, {
-            "id": "5",
-            "name": "Sass,"
+            "id": 5,
+            "name": "Sass"
           }, {
-            "id": "6",
+            "id": 6,
+            "name": "ReactJS"
+          }, {
+            "id": 7,
+            "name": "Redux"
+          }, {
+            "id": 8,
             "name": "Ember.js (Ember CLI)"
           }, {
-            "id": "7",
+            "id": 9,
             "name": "Ember Data"
           }, {
-            "id": "8",
+            "id": 10,
             "name": "Liquid Fire"
           }, {
-            "id": "9",
+            "id": 11,
             "name": "Green Sock Animation"
           }, {
-            "id": "10",
+            "id": 12,
             "name": "MochaJS"
           }, {
-            "id": "11",
+            "id": 13,
             "name": "NPM"
           }, {
-            "id": "12",
+            "id": 14,
             "name": "Gulp"
           }, {
-            "id": "13",
-            "name": "Bootstrap"
+            "id": 4,
+            "name": "Webpack"
           }, {
-            "id": "14",
+            "id": 15,
             "name": "BEM"
           }
         ]
@@ -188,19 +190,19 @@
         "title": "Source control",
         "list": [
           {
-            "id": "1",
+            "id": 1,
             "name": "Git"
           }, {
-            "id": "2",
+            "id": 2,
             "name": "GitHub"
           }, {
-            "id": "3",
+            "id": 3,
             "name": "Jenkins"
           }, {
-            "id": "4",
+            "id": 4,
             "name": "JIRA"
           }, {
-            "id": "5",
+            "id": 5,
             "name": "Trello"
           }
         ]
@@ -209,16 +211,16 @@
         "title": "Graphic software",
         "list": [
           {
-            "id": "1",
+            "id": 1,
             "name": "Photoshop"
           }, {
-            "id": "2",
+            "id": 2,
             "name": "Illustrator"
           }, {
-            "id": "3",
+            "id": 3,
             "name": "Sketch"
           }, {
-            "id": "4",
+            "id": 4,
             "name": "Final Cut Pro"
           }
         ]
@@ -227,19 +229,10 @@
         "title": "Experience with...",
         "list": [
           {
-            "id": "1",
+            "id": 1,
             "name": "Angular"
           }, {
-            "id": "2",
-            "name": "ReactJS"
-          }, {
-            "id": "3",
-            "name": "Redux"
-          }, {
-            "id": "4",
-            "name": "Webpack"
-          }, {
-            "id": "5",
+            "id": 5,
             "name": "Accessibility"
           }
         ]
