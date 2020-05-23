@@ -1,5 +1,5 @@
 export function fireGoogleEvent(message = '') {
-  if (window?.gtag) {
-    window.gtag('send', 'event', 'Page Section', `Viewed - ${message}`);
+  if (window?.ga) {
+    window.ga('send', 'event', 'Page Section', message);
   }
 }

@@ -33,7 +33,7 @@
       @title="Projects"
       @titlePosition="right"
       @titleTheme="primary"
-      @onEntryToViewport={{action "sendGoogleEvent" "message"}}
+      @onEntryToViewport={{action "sendGoogleEvent" "Scrolled - Home - Projects"}}
     >
       <Project::ProjectLinkList
         @projects={{this.projectList}}
@@ -44,6 +44,7 @@
       @title="Contact"
       @titlePosition="left"
       @titleTheme="secondary"
+      @onEntryToViewport={{action "sendGoogleEvent" "Scrolled - Home - Contact"}}
     >
       <ContactMe
         @description={{@model.author.contactDescription}}

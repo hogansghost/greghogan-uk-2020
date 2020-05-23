@@ -10,10 +10,12 @@ export default Component.extend({
   classNames: ['page-section-sticky-title'],
 
   analyticsLogName: null,
+  isFirstEntry: false,
   isSticky: false,
   stateFixed: false,
   stateEnd: false,
   title: '',
+  onEntryToViewport: () => {},
   titlePosition: 'right',
   titleTheme: 'primary',
   hasEnteredView: false,
@@ -65,7 +67,7 @@ export default Component.extend({
      * this could check the window width, it's much easier to sync to the CSS as the media
      * width may change.
      */
-    if( staticElement && window.getComputedStyle(staticElement, null).getPropertyValue('position') !== 'relative' ) {
+    if (staticElement && window.getComputedStyle(staticElement, null).getPropertyValue('position') !== 'relative' ) {
       const windowInnerHeight = window.innerHeight;
       const containerElementPosition = containerElement.getBoundingClientRect();
       const containerElementPositionTop = containerElementPosition.top;
@@ -73,18 +75,20 @@ export default Component.extend({
 
       set(this, 'isSticky', true);
 
-      if( containerElementPositionTop <= windowInnerHeight && containerElementPositionBottom >= 0 ) {
-        if( containerElementPositionTop > 0 ) {
+      if (containerElementPositionTop <= windowInnerHeight) {
+        this.setFirstEntryAndCallEntryMethod();
+      }
+
+      if (containerElementPositionTop <= windowInnerHeight && containerElementPositionBottom >= 0 ) {
+        if (containerElementPositionTop > 0 ) {
           set(this, 'stateFixed', false);
           set(this, 'stateEnd', false);
           set(this, 'hasEnteredView', false);
-        } else if( containerElementPositionTop <= 0 && containerElementPositionBottom - windowInnerHeight > 0 ) {
-          this.onEntryToViewport(`Scrolled - Home - ${title}`);
-
+        } else if (containerElementPositionTop <= 0 && containerElementPositionBottom - windowInnerHeight > 0 ) {
           set(this, 'stateFixed', true);
           set(this, 'stateEnd', false);
           set(this, 'hasEnteredView', true);
-        } else if( containerElementPositionBottom - windowInnerHeight <= 0 && containerElementPositionTop <= 0 ) {
+        } else if (containerElementPositionBottom - windowInnerHeight <= 0 && containerElementPositionTop <= 0 ) {
           set(this, 'stateFixed', false);
           set(this, 'stateEnd', true);
           set(this, 'hasEnteredView', false);
@@ -96,16 +100,18 @@ export default Component.extend({
       this.resetPosition();
     }
   },
+  
+  setFirstEntryAndCallEntryMethod() {
+    if (!get(this, 'isFirstEntry') && !get(this, 'stateEnd') && get(this, 'hasEnteredView')) {
+      set(this, 'isFirstEntry', true);
+  
+      this.onEntryToViewport();
+    }
+  },
 
   resetPosition() {
     set(this, 'isSticky', false);
     set(this, 'stateFixed', false);
     set(this, 'stateEnd', false);
-  },
-
-  onEntryToViewport(message) {
-    if (!this.hasEnteredView) {
-      fireGoogleEvent(message);
-    }
   },
 });
