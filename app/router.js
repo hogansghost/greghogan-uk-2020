@@ -4,6 +4,8 @@ import { get, set } from '@ember/object';
 
 import config from './config/environment';
 
+import { fireGoogleEvent } from './functions/googleTrackingEvents';
+
 export default class Router extends EmberRouter {
   location = config.locationType;
   rootURL = config.rootURL;
@@ -39,12 +41,12 @@ Router.reopen({
   },
 
   logGoogleAnalyticsOnPageChange(transitionObj) {
-    if( transitionObj && transitionObj.lastObject ) {
-      // window.gtag('send', 'event', 'Page Section', `Viewed - ${stringsHumaniser(transitionObj.lastObject.name)}`);
+    if (transitionObj?.to?.params?.id) {
+      fireGoogleEvent(transitionObj?.to?.params?.id);
     }
   },
 
-  acceptCookieOnPageChange(transitionObj) {
+  acceptCookieOnPageChange() {
     if (get(this, 'hasTransitioned')) {
       this.cookies.acceptAllCookies();
     }

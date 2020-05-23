@@ -3,6 +3,7 @@ import { computed, get, set } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { throttle } from '@ember/runloop';
 
+import { fireGoogleEvent } from '../../../../../functions/googleTrackingEvents';
 
 export default Component.extend({
   tagName: 'section',
@@ -23,8 +24,6 @@ export default Component.extend({
 
     return `theme-${titleTheme}`;
   }),
-
-  onEntryToViewport: (message) => console.log(`original ${message}`), //eslint-disable-line no-console
   
   didInsertElement() {
     this._super(...arguments);
@@ -80,7 +79,7 @@ export default Component.extend({
           set(this, 'stateEnd', false);
           set(this, 'hasEnteredView', false);
         } else if( containerElementPositionTop <= 0 && containerElementPositionBottom - windowInnerHeight > 0 ) {
-          this._onEntryToViewport();
+          this.onEntryToViewport(`Scrolled - Home - ${title}`);
 
           set(this, 'stateFixed', true);
           set(this, 'stateEnd', false);
@@ -104,17 +103,9 @@ export default Component.extend({
     set(this, 'stateEnd', false);
   },
 
-  _onEntryToViewport() {
+  onEntryToViewport(message) {
     if (!this.hasEnteredView) {
-      this.onEntryToViewport();
+      fireGoogleEvent(message);
     }
   },
-
-  
-
-  // onEntryToViewport() {
-  //   if( get(this, 'analyticsLogName') && !!window.gtag) {
-  //     window.gtag('send', 'event', 'Page Section', `Viewed - ${get(this, 'analyticsLogName')}`);
-  //   }
-  // }
 });
