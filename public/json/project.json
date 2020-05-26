@@ -3,7 +3,8 @@
     {
       "uid": 0,
       "id": "greghogan",
-      "name": "Portfolio",
+      "name": "Greg Hogan UK",
+      "role": "Front-end Developer / Designer",
       "timeframe": {
         "start": "2020"
       },
@@ -33,9 +34,78 @@
             "src": "/assets/images/projects/greghogan/greghogan_poster_xl.jpg",
             "width": "1800w"
           }
-        }
+        },
+        "sizes": "(min-width: 700px) 800px, (min-width: 900px) 1000px, (min-width: 1000px) 1200px, (min-width: 1200px) 1600px, (min-width: 1550px) 1800px, 100vw"
       },
-      "sizes": "(min-width: 700px) 768px, (min-width: 900px) 992px, (min-width: 1050px) 1100px, (min-width: 1300px) 1400px, (min-width: 1550px) 1660px, 100vw"
+      "projectContents": {
+        "projectVideo": {
+          "thumbnailSrcSet": {
+            "pl": {
+              "src": "/assets/images/projects/greghogan/greghogan_poster_pl.jpg",
+              "width": "100w"
+            },
+            "xs": {
+              "src": "/assets/images/projects/greghogan/greghogan_poster_xs.jpg",
+              "width": "768w"
+            },
+            "sm": {
+              "src": "/assets/images/projects/greghogan/greghogan_poster_sm.jpg",
+              "width": "992w"
+            },
+            "md": {
+              "src": "/assets/images/projects/greghogan/greghogan_poster_md.jpg",
+              "width": "1100w"
+            },
+            "lg": {
+              "src": "/assets/images/projects/greghogan/greghogan_poster_lg.jpg",
+              "width": "1400w"
+            },
+            "xl": {
+              "src": "/assets/images/projects/greghogan/greghogan_poster_xl.jpg",
+              "width": "1660w"
+            }
+          },
+          "sizes": "(min-width: 700px) 768px, (min-width: 900px) 992px, (min-width: 1050px) 1100px, (min-width: 1300px) 1400px, (min-width: 1550px) 1660px, 100vw"
+        },
+        "body": [
+          {
+            "type": "h2",
+            "content": "A case study of this portfolio"
+          }, {
+            "type": "p",
+            "content": "This project is in fact the portfolio that you are currently looking at. I will be adding, in the near future, a small case study about how I designed and created this portfolio, looking into some of the UX choices, technologies used, etc. I feel it will be a useful example of my skills as it is something that I have, obviously, had complete control over."
+          }, {
+            "type": "techGrid",
+            "content": [
+              {
+                "iconSrc": "fa-html5",
+                "title": "HTML5"
+              }, {
+                "iconSrc": "fa-css3",
+                "title": "CSS3"
+              }, {
+                "iconSrc": "fa-sass",
+                "title": "Sass"
+              }, {
+                "iconSrc": "fa-js",
+                "title": "JavaScript"
+              }, {
+                "iconSrc": "fa-github",
+                "title": "GitHub"
+              }, {
+                "iconSrc": "fa-ember",
+                "title": "Ember.js"
+              }, {
+                "iconSrc": "fa-ember",
+                "title": "Ember Data"
+              }, {
+                "iconSrc": "fa-photoshop",
+                "title": "Photoshop"
+              }
+            ]
+          }
+        ]
+      }
     }, {
       "uid": 1,
       "id": "resident-evil",
@@ -80,7 +150,7 @@
             "width": "1800w"
           }
         },
-        "sizes": "(min-width: 700px) 768px, (min-width: 900px) 992px, (min-width: 1050px) 1100px, (min-width: 1300px) 1400px, (min-width: 1550px) 1660px, 100vw"
+        "sizes": "(min-width: 700px) 800px, (min-width: 900px) 1000px, (min-width: 1000px) 1200px, (min-width: 1200px) 1600px, (min-width: 1550px) 1800px, 100vw"
       },
       "projectContents": {
         "projectVideo": {
@@ -508,28 +578,21 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/teads/microsite_bandq_home_pl.jpg",
-                    "width": ""
-                  },
-                  "xs": {
-                    "src": "/assets/images/projects/teads/microsite_bandq_home_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/teads/microsite_bandq_home_sm.jpg",
-                    "width": ""
+                    "width": "992w"
                   },
                   "md": {
                     "src": "/assets/images/projects/teads/microsite_bandq_home_md.jpg",
-                    "width": ""
+                    "width": "1100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/teads/microsite_bandq_home_lg.jpg",
-                    "width": ""
+                    "width": "1400w"
                   },
-                  "xl": {
-                    "src": "/assets/images/projects/teads/microsite_bandq_home_xl.jpg",
-                    "width": "1660w"
-                  }
+                  "sizes": "(min-width: 450px) 900px, (min-width: 900px) 1100px, (min-width: 1100px) 1400px, 100vw"
                 }
               }, {
                 "alt": "B&Q advertisement video page",
@@ -537,10 +600,6 @@
                   "pl": {
                     "src": "/assets/images/projects/teads/microsite_bandq_video_pl.jpg",
                     "width": "100w"
-                  },
-                  "xs": {
-                    "src": "/assets/images/projects/teads/microsite_bandq_video_xs.jpg",
-                    "width": "768w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/teads/microsite_bandq_video_sm.jpg",
@@ -553,51 +612,36 @@
                   "lg": {
                     "src": "/assets/images/projects/teads/microsite_bandq_video_lg.jpg",
                     "width": "1400w"
-                  },
-                  "xl": {
-                    "src": "/assets/images/projects/teads/microsite_bandq_video_xl.jpg",
-                    "width": "1660w"
                   }
                 },
-                "sizes": "(min-width: 700px) 768px, (min-width: 900px) 992px, (min-width: 1050px) 1100px, (min-width: 1300px) 1400px, (min-width: 1550px) 1660px, 100vw"
+                "sizes": "(min-width: 450px) 900px, (min-width: 900px) 1100px, (min-width: 1100px) 1400px, 100vw"
               }, {
                 "alt": "OKA advertisement first page",
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_pl.jpg",
-                    "width": ""
-                  },
-                  "xs": {
-                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_sm.jpg",
-                    "width": ""
+                    "width": "992w"
                   },
                   "md": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_md.jpg",
-                    "width": ""
+                    "width": "1100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_lg.jpg",
-                    "width": ""
-                  },
-                  "xl": {
-                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_xl.jpg",
-                    "width": "1660w"
+                    "width": "1400w"
                   }
-                }
+                },
+                "sizes": "(min-width: 450px) 900px, (min-width: 900px) 1100px, (min-width: 1100px) 1400px, 100vw"
               }, {
                 "alt": "OKA advertisement product information modal",
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_overlay_pl.jpg",
                     "width": "100w"
-                  },
-                  "xs": {
-                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_overlay_xs.jpg",
-                    "width": "768w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_overlay_sm.jpg",
@@ -610,13 +654,9 @@
                   "lg": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_overlay_lg.jpg",
                     "width": "1400w"
-                  },
-                  "xl": {
-                    "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_overlay_xl.jpg",
-                    "width": "1660w"
                   }
                 },
-                "sizes": "(min-width: 700px) 768px, (min-width: 900px) 992px, (min-width: 1050px) 1100px, (min-width: 1300px) 1400px, (min-width: 1550px) 1660px, 100vw"
+                "sizes": "(min-width: 450px) 900px, (min-width: 900px) 1100px, (min-width: 1100px) 1400px, 100vw"
               }, {
                 "alt": "OKA advertisement product information modal",
                 "srcSet": {
@@ -637,7 +677,7 @@
                     "width": "1400w"
                   }
                 },
-                "sizes": "(min-width: 450px) 500px, (min-width: 650px) 700px, (min-width: 850px) 900px, 100vw"
+                "sizes": "(min-width: 450px) 900px, (min-width: 900px) 1100px, (min-width: 1100px) 1400px, 100vw"
               }, {
                 "alt": "OKA advertisement product information modal",
                 "srcSet": {
@@ -658,7 +698,7 @@
                     "width": "1400w"
                   }
                 },
-                "sizes": "(min-width: 450px) 500px, (min-width: 650px) 700px, (min-width: 850px) 900px, 100vw"
+                "sizes": "(min-width: 450px) 900px, (min-width: 900px) 1100px, (min-width: 1100px) 1400px, 100vw"
               }, {
                 "alt": "CentreParcs advertisement landing page",
                 "srcSet": {
@@ -679,7 +719,7 @@
                     "width": "1400w"
                   }
                 },
-                "sizes": "(min-width: 450px) 500px, (min-width: 650px) 700px, (min-width: 850px) 900px, 100vw"
+                "sizes": "(min-width: 450px) 900px, (min-width: 900px) 1100px, (min-width: 1100px) 1400px, 100vw"
               }
             ]
           }, {
@@ -816,51 +856,52 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_clean_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_clean_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_clean_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_clean_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_clean_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_clean_xl.jpg",
                     "width": "1660w"
                   }
-                }
+                },
+                "sizes": "(min-width: 450px) 900px, (min-width: 900px) 1100px, (min-width: 1100px) 1400px, 100vw"
               }, {
                 "alt": "An advertisement for Dragon Age Inquisition showing the Teads viewable area template overlay",
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/teads/takeover_dragon_age_xl.jpg",
@@ -874,23 +915,23 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/teads/takeover_transformers_clean_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/teads/takeover_transformers_clean_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/teads/takeover_transformers_clean_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/teads/takeover_transformers_clean_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/teads/takeover_transformers_clean_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/teads/takeover_transformers_clean_xl.jpg",
@@ -904,23 +945,23 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/teads/takeover_transformers_overlay_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/teads/takeover_transformers_overlay_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/teads/takeover_transformers_overlay_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/teads/takeover_transformers_overlay_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/teads/takeover_transformers_overlay_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/teads/takeover_transformers_overlay_xl.jpg",
@@ -969,23 +1010,23 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/teads/microsite_bandq_home_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/teads/microsite_bandq_home_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/teads/microsite_bandq_home_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/teads/microsite_bandq_home_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/teads/microsite_bandq_home_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/teads/microsite_bandq_home_xl.jpg",
@@ -1026,23 +1067,23 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/teads/microsite_oka_california_dreaming_xl.jpg",
@@ -1240,27 +1281,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_5_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_5_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_5_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_5_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_5_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_5_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1268,27 +1309,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_6_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_6_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_6_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_6_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_6_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_6_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1296,27 +1337,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_7_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_7_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_7_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_7_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_7_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_7_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1324,27 +1365,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1352,27 +1393,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1380,27 +1421,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1408,27 +1449,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }
@@ -1450,27 +1491,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_1_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_1_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_1_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_1_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_1_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_1_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1478,27 +1519,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_2_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_2_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_2_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_2_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_2_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_product_2_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }
@@ -1573,27 +1614,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_1_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1601,27 +1642,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_2_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1629,27 +1670,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_3_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1657,27 +1698,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_screen_4_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }
@@ -1694,27 +1735,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_01_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_01_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_01_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_01_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_01_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_01_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1722,27 +1763,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_02_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_02_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_02_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_02_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_02_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_02_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1750,27 +1791,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_03_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_03_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_03_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_03_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_03_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_03_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1778,27 +1819,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_04_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_04_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_04_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_04_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_04_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2016_04_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1806,27 +1847,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_message_2016_01_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_message_2016_01_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_message_2016_01_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_message_2016_01_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_message_2016_01_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_message_2016_01_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1834,27 +1875,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_01_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_01_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_01_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_01_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_01_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_01_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1862,27 +1903,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_02_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_02_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_02_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_02_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_02_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_02_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1890,27 +1931,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_03_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_03_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_03_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_03_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_03_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_emails_newsletter_2018_03_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }
@@ -1930,27 +1971,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_01_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1958,27 +1999,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_02_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -1986,27 +2027,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_03_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2014,27 +2055,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/movidiam/movidiam_salesforce_04_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }
@@ -2135,27 +2176,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2163,27 +2204,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2191,27 +2232,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2219,27 +2260,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2247,27 +2288,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2275,27 +2316,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2303,27 +2344,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }
@@ -2402,27 +2443,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_001_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2430,27 +2471,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_002_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2458,27 +2499,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_003_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2486,27 +2527,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_004_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2514,27 +2555,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_005_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2542,27 +2583,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_006_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
@@ -2570,27 +2611,27 @@
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/loveholidays/loveholidays_product_007_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }
@@ -2741,8 +2782,8 @@
       },
       "url": [
         {
-          "href": "https://www.checkpoint.gg/",
-          "label": "https://www.checkpoint.gg/"
+          "href": "https://www.joincheckpoint.com/",
+          "label": "https://www.joincheckpoint.com/"
         }
       ],
       "thumbnail": {
@@ -2819,171 +2860,171 @@
             "imageAspect": "16-9",
             "content": [
               {
-                "alt": "One",
+                "alt": "Checkpoint registration webpage 001",
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_001_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_001_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_001_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_001_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_001_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_001_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
-                "alt": "Two",
+                "alt": "Checkpoint registration webpage 002",
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_002_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_002_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_002_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_002_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_002_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_002_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
-                "alt": "Three",
+                "alt": "Checkpoint registration webpage 003",
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_003_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_003_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_003_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_003_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_003_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_003_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
-                "alt": "Four",
+                "alt": "Checkpoint registration webpage 004",
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_004_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_004_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_004_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_004_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_004_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_004_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
-                "alt": "One",
+                "alt": "Checkpoint registration webpage 005",
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_005_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_005_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_005_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_005_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_005_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_005_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }, {
-                "alt": "One",
+                "alt": "Checkpoint registration webpage 006",
                 "srcSet": {
                   "pl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_006_pl.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xs": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_006_xs.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "sm": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_006_sm.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "md": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_006_md.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "lg": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_006_lg.jpg",
-                    "width": ""
+                    "width": "100w"
                   },
                   "xl": {
                     "src": "/assets/images/projects/checkpoint/checkpoint_product_006_xl.jpg",
-                    "width": ""
+                    "width": "100w"
                   }
                 }
               }

@@ -5,8 +5,6 @@
 
 $text-typeface-fallback: "Helvetica", "Arial", sans-serif;
 $text-typeface: "Avenir LT Std 45 Book", $text-typeface-fallback;
-$text-color: rgba($black, 0.65);
-$text-color-dark-mode: rgba(255,255,255, 0.65);
 $text-font-size: 16px;
 $text-line-height: 1.4;
 
@@ -14,37 +12,46 @@ $text-line-height: 1.4;
 
 
 /**
- * Branding colours
+* Branding colours
+*
+*/
+
+// Color variables
+:root {
+  --brand-primary: #{$london-red};
+  --brand-secondary: #{$bright-turquoise};
+  --brand-accent-primary: #{#141414};
+  --brand-accent-secondary: #{$smoky-black};
+  --brand-backing-primary: #{$white};
+  --color-backing-secondary: #{#fafafa};
+  --color-image-background: #{#d7d6e0};
+  --text-color: rgba($black, 0.65);
+  
+  @media (prefers-color-scheme: dark) {
+    // --color-primary: #{$color-primary-dark-mode};
+    // --color-accent-primary: #{$color-accent-primary-dark-mode};
+    // --color-backing-primary: #{$color-backing-primary-dark-mode};
+    // --color-backing-secondary: #{$color-backing-secondary-dark-mode};
+    // --text-color: #{$text-color-dark-mode};
+  }
+}
+
+$text-color: var(--text-color);
+$color-backing-primary: var(--color-backing-primary);
+$color-backing-secondary: var(--color-backing-secondary);
+$color-primary: var(--brand-primary);
+$color-secondary: var(--brand-secondary);
+$color-accent-primary: var(--brand-accent-primary);
+$color-accent-secondary: var(--brand-accent-secondary);
+$color-image-background: var(--color-image-background);
+
+
+
+/**
+ * Interface basics, padding, gutters, 
+ * animation durations, etc.
  *
  */
-
-$color-backing-primary: $white;
-$color-backing-primary-dark-mode: $cod-gray;
-
-$color-backing-secondary: #fafafa;
-$color-backing-secondary-dark-mode: $black;
-
-$color-primary: $london-red;
-$color-primary-dark-mode: mix($black, $london-red, 70%);
-
-$color-secondary: $bright-turquoise;
-$color-secondary-dark-mode: $bright-turquoise;
-
-$color-tirtiary: $acajou;
-
-$color-accent-primary: #141414; // $charleston-green;
-$color-accent-primary-dark-mode: mix($black, $charleston-green, 70%);
-
-$color-accent-secondary: $smoky-black;
-$color-accent-secondary-dark-mode: $smoky-black;
-
-$color-image-background: #d7d6e0;
-$color-image-background-dark-mode: #d7d6e0;
-
-$ui-color-success: $bright-turquoise;
-
-
-
 
 // Z-index
 $z-index: (
@@ -58,14 +65,6 @@ $drop-shadows: (
   navigation: 6,
 );
 
-
-
-/**
- * Interface basics, padding, gutters, 
- * animation durations, etc.
- *
- */
-
 // Content spacers (think padding around copy, etc. to space content from edges.
 $ui-content-padding-xs: 10px;
 $ui-content-padding-sm: 20px;
@@ -76,7 +75,6 @@ $ui-content-padding-xl: 80px;
 $ui-transition-duration-short: 240ms;
 $ui-transition-duration-medium: 540ms;
 $ui-transition-duration-long: 840ms;
-
 
 
 
@@ -100,7 +98,6 @@ $media-width-xxl-max: $media-width-xxl - 1;
 
 
 
-
 /**
  * Content width breakpoints
  * Use these to limit content, rather than the actual window breakpoint.
@@ -118,4 +115,3 @@ $content-width-readable: 800px;
 
 // Restrict content on ultra wide screens so not to look odd.
 $content-restriction-uhd: $content-width-xxl / 2;
-

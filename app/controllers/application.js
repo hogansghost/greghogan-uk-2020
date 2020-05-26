@@ -5,6 +5,7 @@ import { not } from '@ember/object/computed';
 
 export default Controller.extend({
   cookies: service(),
+  darkMode: service(),
 
   shouldShowCookieBar: not('cookies.hasAcceptedAllCookies'),
 
@@ -13,6 +14,7 @@ export default Controller.extend({
 
     this.setScrollHandlingToManual();
     this.setCookieAcceptanceState();
+    this.darkMode.init();
   },
 
   setScrollHandlingToManual() {

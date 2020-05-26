@@ -9,23 +9,6 @@
 @import "utils";
 
 
-// Color variables
-:root {
-  --color-primary: #{$color-primary};
-  --color-accent-primary: #{$color-accent-primary};
-  --color-backing-primary: #{$color-backing-primary};
-  --color-backing-secondary: #{$color-backing-secondary};
-  --text-color: #{$text-color};
-  
-  @media (prefers-color-scheme: dark) {
-    // --color-primary: #{$color-primary-dark-mode};
-    // --color-accent-primary: #{$color-accent-primary-dark-mode};
-    // --color-backing-primary: #{$color-backing-primary-dark-mode};
-    // --color-backing-secondary: #{$color-backing-secondary-dark-mode};
-    // --text-color: #{$text-color-dark-mode};
-  }
-}
-
 // Base styling
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
@@ -34,10 +17,10 @@
 
 html {
   background-color: $white;
-  background-color: var(--color-backing-primary);
+  background-color: $color-backing-primary;
   font-family: $text-typeface;
   font-size: $text-font-size;
-  color: var(--text-color);
+  color: $text-color;
   line-height: $text-line-height;
   word-break: break-word;
   overflow-wrap: break-word;

@@ -13,7 +13,7 @@
         right: 50%;
         width: 20px;
         padding-bottom: 20px;
-        background-color: var(--color-primary);
+        background-color: $color-primary;
         transform: translate(52%, -50%) rotate(45deg);
         
         @include media($media-sm) {

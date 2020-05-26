@@ -27,10 +27,18 @@ export default Component.extend({
   offsetPlaceholderSrc: '',
 
   mainRole: computed('role', 'alt', function() {
-    const alt = get(this, 'alt');
-    const role = get(this, 'role') || 'img';
+    const alt = `${get(this, 'alt')}`;
+    const role = `${get(this, 'role')}`;
 
-    return alt ? role : 'presentation';
+    let roleValue = 'img';
+
+    if (role) {
+      roleValue = role;
+    } else if (alt) {
+      roleValue = alt;
+    }
+
+    return roleValue;
   }),
 
   init() {

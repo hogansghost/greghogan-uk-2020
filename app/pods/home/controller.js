@@ -10,9 +10,7 @@ export default Controller.extend({
     return (projects && projects.toArray() || []).sortBy('uid').reverse();
   }),
 
-  actions: {
-    sendGoogleEvent(message) {
-      fireGoogleEvent(message);
-    }
-  }
+  sendGoogleEvent(message) {
+    fireGoogleEvent(message);
+  },
 });

@@ -70,13 +70,11 @@
 
       &::before {
         transform: skewY(3deg);
-
         transform: perspective(900px) rotateY(5deg);
         transform-origin: 100% 50%;
         width: 50%;
         left: 0px;
         right: auto;
-        background-color: mix($color-primary, $black, 90%) !important;
       }
 
       &::after {

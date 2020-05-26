@@ -3,8 +3,6 @@ import { computed, get, set } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { throttle } from '@ember/runloop';
 
-import { fireGoogleEvent } from '../../../../../functions/googleTrackingEvents';
-
 export default Component.extend({
   tagName: 'section',
   classNames: ['page-section-sticky-title'],

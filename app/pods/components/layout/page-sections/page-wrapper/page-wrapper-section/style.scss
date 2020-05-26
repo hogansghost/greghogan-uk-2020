@@ -3,7 +3,7 @@
 
   position: relative;
   background-color: inherit;
-  background-color: var(--color-backing-primary);
+  background-color: $color-backing-primary;
   transition: background-color #{$ui-transition-duration-medium};
 
   // Overlap previous section
