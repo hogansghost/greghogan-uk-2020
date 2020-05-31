@@ -16,7 +16,6 @@
 }
 
 html {
-  background-color: $white;
   background-color: $color-backing-primary;
   font-family: $text-typeface;
   font-size: $text-font-size;
@@ -25,6 +24,14 @@ html {
   word-break: break-word;
   overflow-wrap: break-word;
   transition: background-color #{$ui-transition-duration-medium};
+}
+
+body {
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  color: $text-color;
+  transition: inherit;
 }
 
 hr {
@@ -117,6 +124,7 @@ ul[class], ol[class], figure {
 
 // UI generic component elements
 @import "app/pods/components/ui/cookie-bar/style";
+@import "app/pods/components/ui/dark-mode-toggle/style";
 @import "app/pods/components/ui/is-currently-visible/style";
 @import "app/pods/components/ui/lazy-image/style";
 @import "app/pods/components/ui/link-external/style";

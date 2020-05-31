@@ -7,9 +7,20 @@
   color: $white;
   font-size: 0.8em;
   text-align: left;
-  background-color: rgba($color-primary, 0.85);
   box-shadow: 0px 0px 5px rgba($black, 0.25), 0px -3px 21px rgba($black, 0.35);
   z-index: map-get($z-index, sticky);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary;
+    opacity: 0.85;
+    z-index: 0;
+  }
 
   p {
     margin: 1.6em 0 0 0;
@@ -20,6 +31,7 @@
   }
 
   &__inner {
+    position: relative;
     margin-right: auto;
     margin-left: auto;
     width: $content-width-lg;
@@ -56,14 +68,11 @@
     margin: 0;
     width: 100%;
     border-radius: 2px;
-    // color: currentColor;
     text-align: center;
     transition: all 300ms;
     cursor: pointer;
 
     &:hover {
-      // color: currentColor;
-      // background-color: rgba($black, 0.25);
       box-shadow: 0px 2px 2px rgba($black, 0.1), 0px 4px 11px rgba($black, 0.15);
       transform: translateY(-1px);
     }
