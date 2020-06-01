@@ -16,7 +16,8 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
-    this._onScreenCheck = bind(this, this.onScreenCheck);
+    this._onScreenCheckListener = bind(this, this.onScreenCheckListener);
+    this._onScreenCheckIntersection = bind(this, this.onScreenCheckIntersection);
   },
 
   didInsertElement() {
@@ -32,50 +33,53 @@ export default Component.extend({
 
   bindScrollEvents() {
     if ('IntersectionObserver' in window) {
-
-        let observer = new IntersectionObserver(this._onScreenCheck, {
-          threshold: 0.1
+      let observer = new IntersectionObserver((entries) => {
+        entries.forEach(({ isIntersecting }) => {
+          if (isIntersecting) {
+            this._onScreenCheckIntersection();
+          }
         });
-
+      }, {
+        threshold: 0.1
+      });
 
       set(this, 'intersectionObserver', observer);
       
       get(this, 'intersectionObserver').observe(this.element);
     } else {
-        this.scrolling.on('scroll', this, this._onScreenCheck);
-        this.scrolling.on('resize', this, this._onScreenCheck);
+        this.scrolling.on('scroll', this, this._onScreenCheckListener);
+        this.scrolling.on('resize', this, this._onScreenCheckListener);
     }
   },
 
   unbindScrollEvents() {
     if ('IntersectionObserver' in window) {
-      get(this, 'intersectionObserver').unobserve(this.element);
+      // get(this, 'intersectionObserver').unobserve(this.element);
+      get(this, 'intersectionObserver').observe(this.element);
     } else {
       if (this.scrolling.has('resize')) {
-        this.scrolling.off('resize', this, this._onScreenCheck);
+        this.scrolling.off('resize', this, this._onScreenCheckListener);
       }
 
       if (this.scrolling.has('scroll')) {
-        this.scrolling.off('scroll', this, this._onScreenCheck);
+        this.scrolling.off('scroll', this, this._onScreenCheckListener);
       }
     }
   },
 
-  onScreenCheck(intersection) {
-    if ('IntersectionObserver' in window) {
-      if (intersection?.[0]?.isIntersecting) {
+  onScreenCheckIntersection() {
+    set(this, 'isCurrentlyVisible', true);
+    this.unbindScrollEvents();
+  },
+
+  onScreenCheckListener() {
+    const isOnscreenCurrently = onScreenCheck(this.element);
+    
+    next(this, function() {
+      if (isOnscreenCurrently && !get(this, 'isCurrentlyVisible') && this._state === 'inDOM') {
         set(this, 'isCurrentlyVisible', true);
         this.unbindScrollEvents();
       }
-    } else {
-      const isOnscreenCurrently = onScreenCheck(this.element);
-      
-      next(this, function() {
-        if (isOnscreenCurrently && !get(this, 'isCurrentlyVisible') && this._state === 'inDOM') {
-          set(this, 'isCurrentlyVisible', true);
-          this.unbindScrollEvents();
-        }
-      });
-    }
+    });
   },
 });

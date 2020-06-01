@@ -12,6 +12,10 @@
   border-color: rgba($white, 0.2);
   scroll-snap-align: start;
   color: $white !important;
+
+  @media (orientation: landscape) {
+    width: 40vw;
+  }
   
   @include media($media-sm, max) {
     &:last-child {
@@ -65,11 +69,7 @@
       display: block;
       flex: 0 0 auto;
       width: 0px;
-      padding-bottom: 125%;
-
-      @include media($media-sm) {
-        padding-bottom: 100%;
-      }
+      padding-bottom: 100%;
     }
 
     span {
