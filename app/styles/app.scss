@@ -27,11 +27,11 @@ html {
 }
 
 body {
-  background-color: inherit;
+  background-color: $color-backing-primary;
   font-family: inherit;
   font-size: inherit;
   color: $text-color;
-  transition: inherit;
+  transition: background-color #{$ui-transition-duration-medium};
 }
 
 hr {

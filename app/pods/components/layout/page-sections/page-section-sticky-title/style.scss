@@ -36,17 +36,16 @@
   }
 
   &__content {
-    grid-area: left-column;
+    transition: background-color #{$ui-transition-duration-medium};
     background-color: $color-backing-primary;
   }
 
   &__heading {
-    grid-area: right-column;
     position: relative;
     right: 0;
     height: 100vh;
     background-color: inherit;
-    transition: background 500ms;
+    transition: background-color #{$ui-transition-duration-medium};
     display: flex;
     align-items: center;
     justify-content: center;

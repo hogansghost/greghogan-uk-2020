@@ -20,22 +20,20 @@ $text-line-height: 1.4;
 :root {
   --brand-primary: #{$london-red};
   --brand-secondary: #{$bright-turquoise};
-  --brand-accent-primary: #{#141414};
+  --brand-accent-primary: #{$smoky-black}; // #{#141414};
   --brand-accent-secondary: #{$smoky-black};
   --color-backing-primary: #{$white};
   --color-backing-secondary: #{#fafafa};
   --color-image-background: #{#d7d6e0};
+  --color-image-border: #{rgba($black, 0.1)};
   --text-color: rgba($black, 0.65);
   
-  .dark-mode {
-    --brand-primary: #{$london-red};
-    --brand-secondary: #{$bright-turquoise};
-    --brand-accent-primary: #{#141414};
-    --brand-accent-secondary: #{$smoky-black};
-    --color-backing-primary: #{$black};
+  &[data-theme="dark"] {
+    --color-backing-primary: #{$smoky-black};
     --color-backing-secondary: #{mix($black, $white, 5%)};
-    --color-image-background: #{#d7d6e0};
-    --text-color: #{rgba($white, 0.65)};
+    --color-image-background: #{mix($black, $white, 6%)};
+    --color-image-border: #{rgba($white, 0.1)};
+    --text-color: #{rgba($white, 0.85)};
   }
 }
 
@@ -47,6 +45,7 @@ $color-secondary: var(--brand-secondary);
 $color-accent-primary: var(--brand-accent-primary);
 $color-accent-secondary: var(--brand-accent-secondary);
 $color-image-background: var(--color-image-background);
+$color-image-border: var(--color-image-border);
 
 
 

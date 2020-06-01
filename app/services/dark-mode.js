@@ -77,12 +77,10 @@ export default Service.extend({
   toggleBodyClassForDarkMode(darkMode) {
     if ([DarkModeStates.On, DarkModeStates.AutoOn].includes(darkMode)) {
       this.setDarkModeState(darkMode);
-      document.body.classList.add('dark-mode');
-      document.body.classList.remove('light-mode');
+      document.documentElement.setAttribute('data-theme', 'dark');
     } else if ([DarkModeStates.Off, DarkModeStates.AutoOff].includes(darkMode)) {
       this.setDarkModeState(darkMode);
-      document.body.classList.remove('dark-mode');
-      document.body.classList.add('light-mode');
+      document.documentElement.setAttribute('data-theme', 'light');
     }
   },
 
