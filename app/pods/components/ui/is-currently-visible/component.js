@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { get, set } from '@ember/object';
-import { next } from '@ember/runloop';
+import { bind, next } from '@ember/runloop';
 import { inject as service } from '@ember/service';
 
 import { onScreenCheck } from '../../../../functions/on-screen-check';
@@ -11,12 +11,19 @@ export default Component.extend({
   scrolling: service(),
 
   isCurrentlyVisible: false,
+  intersectionObserver: null,
+
+  init() {
+    this._super(...arguments);
+
+    this._onScreenCheck = bind(this, this.onScreenCheck);
+  },
 
   didInsertElement() {
-    this._super();
+    this._super(...arguments);
 
     this.bindScrollEvents();
-    this.onScreenCheck();
+    // this.onScreenCheck();
   },
 
   willDestroyElement() {
@@ -24,29 +31,51 @@ export default Component.extend({
   },
 
   bindScrollEvents() {
-    this.onScreenCheck();
+    if ('IntersectionObserver' in window) {
 
-    this.scrolling.on('scroll', this, this.onScreenCheck);
-    this.scrolling.on('resize', this, this.onScreenCheck);
+        let observer = new IntersectionObserver(this._onScreenCheck, {
+          threshold: 0.1
+        });
+
+
+      set(this, 'intersectionObserver', observer);
+      
+      get(this, 'intersectionObserver').observe(this.element);
+    } else {
+        this.scrolling.on('scroll', this, this._onScreenCheck);
+        this.scrolling.on('resize', this, this._onScreenCheck);
+    }
   },
 
   unbindScrollEvents() {
-    if (this.scrolling.has('resize')) {
-      this.scrolling.off('resize', this, this.onScreenCheck);
-    }
+    if ('IntersectionObserver' in window) {
+      get(this, 'intersectionObserver').unobserve(this.element);
+    } else {
+      if (this.scrolling.has('resize')) {
+        this.scrolling.off('resize', this, this._onScreenCheck);
+      }
 
-    if (this.scrolling.has('scroll')) {
-      this.scrolling.off('scroll', this, this.onScreenCheck);
+      if (this.scrolling.has('scroll')) {
+        this.scrolling.off('scroll', this, this._onScreenCheck);
+      }
     }
   },
 
-  onScreenCheck() {
-    const isOnscreenCurrently = onScreenCheck(this.element);
-
-    next(this, function() {
-      if (isOnscreenCurrently && !get(this, 'isCurrentlyVisible') && this._state === 'inDOM') {
+  onScreenCheck(intersection) {
+    if ('IntersectionObserver' in window) {
+      if (intersection?.[0]?.isIntersecting) {
         set(this, 'isCurrentlyVisible', true);
+        this.unbindScrollEvents();
       }
-    });
+    } else {
+      const isOnscreenCurrently = onScreenCheck(this.element);
+      
+      next(this, function() {
+        if (isOnscreenCurrently && !get(this, 'isCurrentlyVisible') && this._state === 'inDOM') {
+          set(this, 'isCurrentlyVisible', true);
+          this.unbindScrollEvents();
+        }
+      });
+    }
   },
 });
