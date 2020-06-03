@@ -1,5 +1,5 @@
-<button class="dark-mode-toggle" type="button" {{on "click" this.darkModeCycle}} title="Dark mode: {{this.darkMode.darkMode}}">
-  <div class="dark-mode-toggle__switch" data-dark-mode-state="{{this.darkMode.darkMode}}">
-    <span class="dark-mode-toggle__switch-inner" data-dark-mode-state="{{this.darkMode.darkMode}}" />
+<button class="dark-mode-toggle" type="button" {{on "click" this.darkModeCycle}} title="Dark mode: {{this.darkMode.isDark}}">
+  <div class="dark-mode-toggle__switch" data-dark-mode-state="{{this.darkMode.isDark}}">
+    <span class="dark-mode-toggle__switch-inner" data-dark-mode-state="{{this.darkMode.isDark}}" />
   </div>
 </button>

@@ -1,5 +1,5 @@
 import Service from '@ember/service';
-import { computed, get, set } from '@ember/object';
+import { get, set } from '@ember/object';
 import { bind } from '@ember/runloop';
 
 const darkMediaQuery = 'screen and (prefers-color-scheme: dark)';
@@ -13,7 +13,7 @@ export const DarkModeStates = {
 };
 
 export default Service.extend({
-  darkMode: DarkModeStates.Auto,
+  isDark: DarkModeStates.Auto,
   safariMode: false,
   
   init() {
@@ -37,7 +37,7 @@ export default Service.extend({
         mediaQuery.addListener(this._applyDarkMode);
         set(this, 'safariMode', true);
       } catch (safariErr) {
-        console.error(safariErr);
+        console.error(safariErr); //eslint-disable-line no-console
       }
     }
   },
@@ -64,14 +64,14 @@ export default Service.extend({
     const windowPreference = window?.matchMedia(darkMediaQuery).matches ? DarkModeStates.AutoOn : DarkModeStates.AutoOff;
 
     if ([DarkModeStates.Auto, DarkModeStates.AutoOff, DarkModeStates.AutoOn].includes(get(this, 'darkMode'))) {
-      set(this, 'darkMode', windowPreference);
+      set(this, 'isDark', windowPreference);
     }
 
     this.toggleBodyClassForDarkMode(get(this, 'darkMode'));
   },
 
   setDarkModeState(state) {
-    set(this, 'darkMode', state);
+    set(this, 'isDark', state);
   },
 
   toggleBodyClassForDarkMode(darkMode) {
@@ -85,7 +85,7 @@ export default Service.extend({
   },
 
   manualDarkModeOn() {
-    set(this, 'darkMode', DarkModeStates.On);
+    set(this, 'isDark', DarkModeStates.On);
 
     window?.localStorage?.setItem('darkMode', DarkModeStates.On);
 
@@ -93,7 +93,7 @@ export default Service.extend({
   },
   
   manualDarkModeOff() {
-    set(this, 'darkMode', DarkModeStates.Off);
+    set(this, 'isDark', DarkModeStates.Off);
 
     window?.localStorage?.setItem('darkMode', DarkModeStates.Off);
 
@@ -101,7 +101,7 @@ export default Service.extend({
   },
   
   manualDarkModeRevoke() {
-    set(this, 'darkMode', DarkModeStates.Auto);
+    set(this, 'isDark', DarkModeStates.Auto);
 
     window?.localStorage?.removeItem('darkMode');
 

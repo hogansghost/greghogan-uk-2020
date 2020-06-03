@@ -11,9 +11,9 @@ export default class DarkModeToggle extends Component {
   darkModeCycle() {
     if ([DarkModeStates.Auto, DarkModeStates.AutoOff, DarkModeStates.AutoOn].includes(this.darkMode.darkMode)) {
       this.darkMode.manualDarkModeOn();
-    } else if (this.darkMode.darkMode === DarkModeStates.On) {
+    } else if (this.darkMode.isDark === DarkModeStates.On) {
       this.darkMode.manualDarkModeOff();
-    } else if (this.darkMode.darkMode === DarkModeStates.Off) {
+    } else if (this.darkMode.isDark === DarkModeStates.Off) {
       this.darkMode.manualDarkModeRevoke();
     }
   }
