@@ -8,6 +8,7 @@ export default Component.extend({
   classNames: ['page-section-sticky-title'],
 
   analyticsLogName: null,
+  isCurrentlyVisible: false,
   isFirstEntry: false,
   isSticky: false,
   stateFixed: false,
@@ -60,13 +61,15 @@ export default Component.extend({
     const containerElement = this.element;
     const staticElement = containerElement && containerElement.querySelector('.js__page-section-sticky-title__heading');
 
+    const isCurrentlyVisible = get(this, 'isCurrentlyVisible');
+
     /**
      * Check for the static element and whether the CSS is setting it to static,
      * as anything other than static means it is meant to scroll with the client. While
      * this could check the window width, it's much easier to sync to the CSS as the media
      * width may change.
      */
-    if (staticElement && window.getComputedStyle(staticElement, null).getPropertyValue('position') !== 'relative' ) {
+    if (isCurrentlyVisible && staticElement && window.getComputedStyle(staticElement, null).getPropertyValue('position') !== 'relative' ) {
       const windowInnerHeight = window.innerHeight;
       const containerElementPosition = containerElement.getBoundingClientRect();
       const containerElementPositionTop = containerElementPosition.top;

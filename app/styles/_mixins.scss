@@ -223,3 +223,10 @@ $media-xl: "xl";
 %body-copy-drop-letter {
   @include body-copy-drop-letter;
 }
+
+
+@mixin selection-highlight {
+  color: $white;
+  background: $highlight-color;
+  text-shadow: 0px 1px 1px rgba($black, 0.45);
+}

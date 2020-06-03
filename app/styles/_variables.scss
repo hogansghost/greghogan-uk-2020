@@ -3,12 +3,12 @@
  *
  */
 
-$text-typeface-fallback: "Times New Roman", "Helvetica", "Arial", sans-serif;
+$text-typeface-fallback: "Helvetica", "Arial", sans-serif;
 $text-typeface: "Work Sans", $text-typeface-fallback;
 $text-font-size: 16px;
 $text-line-height: 1.4;
 
-$font-weight-light: 400;
+$font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
@@ -21,11 +21,16 @@ $font-weight-bold: 700;
 */
 
 // Color variables
+
+$brand-primary: $london-red;
+$brand-secondary: $bright-turquoise;
+
 :root {
-  --brand-primary: #{$london-red};
-  --brand-secondary: #{$bright-turquoise};
+  --brand-primary: #{$brand-primary};
+  --brand-secondary: #{$brand-secondary};
   --brand-accent-primary: #{$smoky-black}; // #{#141414};
   --brand-accent-secondary: #{$smoky-black};
+  --color-highlight: #{rgba($brand-primary, 0.8)};
   --color-backing-primary: #{$white};
   --color-backing-secondary: #{#fafafa};
   --color-image-background: #{#d7d6e0};
@@ -41,6 +46,7 @@ $font-weight-bold: 700;
   }
 }
 
+$highlight-color: var(--color-highlight);
 $text-color: var(--text-color);
 $color-backing-primary: var(--color-backing-primary);
 $color-backing-secondary: var(--color-backing-secondary);

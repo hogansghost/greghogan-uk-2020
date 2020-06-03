@@ -29,27 +29,33 @@
   <Layout::PageSections::PageWrapper::PageWrapperSection
     @gutterVertical="none"
   >
-    <Layout::PageSections::PageSectionStickyTitle
-      @title="Projects"
-      @titlePosition="right"
-      @titleTheme="primary"
-      @onEntryToViewport={{fn this.sendGoogleEvent "Scrolled - Home - Projects"}}
-    >
-      <Project::ProjectLinkList
-        @projects={{this.projectList}}
-      />
-    </Layout::PageSections::PageSectionStickyTitle>
+    <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
+      <Layout::PageSections::PageSectionStickyTitle
+        @isCurrentlyVisible={{isCurrentlyVisible}}
+        @title="Projects"
+        @titlePosition="right"
+        @titleTheme="primary"
+        @onEntryToViewport={{fn this.sendGoogleEvent "Scrolled - Home - Projects"}}
+      >
+        <Project::ProjectLinkList
+          @projects={{this.projectList}}
+        />
+      </Layout::PageSections::PageSectionStickyTitle>
+    </Ui::IsCurrentlyVisible>
 
-    <Layout::PageSections::PageSectionStickyTitle
-      @title="Contact"
-      @titlePosition="left"
-      @titleTheme="secondary"
-      @onEntryToViewport={{fn this.sendGoogleEvent "Scrolled - Home - Contact"}}
-    >
-      <ContactMe
-        @description={{@model.author.contactDescription}}
-        @links={{@model.author.profileLinks}}
-      />
-    </Layout::PageSections::PageSectionStickyTitle>
+    <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
+      <Layout::PageSections::PageSectionStickyTitle
+        @isCurrentlyVisible={{isCurrentlyVisible}}
+        @title="Contact"
+        @titlePosition="left"
+        @titleTheme="secondary"
+        @onEntryToViewport={{fn this.sendGoogleEvent "Scrolled - Home - Contact"}}
+      >
+        <ContactMe
+          @description={{@model.author.contactDescription}}
+          @links={{@model.author.profileLinks}}
+        />
+      </Layout::PageSections::PageSectionStickyTitle>
+    </Ui::IsCurrentlyVisible>
   </Layout::PageSections::PageWrapper::PageWrapperSection>
 </Layout::PageSections::PageWrapper>

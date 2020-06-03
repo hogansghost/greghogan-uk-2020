@@ -15,10 +15,19 @@
   box-sizing: border-box;
 }
 
+::-moz-selection { /* Code for Firefox */
+  @include selection-highlight;
+}
+
+::selection {
+  @include selection-highlight;
+}
+
 html {
   background-color: $color-backing-primary;
   font-family: $text-typeface;
   font-size: $text-font-size;
+  font-weight: $font-weight-light;
   color: $text-color;
   line-height: $text-line-height;
   word-break: break-word;
