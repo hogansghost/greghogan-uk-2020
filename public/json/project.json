@@ -154,10 +154,6 @@
       },
       "projectContents": {
         "projectVideo": {
-          "videoSrcSet": {
-            "webm": "/assets/videos/projects/resident_evil/resident_evil_hero_720.webm",
-            "mp4": "/assets/videos/projects/resident_evil/resident_evil_hero_720.mp4"
-          },
           "thumbnailSrcSet": {
             "pl": {
               "src": "/assets/images/projects/resident_evil/resident_evil_poster_pl.jpg",
@@ -530,10 +526,6 @@
       },
       "projectContents": {
         "projectVideo": {
-          "videoSrcSet": {
-            "webm": "/assets/videos/projects/teads/teads_hero_720.webm",
-            "mp4": "/assets/videos/projects/teads/teads_hero_720.mp4"
-          },
           "thumbnailSrcSet": {
             "pl": {
               "src": "/assets/images/projects/teads/teads_poster_pl.jpg",
@@ -1233,10 +1225,6 @@
       },
       "projectContents": {
         "projectVideo": {
-          "videoSrcSet": {
-            "webm": "/assets/videos/projects/movidiam/movidiam_hero_720.webm",
-            "mp4": "/assets/videos/projects/movidiam/movidiam_hero_720.mp4"
-          },
           "thumbnailSrcSet": {
             "pl": {
               "src": "/assets/images/projects/movidiam/movidiam_poster_pl.jpg",
