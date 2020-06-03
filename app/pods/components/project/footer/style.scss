@@ -5,8 +5,8 @@
   text-align: center;
   background-color: $color-accent-secondary;
   box-shadow: 0px 0px 22px -3px rgba($black, 0.85), 0px 0px 8px -1px rgba($black, 0.45);
-  @include body-copy-formatting;
   margin-top: 22vh;
+  @extend %body-copy-formatting;
 
   &__inner {
     margin: 0 auto;
@@ -117,7 +117,7 @@
     }
   
     &__links-list-item-label {
-      flex: 1 1 auto;
+      flex: 0 1 auto;
       min-width: 0;
       @include link-decoration;
     }

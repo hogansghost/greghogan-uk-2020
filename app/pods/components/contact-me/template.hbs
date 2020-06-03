@@ -14,7 +14,14 @@
       <ul class="contact-me__link-list">
         {{#each this.contactLinks as |link|}}
           <li class="contact-me__link-list-item">
-            <a class="contact-me__link" href={{link.href}} target={{link.target}}>{{link.label}}</a>
+            <a
+              class="contact-me__link"
+              href={{link.href}}
+              rel="noopener noreferrer"
+              target={{link.target}}
+            >
+              {{link.label}}
+            </a>
           </li>
         {{/each}}
       </ul>

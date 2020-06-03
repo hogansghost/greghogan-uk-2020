@@ -68,7 +68,10 @@ export default Component.extend({
   },
 
   onScreenCheckIntersection() {
-    set(this, 'isCurrentlyVisible', true);
+    if (this._state === 'inDOM') {
+      set(this, 'isCurrentlyVisible', true);
+    }
+
     this.unbindScrollEvents();
   },
 

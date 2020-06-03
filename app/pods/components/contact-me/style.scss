@@ -1,5 +1,6 @@
 .contact-me {
-  @include body-copy-formatting;
+  @extend %body-copy-formatting;
+
   padding: $ui-content-padding-md;
   width: $content-restriction-uhd;
   max-width: 100%;

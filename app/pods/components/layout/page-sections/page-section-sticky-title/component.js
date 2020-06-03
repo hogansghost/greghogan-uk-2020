@@ -29,6 +29,7 @@ export default Component.extend({
     this._super(...arguments);
 
     this.attachListeners();
+    this.resetPosition();
     this.repositionStaticElement();
   },
 

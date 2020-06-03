@@ -26,6 +26,18 @@ export default Component.extend({
   offsetSizes: '100w',
   offsetPlaceholderSrc: '',
 
+  mainAlt: computed('alt', function() {
+    const alt = `${get(this, 'alt')}`;
+
+    let altValue = '';
+
+    if (alt) {
+      altValue = alt;
+    }
+
+    return altValue;
+  }),
+
   mainRole: computed('role', 'alt', function() {
     const alt = `${get(this, 'alt')}`;
     const role = `${get(this, 'role')}`;

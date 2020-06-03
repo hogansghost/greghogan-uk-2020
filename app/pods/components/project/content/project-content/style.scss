@@ -13,7 +13,7 @@
     margin-right: auto;
     margin-left: auto;
     padding: $ui-content-padding-md;
-    @include body-copy-formatting;
+    @extend %body-copy-formatting;
 
     &--media-width {
       width: $content-width-lg;

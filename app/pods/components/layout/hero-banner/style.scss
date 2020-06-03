@@ -43,7 +43,7 @@
     align-items: center;
     justify-content: center;
     min-height: 35vh;
-    font-weight: 700; // heavy;
+    font-weight: $font-weight-bold;
     padding: $ui-content-padding-md $ui-content-padding-sm;
     text-align: center;
   }
@@ -86,7 +86,7 @@
 
   &__author-role {
     display: inline-block;
-    font-weight: 300;
+    font-weight: $font-weight-light;
     display: inline-flex;
     align-items: center;
     justify-content: flex-start;
@@ -99,7 +99,7 @@
   }
 
   &__author-name {
-    font-family: "Avenir LT Std 35 Light";
+    font-weight: $font-weight-light;
     font-size: 3em;
     text-transform: uppercase;
     letter-spacing: 0.2em;
