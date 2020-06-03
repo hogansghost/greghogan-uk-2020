@@ -13,8 +13,13 @@ export default Controller.extend({
     this._super(...arguments);
 
     this.setScrollHandlingToManual();
+    this.jsEnabled();
     this.setCookieAcceptanceState();
     this.darkMode.init();
+  },
+
+  jsEnabled() {
+    document?.body?.removeAttribute('data-script');
   },
 
   setScrollHandlingToManual() {

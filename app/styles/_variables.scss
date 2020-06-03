@@ -3,10 +3,14 @@
  *
  */
 
-$text-typeface-fallback: "Helvetica", "Arial", sans-serif;
-$text-typeface: "Avenir LT Std 45 Book", $text-typeface-fallback;
+$text-typeface-fallback: "Times New Roman", "Helvetica", "Arial", sans-serif;
+$text-typeface: "Work Sans", $text-typeface-fallback;
 $text-font-size: 16px;
 $text-line-height: 1.4;
+
+$font-weight-light: 400;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
 
 
 

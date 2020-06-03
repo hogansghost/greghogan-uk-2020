@@ -111,13 +111,12 @@ ul[class], ol[class], figure {
   }
 }
 
-@import "app/pods/not-found/style";
-
 // Component imports
 @import "app/pods/components/about-me/style";
 @import "app/pods/components/contact-me/style";
 @import "app/pods/components/example/example-grid/style";
 @import "app/pods/components/example/example-grid/example-grid-item/style";
+@import "app/pods/components/status-page/status-message/style";
 
 // Decorative elements
 @import "app/pods/components/decorations/decorative-triangles/style";

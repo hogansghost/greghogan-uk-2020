@@ -591,9 +591,9 @@
                   "lg": {
                     "src": "/assets/images/projects/teads/microsite_bandq_home_lg.jpg",
                     "width": "1400w"
-                  },
-                  "sizes": "(min-width: 450px) 900px, (min-width: 900px) 1100px, (min-width: 1100px) 1400px, 100vw"
-                }
+                  }
+                },
+                "sizes": "(min-width: 450px) 900px, (min-width: 900px) 1100px, (min-width: 1100px) 1400px, 100vw"
               }, {
                 "alt": "B&Q advertisement video page",
                 "srcSet": {
@@ -2773,8 +2773,8 @@
       }
     }, {
       "uid": 5,
-      "id": "checkpoint",
-      "name": "Checkpoint",
+      "id": "geeiq",
+      "name": "Geeiq",
       "role": "Front-end Developer",
       "timeframe": {
         "start": "2020",
@@ -2782,34 +2782,34 @@
       },
       "url": [
         {
-          "href": "https://www.joincheckpoint.com/",
-          "label": "https://www.joincheckpoint.com/"
+          "href": "https://www.geeiq.com/",
+          "label": "https://www.geeiq.com/"
         }
       ],
       "thumbnail": {
         "srcSet": {
           "pl": {
-            "src": "/assets/images/projects/checkpoint/checkpoint_poster_pl.jpg",
+            "src": "/assets/images/projects/geeiq/checkpoint_poster_pl.jpg",
             "width": "100w"
           },
           "xs": {
-            "src": "/assets/images/projects/checkpoint/checkpoint_poster_xs.jpg",
+            "src": "/assets/images/projects/geeiq/checkpoint_poster_xs.jpg",
             "width": "768w"
           },
           "sm": {
-            "src": "/assets/images/projects/checkpoint/checkpoint_poster_sm.jpg",
+            "src": "/assets/images/projects/geeiq/checkpoint_poster_sm.jpg",
             "width": "992w"
           },
           "md": {
-            "src": "/assets/images/projects/checkpoint/checkpoint_poster_md.jpg",
+            "src": "/assets/images/projects/geeiq/checkpoint_poster_md.jpg",
             "width": "1100w"
           },
           "lg": {
-            "src": "/assets/images/projects/checkpoint/checkpoint_poster_lg.jpg",
+            "src": "/assets/images/projects/geeiq/checkpoint_poster_lg.jpg",
             "width": "1400w"
           },
           "xl": {
-            "src": "/assets/images/projects/checkpoint/checkpoint_poster_xl.jpg",
+            "src": "/assets/images/projects/geeiq/checkpoint_poster_xl.jpg",
             "width": "1660w"
           }
         },
@@ -2819,27 +2819,27 @@
         "projectVideo": {
           "thumbnailSrcSet": {
             "pl": {
-              "src": "/assets/images/projects/checkpoint/checkpoint_poster_pl.jpg",
+              "src": "/assets/images/projects/geeiq/checkpoint_poster_pl.jpg",
               "width": "100w"
             },
             "xs": {
-              "src": "/assets/images/projects/checkpoint/checkpoint_poster_xs.jpg",
+              "src": "/assets/images/projects/geeiq/checkpoint_poster_xs.jpg",
               "width": "768w"
             },
             "sm": {
-              "src": "/assets/images/projects/checkpoint/checkpoint_poster_sm.jpg",
+              "src": "/assets/images/projects/geeiq/checkpoint_poster_sm.jpg",
               "width": "992w"
             },
             "md": {
-              "src": "/assets/images/projects/checkpoint/checkpoint_poster_md.jpg",
+              "src": "/assets/images/projects/geeiq/checkpoint_poster_md.jpg",
               "width": "1100w"
             },
             "lg": {
-              "src": "/assets/images/projects/checkpoint/checkpoint_poster_lg.jpg",
+              "src": "/assets/images/projects/geeiq/checkpoint_poster_lg.jpg",
               "width": "1400w"
             },
             "xl": {
-              "src": "/assets/images/projects/checkpoint/checkpoint_poster_xl.jpg",
+              "src": "/assets/images/projects/geeiq/checkpoint_poster_xl.jpg",
               "width": "1660w"
             }
           },
@@ -2848,182 +2848,182 @@
         "body": [
           {
             "type": "h2",
-            "content": "About checkpoint"
+            "content": "About Geeiq"
           }, {
             "type": "p",
-            "content": "I have only recently just started working at Checkpoint as of May 2020"
+            "content": "I have only recently just started working at Geeiq as of May 2020"
           }, {
             "type": "p",
-            "content": "Checkpoint is a gaming based data anaylsis tool enabling brands actionable insights for optimising strategy in regards to marketing to audiences of esports teams, streamers and tournaments."
+            "content": "Geeiq is a gaming based data anaylsis tool enabling brands actionable insights for optimising strategy in regards to marketing to audiences of esports teams, streamers and tournaments."
           }, {
             "type": "imageGridSlanted",
             "imageAspect": "16-9",
             "content": [
               {
-                "alt": "Checkpoint registration webpage 001",
+                "alt": "Geeiq registration webpage 001",
                 "srcSet": {
                   "pl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_001_pl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_001_pl.jpg",
                     "width": "100w"
                   },
                   "xs": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_001_xs.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_001_xs.jpg",
                     "width": "100w"
                   },
                   "sm": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_001_sm.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_001_sm.jpg",
                     "width": "100w"
                   },
                   "md": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_001_md.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_001_md.jpg",
                     "width": "100w"
                   },
                   "lg": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_001_lg.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_001_lg.jpg",
                     "width": "100w"
                   },
                   "xl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_001_xl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_001_xl.jpg",
                     "width": "100w"
                   }
                 }
               }, {
-                "alt": "Checkpoint registration webpage 002",
+                "alt": "Geeiq registration webpage 002",
                 "srcSet": {
                   "pl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_002_pl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_002_pl.jpg",
                     "width": "100w"
                   },
                   "xs": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_002_xs.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_002_xs.jpg",
                     "width": "100w"
                   },
                   "sm": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_002_sm.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_002_sm.jpg",
                     "width": "100w"
                   },
                   "md": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_002_md.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_002_md.jpg",
                     "width": "100w"
                   },
                   "lg": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_002_lg.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_002_lg.jpg",
                     "width": "100w"
                   },
                   "xl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_002_xl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_002_xl.jpg",
                     "width": "100w"
                   }
                 }
               }, {
-                "alt": "Checkpoint registration webpage 003",
+                "alt": "Geeiq registration webpage 003",
                 "srcSet": {
                   "pl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_003_pl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_003_pl.jpg",
                     "width": "100w"
                   },
                   "xs": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_003_xs.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_003_xs.jpg",
                     "width": "100w"
                   },
                   "sm": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_003_sm.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_003_sm.jpg",
                     "width": "100w"
                   },
                   "md": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_003_md.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_003_md.jpg",
                     "width": "100w"
                   },
                   "lg": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_003_lg.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_003_lg.jpg",
                     "width": "100w"
                   },
                   "xl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_003_xl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_003_xl.jpg",
                     "width": "100w"
                   }
                 }
               }, {
-                "alt": "Checkpoint registration webpage 004",
+                "alt": "Geeiq registration webpage 004",
                 "srcSet": {
                   "pl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_004_pl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_004_pl.jpg",
                     "width": "100w"
                   },
                   "xs": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_004_xs.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_004_xs.jpg",
                     "width": "100w"
                   },
                   "sm": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_004_sm.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_004_sm.jpg",
                     "width": "100w"
                   },
                   "md": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_004_md.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_004_md.jpg",
                     "width": "100w"
                   },
                   "lg": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_004_lg.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_004_lg.jpg",
                     "width": "100w"
                   },
                   "xl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_004_xl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_004_xl.jpg",
                     "width": "100w"
                   }
                 }
               }, {
-                "alt": "Checkpoint registration webpage 005",
+                "alt": "Geeiq registration webpage 005",
                 "srcSet": {
                   "pl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_005_pl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_005_pl.jpg",
                     "width": "100w"
                   },
                   "xs": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_005_xs.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_005_xs.jpg",
                     "width": "100w"
                   },
                   "sm": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_005_sm.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_005_sm.jpg",
                     "width": "100w"
                   },
                   "md": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_005_md.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_005_md.jpg",
                     "width": "100w"
                   },
                   "lg": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_005_lg.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_005_lg.jpg",
                     "width": "100w"
                   },
                   "xl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_005_xl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_005_xl.jpg",
                     "width": "100w"
                   }
                 }
               }, {
-                "alt": "Checkpoint registration webpage 006",
+                "alt": "Geeiq registration webpage 006",
                 "srcSet": {
                   "pl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_006_pl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_006_pl.jpg",
                     "width": "100w"
                   },
                   "xs": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_006_xs.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_006_xs.jpg",
                     "width": "100w"
                   },
                   "sm": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_006_sm.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_006_sm.jpg",
                     "width": "100w"
                   },
                   "md": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_006_md.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_006_md.jpg",
                     "width": "100w"
                   },
                   "lg": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_006_lg.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_006_lg.jpg",
                     "width": "100w"
                   },
                   "xl": {
-                    "src": "/assets/images/projects/checkpoint/checkpoint_product_006_xl.jpg",
+                    "src": "/assets/images/projects/geeiq/checkpoint_product_006_xl.jpg",
                     "width": "100w"
                   }
                 }

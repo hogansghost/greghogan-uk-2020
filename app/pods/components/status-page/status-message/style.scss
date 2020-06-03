@@ -1,0 +1,39 @@
+.status-message {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  min-height: 100vh;
+  background-color: #000;
+
+  .lazy-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fade-in 2000ms both;
+  }
+
+  &__body {
+    @extend %body-copy-formatting;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+    width: 600px;
+    max-width: 100%;
+
+    h1 {
+      font-size: 4em;
+    }
+
+    & > * {
+      animation: slide-in-from-left 2000ms ease both;
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: 200ms * $i;
+        }
+      }
+    }
+  }
+}

@@ -28,19 +28,58 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <style>
+      body[data-script="noscript"] {
+        background-color: #08090A;
+        font-family:  "Helvetica", "Arial", sans-serif;
+        color: white;
+        line-height: 1.6;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        min-height: 100vh;
+      }
+      
+      .noscript {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-weight: 300;
+      }
+
+      .noscript__inner {
+        margin: auto;
+        width: 600px;
+        max-width: 100%;
+        text-align: center;
+      }
+    </style>
+
     {{content-for "head"}}
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/greghogan-uk-2020.css">
 
-    <link integrity="" rel="prefetch" href="{{rootURL}}assets/fonts/AvenirLTStd/AvenirLTStd-Book.woff" as="font">
-    <link integrity="" rel="prefetch" href="{{rootURL}}assets/fonts/AvenirLTStd/AvenirLTStd-Light.woff" as="font">
+    <link as="font" crossOrigin="anonymous" rel="preload" href="{{rootURL}}assets/fonts/FontAwesome.5.3.1/fa-brands-400.woff2">
+    <link as="font" crossOrigin="anonymous" rel="preload" href="{{rootURL}}assets/fonts/FontAwesome.5.3.1/fa-solid-900.woff2">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
 
     {{content-for "head-footer"}}
   </head>
-  <body>
+
+  <body data-script="noscript">
     {{content-for "body"}}
+
+    <noscript>
+      <div class="noscript">
+        <div class="noscript__inner">
+          <h1>Warning</h1>
+          <p>JavaScript is required as this portfolio is a SPA. Please enable it to view this site.</p>
+        </div>
+      </div>
+    </noscript>
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/greghogan-uk-2020.js"></script>

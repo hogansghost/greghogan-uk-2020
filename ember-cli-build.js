@@ -10,6 +10,11 @@ module.exports = function(defaults) {
       extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'json'],
       replaceExtensions: ['html', 'css', 'js', 'json']
     },
+    gzip: {
+      appendSuffix: false,
+      enabled: EmberApp.env() === 'production',
+      extensions: ['js', 'css']
+    },
     sassOptions: {
       includePaths: [
         'app/components'
