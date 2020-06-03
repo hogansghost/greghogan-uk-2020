@@ -63,11 +63,11 @@ export default Service.extend({
   applyDarkMode() {
     const windowPreference = window?.matchMedia(darkMediaQuery).matches ? DarkModeStates.AutoOn : DarkModeStates.AutoOff;
 
-    if ([DarkModeStates.Auto, DarkModeStates.AutoOff, DarkModeStates.AutoOn].includes(get(this, 'darkMode'))) {
+    if ([DarkModeStates.Auto, DarkModeStates.AutoOff, DarkModeStates.AutoOn].includes(get(this, 'isDark'))) {
       set(this, 'isDark', windowPreference);
     }
 
-    this.toggleBodyClassForDarkMode(get(this, 'darkMode'));
+    this.toggleBodyClassForDarkMode(get(this, 'isDark'));
   },
 
   setDarkModeState(state) {
