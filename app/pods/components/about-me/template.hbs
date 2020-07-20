@@ -25,6 +25,16 @@
     <div class="about-me__section">
       <div class="about-me__skills">
         <div class="about-me__skills-section">
+          <h3 class="about-me__skill-list-title">{{@author.skills.languages.title}}</h3>
+
+          <ul class="about-me__skill-list">
+            {{#each @author.skills.languages.list as |language|}}
+              <li>{{language.name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <div class="about-me__skills-section">
           <h3 class="about-me__skill-list-title">{{@author.skills.technical.title}}</h3>
 
           <ul class="about-me__skill-list">
