@@ -215,6 +215,7 @@ export default Component.extend({
         "sizes": "(min-width: 1200px) 1660px, (min-width: 900px) 1200px, (min-width: 700px) 900px, (min-width: 500px) 700px, (min-width: 300px) 500px, 100vw"
       },
     ];
+
     const randomNumberListRange = Math.floor(Math.random() * ((backgroundList.length - 1) - 0)) + 0;
     const randomBackgroundObject = backgroundList[randomNumberListRange];
 

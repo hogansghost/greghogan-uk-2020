@@ -9,7 +9,7 @@ export default class LazyImage extends Component {
   @tracked role = '';
   @tracked srcSet = null;
   @tracked sizes = '';
-  @tracked isCurrentlyVisible = true;
+  @tracked isCurrentlyVisible = null;
   @tracked shouldImageCover = false;
 
   @tracked forceCurrentlyVisible = false;
@@ -20,6 +20,18 @@ export default class LazyImage extends Component {
   @tracked offsetSrcSet = '';
   @tracked offsetSizes = '100w';
   @tracked offsetPlaceholderSrc = '';
+
+  constructor(owner, args) {
+    super(owner, args);
+
+    this.createSrcStrings();
+  }
+
+  get isCurrentlyOnScreen() {
+    const isCurrentlyVisible = this.args.isCurrentlyVisible;
+
+    return ![null, undefined].includes(isCurrentlyVisible) ? isCurrentlyVisible : true;
+  }
 
   get noBorder() {
     return !this.args.hasBorder;
@@ -50,12 +62,6 @@ export default class LazyImage extends Component {
     }
 
     return roleValue;
-  }
-
-  constructor(owner, args) {
-    super(owner, args);
-
-    this.createSrcStrings();
   }
 
   createSrcStrings() {

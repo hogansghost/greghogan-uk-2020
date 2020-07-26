@@ -4,6 +4,7 @@
       <div class="about-me__author-image">
         <Ui::LazyImage
           class="about-me__author-image-base"
+          @isCurrentlyVisible={{true}}
           @alt={{@author.images.author.alt}}
           @role={{@author.images.author.role}}
           @sizes={{@author.images.author.sizes}}

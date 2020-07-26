@@ -1,15 +1,17 @@
-import Component from '@ember/component';
-import { computed, get } from '@ember/object';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  tagName: '',
+export default class extends Component {
+  @tracked gutterVertical = 'md';
+  @tracked hasOverlap = false;
+  @tracked gutterVerticalTopOnly = false;
+  @tracked gutterVerticalBottomOnly = false;
 
-  gutterVertical: 'md',
-  hasOverlap: false,
-  gutterVerticalTopOnly: false,
-  gutterVerticalBottomOnly: false,
+  get gutterVerticalValue() {
+    return this.args.gutterVertical || 'md';
+  }
 
-  gutterVerticalSpacer: computed('gutterVertical', function() {
-    return `gutter-vertical-${get(this, 'gutterVertical')}`;
-  }),
-});
+  get gutterVerticalSpacer() {
+    return `gutter-vertical-${this.gutterVerticalValue}`;
+  }
+}

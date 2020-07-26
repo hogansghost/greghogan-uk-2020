@@ -43,9 +43,9 @@
         }}
       "
       role={{this.mainRole}}
-      src={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSrc ''}}
-      srcset={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSrcSet ''}}
-      sizes={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSizes ''}}
+      src={{if (or this.isCurrentlyOnScreen this.forceCurrentlyVisible) this.offsetSrc ''}}
+      srcset={{if (or this.isCurrentlyOnScreen this.forceCurrentlyVisible) this.offsetSrcSet ''}}
+      sizes={{if (or this.isCurrentlyOnScreen this.forceCurrentlyVisible) this.offsetSizes ''}}
     />
   </div>
 

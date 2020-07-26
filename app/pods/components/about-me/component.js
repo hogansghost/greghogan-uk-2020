@@ -1,7 +1,6 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  tagName: '',
-
-  author: null,
-});
+export default class AboutMe extends Component {
+  @tracked author = null;
+}
