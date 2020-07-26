@@ -1,44 +1,55 @@
 <div
   class={{bem
-    "lazy-image__body"
-    noBorder=this.noBorder
+    "lazy-image"
+    imageCover=@shouldImageCover
+    imageDefault=(not @shouldImageCover)
   }}
+  ...attributes
 >
-  {{#if (and this.placeholderSrc (not this.hasErroredPlaceholder))}}
+  <div
+    class={{bem
+      "lazy-image__body"
+      noBorder=this.noBorder
+    }}
+  >
+    {{#if (and this.placeholderSrc (not this.hasErroredPlaceholder))}}
+      <img
+        {{on "error" this.setPlaceholderError}}
+        alt=""
+        class="
+          js__lazy-placeholder
+          {{bem
+            "lazy-image__placeholder"
+            placeholderError=@hasErroredPlaceholder
+            shouldImageCover=@shouldImageCover
+          }}
+        "
+        role="presentation"
+        src={{this.placeholderSrc}}
+      />
+    {{/if}}
+
     <img
-      alt=""
+      {{on "load" this.setStateHasLoaded}}
+      alt={{this.mainAlt}}
       class="
-        js__lazy-placeholder
+        {{@className}}
+        js__lazy-main
         {{bem
-          "lazy-image__placeholder"
-          placeholderError=@hasErroredPlaceholder
+          "lazy-image__main"
+          loaded=this.hasLoaded
+          hasPlaceholder=this.hasPlaceholder
           shouldImageCover=@shouldImageCover
         }}
       "
-      role="presentation"
-      src={{this.placeholderSrc}}
+      role={{this.mainRole}}
+      src={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSrc ''}}
+      srcset={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSrcSet ''}}
+      sizes={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSizes ''}}
     />
+  </div>
+
+  {{#if @caption}}
+    <figcaption class="lazy-image__caption">{{@caption}}</figcaption>
   {{/if}}
-
-  <img
-    alt={{this.mainAlt}}
-    class="
-      {{@className}}
-      js__lazy-main
-      {{bem
-        "lazy-image__main"
-        loaded=this.hasLoaded
-        hasPlaceholder=this.hasPlaceholder
-        shouldImageCover=@shouldImageCover
-      }}
-    "
-    role={{this.mainRole}}
-    src={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSrc ''}}
-    srcset={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSrcSet ''}}
-    sizes={{if (or this.isCurrentlyVisible this.forceCurrentlyVisible) this.offsetSizes ''}}
-  />
 </div>
-
-{{#if @caption}}
-  <figcaption class="lazy-image__caption">{{@caption}}</figcaption>
-{{/if}}
