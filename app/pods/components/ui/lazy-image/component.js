@@ -73,12 +73,11 @@ export default class LazyImage extends Component {
     const mainSrcSet = this.stringifySrc(srcMainObj);
     const mainSizes = `${this.args.sizes} 100w`.replace(/^, /g, '').replace(/, 100w, 100w$/g, ', 100w');
 
+    this.hasPlaceholder = !!placeholderSrc;
     this.placeholderSrc = placeholderSrc;
     this.offsetSrc = mainSrc;
     this.offsetSrcSet = mainSrcSet;
     this.offsetSizes = mainSizes;
-
-    this.hasPlaceholder = !!placeholderSrc;
   }
 
   stringifySrc(srcObject = {}) {

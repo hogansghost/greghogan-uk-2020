@@ -15,9 +15,9 @@ export default class UiIsCurrentlyVisible extends Component {
 
   @action
   bindScrollEvents(element) {
-    const once = this.once;
-
     if ('IntersectionObserver' in window) {
+      const once = this.once;
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(({ isIntersecting }) => {
           if (isIntersecting) {
@@ -35,6 +35,8 @@ export default class UiIsCurrentlyVisible extends Component {
       this.intersectionObserver = observer;
 
       this.intersectionObserver.observe(element);
+    } else {
+      this.isCurrentlyVisible = true;
     }
   }
 

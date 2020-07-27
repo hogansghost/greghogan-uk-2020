@@ -1,24 +1,25 @@
-import Component from '@ember/component';
-import { computed, get } from '@ember/object';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  tagName: 'section',
-  classNames: 'image-grid-slanted',
+const aspectRatios = {
+  '16:9': '16:9',
+};
 
-  media: null,
-  limitCount: 12,
-  imageAspect: '',
+export default class ProjectContentImageGridSlanted extends Component {
+  @tracked media = null;
+  @tracked limitCount = 12;
+  @tracked imageAspect = '';
 
-  imageAspectRatio: computed('imageAspect', function() {
-    return get(this, 'imageAspect') || '16-9';
-  }),
+  get imageAspectRatio() {
+    return this.args.imageAspect || aspectRatios['16:9'];
+  }
 
-  mediaRowList: computed('media.[]', function() {
+  get mediaRowList() {
     const media = this.limitMedia();
 
     let mediaRows = [];
     let rowCount = 0;
-    
+
     while(media.length) {
       if (rowCount%2 === 0) {
         mediaRows.push(media.splice(0, 2));
@@ -30,11 +31,11 @@ export default Component.extend({
     }
 
     return mediaRows;
-  }),
+  }
 
   limitMedia() {
-    const limit = get(this, 'limitCount');
-    const media = get(this, 'media') || [];
+    const limit = this.args.limitCount || 12;
+    const media = this.args.media || [];
 
     if (media.length > limit) {
       console.warn('W A R N :: You have passed too many images to the slanted grid and the media has been limited.'); // eslint-disable-line no-console
@@ -42,4 +43,4 @@ export default Component.extend({
 
     return media.slice(0, limit);
   }
-});
+}

@@ -1,41 +1,48 @@
-<Ui::IsCurrentlyVisible class="project-link__background" as |isCurrentlyVisible|>
-  <div class="project-link__background-image">
-    <Ui::LazyImage
-      @alt=""
-      @isCurrentlyVisible={{isCurrentlyVisible}}
-      @shouldImageCover={{true}}
-      @srcSet={{@srcSet}}
-      @sizes={{@sizes}}
-    />
-  </div>
-</Ui::IsCurrentlyVisible>
+<article
+  class={{bem "project-link"
+    visible=@isCurrentlyVisible
+    hidden=(not @isCurrentlyVisible)
+  }}
+>
+  <Ui::IsCurrentlyVisible class="project-link__background" as |isCurrentlyVisible|>
+    <div class="project-link__background-image">
+      <Ui::LazyImage
+        @alt=""
+        @isCurrentlyVisible={{isCurrentlyVisible}}
+        @shouldImageCover={{true}}
+        @srcSet={{@srcSet}}
+        @sizes={{@sizes}}
+      />
+    </div>
+  </Ui::IsCurrentlyVisible>
 
-<div class="project-link__body">
-  <LinkTo
-    class="project-link__body-content-main"
-    @route="project"
-    @model={{@id}}
-  >
-    <div class="project-link__card">
-      <div class="project-link__card-inner">
-        <div class="project-link__card-content">
-          <h3 class="project-link__card-content-name">{{@name}}</h3>
-          <hr class="project-link__card-content-spacer" />
-          <p class="project-link__card-content-role text-light">{{@role}}</p>
+  <div class="project-link__body">
+    <LinkTo
+      class="project-link__body-content-main"
+      @route="project"
+      @model={{@id}}
+    >
+      <div class="project-link__card">
+        <div class="project-link__card-inner">
+          <div class="project-link__card-content">
+            <h3 class="project-link__card-content-name">{{@name}}</h3>
+            <hr class="project-link__card-content-spacer" />
+            <p class="project-link__card-content-role text-light">{{@role}}</p>
+          </div>
         </div>
       </div>
-    </div>
-  </LinkTo>
+    </LinkTo>
 
-  {{#if @url.length}}
-    <div class="project-link__body-content-footer">
-      <ul class="project-link__body-content-footer-inner util-spaced-list">
-        {{#each @url as |url|}}
-          <li class="project-link__body-content-footer-inner-item">
-            <Ui::LinkExternal @href={{url.href}}>{{url.label}}</Ui::LinkExternal>
-          </li>
-        {{/each}}
-      </ul>
-    </div>
-  {{/if}}
-</div>
+    {{#if @url.length}}
+      <div class="project-link__body-content-footer">
+        <ul class="project-link__body-content-footer-inner util-spaced-list">
+          {{#each @url as |url|}}
+            <li class="project-link__body-content-footer-inner-item">
+              <Ui::LinkExternal @href={{url.href}}>{{url.label}}</Ui::LinkExternal>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/if}}
+  </div>
+</article>

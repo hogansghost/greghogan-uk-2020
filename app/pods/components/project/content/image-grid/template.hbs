@@ -1,10 +1,12 @@
-<div class="image-grid__body">
-  {{#each @media as |mediaItem|}}
-    <Project::Content::ImageGrid::ImageGridItem
-      @alt={{mediaItem.alt}}
-      @caption={{mediaItem.caption}}
-      @colCount={{@colCount}}
-      @srcSet={{mediaItem.srcSet}}
-    />
-  {{/each}}
-</div>
+<section class="image-grid">
+  <div class="image-grid__body">
+    {{#each @media as |mediaItem|}}
+      <Project::Content::ImageGrid::ImageGridItem
+        @alt={{mediaItem.alt}}
+        @caption={{mediaItem.caption}}
+        @colCount={{this.columns}}
+        @srcSet={{mediaItem.srcSet}}
+      />
+    {{/each}}
+  </div>
+</section>
