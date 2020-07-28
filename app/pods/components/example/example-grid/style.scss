@@ -40,7 +40,6 @@
     box-shadow: 0 0 20px -3px rgba($black, 0.2), 0 0 30px -5px rgba($black, 0.35);
     display: flex;
     justify-content: flex-start;
-    background: rgba($black, 0.9);
 
     @include media($media-sm) {
       flex-flow: row wrap;

@@ -1,26 +1,35 @@
-<div
-  data-analytics-name={{@analyticsLogName}}
-  class={{bem "page-section-sticky-title__inner"
-    isSticky=this.isSticky
-    isTitleFirst=this.isTitleFirst
-    titleTheme=this.bemTitleTheme
-  }}
+<section
+  class="page-section-sticky-title"
 >
   <div
-    class={{bem "js__page-section-sticky-title__heading page-section-sticky-title__heading"
+    {{did-insert this.attachListeners}}
+    {{did-insert this.resetPosition}}
+    {{did-insert this.checkIfStickySupported}}
+    {{will-destroy this.detachListeners}}
+    data-analytics-name={{@analyticsLogName}}
+    class={{bem "page-section-sticky-title__inner"
+      isSticky=this.elementIsSticky
       isTitleFirst=this.isTitleFirst
-      stateFixed=this.stateFixed
-      stateEnd=this.stateEnd
+      titleTheme=this.bemTitleTheme
     }}
   >
-    <div class="page-section-sticky-title__heading-content-width">
-      <h3 class="page-section-sticky-title__heading-title">{{@title}}</h3>
+    <div
+      {{did-insert this.setHeaderElement}}
+      class={{bem "page-section-sticky-title__heading"
+        isTitleFirst=this.isTitleFirst
+        stateFixed=this.elementIsFixed
+        stateEnd=this.stateEnd
+      }}
+    >
+      <div class="page-section-sticky-title__heading-content-width">
+        <h3 class="page-section-sticky-title__heading-title">{{@title}}</h3>
+      </div>
     </div>
-  </div>
 
-  <div class="page-section-sticky-title__content">
-    <div class="page-section-sticky-title__content-content-width">
-      {{yield}}
+    <div class="page-section-sticky-title__content">
+      <div class="page-section-sticky-title__content-content-width">
+        {{yield}}
+      </div>
     </div>
   </div>
-</div>
+</section>
