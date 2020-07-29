@@ -4,7 +4,6 @@
   <div
     {{did-insert this.attachListeners}}
     {{did-insert this.resetPosition}}
-    {{did-insert this.checkIfStickySupported}}
     {{will-destroy this.detachListeners}}
     data-analytics-name={{@analyticsLogName}}
     class={{bem "page-section-sticky-title__inner"
@@ -15,6 +14,7 @@
   >
     <div
       {{did-insert this.setHeaderElement}}
+      {{did-insert this.checkIfStickySupported}}
       class={{bem "page-section-sticky-title__heading"
         isTitleFirst=this.isTitleFirst
         stateFixed=this.elementIsFixed

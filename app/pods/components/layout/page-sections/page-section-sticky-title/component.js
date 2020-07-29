@@ -46,62 +46,27 @@ export default class LayoutPageSectionStickyHeader extends Component {
     return `theme-${titleTheme}`;
   }
 
-  @action
-  attachListeners(element) {
-    this._onScroll = this.throttledRepositionStaticElement.bind(this, element);
-
-    window.addEventListener('scroll', this._onScroll, false);
-    window.addEventListener('resize', this._onScroll, false);
-  }
-
-  @action
-  detachListeners() {
-    window.removeEventListener('scroll', this._onScroll, false);
-    window.removeEventListener('resize', this._onScroll, false);
-  }
-
-  throttledRepositionStaticElement(element) {
-    throttle(this, this._repositionStaticElement.bind(this, element), 1);
-  }
-
-  @action
-  checkIfStickySupported(element) {
-    return this._checkIfStickySupported(this.headerElement);
-  }
-
-  @action
-  setHeaderElement(element) {
-    this.headerElement = element;
-  }
-
   _checkIfStickySupported(element) {
     this.isSticky = !(element && window.getComputedStyle(element, null).getPropertyValue('position') === 'relative');
     return this.isSticky;
   }
 
-  // @action
-  // repositionStaticElement(element) {
-  //   this._repositionStaticElement(element);
-  // }
-
-  _repositionStaticElement(element) {
+  repositionStaticElement(element) {
     const staticElement = element;
     const isCurrentlyVisible = this.args.isCurrentlyVisible || false;
     const isHeadingMeantToBeSticky = this._checkIfStickySupported(this.headerElement);
-    /**
-     * Check for the static element and whether the CSS is setting it to static,
-     * as anything other than static means it is meant to scroll with the client. While
-     * this could check the window width, it's much easier to sync to the CSS as the media
-     * width may change.
-     */
 
+    /*
+    * Check for the static element and whether the CSS is setting it to static,
+    * as anything other than static means it is meant to scroll with the client. While
+    * this could check the window width, it's much easier to sync to the CSS as the media
+    * width may change.
+    */
     if (isCurrentlyVisible && staticElement && isHeadingMeantToBeSticky) {
       const windowInnerHeight = window.innerHeight;
       const staticElementPosition = staticElement.getBoundingClientRect();
       const staticElementPositionTop = staticElementPosition.top;
       const staticElementPositionBottom = staticElementPosition.bottom;
-
-      this.isSticky = true;
 
       if (staticElementPositionTop <= windowInnerHeight) {
         this.setFirstEntryAndCallEntryMethod();
@@ -129,6 +94,11 @@ export default class LayoutPageSectionStickyHeader extends Component {
     }
   }
 
+  _resetPosition() {
+    this.stateFixed = false;
+    this.stateEnd = false;
+  }
+
   setFirstEntryAndCallEntryMethod() {
     if (!this.isFirstEntry && !this.stateEnd && this.hasEnteredView) {
       this.isFirstEntry = true;
@@ -137,13 +107,36 @@ export default class LayoutPageSectionStickyHeader extends Component {
     }
   }
 
+  throttledRepositionStaticElement(element) {
+    throttle(this, this.repositionStaticElement.bind(this, element), 1);
+  }
+
+  @action
+  attachListeners(element) {
+    this._onScroll = this.throttledRepositionStaticElement.bind(this, element);
+
+    window.addEventListener('scroll', this._onScroll, false);
+    window.addEventListener('resize', this._onScroll, false);
+  }
+
+  @action
+  checkIfStickySupported(element) {
+    return this._checkIfStickySupported(element);
+  }
+
+  @action
+  detachListeners() {
+    window.removeEventListener('scroll', this._onScroll, false);
+    window.removeEventListener('resize', this._onScroll, false);
+  }
+
   @action
   resetPosition() {
     this._resetPosition();
   }
 
-  _resetPosition() {
-    this.stateFixed = false;
-    this.stateEnd = false;
+  @action
+  setHeaderElement(element) {
+    this.headerElement = element;
   }
 }
