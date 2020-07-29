@@ -1,33 +1,44 @@
-import Component from '@ember/component';
-import { computed, get, set } from '@ember/object';
-import { not } from '@ember/object/computed';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
+export default class LazyImage extends Component {
+  @tracked alt = '';
+  @tracked caption = '';
+  @tracked hasBorder = true;
+  @tracked role = '';
+  @tracked srcSet = null;
+  @tracked sizes = '';
+  @tracked isCurrentlyVisible = null;
+  @tracked shouldImageCover = false;
 
-export default Component.extend({
-  classNames: 'lazy-image',
-  classNameBindings: ['shouldImageCover:lazy-image--image-cover:lazy-image--image-default'],
-  
-  alt: '',
-  caption: '',
-  hasBorder: true,
-  role: '',
-  srcSet: null,
-  sizes: '',
-  isCurrentlyVisible: true,
-  shouldImageCover: false,
-  
-  noBorder: not('hasBorder'),
-  forceCurrentlyVisible: false,
-  hasLoaded: false,
-  hasPlaceholder: false,
-  hasErroredPlaceholder: false,
-  offsetSrc: '',
-  offsetSrcSet: '',
-  offsetSizes: '100w',
-  offsetPlaceholderSrc: '',
+  @tracked forceCurrentlyVisible = false;
+  @tracked hasLoaded = false;
+  @tracked hasPlaceholder = false;
+  @tracked hasErroredPlaceholder = false;
+  @tracked offsetSrc = '';
+  @tracked offsetSrcSet = '';
+  @tracked offsetSizes = '100w';
+  @tracked offsetPlaceholderSrc = '';
 
-  mainAlt: computed('alt', function() {
-    const alt = `${get(this, 'alt')}`;
+  constructor(owner, args) {
+    super(owner, args);
+
+    this.createSrcStrings();
+  }
+
+  get isCurrentlyOnScreen() {
+    const isCurrentlyVisible = this.args.isCurrentlyVisible;
+
+    return ![null, undefined].includes(isCurrentlyVisible) ? isCurrentlyVisible : true;
+  }
+
+  get noBorder() {
+    return !this.args.hasBorder;
+  }
+
+  get mainAlt() {
+    const alt = this.args.alt;
 
     let altValue = '';
 
@@ -36,121 +47,62 @@ export default Component.extend({
     }
 
     return altValue;
-  }),
+  }
 
-  mainRole: computed('role', 'alt', function() {
-    const alt = `${get(this, 'alt')}`;
-    const role = `${get(this, 'role')}`;
+  get mainRole() {
+    const role = this.args.role;
 
     let roleValue = 'img';
 
     if (role) {
       roleValue = role;
-    } else if (alt) {
-      roleValue = alt;
     }
 
     return roleValue;
-  }),
-
-  init() {
-    this._super();
-
-    this.createInstanceEventHandlers();
-    this.createSrcStrings();
-  },
-  
-  didInsertElement() {
-    this._super();
-    
-    this.bindEvents();
-    this.checkPlaceholderExists();
-  },
-  
-  willDestroyElement() {
-    this.unbindEvents();
-  },
-
-  createInstanceEventHandlers() {
-    this._setPlaceholderError = () => this.setPlaceholderError();
-    this._setStateHasLoaded = () => this.setStateHasLoaded();
-  },
-  
-  bindEvents() {
-    const lazyImageMain = this.element.querySelector('.js__lazy-main');
-    const lazyImagePlaceholder = this.element.querySelector('.js__lazy-placeholder');
-    
-    if (lazyImageMain) {
-      lazyImageMain.addEventListener('load', this._setStateHasLoaded);
-    }
-    
-    if (lazyImagePlaceholder) {
-      lazyImagePlaceholder.addEventListener('error', this._setPlaceholderError);
-    }
-  },
-  
-  unbindEvents() {
-    const lazyImageMain = this.element.querySelector('.js__lazy-main');
-    const lazyImagePlaceholder = this.element.querySelector('.js__lazy-placeholder');
-    
-    if (lazyImageMain) {
-      lazyImageMain.removeEventListener('load', this._setStateHasLoaded);
-    }
-    
-    if (lazyImagePlaceholder) {
-      lazyImagePlaceholder.removeEventListener('error', this.setPlaceholderError);
-    }
-  },
+  }
 
   createSrcStrings() {
-    const srcSet = get(this, 'srcSet') || {};
+    const srcSet = this.args.srcSet || {};
     const srcMainObj = Object.fromEntries(Object.entries(srcSet).filter((src) => src[0] !== 'pl'));
 
     const placeholderSrc = srcSet?.pl?.src || '';
     const mainSrc = srcSet?.md?.src || srcMainObj[0]?.src || '';
     const mainSrcSet = this.stringifySrc(srcMainObj);
-    const mainSizes = `${get(this, 'sizes')}, 100w`.replace(/^, /g, '').replace(/, 100w, 100w$/g, ', 100w');
+    const mainSizes = `${this.args.sizes} 100w`.replace(/^, /g, '').replace(/, 100w, 100w$/g, ', 100w');
 
-    set(this, 'placeholderSrc', placeholderSrc);
-    set(this, 'offsetSrc', mainSrc);
-    set(this, 'offsetSrcSet', mainSrcSet);
-    set(this, 'offsetSizes', mainSizes);
-
-    set(this, 'hasPlaceholder', !!placeholderSrc);
-  },
+    this.hasPlaceholder = !!placeholderSrc;
+    this.placeholderSrc = placeholderSrc;
+    this.offsetSrc = mainSrc;
+    this.offsetSrcSet = mainSrcSet;
+    this.offsetSizes = mainSizes;
+  }
 
   stringifySrc(srcObject = {}) {
     return Object.values(srcObject).map((sizeObject) => (
       Object.values(sizeObject).filter(Boolean).join(' ').trim()
     )).join(', ').trim();
-  },
+  }
 
   checkPlaceholderExists() {
-    if (!get(this, 'hasPlaceholder')) {
+    if (!this.args.hasPlaceholder) {
       this.setForceCurrentlyVisible();
     }
-  },
-  
-  setForceCurrentlyVisible() {
-    if (this._state === 'inDOM') {
-      set(this, 'forceCurrentlyVisible', true);
-    }
-  },
-  
-  setStateHasLoaded() {
-    if (this._state === 'inDOM') {
-      set(this, 'hasLoaded', true);
-    }
-    
-    this.unbindEvents();
-  },
-  
-  setPlaceholderError() {
-    if (this._state === 'inDOM') {
-      set(this, 'hasErroredPlaceholder', true);
-      set(this, 'hasPlaceholder', false);
+  }
 
-      this.setForceCurrentlyVisible();
-    }
-  },
-});
+  setForceCurrentlyVisible() {
+    this.forceCurrentlyVisible = true;
+  }
+
+  @action
+  setStateHasLoaded() {
+    this.hasLoaded = true;
+  }
+
+  @action
+  setPlaceholderError() {
+    this.hasErroredPlaceholder = true;
+    this.hasPlaceholder = false;
+
+    this.setForceCurrentlyVisible();
+  }
+}

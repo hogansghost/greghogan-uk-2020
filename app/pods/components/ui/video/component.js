@@ -1,14 +1,12 @@
-import Component from '@ember/component';
-import { computed, get } from '@ember/object';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  tagName: '',
+export default class UiVideo extends Component {
+  @tracked videoPosterSrcSet = null;
+  @tracked videoSrcSet = null;
 
-  videoPosterSrcSet: null,
-  videoSrcSet: null,
-
-  videoSrcSetList: computed('videoSrcSet.[]', function() {
-    const videoSrcSet = Object.entries(get(this, 'videoSrcSet'));
+  get videoSrcSetList() {
+    const videoSrcSet = Object.entries(this.videoSrcSet);
 
     let sourceList = [];
 
@@ -25,5 +23,5 @@ export default Component.extend({
     });
 
     return sourceList;
-  }),
-});
+  }
+}

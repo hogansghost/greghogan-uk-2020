@@ -1,8 +1,7 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  tagName: '',
-
-  heading: '',
-  examples: null,
-});
+export default class ExampleExampleGrid extends Component {
+  @tracked heading = '';
+  @tracked examples = null;
+}

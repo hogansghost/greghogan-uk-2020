@@ -1,9 +1,11 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  tagName: 'section',
-  classNames: ['tech-grid'],
+export default class ProjectContentTechGrid extends Component {
+  @tracked technology = null;
+  @tracked title = '';
 
-  technology: null,
-  title: 'Tech stack',
-});
+  get sectionTitle() {
+    return this.args.title || 'Tech stack';
+  }
+}

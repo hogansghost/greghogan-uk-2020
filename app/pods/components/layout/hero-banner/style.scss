@@ -35,7 +35,7 @@
     min-height: 80vh;
   }
 
-  
+
   // Content header
   &__header {
     position: relative;
@@ -76,7 +76,7 @@
         &:nth-child(1) {
           animation-delay: 200ms * 3;
         }
-        
+
         &:nth-child(2) {
           animation-delay: 200ms * 4;
         }
@@ -121,12 +121,15 @@
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
+    @include heading-formatting;
+    font-size: $heading-size-h3;
+    font-weight: $font-weight-normal;
 
     &:nth-child(n+2) {
       margin-top: 0.6em;
     }
   }
-  
+
   &__author-detail-item-icon {
     flex: 0 0 auto;
     min-width: 2em;
@@ -137,13 +140,13 @@
     flex: 1 1 auto;
     min-width: 0;
   }
-  
+
   // Content body
   &__body {
     position: relative;
     flex: 1 1 auto;
   }
-  
+
   &__body-inner {
     display: flex;
     align-items: center;

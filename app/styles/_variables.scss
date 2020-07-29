@@ -12,6 +12,11 @@ $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
+$heading-size-h1: 2em;
+$heading-size-h2: 1.7em;
+$heading-size-h3: 1.4em;
+$heading-size-h4: 1em;
+
 
 
 
@@ -36,7 +41,7 @@ $brand-secondary: $bright-turquoise;
   --color-image-background: #{#d7d6e0};
   --color-image-border: #{rgba($black, 0.1)};
   --text-color: rgba($black, 0.65);
-  
+
   &[data-theme="dark"] {
     --color-backing-primary: #{$smoky-black};
     --color-backing-secondary: #{mix($black, $white, 5%)};
@@ -60,7 +65,7 @@ $color-image-border: var(--color-image-border);
 
 
 /**
- * Interface basics, padding, gutters, 
+ * Interface basics, padding, gutters,
  * animation durations, etc.
  *
  */

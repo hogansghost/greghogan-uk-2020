@@ -52,6 +52,11 @@
   content: "\f15c";
 }
 
+.fa-languages::before {
+  @extend .fa;
+  content: "\f086";
+}
+
 .fa-location::before {
   @extend .fa;
   content: "\f3c5";

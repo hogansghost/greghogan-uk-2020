@@ -7,7 +7,10 @@
     "details": [
       {
         "iconClass": "fa-location",
-        "label": "London, UK"
+        "label": "Zürich, Switzerland"
+      }, {
+        "iconClass": "fa-languages",
+        "label": "Languages: English"
       }, {
         "iconClass": "fa-checkbox",
         "label": "Not a Robot"
@@ -135,6 +138,15 @@
       }
     ],
     "skills": {
+      "languages": {
+        "title": "Languages",
+        "list": [
+          {
+            "id": 1,
+            "name": "English"
+          }
+        ]
+      },
       "technical": {
         "title": "Technical",
         "list": [

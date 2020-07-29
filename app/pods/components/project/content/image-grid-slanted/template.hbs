@@ -1,20 +1,20 @@
-<div class="image-grid-slanted__body">
-  {{#each this.mediaRowList as |mediaRow|}}
-    <div class="image-grid-slanted__row">
-      {{#each mediaRow as |mediaItem|}}
-        <div
-          class={{bem
-            "image-grid-slanted__item"
-            this.imageAspectRatio
-          }}
-        >
-          <Project::Content::ImageGridSlanted::ImageGridSlantedItem
-            @alt={{mediaItem.alt}}
-            @role={{@role}}
-            @srcSet={{mediaItem.srcSet}}
-          />
-        </div>
-      {{/each}}
-    </div>
-  {{/each}}
-</div>
+<section class="image-grid-slanted">
+  <div class="image-grid-slanted__body">
+    {{#each this.mediaRowList as |mediaRow|}}
+      <div class="image-grid-slanted__row">
+        {{#each mediaRow as |mediaItem|}}
+          <div
+            class="image-grid-slanted__item"
+            data-aspect-ratio={{this.imageAspectRatio}}
+          >
+            <Project::Content::ImageGridSlanted::ImageGridSlantedItem
+              @alt={{mediaItem.alt}}
+              @role={{@role}}
+              @srcSet={{mediaItem.srcSet}}
+            />
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
+</section>

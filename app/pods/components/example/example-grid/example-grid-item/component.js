@@ -1,19 +1,17 @@
-import Component from '@ember/component';
-import { set } from '@ember/object';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  tagName: '',
+export default class ExampleExampleGridItem extends Component {
+  @tracked isCurrentlyVisible = false;
+  @tracked example = null;
+  @tracked randomisedBackgroundSrcSet = '';
+  @tracked randomisedBackgroundSizes = '';
 
-  isCurrentlyVisible: false,
-  example: null,
-  randomisedBackgroundSrcSet: '',
-  randomisedBackgroundSizes: '',
-
-  init() {
-    this._super();
+  constructor(owner, args) {
+    super(owner, args);
 
     this.setRandomisedBackgroundSrcSet();
-  },
+  }
 
   setRandomisedBackgroundSrcSet() {
     const backgroundList = [
@@ -215,10 +213,11 @@ export default Component.extend({
         "sizes": "(min-width: 1200px) 1660px, (min-width: 900px) 1200px, (min-width: 700px) 900px, (min-width: 500px) 700px, (min-width: 300px) 500px, 100vw"
       },
     ];
+
     const randomNumberListRange = Math.floor(Math.random() * ((backgroundList.length - 1) - 0)) + 0;
     const randomBackgroundObject = backgroundList[randomNumberListRange];
 
-    set(this, 'randomisedBackgroundSrcSet', randomBackgroundObject.srcSet);
-    set(this, 'randomisedBackgroundSizes', randomBackgroundObject.sizes);
-  },
-});
+    this.randomisedBackgroundSrcSet = randomBackgroundObject.srcSet;
+    this.randomisedBackgroundSizes = randomBackgroundObject.sizes;
+  }
+}

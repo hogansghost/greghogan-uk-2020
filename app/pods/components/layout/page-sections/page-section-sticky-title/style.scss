@@ -55,30 +55,29 @@
 
     @include media($media-sm) {
       position: static;
-    }
 
+      // Position
+      &--is-title-first {
+        right: auto;
+        left: 0;
+      }
 
-    // Position
-    &--is-title-first {
-      right: auto;
-      left: 0;
-    }
+      // Scroll state
+      &--state-fixed {
+        position: fixed;
+        top: 0;
+        width: 50%;
+      }
 
-    // Scroll state
-    &--state-fixed {
-      position: fixed;
-      top: 0;
-      width: 50%;
-    }
+      &--state-end {
+        bottom: 0;
+        position: absolute;
+      }
 
-    &--state-end {
-      bottom: 0;
-      position: absolute;
-    }
-
-    #{$_this}__inner--is-sticky & {
-      flex: 0 0 auto;
-      order: 1;
+      #{$_this}__inner--is-sticky & {
+        flex: 0 0 auto;
+        order: 1;
+      }
     }
   }
 

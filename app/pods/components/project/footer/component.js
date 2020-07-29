@@ -1,12 +1,12 @@
-import Component from '@ember/component';
-import { computed, get } from '@ember/object';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  tagName: '',
+export default class ProjectFooter extends Component {
+  @tracked author = null;
 
-  author: null,
+  get contactLinks() {
+    const contacts = this.args.author.profileLinks || [];
 
-  contactLinks: computed('author.profileLinks.[]', function() {
-    return get(this, 'author.profileLinks').filter((link) => link.type === 'personal');
-  }),
-});
+    return contacts.filter((link) => link.type === 'personal');
+  }
+}

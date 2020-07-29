@@ -1,6 +1,6 @@
 {
   "name": "greghogan-uk-2020",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "Portfolio of work for Greg Hogan",
   "repository": "",
@@ -17,11 +17,9 @@
     "start": "ember serve",
     "test": "ember test"
   },
-  "dependencies": {
-    "ember-adapters": "https://github.com/andrew-checkpoint/ember-addon-adapters.git#master"
-  },
   "devDependencies": {
     "@ember/optional-features": "^1.3.0",
+    "@ember/render-modifiers": "^1.0.2",
     "@glimmer/component": "^1.0.0",
     "@glimmer/tracking": "^1.0.0",
     "babel-eslint": "^10.0.3",

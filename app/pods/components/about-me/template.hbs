@@ -4,6 +4,7 @@
       <div class="about-me__author-image">
         <Ui::LazyImage
           class="about-me__author-image-base"
+          @isCurrentlyVisible={{true}}
           @alt={{@author.images.author.alt}}
           @role={{@author.images.author.role}}
           @sizes={{@author.images.author.sizes}}
@@ -24,45 +25,30 @@
 
     <div class="about-me__section">
       <div class="about-me__skills">
-        <div class="about-me__skills-section">
-          <h3 class="about-me__skill-list-title">{{@author.skills.technical.title}}</h3>
+        <AboutMe::SkillList
+          @title={{@author.skills.languages.title}}
+          @skills={{@author.skills.languages.list}}
+        />
 
-          <ul class="about-me__skill-list">
-            {{#each @author.skills.technical.list as |technical|}}
-              <li>{{technical.name}}</li>
-            {{/each}}
-          </ul>
-        </div>
+        <AboutMe::SkillList
+          @title={{@author.skills.technical.title}}
+          @skills={{@author.skills.technical.list}}
+        />
 
-        <div class="about-me__skills-section">
-          <h3 class="about-me__skill-list-title">{{@author.skills.graphicsSoftware.title}}</h3>
+        <AboutMe::SkillList
+          @title={{@author.skills.graphicsSoftware.title}}
+          @skills={{@author.skills.graphicsSoftware.list}}
+        />
 
-          <ul class="about-me__skill-list">
-            {{#each @author.skills.graphicsSoftware.list as |graphicsSoftware|}}
-              <li>{{graphicsSoftware.name}}</li>
-            {{/each}}
-          </ul>
-        </div>
+        <AboutMe::SkillList
+          @title={{@author.skills.sourceControl.title}}
+          @skills={{@author.skills.sourceControl.list}}
+        />
 
-        <div class="about-me__skills-section">
-          <h3 class="about-me__skill-list-title">{{@author.skills.sourceControl.title}}</h3>
-
-          <ul class="about-me__skill-list">
-            {{#each @author.skills.sourceControl.list as |sourceControl|}}
-              <li>{{sourceControl.name}}</li>
-            {{/each}}
-          </ul>
-        </div>
-
-        <div class="about-me__skills-section">
-          <h3 class="about-me__skill-list-title">{{@author.skills.experience.title}}</h3>
-
-          <ul class="about-me__skill-list">
-            {{#each @author.skills.experience.list as |experience|}}
-              <li>{{experience.name}}</li>
-            {{/each}}
-          </ul>
-        </div>
+        <AboutMe::SkillList
+          @title={{@author.skills.experience.title}}
+          @skills={{@author.skills.experience.list}}
+        />
       </div>
     </div>
   </div>

@@ -1,20 +1,22 @@
-<div class="tech-grid__inner">
-  <div class="tech-grid__header">
-    <h2 class="tech-grid__header-title">{{@title}}</h2>
-  </div>
+<section class="tech-grid">
+  <div class="tech-grid__inner">
+    <div class="tech-grid__header">
+      <h2 class="tech-grid__header-title">{{this.sectionTitle}}</h2>
+    </div>
 
-  <div class="tech-grid__body">
-    <ul class="tech-grid__list">
-      {{#each @technology as |tech|}}
-        <li class="tech-grid__list-item">
-          <Ui::IsCurrentlyVisible class="tech-grid__list-item-inner" as |isCurrentlyVisible|>
-            <Project::Content::TechGrid::TechGridItem
-              @isCurrentlyVisible={{isCurrentlyVisible}}
-              @tech={{tech}}
-            />
-          </Ui::IsCurrentlyVisible>
-        </li>
-      {{/each}}
-    </ul>
+    <div class="tech-grid__body">
+      <ul class="tech-grid__list">
+        {{#each @technology as |tech|}}
+          <li class="tech-grid__list-item">
+            <Ui::IsCurrentlyVisible class="tech-grid__list-item-inner" as |isCurrentlyVisible|>
+              <Project::Content::TechGrid::TechGridItem
+                @isCurrentlyVisible={{isCurrentlyVisible}}
+                @tech={{tech}}
+              />
+            </Ui::IsCurrentlyVisible>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
   </div>
-</div>
+</section>

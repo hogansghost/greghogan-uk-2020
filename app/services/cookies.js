@@ -11,7 +11,7 @@ export default Service.extend({
     }
 
     let cookieToWrite = `${name}=`;
-    
+
     cookieToWrite += value;
     cookieToWrite += lifetime ? `; expires${lifetime}` : '';
 
@@ -21,7 +21,7 @@ export default Service.extend({
   hasAcceptedAllCookies: false,
 
   acceptAllCookies() {
-    this.writeCookie('cookiesAccept', 'true', 'Fri, 31 Dec 9999 23:59:59 GMT');
+    this.writeCookie('cookiesAccept', 'true', 'Fri, 31 Dec 2035 23:59:59 GMT');
 
     this.set('hasAcceptedAllCookies', true);
   },

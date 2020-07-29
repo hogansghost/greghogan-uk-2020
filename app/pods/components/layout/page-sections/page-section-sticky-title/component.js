@@ -1,119 +1,142 @@
-import Component from '@ember/component';
-import { computed, get, set } from '@ember/object';
-import { equal } from '@ember/object/computed';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 import { throttle } from '@ember/runloop';
 
-export default Component.extend({
-  tagName: 'section',
-  classNames: ['page-section-sticky-title'],
+const titlePositions = {
+  Left: 'left',
+  Right: 'right',
+};
 
-  analyticsLogName: null,
-  isCurrentlyVisible: false,
-  isFirstEntry: false,
-  isSticky: false,
-  stateFixed: false,
-  stateEnd: false,
-  title: '',
-  onEntryToViewport: () => {},
-  titlePosition: 'right',
-  titleTheme: 'primary',
-  hasEnteredView: false,
-  isTitleFirst: equal('titlePosition', 'left'),
+export default class LayoutPageSectionStickyHeader extends Component {
+  @tracked analyticsLogName = null;
+  @tracked isCurrentlyVisible = false;
+  @tracked isFirstEntry = false;
+  @tracked stateFixed = false;
+  @tracked stateEnd = false;
+  @tracked title = '';
+  @tracked onEntryToViewport = () => {};
+  @tracked titlePosition = 'right';
+  @tracked titleTheme = 'primary';
+  @tracked hasEnteredView = false;
 
-  bemTitleTheme: computed('titleTheme', function() {
-    const titleTheme = get(this, 'titleTheme');
+  @tracked headerElement;
+  @tracked isSticky = false;
+  @tracked isFixed = false;
+
+  get elementIsSticky() {
+    return this.isSticky;
+  }
+
+  get elementIsFixed() {
+    return this.isFixed;
+  }
+
+  get currentTitlePosition() {
+    return this.args.titlePosition || titlePositions.Right;
+  }
+
+  get isTitleFirst() {
+    return this.currentTitlePosition === titlePositions.Left;
+  }
+
+  get bemTitleTheme() {
+    const titleTheme = this.args.titleTheme || 'primary';
 
     return `theme-${titleTheme}`;
-  }),
-  
-  didInsertElement() {
-    this._super(...arguments);
+  }
 
-    this.attachListeners();
-    this.resetPosition();
-    this.repositionStaticElement();
-  },
+  _checkIfStickySupported(element) {
+    this.isSticky = !(element && window.getComputedStyle(element, null).getPropertyValue('position') === 'relative');
+    return this.isSticky;
+  }
 
-  willDestroyElement() {
-    this._super(...arguments);
+  repositionStaticElement(element) {
+    const staticElement = element;
+    const isCurrentlyVisible = this.args.isCurrentlyVisible || false;
+    const isHeadingMeantToBeSticky = this._checkIfStickySupported(this.headerElement);
 
-    this.detachListeners();
-    this.resetPosition();
-  },
-
-  attachListeners() {
-    this._onScroll = this.throttledRepositionStaticElement.bind(this);
-
-    window.addEventListener('scroll', this._onScroll, false);
-    window.addEventListener('resize', this._onScroll, false);
-  },
-
-  detachListeners() {
-    window.removeEventListener('scroll', this._onScroll, false);
-    window.removeEventListener('resize', this._onScroll, false);
-  },
-
-  throttledRepositionStaticElement() {
-    throttle(this, this.repositionStaticElement, 1);
-  },
-
-  repositionStaticElement() {
-    const containerElement = this.element;
-    const staticElement = containerElement && containerElement.querySelector('.js__page-section-sticky-title__heading');
-
-    const isCurrentlyVisible = get(this, 'isCurrentlyVisible');
-
-    /**
-     * Check for the static element and whether the CSS is setting it to static,
-     * as anything other than static means it is meant to scroll with the client. While
-     * this could check the window width, it's much easier to sync to the CSS as the media
-     * width may change.
-     */
-    if (isCurrentlyVisible && staticElement && window.getComputedStyle(staticElement, null).getPropertyValue('position') !== 'relative' ) {
+    /*
+    * Check for the static element and whether the CSS is setting it to static,
+    * as anything other than static means it is meant to scroll with the client. While
+    * this could check the window width, it's much easier to sync to the CSS as the media
+    * width may change.
+    */
+    if (isCurrentlyVisible && staticElement && isHeadingMeantToBeSticky) {
       const windowInnerHeight = window.innerHeight;
-      const containerElementPosition = containerElement.getBoundingClientRect();
-      const containerElementPositionTop = containerElementPosition.top;
-      const containerElementPositionBottom = containerElementPosition.bottom;
+      const staticElementPosition = staticElement.getBoundingClientRect();
+      const staticElementPositionTop = staticElementPosition.top;
+      const staticElementPositionBottom = staticElementPosition.bottom;
 
-      set(this, 'isSticky', true);
-
-      if (containerElementPositionTop <= windowInnerHeight) {
+      if (staticElementPositionTop <= windowInnerHeight) {
         this.setFirstEntryAndCallEntryMethod();
       }
 
-      if (containerElementPositionTop <= windowInnerHeight && containerElementPositionBottom >= 0 ) {
-        if (containerElementPositionTop > 0 ) {
-          set(this, 'stateFixed', false);
-          set(this, 'stateEnd', false);
-          set(this, 'hasEnteredView', false);
-        } else if (containerElementPositionTop <= 0 && containerElementPositionBottom - windowInnerHeight > 0 ) {
-          set(this, 'stateFixed', true);
-          set(this, 'stateEnd', false);
-          set(this, 'hasEnteredView', true);
-        } else if (containerElementPositionBottom - windowInnerHeight <= 0 && containerElementPositionTop <= 0 ) {
-          set(this, 'stateFixed', false);
-          set(this, 'stateEnd', true);
-          set(this, 'hasEnteredView', false);
+      if (staticElementPositionTop <= windowInnerHeight && staticElementPositionBottom >= 0 ) {
+        if (staticElementPositionTop > 0 ) {
+          this.isFixed = false;
+          this.stateEnd = false;
+          this.hasEnteredView = false;
+        } else if (staticElementPositionTop <= 0 && staticElementPositionBottom - windowInnerHeight > 0 ) {
+          this.isFixed = true;
+          this.stateEnd = false;
+          this.hasEnteredView = true;
+        } else if (staticElementPositionBottom - windowInnerHeight <= 0 && staticElementPositionTop <= 0 ) {
+          this.isFixed = false;
+          this.stateEnd = true;
+          this.hasEnteredView = false;
         } else {
-          set(this, 'stateEnd', false);
+          this.stateEnd = false;
         }
       }
-    } else {
-      this.resetPosition();
+    } else if (!isHeadingMeantToBeSticky) {
+      this.isSticky = isHeadingMeantToBeSticky;
     }
-  },
-  
+  }
+
+  _resetPosition() {
+    this.stateFixed = false;
+    this.stateEnd = false;
+  }
+
   setFirstEntryAndCallEntryMethod() {
-    if (!get(this, 'isFirstEntry') && !get(this, 'stateEnd') && get(this, 'hasEnteredView')) {
-      set(this, 'isFirstEntry', true);
-  
+    if (!this.isFirstEntry && !this.stateEnd && this.hasEnteredView) {
+      this.isFirstEntry = true;
+
       this.onEntryToViewport();
     }
-  },
+  }
 
+  throttledRepositionStaticElement(element) {
+    throttle(this, this.repositionStaticElement.bind(this, element), 1);
+  }
+
+  @action
+  attachListeners(element) {
+    this._onScroll = this.throttledRepositionStaticElement.bind(this, element);
+
+    window.addEventListener('scroll', this._onScroll, false);
+    window.addEventListener('resize', this._onScroll, false);
+  }
+
+  @action
+  checkIfStickySupported(element) {
+    return this._checkIfStickySupported(element);
+  }
+
+  @action
+  detachListeners() {
+    window.removeEventListener('scroll', this._onScroll, false);
+    window.removeEventListener('resize', this._onScroll, false);
+  }
+
+  @action
   resetPosition() {
-    set(this, 'isSticky', false);
-    set(this, 'stateFixed', false);
-    set(this, 'stateEnd', false);
-  },
-});
+    this._resetPosition();
+  }
+
+  @action
+  setHeaderElement(element) {
+    this.headerElement = element;
+  }
+}

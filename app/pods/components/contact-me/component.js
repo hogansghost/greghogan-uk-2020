@@ -1,15 +1,13 @@
-import Component from '@ember/component';
-import { computed, get } from '@ember/object';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  tagName: '',
+export default class ContactMe extends Component {
+  @tracked description = null;
+  @tracked links = null;
 
-  description: null,
-  links: null,
-
-  contactLinks: computed('links', function() {
-    const links = get(this, 'links') || [];
+  get contactLinks() {
+    const links = this.args.links || [];
 
     return links.filter((link) => link.type === 'personal');
-  }),
-});
+  }
+}

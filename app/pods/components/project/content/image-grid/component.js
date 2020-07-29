@@ -1,9 +1,11 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  tagName: 'section',
-  classNames: ['image-grid'],
+export default class ProjectContentImageGrid extends Component {
+  @tracked colCount = 2;
+  @tracked media = null;
 
-  colCount: 2,
-  media: null,
-});
+  get columns() {
+    return this.args.colCount || 2;
+  }
+}
