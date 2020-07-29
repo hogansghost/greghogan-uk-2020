@@ -94,8 +94,24 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2;
-  letter-spacing: 0.2em;
+  @include heading-formatting;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: $heading-size-h1;
+}
+
+h2 {
+  font-size: $heading-size-h2;
+}
+
+h3 {
+  font-size: $heading-size-h3;
+}
+
+h4 {
+  font-size: $heading-size-h4;
 }
 
 

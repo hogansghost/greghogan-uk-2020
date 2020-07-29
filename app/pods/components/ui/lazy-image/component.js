@@ -38,7 +38,7 @@ export default class LazyImage extends Component {
   }
 
   get mainAlt() {
-    const alt = `${this.args.alt}`;
+    const alt = this.args.alt;
 
     let altValue = '';
 
@@ -50,15 +50,12 @@ export default class LazyImage extends Component {
   }
 
   get mainRole() {
-    const alt = `${this.args.alt}`;
-    const role = `${this.args.role}`;
+    const role = this.args.role;
 
     let roleValue = 'img';
 
     if (role) {
       roleValue = role;
-    } else if (alt) {
-      roleValue = alt;
     }
 
     return roleValue;
