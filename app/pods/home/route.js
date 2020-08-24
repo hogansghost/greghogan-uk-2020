@@ -1,12 +1,12 @@
 import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
 
-export default Route.extend({
+export default class HomeRoute extends Route {
   model() {
     return RSVP.hash({
       author: this.store.queryRecord('author', {}),
       example: this.store.queryRecord('example', {}),
-      project: this.store.findAll('project'),
+      projects: this.store.findAll('project', { reload: true }),
     });
-  },
-});
+  }
+}
