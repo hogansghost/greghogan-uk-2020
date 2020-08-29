@@ -1,6 +1,8 @@
 import Service from '@ember/service';
-import { get, set } from '@ember/object';
-import { bind } from '@ember/runloop';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+import { addListener, removeListener } from '@ember/object/events';
+
 
 const darkMediaQuery = 'screen and (prefers-color-scheme: dark)';
 
@@ -12,44 +14,27 @@ export const DarkModeStates = {
   On: 'on',
 };
 
-export default Service.extend({
-  isDark: DarkModeStates.Auto,
-  safariMode: false,
-  
-  init() {
-    this._super(...arguments);
-    
-    this._applyDarkMode = bind(this, this.applyDarkMode);
-    
+export default class DarkModeService extends Service {
+  @tracked isDark = DarkModeStates.Auto;
+
+  constructor(owner, args) {
+    super(owner, args);
+
     this.attachListeners();
     this.applyDarkMode();
     this.setForcedDarkModeFromStorage();
-  },
-  
+  }
+
   attachListeners() {
     const mediaQuery = window.matchMedia(darkMediaQuery);
-    
-    try {
-      mediaQuery.addEventListener('change', this._applyDarkMode);
-    } catch (err) {
-      try {
-        // Safari
-        mediaQuery.addListener(this._applyDarkMode);
-        set(this, 'safariMode', true);
-      } catch (safariErr) {
-        console.error(safariErr); //eslint-disable-line no-console
-      }
-    }
-  },
-  
+
+    addListener(mediaQuery, 'change', this, 'applyDarkMode');
+  }
+
   detachListeners() {
-    if (get(this, 'safariMode')) {
-      window.matchMedia(darkMediaQuery).removeListener(this._applyDarkMode);
-    } else {
-      window.matchMedia(darkMediaQuery).removeEventListener('change', this._applyDarkMode);
-    }
-  },
-  
+    removeListener(mediaQuery, 'change', this, 'applyDarkMode');
+  }
+
   setForcedDarkModeFromStorage() {
     const storedPreference = window?.localStorage?.getItem('darkMode');
 
@@ -58,23 +43,23 @@ export default Service.extend({
     } else if (storedPreference === DarkModeStates.Off) {
       this.manualDarkModeOff();
     }
-  },
+  }
 
   applyDarkMode() {
     const windowPreference = window?.matchMedia(darkMediaQuery).matches ? DarkModeStates.AutoOn : DarkModeStates.AutoOff;
 
-    if ([DarkModeStates.Auto, DarkModeStates.AutoOff, DarkModeStates.AutoOn].includes(get(this, 'isDark'))) {
-      set(this, 'isDark', windowPreference);
+    if ([DarkModeStates.Auto, DarkModeStates.AutoOff, DarkModeStates.AutoOn].includes(this.isDark)) {
+      this.isDark = windowPreference;
     }
 
-    this.toggleBodyClassForDarkMode(get(this, 'isDark'));
-  },
+    this.toggleDataTheme(this.isDark);
+  }
 
   setDarkModeState(state) {
-    set(this, 'isDark', state);
-  },
+    this.isDark = state;
+  }
 
-  toggleBodyClassForDarkMode(darkMode) {
+  toggleDataTheme(darkMode) {
     if ([DarkModeStates.On, DarkModeStates.AutoOn].includes(darkMode)) {
       this.setDarkModeState(darkMode);
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -82,29 +67,36 @@ export default Service.extend({
       this.setDarkModeState(darkMode);
       document.documentElement.setAttribute('data-theme', 'light');
     }
-  },
+  }
 
+  setCurrentState(state) {
+    this.isDark = state;
+
+    if (state === DarkModeStates.Auto) {
+      window?.localStorage?.removeItem('darkMode');
+    } else {
+      window?.localStorage?.setItem('darkMode', state);
+    }
+
+    this.applyDarkMode();
+  }
+
+  resetState() {
+
+  }
+
+  @action
   manualDarkModeOn() {
-    set(this, 'isDark', DarkModeStates.On);
+    this.setCurrentState(DarkModeStates.On);
+  }
 
-    window?.localStorage?.setItem('darkMode', DarkModeStates.On);
-
-    this.applyDarkMode();
-  },
-  
+  @action
   manualDarkModeOff() {
-    set(this, 'isDark', DarkModeStates.Off);
+    this.setCurrentState(DarkModeStates.Off);
+  }
 
-    window?.localStorage?.setItem('darkMode', DarkModeStates.Off);
-
-    this.applyDarkMode();
-  },
-  
+  @action
   manualDarkModeRevoke() {
-    set(this, 'isDark', DarkModeStates.Auto);
-
-    window?.localStorage?.removeItem('darkMode');
-
-    this.applyDarkMode();
-  },
-});
+    this.setCurrentState(DarkModeStates.Auto);
+  }
+}
