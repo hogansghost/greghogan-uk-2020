@@ -26,6 +26,10 @@
         "id": 6,
         "name": "CSS scroll-snap",
         "url": "https://codepen.io/greghogan/pen/dyMbNWp"
+      }, {
+        "id": 7,
+        "name": "Conway's Game of Life",
+        "url": "https://github.com/hogansghost/game-of-life"
       }
     ]
   }

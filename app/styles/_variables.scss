@@ -51,8 +51,6 @@ $brand-secondary: $bright-turquoise;
   }
 }
 
-$highlight-color: var(--color-highlight);
-$text-color: var(--text-color);
 $color-backing-primary: var(--color-backing-primary);
 $color-backing-secondary: var(--color-backing-secondary);
 $color-primary: var(--brand-primary);
@@ -61,6 +59,10 @@ $color-accent-primary: var(--brand-accent-primary);
 $color-accent-secondary: var(--brand-accent-secondary);
 $color-image-background: var(--color-image-background);
 $color-image-border: var(--color-image-border);
+
+$highlight-color: var(--color-highlight);
+$text-color: var(--text-color);
+$link-color: $color-secondary;
 
 
 

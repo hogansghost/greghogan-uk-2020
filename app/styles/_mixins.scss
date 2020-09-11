@@ -58,14 +58,14 @@ $media-xl: "xl";
 }
 
 @mixin link-decoration-active-state {
-  border-bottom-color: $color-primary;
+  border-bottom-color: $link-color;
   background-size: 100% 2px;
 }
 
 @mixin link-decoration {
   position: relative;
   display: inline-block;
-  background-image: linear-gradient($color-primary, $color-primary);
+  background-image: linear-gradient($link-color, $link-color);
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 1px;
@@ -78,7 +78,7 @@ $media-xl: "xl";
     bottom: 0;
     left: 0;
     width: 100%;
-    border-bottom: 2px dotted $color-primary;
+    border-bottom: 2px dotted $link-color;
     opacity: 0.35;
   }
 

@@ -65,6 +65,10 @@
       padding-bottom: 62.67%;
     }
 
+    &[data-aspect-ratio="screenshot"]::before {
+      padding-bottom: 63.8%;
+    }
+
     &[data-aspect-ratio="3:2"]::before {
       padding-bottom: 66.67%;
     }
