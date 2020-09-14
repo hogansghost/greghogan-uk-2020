@@ -12,20 +12,20 @@ module.exports = function(defaults) {
     },
     gzip: {
       appendSuffix: false,
-      enabled: false, // EmberApp.env() === 'production',
-      extensions: ['js', 'css', 'json']
+      enabled: EmberApp.env() === 'production',
+      extensions: [], // ['js', 'css', 'json'],
     },
     sassOptions: {
       includePaths: [
         'app/components'
-      ]
+      ],
     },
     minifyJS: {
       enabled: true
     },
     minifyCSS: {
       enabled: true
-    }
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
