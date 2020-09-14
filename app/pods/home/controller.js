@@ -1,16 +1,22 @@
 import Controller from '@ember/controller';
-import { computed, get } from '@ember/object';
+import { action } from '@ember/object';
 
 import { fireGoogleEvent } from '../../functions/googleTrackingEvents';
 
-export default Controller.extend({
-  projectList: computed('model.project.[]', function() {
-    const projects = get(this, 'model.project');
+export default class HomeController extends Controller {
 
-    return (projects && projects.toArray() || []).sortBy('uid').reverse();
-  }),
+  get projects() {
+    return this.model.projects && this.model.projects.toArray() || [];
+  }
 
-  sendGoogleEvent(message) {
+  get projectList() {
+    const projects = this.projects;
+
+    return projects.sort((a, b) => a.uid - b.uid).reverse();
+  }
+
+  @action
+  sendGoogleEvent(element, message) {
     fireGoogleEvent(message);
-  },
-});
+  }
+}

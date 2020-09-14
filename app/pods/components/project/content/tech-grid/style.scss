@@ -6,10 +6,20 @@
 
 
   &__inner {
+    padding-top: $ui-content-padding-lg;
+    padding-bottom: $ui-content-padding-md;
     position: relative;
     z-index: 1;
   }
 
+  &__header {
+    margin-right: auto;
+    margin-left: auto;
+    width: $content-width-readable;
+    padding-right: $ui-content-padding-md;
+    padding-left: $ui-content-padding-md;
+    text-align: center;
+  }
 
   &__header-title {
     letter-spacing: 0.2em;
@@ -22,7 +32,7 @@
     position: relative;
 
     &:nth-child(n+2) {
-      margin-top: $ui-content-padding-lg;
+      margin-top: $ui-content-padding-md;
     }
   }
 

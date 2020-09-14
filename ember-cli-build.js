@@ -12,7 +12,7 @@ module.exports = function(defaults) {
     },
     gzip: {
       appendSuffix: false,
-      enabled: EmberApp.env() === 'production',
+      enabled: false, // EmberApp.env() === 'production',
       extensions: ['js', 'css', 'json']
     },
     sassOptions: {

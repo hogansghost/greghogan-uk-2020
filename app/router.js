@@ -1,29 +1,21 @@
 import EmberRouter from '@ember/routing/router';
 import { inject as service } from '@ember/service';
-import { get, set } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
 import config from './config/environment';
 
 import { fireGoogleEvent } from './functions/googleTrackingEvents';
 
 export default class Router extends EmberRouter {
+  @service cookies;
+
   location = config.locationType;
   rootURL = config.rootURL;
-}
 
-Router.map(function() {
-  this.route('home', { path: '/' });
-  this.route('not-found', { path: '/*path' });
-  this.route('project', { path: 'project/:id' });
-});
+  @tracked hasTransitioned = false;
 
-Router.reopen({
-  cookies: service(),
-
-  hasTransitioned: false,
-
-  init() {
-    this._super(...arguments);
+  constructor() {
+    super(...arguments);
 
     this.on('routeWillChange', (transition) => {
       this.acceptCookieOnPageChange(transition);
@@ -33,22 +25,27 @@ Router.reopen({
       this.captureFirstTransitionOntoSite();
       this.logGoogleAnalyticsOnPageChange(transition);
     });
-  },
-
+  }
 
   captureFirstTransitionOntoSite() {
-    set(this, 'hasTransitioned', true);
-  },
+    this.hasTransitioned = true;
+  }
 
   logGoogleAnalyticsOnPageChange(transitionObj) {
     if (transitionObj?.to?.params?.id) {
-      fireGoogleEvent(transitionObj?.to?.params?.id);
+      fireGoogleEvent(transitionObj.to.params.id);
     }
-  },
+  }
 
   acceptCookieOnPageChange() {
-    if (get(this, 'hasTransitioned')) {
+    if (this.hasTransitioned) {
       this.cookies.acceptAllCookies();
     }
   }
+}
+
+Router.map(function() {
+  this.route('home', { path: '/' });
+  this.route('not-found', { path: '/*path' });
+  this.route('project', { path: 'project/:id' });
 });

@@ -28,12 +28,12 @@
       padding-top: 0;
       padding-bottom: 0;
       width: $content-width-readable;
-      
+
       & + :not(&) {
         padding-top: $ui-content-padding-md;
         padding-bottom: $ui-content-padding-md;
       }
-      
+
       @include media($media-sm) {
         max-width: 80vw;
       }

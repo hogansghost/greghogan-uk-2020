@@ -6,11 +6,11 @@
       </div>
     {{/if}}
 
-    {{#if @examples}}
+    {{#if this.exampleList}}
       <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
         <div class="example-grid__body">
           <div class="example-grid__body-content">
-            {{#each @examples as |example|}}
+            {{#each this.exampleList as |example|}}
               <Example::ExampleGrid::ExampleGridItem
                 @example={{example}}
                 @isCurrentlyVisible={{isCurrentlyVisible}}
