@@ -57,13 +57,16 @@
     {{content-for "head"}}
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/greghogan-uk-2020.css">
+
+    <link integrity="" rel="preload" href="{{rootURL}}assets/vendor.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css"></noscript>
+
+    <link integrity="" rel="preload" href="{{rootURL}}assets/greghogan-uk-2020.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link integrity="" rel="stylesheet" href="{{rootURL}}assets/greghogan-uk-2020.css"></noscript>
 
     <link as="font" crossOrigin="anonymous" rel="preload" href="{{rootURL}}assets/fonts/FontAwesome.5.3.1/fa-brands-400.woff2">
     <link as="font" crossOrigin="anonymous" rel="preload" href="{{rootURL}}assets/fonts/FontAwesome.5.3.1/fa-solid-900.woff2">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" crossOrigin="anonymous" rel="preload">
 
     {{content-for "head-footer"}}
   </head>
