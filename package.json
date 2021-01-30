@@ -63,5 +63,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "ember-element-helper": "^0.3.2"
   }
 }

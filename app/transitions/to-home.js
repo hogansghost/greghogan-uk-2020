@@ -46,7 +46,9 @@ export default function toProject(opts = {}) {
   }
 
   return firstStep.then(() => {
-    setDocumentHeight(this.newElement[0].clientHeight);
+    const documentHeight = this.newElement[0]?.clientHeight || window.innerHeight;
+
+    setDocumentHeight(documentHeight);
 
     window.scrollTo({
       top: window.previousScrollPosition || 0,

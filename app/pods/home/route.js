@@ -6,7 +6,15 @@ export default class HomeRoute extends Route {
     return RSVP.hash({
       author: this.store.queryRecord('author', {}),
       example: this.store.queryRecord('example', {}),
-      projects: this.store.findAll('project', { reload: true }),
+      projects: this.store.findAll('project', {
+        reload: true,
+      }).then((projects) => {
+        const projectArray = projects?.toArray() || [];
+
+        return projectArray.sort((a, b) => (
+          +a.order < +b.order ? 1 : -1
+        ));
+      }),
     });
   }
 }

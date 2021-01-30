@@ -10,10 +10,67 @@
     $_self-section: &;
 
     max-width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: auto !important;
+    margin-left: auto !important;
     padding: $ui-content-padding-md;
-    @extend %body-copy-formatting;
+
+    &[data-content-type="h1"],
+    &[data-content-type="h2"],
+    &[data-content-type="h3"],
+    &[data-content-type="h4"],
+    &[data-content-type="h5"],
+    &[data-content-type="h6"] {
+      @include heading-formatting;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      &:nth-child(n+2):not(:empty) {
+        margin-top: 3em;
+      }
+    }
+
+    &[data-content-type="h3"],
+    &[data-content-type="h4"],
+    &[data-content-type="h5"],
+    &[data-content-type="h6"] {
+      text-transform: inherit;
+    }
+
+    &[data-content-type="p"],
+    &[data-content-type="span"],
+    &[data-content-type="ul"],
+    &[data-content-type="ol"] {
+      line-height: 1.8;
+
+      &:nth-child(n+2) {
+        margin-top: 1em;
+      }
+    }
+
+    &[data-content-type="ul"],
+    &[data-content-type="ol"] {
+      margin-right: 0;
+      margin-left: 0;
+      columns: 2 300px;
+
+      li {
+        margin-left: 1.15em;
+        padding-right: $ui-content-padding-md;
+        page-break-after: avoid;
+        break-after: avoid;
+        page-break-before: avoid;
+        break-before: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+
+    a {
+      @include link-decoration;
+    }
+
 
     &--media-width {
       width: $content-width-lg;

@@ -2,39 +2,35 @@
   <article class="project-content__body">
     {{#each @content.body as |bodyContent|}}
       {{!-- Sub heading --}}
-      {{#if (does-equal bodyContent.type "h2")}}
-        <div class={{bem "project-content__body-section" readableWidth=true}} data-content-type="h2">
-          <h2>{{bodyContent.content}}</h2>
-        </div>
+      {{#if (or
+        (does-equal bodyContent.type "h1")
+        (does-equal bodyContent.type "h2")
+        (does-equal bodyContent.type "h3")
+        (does-equal bodyContent.type "h4")
+        (does-equal bodyContent.type "h5")
+        (does-equal bodyContent.type "h6")
+        (does-equal bodyContent.type "p")
+        (does-equal bodyContent.type "span")
+      )}}
+        {{#let (element bodyContent.type) as |Element|}}
+          <Element class={{bem "project-content__body-section" readableWidth=true}} data-content-type={{bodyContent.type}}>
+            {{bodyContent.content}}
+          </Element>
+        {{/let}}
       {{/if}}
 
-      {{!-- Paragraph copy --}}
-      {{#if (does-equal bodyContent.type "p")}}
-        <div class={{bem "project-content__body-section" readableWidth=true}} data-content-type="p">
-          <p>{{{bodyContent.content}}}</p>
-        </div>
-      {{/if}}
 
-      {{!-- Bullet point list unordered --}}
-      {{#if (does-equal bodyContent.type "ul")}}
-        <div class={{bem "project-content__body-section" readableWidth=true}} data-content-type="ul">
-          <ul>
+      {{#if (or
+        (does-equal bodyContent.type "ul")
+        (does-equal bodyContent.type "ol")
+      )}}
+        {{#let (element bodyContent.type) as |Element|}}
+          <Element class={{bem "project-content__body-section" readableWidth=true}} data-content-type={{bodyContent.type}}>
             {{#each bodyContent.content as |listItem|}}
               <li>{{{listItem}}}</li>
             {{/each}}
-          </ul>
-        </div>
-      {{/if}}
-
-      {{!-- Bullet point list ordered --}}
-      {{#if (does-equal bodyContent.type "ol")}}
-        <div class={{bem "project-content__body-section" readableWidth=true}} data-content-type="ol">
-          <ol>
-            {{#each bodyContent.content as |listItem|}}
-              <li>{{{listItem}}}</li>
-            {{/each}}
-          </ol>
-        </div>
+          </Element>
+        {{/let}}
       {{/if}}
 
       {{!-- Image grid --}}
@@ -66,12 +62,10 @@
       {{!-- Mockup grid --}}
       {{#if (does-equal bodyContent.type "mockupGrid")}}
         <figure class={{bem "project-content__body-section" fullWidth=true}}>
-
             <Project::Content::MockupGrid
               @isCurrentlyVisible={{true}}
               @media={{bodyContent.content}}
             />
-
         </figure>
       {{/if}}
 
