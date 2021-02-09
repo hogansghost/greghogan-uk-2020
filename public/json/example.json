@@ -3,35 +3,27 @@
     "id": 1,
     "codepen": [
       {
-        "id": 2,
         "name": "Button Sass mixin",
         "url": "https://codepen.io/greghogan/pen/ajyMOz"
       }, {
-        "id": 3,
         "name": "Aspect ratios",
         "url": "https://codepen.io/greghogan/pen/gqJmyM"
       }, {
-        "id": 4,
         "name": "SVG <use>",
         "url": "https://codepen.io/greghogan/pen/zYxMaEd"
       }, {
-        "id": 5,
         "name": "Validating email domain example",
         "url": "https://codepen.io/greghogan/pen/ExjWbWp"
       }, {
-        "id": 6,
         "name": "CSS scroll-snap",
         "url": "https://codepen.io/greghogan/pen/dyMbNWp"
       }, {
-        "id": 7,
         "name": "Conway's Game of Life",
         "url": "https://github.com/hogansghost/game-of-life"
       }, {
-        "id": 8,
         "name": "Secure note taking app",
         "url": "https://github.com/hogansghost/notes-secure"
       }, {
-        "id": 9,
         "name": "Pizza party calculator",
         "url": "https://github.com/hogansghost/pizza-calculator"
       }

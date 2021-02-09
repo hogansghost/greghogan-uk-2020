@@ -7,13 +7,13 @@
           <div class="footer__coffee-images">
             <Ui::LazyImage
               class={{bem "footer__coffee-image" main=true}}
-              @alt={{@author.images.author.alt}}
-              @role={{@author.images.author.role}}
-              @sizes={{@author.images.author.sizes}}
-              @srcSet={{@author.images.author.srcSet}}
+              @alt={{this.author.images.author.alt}}
+              @role={{this.author.images.author.role}}
+              @sizes={{this.author.images.author.sizes}}
+              @srcSet={{this.author.images.author.srcSet}}
             />
 
-            {{#each @author.images.secondary as |secondaryImage|}}
+            {{#each this.author.images.secondary as |secondaryImage|}}
               <Ui::LazyImage
                 class={{bem "footer__coffee-image" secondary=true}}
                 @alt={{secondaryImage.alt}}
@@ -24,8 +24,8 @@
             {{/each}}
           </div>
 
-          {{#if @author.footerDescription.length}}
-            {{#each @author.footerDescription as |paragraph|}}
+          {{#if this.author.footerDescription.length}}
+            {{#each this.author.footerDescription as |paragraph|}}
               <p class="footer__coffee-description">{{paragraph}}</p>
             {{/each}}
           {{/if}}
@@ -39,7 +39,7 @@
           {{#each this.contactLinks as |contactLink|}}
             <li class="footer__links-list-item">
               <span class="footer__links-list-item-icon {{contactLink.labelIconClass}}" />
-              <a 
+              <a
                 class="footer__links-list-item-label"
                 href={{contactLink.href}}
                 target={{contactLink.target}}
@@ -55,7 +55,7 @@
     </div>
 
     <div class="footer__footer">
-      <p class="footer__footer-copy">{{@author.name}} &copy; {{@author.copyright}}</p>
+      <p class="footer__footer-copy">{{this.author.name}} &copy; {{this.copyright}}</p>
     </div>
   </div>
 </div>

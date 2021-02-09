@@ -1,14 +1,20 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
+
+import { validateProp } from 'greghogan-uk-2020/utils/props';
+
+const Sizes = {
+  SM: 'sm',
+  MD: 'md',
+  LG: 'lg',
+  XL: 'xl',
+  NONE: 'none',
+  TOP_ONLY: 'top-only',
+  BOTTOM_ONLY: 'bottom-only',
+};
 
 export default class extends Component {
-  @tracked gutterVertical = 'md';
-  @tracked hasOverlap = false;
-  @tracked gutterVerticalTopOnly = false;
-  @tracked gutterVerticalBottomOnly = false;
-
   get gutterVerticalValue() {
-    return this.args.gutterVertical || 'md';
+    return validateProp(this.args.gutterVertical, Sizes, Sizes.MD);
   }
 
   get gutterVerticalSpacer() {

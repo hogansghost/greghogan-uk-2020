@@ -1,12 +1,8 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
 
 export default class UiVideo extends Component {
-  @tracked videoPosterSrcSet = null;
-  @tracked videoSrcSet = null;
-
   get videoSrcSetList() {
-    const videoSrcSet = Object.entries(this.videoSrcSet);
+    const videoSrcSet = Object.entries(this.args.videoSrcSet);
 
     let sourceList = [];
 

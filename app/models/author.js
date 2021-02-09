@@ -6,7 +6,11 @@ export default DS.Model.extend({
       return [];
     }
   }),
-  copyright: DS.attr('string'),
+  copyright: DS.attr({
+    defaultValue() {
+      return {};
+    }
+  }),
   description: DS.attr({
     defaultValue() {
       return {};

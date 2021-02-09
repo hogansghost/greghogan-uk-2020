@@ -3,23 +3,23 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { throttle } from '@ember/runloop';
 
-const titlePositions = {
-  Left: 'left',
-  Right: 'right',
+import { validateProp } from 'greghogan-uk-2020/utils/props';
+
+const TitlePositions = {
+  LEFT: 'left',
+  RIGHT: 'right',
+};
+
+const Theme = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
 };
 
 export default class LayoutPageSectionStickyHeader extends Component {
-  @tracked analyticsLogName = null;
-  @tracked isCurrentlyVisible = false;
   @tracked isFirstEntry = false;
   @tracked stateFixed = false;
   @tracked stateEnd = false;
-  @tracked title = '';
-  @tracked onEntryToViewport = () => {};
-  @tracked titlePosition = 'right';
-  @tracked titleTheme = 'primary';
   @tracked hasEnteredView = false;
-
   @tracked headerElement;
   @tracked isSticky = false;
   @tracked isFixed = false;
@@ -33,21 +33,22 @@ export default class LayoutPageSectionStickyHeader extends Component {
   }
 
   get currentTitlePosition() {
-    return this.args.titlePosition || titlePositions.Right;
+    return this.args.titlePosition || TitlePositions.RIGHT;
   }
 
   get isTitleFirst() {
-    return this.currentTitlePosition === titlePositions.Left;
+    return this.currentTitlePosition === TitlePositions.LEFT;
   }
 
   get bemTitleTheme() {
-    const titleTheme = this.args.titleTheme || 'primary';
+    const titleTheme = validateProp(this.args.titleTheme, Theme, Theme.PRIMARY);
 
     return `theme-${titleTheme}`;
   }
 
   _checkIfStickySupported(element) {
     this.isSticky = !(element && window.getComputedStyle(element, null).getPropertyValue('position') === 'relative');
+
     return this.isSticky;
   }
 
@@ -100,10 +101,14 @@ export default class LayoutPageSectionStickyHeader extends Component {
   }
 
   setFirstEntryAndCallEntryMethod() {
-    if (!this.isFirstEntry && !this.stateEnd && this.hasEnteredView) {
-      this.isFirstEntry = true;
+    const isValidFirstEntry = !this.isFirstEntry && this.hasEnteredView;
 
-      this.onEntryToViewport();
+    if (isValidFirstEntry && typeof this.args.onEntryToViewport === 'function') {
+      this.args.onEntryToViewport();
+    }
+
+    if (isValidFirstEntry && !this.stateEnd) {
+      this.isFirstEntry = true;
     }
   }
 

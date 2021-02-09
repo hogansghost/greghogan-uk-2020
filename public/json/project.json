@@ -1320,7 +1320,7 @@
             "content": "Movidiam is designed to be a one stop shop for everything one might require during a media production project, be that talent, asset sharing or even management of the project at hand. It features social network profiling for freelancers to display their work, write blogs, post status updates as well as feature contact information for potential clients. This profiling also links into a map-based search system, allowing users to enter a search term such as \"Camera operator in New York\" which will then supply a list of results matching that criteria, in a similar manner to Airbnb’s search page. Movidiam also offer a briefing system where users can contact Movidiam to request a specific type or multiple types of users to help them creating a production - the chosen responses coming from the 20K+ freelancers registered to the service."
           }, {
             "type": "imageGridSlanted",
-            "imageAspect": "16-9",
+            "imageAspect": "16:9",
             "content": [
               {
                 "alt": "One",
@@ -2216,7 +2216,7 @@
             "content": "This was my first experience of working with React and Redux as well as technologies like styled components (CSS in JS) and yarn, once we transitioned to it's use over NPM towards the end of 2019."
           }, {
             "type": "imageGridSlanted",
-            "imageAspect": "16-9",
+            "imageAspect": "16:9",
             "content": [
               {
                 "alt": "A screenshot of the loveholidays home page",

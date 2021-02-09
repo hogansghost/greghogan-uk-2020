@@ -1,7 +1,13 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
+
+import { defaultProp } from 'greghogan-uk-2020/utils/props';
 
 export default class LayoutPageWrapper extends Component {
-  @tracked spacingUpper = false;
-  @tracked spacingLower = false;
+  get spacingUpper() {
+    return defaultProp(this.args.spacingUpper, false);
+  }
+
+  get spacingLower() {
+    return defaultProp(this.args.spacingLower, false);
+  }
 }

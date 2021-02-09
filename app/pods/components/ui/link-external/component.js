@@ -1,6 +1,9 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
+
+import { defaultProp } from 'greghogan-uk-2020/utils/props';
 
 export default class UiLinkExternal extends Component {
-  @tracked href = '';
+  get target() {
+    return defaultProp(this.args.target, '_blank');
+  }
 }

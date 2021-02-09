@@ -2,16 +2,9 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
-export default class LazyImage extends Component {
-  @tracked alt = '';
-  @tracked caption = '';
-  @tracked hasBorder = true;
-  @tracked role = '';
-  @tracked srcSet = null;
-  @tracked sizes = '';
-  @tracked isCurrentlyVisible = null;
-  @tracked shouldImageCover = false;
+import { defaultProp } from 'greghogan-uk-2020/utils/props';
 
+export default class LazyImage extends Component {
   @tracked forceCurrentlyVisible = false;
   @tracked hasLoaded = false;
   @tracked hasPlaceholder = false;
@@ -28,37 +21,19 @@ export default class LazyImage extends Component {
   }
 
   get isCurrentlyOnScreen() {
-    const isCurrentlyVisible = this.args.isCurrentlyVisible;
-
-    return ![null, undefined].includes(isCurrentlyVisible) ? isCurrentlyVisible : true;
+    return defaultProp(this.args.isCurrentlyVisible, true);
   }
 
   get noBorder() {
-    return !this.args.hasBorder;
+    return defaultProp(this.args.hasBorder, false);
   }
 
   get mainAlt() {
-    const alt = this.args.alt;
-
-    let altValue = '';
-
-    if (alt) {
-      altValue = alt;
-    }
-
-    return altValue;
+    return defaultProp(this.args.alt, '');
   }
 
   get mainRole() {
-    const role = this.args.role;
-
-    let roleValue = 'img';
-
-    if (role) {
-      roleValue = role;
-    }
-
-    return roleValue;
+    return defaultProp(this.args.role, 'img');
   }
 
   createSrcStrings() {
@@ -84,7 +59,7 @@ export default class LazyImage extends Component {
   }
 
   checkPlaceholderExists() {
-    if (!this.args.hasPlaceholder) {
+    if (!this.hasPlaceholder) {
       this.setForceCurrentlyVisible();
     }
   }

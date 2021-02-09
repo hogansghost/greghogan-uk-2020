@@ -1,21 +1,22 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
 
-const aspectRatios = {
-  '16:9': '16:9',
+import { validateProp } from 'greghogan-uk-2020/utils/props';
+
+const AspectRatios = {
+  R1_1: '1:1',
+  R3_2: '3:2',
+  R16_9: '16:9',
+  CUSTOM: 'custom',
+  SCREENSHOT: 'screenshot',
 };
 
 export default class ProjectContentImageGridSlanted extends Component {
-  @tracked media = null;
-  @tracked limitCount = 12;
-  @tracked imageAspect = '';
-
   get imageAspectRatio() {
-    return this.args.imageAspect || aspectRatios['16:9'];
+    return validateProp(this.args.imageAspect, AspectRatios, AspectRatios.R16_9);
   }
 
   get mediaRowList() {
-    const media = this.limitMedia();
+    const media = this.limitMedia;
 
     let mediaRows = [];
     let rowCount = 0;
@@ -33,7 +34,7 @@ export default class ProjectContentImageGridSlanted extends Component {
     return mediaRows;
   }
 
-  limitMedia() {
+  get limitMedia() {
     const limit = this.args.limitCount || 12;
     const media = this.args.media || [];
 

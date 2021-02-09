@@ -1,12 +1,20 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
 
 export default class ProjectFooter extends Component {
-  @tracked author = null;
+  get author() {
+    return this.args.author;
+  }
 
   get contactLinks() {
-    const contacts = this.args.author.profileLinks || [];
+    const contacts = this.args.author?.profileLinks || [];
 
     return contacts.filter((link) => link.type === 'personal');
+  }
+
+  get copyright() {
+    const start = this.author?.copyright?.start;
+    const end = this.author?.copyright?.end;
+
+    return start && end ? `${start} - ${end}` : new Date().getFullYear();
   }
 }

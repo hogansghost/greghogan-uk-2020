@@ -1,16 +1,16 @@
 <div class="contact-me">
   <div class="contact-me__inner">
-    {{#if @description}}
-      {{#each @description as |paragraph|}}
+    {{#if this.description.length}}
+      {{#each this.description as |paragraph|}}
         <p class="contact-me__description">{{paragraph}}</p>
       {{/each}}
     {{/if}}
 
-    {{#if (and @description.length this.contactLinks)}}
+    {{#if (and this.description.length this.contactLinks.length)}}
       <hr />
     {{/if}}
 
-    {{#if this.contactLinks}}
+    {{#if this.contactLinks.length}}
       <ul class="contact-me__link-list">
         {{#each this.contactLinks as |link|}}
           <li class="contact-me__link-list-item">

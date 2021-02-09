@@ -7,6 +7,10 @@
     position: relative;
     background-color: $color-primary;
 
+    &--theme-primary {
+      background-color: $color-primary;
+    }
+
     &--theme-secondary {
       background-color: $color-accent-primary;
     }
@@ -36,8 +40,9 @@
   }
 
   &__content {
-    transition: background-color #{$ui-transition-duration-medium};
     background-color: $color-backing-primary;
+    min-height: 101vh;
+    transition: background-color #{$ui-transition-duration-medium};
   }
 
   &__heading {

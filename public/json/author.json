@@ -2,7 +2,10 @@
   "author": {
     "id": 1,
     "name": "Greg Hogan",
-    "copyright": "2018 - 2020",
+    "copyright": {
+      "start": "2018",
+      "end": "2021"
+    },
     "role": "Front-end developer",
     "details": [
       {
@@ -133,121 +136,56 @@
       "languages": {
         "title": "Languages",
         "list": [
-          {
-            "id": 1,
-            "name": "English"
-          }
+          "English"
         ]
       },
       "technical": {
         "title": "Technical",
         "list": [
-          {
-            "id": 1,
-            "name": "HTML5"
-          }, {
-            "id": 2,
-            "name": "JavaScript"
-          }, {
-            "id": 4,
-            "name": "CSS3"
-          }, {
-            "id": 5,
-            "name": "Sass"
-          }, {
-            "id": 6,
-            "name": "ReactJS"
-          }, {
-            "id": 7,
-            "name": "Redux"
-          }, {
-            "id": 8,
-            "name": "Ember.js (Ember CLI)"
-          }, {
-            "id": 9,
-            "name": "Ember Data"
-          }, {
-            "id": 10,
-            "name": "Liquid Fire"
-          }, {
-            "id": 11,
-            "name": "Green Sock Animation"
-          }, {
-            "id": 12,
-            "name": "MochaJS"
-          }, {
-            "id": 13,
-            "name": "NPM"
-          }, {
-            "id": 14,
-            "name": "Gulp"
-          }, {
-            "id": 15,
-            "name": "Webpack"
-          }, {
-            "id": 16,
-            "name": "BEM"
-          }
+          "HTML5",
+          "JavaScript",
+          "CSS3",
+          "Sass",
+          "Accessibility",
+          "ReactJS",
+          "Redux",
+          "Ember.js (Ember CLI)",
+          "Ember Data",
+          "Liquid Fire (Ember animation library)",
+          "MochaJS",
+          "NPM",
+          "Gulp",
+          "Webpack",
+          "BEM"
         ]
       },
       "sourceControl": {
         "title": "Source control and project management",
         "list": [
-          {
-            "id": 1,
-            "name": "Git"
-          }, {
-            "id": 2,
-            "name": "GitHub"
-          }, {
-            "id": 3,
-            "name": "Jenkins"
-          }, {
-            "id": 4,
-            "name": "JIRA"
-          }, {
-            "id": 5,
-            "name": "Trello"
-          }, {
-            "id": 6,
-            "name": "Ora"
-          }
+            "Git",
+            "GitHub",
+            "Jenkins",
+            "JIRA",
+            "Trello",
+            "Ora"
         ]
       },
       "graphicsSoftware": {
         "title": "Graphic software",
         "list": [
-          {
-            "id": 1,
-            "name": "Photoshop"
-          }, {
-            "id": 2,
-            "name": "Illustrator"
-          }, {
-            "id": 3,
-            "name": "Sketch"
-          }, {
-            "id": 4,
-            "name": "Final Cut Pro"
-          }
+          "Photoshop",
+          "Illustrator",
+          "Sketch",
+          "Final Cut Pro"
         ]
       },
       "experience": {
         "title": "Experience with...",
         "list": [
-          {
-            "id": 1,
-            "name": "Angular"
-          }, {
-            "id": 2,
-            "name": "Accessibility"
-          }, {
-            "id": 3,
-            "name": "Optimizely"
-          }, {
-            "id": 4,
-            "name": "FullStory"
-          }
+          "Angular",
+          "Accessibility",
+          "Optimizely",
+          "FullStory"
         ]
       }
     }

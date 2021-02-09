@@ -1,13 +1,19 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
+
+const LinkTypes = {
+  PERSONAL: 'personal',
+};
 
 export default class ContactMe extends Component {
-  @tracked description = null;
-  @tracked links = null;
+  get description() {
+    return this.args.description || [];
+  }
 
   get contactLinks() {
     const links = this.args.links || [];
 
-    return links.filter((link) => link.type === 'personal');
+    return links.filter((link) => (
+      link.type === LinkTypes.PERSONAL
+    ));
   }
 }

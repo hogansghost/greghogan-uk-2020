@@ -2,15 +2,14 @@ import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
+import { defaultProp } from 'greghogan-uk-2020/utils/props';
+
 export default class UiIsCurrentlyVisible extends Component {
   @tracked isCurrentlyVisible = false;
   @tracked intersectionObserver = null;
-  @tracked once = true;
 
   get triggerOnce() {
-    const once = this.args.once;
-
-    return [null, undefined].includes(once) ? once : true;
+    return defaultProp(this.args.once, true);
   }
 
   @action

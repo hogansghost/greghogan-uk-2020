@@ -4,6 +4,10 @@ import { action } from '@ember/object';
 
 import ENV from '../config/environment';
 
+const Cookies = {
+  ACCEPTED_ALL: 'cookiesAccept',
+};
+
 export default class CookieService extends Service {
   @tracked hasAcceptedAllCookies = false;
 
@@ -45,7 +49,7 @@ export default class CookieService extends Service {
   }
 
   checkIfCookiesAccepted() {
-    const acceptedAll = Boolean(this.readCookie('cookiesAccept'));
+    const acceptedAll = Boolean(this.readCookie(Cookies.ACCEPTED_ALL));
 
     this.hasAcceptedAllCookies = acceptedAll;
 
@@ -54,7 +58,7 @@ export default class CookieService extends Service {
 
   @action
   acceptAllCookies() {
-    this.writeCookie('cookiesAccept', 'true', {
+    this.writeCookie(Cookies.ACCEPTED_ALL, 'true', {
       expires: this.decadeAheadDate,
     });
 

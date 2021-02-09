@@ -2,9 +2,13 @@
   $_self: &;
 
   position: relative;
-  background-color: inherit;
-  background-color: $color-backing-primary;
-  transition: background-color #{$ui-transition-duration-medium};
+
+  &,
+  &::before,
+  &::after {
+    background-color: $color-backing-primary;
+    transition: background-color #{$ui-transition-duration-medium};
+  }
 
   // Overlap previous section
   &--has-overlap {
@@ -14,14 +18,13 @@
       position: absolute;
       top: 0;
       left: 50%;
-      width: 50%;
+      width: 51%;
       padding-bottom: 5vw;
-      background-color: inherit;
     }
 
     &::before {
       transform-origin: 0% 0%;
-      transform: translate(-100%, -100%) skewY(5deg);
+      transform: translate(-99.5%, -100%) skewY(5deg);
     }
 
     &::after {
