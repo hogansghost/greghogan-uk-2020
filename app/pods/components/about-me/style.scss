@@ -32,6 +32,7 @@
 
   // Author image
   &__author-image {
+    display: flex;
     width: 220px;
     margin: $ui-content-padding-sm auto $ui-content-padding-lg auto;
     overflow: hidden;
@@ -40,6 +41,13 @@
     border: 4px solid $white;
     box-shadow: 0px 1px 5px rgba($black, 0.2), 0px 4px 15px -5px rgba($black, 0.2);
 
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+      flex: 0 0 0px;
+    }
+
     @include media($media-sm) {
       float: right;
       margin: $ui-content-padding-md;
@@ -47,6 +55,7 @@
   }
 
   &__author-image-base {
+    flex: 1 1 auto;
     overflow: hidden;
     border-radius: inherit;
   }

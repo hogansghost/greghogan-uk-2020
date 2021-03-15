@@ -4,7 +4,7 @@ import { action } from '@ember/object';
 
 export default class TransitioningService extends Service {
   @tracked transitioning = false;
-  @tracked duration = 500;
+  @tracked duration = 300;
 
   get isTransitioning() {
     return this.transitioning;

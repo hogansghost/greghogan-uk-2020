@@ -1,3 +1,5 @@
+// Currently unused. 15/03/2021
+
 import Service from '@ember/service';
 import Evented from '@ember/object/evented';
 import { debounce, throttle } from '@ember/runloop';

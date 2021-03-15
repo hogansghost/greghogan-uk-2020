@@ -5,10 +5,6 @@ import { action } from '@ember/object';
 export default class ScrollPositionService extends Service {
   @tracked scrollY = 0;
 
-  get scrollPosition() {
-    return this.scrollY;
-  }
-
   @action
   scrollTo(position = 0) {
     window && window.scrollTo({
@@ -19,7 +15,7 @@ export default class ScrollPositionService extends Service {
   @action
   scrollToPreviousScrollPosition() {
     window && window.scrollTo({
-      top: this.scrollPosition,
+      top: this.scrollY,
     });
   }
 
