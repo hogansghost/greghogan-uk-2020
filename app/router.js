@@ -100,7 +100,7 @@ export default class Router extends EmberRouter {
 
   transitionRouteIn(transition) {
     if (!transition.isAborted && !transition.isActive) {
-      this.pageTransition.setTransitioningEnd();
+      scheduleOnce('afterRender', this, this.pageTransition.setTransitioningEnd);
     }
   }
 }

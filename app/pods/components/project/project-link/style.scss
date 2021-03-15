@@ -103,13 +103,17 @@
     flex: 1 1 auto;
     min-height: 0px;
     padding: $ui-content-padding-sm;
-
     width: $content-restriction-uhd;
     max-width: 100%;
-    margin: auto 0 auto auto;
-
+    margin: auto;
     text-decoration: none;
     color: inherit;
+
+    @include media($media-md) {
+      @supports (position:sticky) {
+        margin-right: 0;
+      }
+    }
   }
 
   &__body-content-footer {
@@ -128,8 +132,14 @@
   &__body-content-footer-inner {
     width: $content-restriction-uhd;
     max-width: 100%;
-    margin: auto 0 auto auto;
+    margin: auto;
     text-align: center;
+
+    @include media($media-md) {
+      @supports (position:sticky) {
+        margin-right: 0;
+      }
+    }
   }
 
   &__body-content-footer-list {

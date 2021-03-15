@@ -2,24 +2,14 @@
   class="page-section-sticky-title"
 >
   <div
-    {{did-insert this.attachListeners}}
-    {{did-insert this.resetPosition}}
-    {{will-destroy this.detachListeners}}
     data-analytics-name={{@analyticsLogName}}
     class={{bem "page-section-sticky-title__inner"
-      isSticky=this.elementIsSticky
       isTitleFirst=this.isTitleFirst
       titleTheme=this.bemTitleTheme
     }}
   >
     <div
-      {{did-insert this.setHeaderElement}}
-      {{did-insert this.checkIfStickySupported}}
-      class={{bem "page-section-sticky-title__heading"
-        isTitleFirst=this.isTitleFirst
-        stateFixed=this.elementIsFixed
-        stateEnd=this.stateEnd
-      }}
+      class="page-section-sticky-title__heading"
     >
       <div class="page-section-sticky-title__heading-content-width">
         <h3 class="page-section-sticky-title__heading-title">{{@title}}</h3>
