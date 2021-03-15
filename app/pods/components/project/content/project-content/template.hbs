@@ -14,7 +14,7 @@
       )}}
         {{#let (element bodyContent.type) as |Element|}}
           <Element class={{bem "project-content__body-section" readableWidth=true}} data-content-type={{bodyContent.type}}>
-            {{bodyContent.content}}
+            {{{bodyContent.content}}}
           </Element>
         {{/let}}
       {{/if}}
@@ -35,28 +35,24 @@
 
       {{!-- Image grid --}}
       {{#if (does-equal bodyContent.type "imageGrid")}}
-        <figure class={{bem "project-content__body-section" mediaWidth=true}}>
-          <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
-            <Project::Content::ImageGrid
-              @isCurrentlyVisible={{isCurrentlyVisible}}
-              @colCount={{bodyContent.colCount}}
-              @media={{bodyContent.content}}
-            />
-          </Ui::IsCurrentlyVisible>
-        </figure>
+        <Ui::IsCurrentlyVisible class={{bem "project-content__body-section" mediaWidth=true}} as |isCurrentlyVisible|>
+          <Project::Content::ImageGrid
+            @isCurrentlyVisible={{isCurrentlyVisible}}
+            @colCount={{bodyContent.colCount}}
+            @media={{bodyContent.content}}
+          />
+        </Ui::IsCurrentlyVisible>
       {{/if}}
 
       {{!-- Image grid slanted --}}
       {{#if (does-equal bodyContent.type "imageGridSlanted")}}
-        <figure class={{bem "project-content__body-section" mediaWidth=true}}>
-          <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
-            <Project::Content::ImageGridSlanted
-              @imageAspect={{bodyContent.imageAspect}}
-              @isCurrentlyVisible={{isCurrentlyVisible}}
-              @media={{bodyContent.content}}
-            />
-          </Ui::IsCurrentlyVisible>
-        </figure>
+        <Ui::IsCurrentlyVisible class={{bem "project-content__body-section" mediaWidth=true}} as |isCurrentlyVisible|>
+          <Project::Content::ImageGridSlanted
+            @imageAspect={{bodyContent.imageAspect}}
+            @isCurrentlyVisible={{isCurrentlyVisible}}
+            @media={{bodyContent.content}}
+          />
+        </Ui::IsCurrentlyVisible>
       {{/if}}
 
       {{!-- Mockup grid --}}
