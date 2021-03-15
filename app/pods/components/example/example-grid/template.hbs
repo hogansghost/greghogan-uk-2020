@@ -7,8 +7,7 @@
     {{/if}}
 
     {{#if this.exampleList}}
-      <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
-        <div class="example-grid__body">
+      <Ui::IsCurrentlyVisible class="example-grid__body" as |isCurrentlyVisible|>
           <div class="example-grid__body-content">
             {{#each this.exampleList as |example|}}
               <Example::ExampleGrid::ExampleGridItem
@@ -16,7 +15,6 @@
                 @isCurrentlyVisible={{isCurrentlyVisible}}
               />
             {{/each}}
-          </div>
         </div>
       </Ui::IsCurrentlyVisible>
     {{/if}}

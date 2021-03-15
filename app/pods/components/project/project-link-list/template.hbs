@@ -1,19 +1,17 @@
 <div class="project-link-list">
   <div class="project-link-list__inner">
     {{#each @projects as |project|}}
-      <div class="project-link-list__item">
-        <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
-          <Project::ProjectLink
-            @isCurrentlyVisible={{isCurrentlyVisible}}
-            @srcSet={{project.thumbnail.srcSet}}
-            @sizes={{project.thumbnail.sizes}}
-            @name={{project.name}}
-            @role={{project.role}}
-            @id={{project.id}}
-            @url={{project.url}}
-          />
-        </Ui::IsCurrentlyVisible>
-      </div>
+      <Ui::IsCurrentlyVisible class="project-link-list__item" as |isCurrentlyVisible|>
+        <Project::ProjectLink
+          @isCurrentlyVisible={{isCurrentlyVisible}}
+          @srcSet={{project.thumbnail.srcSet}}
+          @sizes={{project.thumbnail.sizes}}
+          @name={{project.name}}
+          @role={{project.role}}
+          @id={{project.id}}
+          @url={{project.url}}
+        />
+      </Ui::IsCurrentlyVisible>
     {{/each}}
   </div>
 </div>

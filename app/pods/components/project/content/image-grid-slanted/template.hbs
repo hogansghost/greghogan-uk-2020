@@ -1,16 +1,16 @@
 <section class="image-grid-slanted">
   <div class="image-grid-slanted__body">
-    {{#each this.mediaRowList as |mediaRow|}}
+    {{#each this.mediaRow as |row|}}
       <div class="image-grid-slanted__row">
-        {{#each mediaRow as |mediaItem|}}
+        {{#each row as |media|}}
           <div
             class="image-grid-slanted__item"
             data-aspect-ratio={{this.imageAspectRatio}}
           >
             <Project::Content::ImageGridSlanted::ImageGridSlantedItem
-              @alt={{mediaItem.alt}}
+              @alt={{media.alt}}
               @role={{@role}}
-              @srcSet={{mediaItem.srcSet}}
+              @srcSet={{media.srcSet}}
             />
           </div>
         {{/each}}

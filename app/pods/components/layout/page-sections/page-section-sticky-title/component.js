@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
-import { throttle } from '@ember/runloop';
+import { next, throttle } from '@ember/runloop';
 
 import { validateProp } from 'greghogan-uk-2020/utils/props';
 
@@ -23,6 +23,12 @@ export default class LayoutPageSectionStickyHeader extends Component {
   @tracked headerElement;
   @tracked isSticky = false;
   @tracked isFixed = false;
+
+  constructor(args, owner) {
+    super(args, owner);
+    ;
+    this.resetPosition();
+  }
 
   get elementIsSticky() {
     return this.isSticky;
@@ -53,51 +59,54 @@ export default class LayoutPageSectionStickyHeader extends Component {
   }
 
   repositionStaticElement(element) {
-    const staticElement = element;
-    const isCurrentlyVisible = this.args.isCurrentlyVisible || false;
-    const isHeadingMeantToBeSticky = this._checkIfStickySupported(this.headerElement);
+    next(() => {
+      const staticElement = element;
+      const isCurrentlyVisible = true; // this.args.isCurrentlyVisible || false;
+      const isHeadingMeantToBeSticky = this._checkIfStickySupported(this.headerElement);
 
-    /*
-    * Check for the static element and whether the CSS is setting it to static,
-    * as anything other than static means it is meant to scroll with the client. While
-    * this could check the window width, it's much easier to sync to the CSS as the media
-    * width may change.
-    */
-    if (isCurrentlyVisible && staticElement && isHeadingMeantToBeSticky) {
-      const windowInnerHeight = window.innerHeight;
-      const staticElementPosition = staticElement.getBoundingClientRect();
-      const staticElementPositionTop = staticElementPosition.top;
-      const staticElementPositionBottom = staticElementPosition.bottom;
+      /*
+      * Check for the static element and whether the CSS is setting it to static,
+      * as anything other than static means it is meant to scroll with the client. While
+      * this could check the window width, it's much easier to sync to the CSS as the media
+      * width may change.
+      */
+      if (isCurrentlyVisible && staticElement && isHeadingMeantToBeSticky) {
+        const windowInnerHeight = window.innerHeight;
+        const staticElementPosition = staticElement.getBoundingClientRect();
+        const staticElementPositionTop = staticElementPosition.top;
+        const staticElementPositionBottom = staticElementPosition.bottom;
 
-      if (staticElementPositionTop <= windowInnerHeight) {
-        this.setFirstEntryAndCallEntryMethod();
-      }
-
-      if (staticElementPositionTop <= windowInnerHeight && staticElementPositionBottom >= 0 ) {
-        if (staticElementPositionTop > 0 ) {
-          this.isFixed = false;
-          this.stateEnd = false;
-          this.hasEnteredView = false;
-        } else if (staticElementPositionTop <= 0 && staticElementPositionBottom - windowInnerHeight > 0 ) {
-          this.isFixed = true;
-          this.stateEnd = false;
-          this.hasEnteredView = true;
-        } else if (staticElementPositionBottom - windowInnerHeight <= 0 && staticElementPositionTop <= 0 ) {
-          this.isFixed = false;
-          this.stateEnd = true;
-          this.hasEnteredView = false;
-        } else {
-          this.stateEnd = false;
+        if (staticElementPositionTop <= windowInnerHeight) {
+          this.setFirstEntryAndCallEntryMethod();
         }
+
+        if (staticElementPositionTop <= windowInnerHeight && staticElementPositionBottom >= 0 ) {
+          if (staticElementPositionTop > 0 ) {
+            this.isFixed = false;
+            this.stateEnd = false;
+            this.hasEnteredView = false;
+          } else if (staticElementPositionTop <= 0 && staticElementPositionBottom - windowInnerHeight > 0 ) {
+            this.isFixed = true;
+            this.stateEnd = false;
+            this.hasEnteredView = true;
+          } else if (staticElementPositionBottom - windowInnerHeight <= 0 && staticElementPositionTop <= 0 ) {
+            this.isFixed = false;
+            this.stateEnd = true;
+            this.hasEnteredView = false;
+          } else {
+            this.stateEnd = false;
+          }
+        }
+      } else if (!isHeadingMeantToBeSticky) {
+        this.isSticky = isHeadingMeantToBeSticky;
       }
-    } else if (!isHeadingMeantToBeSticky) {
-      this.isSticky = isHeadingMeantToBeSticky;
-    }
+    });
   }
 
   _resetPosition() {
     this.stateFixed = false;
     this.stateEnd = false;
+    this.isFixed = false;
   }
 
   setFirstEntryAndCallEntryMethod() {

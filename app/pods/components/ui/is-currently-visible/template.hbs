@@ -1,7 +1,7 @@
 <div
     {{did-insert this.bindScrollEvents}}
     {{will-destroy this.unbindScrollEvents}}
-    class="is-currently-visible"
+    ...attributes
 >
     {{yield this.isCurrentlyVisible}}
 </div>

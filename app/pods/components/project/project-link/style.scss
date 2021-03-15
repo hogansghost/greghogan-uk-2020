@@ -36,6 +36,18 @@
     }
   }
 
+  &:nth-child(n+2) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      z-index: 1;
+    }
+  }
+
 
 
   &__background {
@@ -120,6 +132,11 @@
     text-align: center;
   }
 
+  &__body-content-footer-list {
+    max-width: 100%;
+    text-align: center;
+  }
+
 
   // Project details card
   &__card {
@@ -161,7 +178,7 @@
       width: 100%;
       height: 100%;
       background-color: $color-accent-primary;
-      outline: 1px dashed rgba($white, 0.2);
+      outline: 1px dotted rgba($white, 0.1);
       outline-offset: -10px;
       box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.15), 0px 4px 15px -2px rgba(0,0,0,0.2);
       box-shadow: 0 3px 5px -1px rgba(0,0,0,.25), 0 4px 25px -2px rgba(0,0,0,.4);
@@ -184,7 +201,8 @@
       }
     }
 
-    #{$_self}__body-content-main:hover & {
+    #{$_self}__body-content-main:hover &,
+    #{$_self}__body-content-main:focus & {
       &::before {
         transform: none;
         opacity: 1;
@@ -208,6 +226,13 @@
     margin: 0;
     @include heading-formatting;
     font-size: 1em;
+    @include link-decoration;
+
+
+    #{$_self}__body-content-main:hover &,
+    #{$_self}__body-content-main:focus & {
+      @include link-decoration-active-state;
+    }
 
     @include media($media-sm) {
       font-size: 1.4em;

@@ -2,10 +2,8 @@
   &__item {
     position: relative;
     background: $black;
-    
+
     &:nth-child(n+2) {
-      border-top: 1px solid rgba(255,255,255,0.1);
-  
       &::after {
         content: '';
         position: absolute;
@@ -15,7 +13,8 @@
         padding-bottom: 20px;
         background-color: $color-primary;
         transform: translate(52%, -50%) rotate(45deg);
-        
+        z-index: 1;
+
         @include media($media-sm) {
           right: 0;
           transform: translate(52%, -50%) rotate(45deg);

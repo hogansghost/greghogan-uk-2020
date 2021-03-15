@@ -17,19 +17,20 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 50%;
       width: 51%;
       padding-bottom: 5vw;
     }
 
     &::before {
+      left: 0%;
       transform-origin: 0% 0%;
-      transform: translate(-99.5%, -100%) skewY(5deg);
+      transform: translateY(-100%) skewY(5deg);
     }
 
     &::after {
+      right: 0%;
       transform-origin: 100% 0%;
-      transform: translate(0%, -100%) skewY(-5deg);
+      transform: translateY(-100%) skewY(-5deg);
     }
   }
 

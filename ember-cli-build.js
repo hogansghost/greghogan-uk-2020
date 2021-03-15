@@ -17,14 +17,14 @@ module.exports = function (defaults) {
     },
     sassOptions: {
       includePaths: [
-        'app/components'
+        'app/components',
       ],
     },
     minifyJS: {
-      enabled: true
+      enabled: true,
     },
     minifyCSS: {
-      enabled: true
+      enabled: true,
     },
   });
 

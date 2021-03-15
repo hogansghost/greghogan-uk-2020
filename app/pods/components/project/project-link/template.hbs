@@ -35,13 +35,15 @@
 
     {{#if @url.length}}
       <div class="project-link__body-content-footer">
-        <ul class="project-link__body-content-footer-inner util-spaced-list">
-          {{#each @url as |url|}}
-            <li class="project-link__body-content-footer-inner-item">
-              <Ui::LinkExternal @href={{url.href}}>{{url.label}}</Ui::LinkExternal>
-            </li>
-          {{/each}}
-        </ul>
+        <div class="project-link__body-content-footer-inner">
+          <ul class="project-link__body-content-footer-list util-spaced-list">
+            {{#each @url as |url|}}
+              <li class="project-link__body-content-footer-list-item">
+                <Ui::LinkExternal @href={{url.href}}>{{url.label}}</Ui::LinkExternal>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
       </div>
     {{/if}}
   </div>

@@ -1,0 +1,7 @@
+.transition-container {
+  transition: opacity 500ms;
+
+  &[data-transitioning] {
+    opacity: 0;
+  }
+}

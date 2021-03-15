@@ -1,6 +1,5 @@
 <div class="image-grid-slanted-item">
-  <div class="image-grid-slanted-item__image">
-    <Ui::IsCurrentlyVisible as |isCurrentlyVisible|>
+    <Ui::IsCurrentlyVisible class="image-grid-slanted-item__image" as |isCurrentlyVisible|>
       <Ui::LazyImage
         @alt={{@alt}}
         @isCurrentlyVisible={{isCurrentlyVisible}}
@@ -9,5 +8,4 @@
         @srcSet={{@srcSet}}
       />
     </Ui::IsCurrentlyVisible>
-  </div>
 </div>

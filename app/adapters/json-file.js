@@ -18,10 +18,11 @@ export default DS.RESTAdapter.extend({
 
 	findRecord: function(store, modelClass, id) {
 		return new Promise(async (resolve) => {
-			let results = await this.query(store, modelClass, { id });
-			let result = results[modelClass.modelName][0];
+			const results = await this.query(store, modelClass, { id });
+			const result = results[modelClass.modelName][0];
+
 			resolve({
-				[modelClass.modelName]: result
+				[modelClass.modelName]: result,
 			});
 		});
 	},
@@ -66,8 +67,8 @@ export default DS.RESTAdapter.extend({
 						} else {
 							return  matcher !== record[key];
 						}
-					} );
-				} );
+					});
+				});
 			}
 
 			response[modelClass.modelName] = records.sort((a,b) => (
@@ -75,7 +76,6 @@ export default DS.RESTAdapter.extend({
 			));
 
 			resolve( response );
-		} );
-
+		});
 	},
 });
