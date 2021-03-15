@@ -120,22 +120,6 @@ ul[class], ol[class], figure {
 }
 
 
-// Transition containers for LiquidFire.
-// !important !important !important
-.lf__main {
-  transform: none !important;
-  position: relative !important;
-
-  .liquid-child {
-    // visibility: visible !important;
-    &:last-child {
-      position: relative !important;
-      top: auto !important;
-      left: auto !important;
-    }
-  }
-}
-
 // Component imports
 @import "app/pods/components/about-me/style";
 @import "app/pods/components/contact-me/style";
@@ -148,10 +132,10 @@ ul[class], ol[class], figure {
 
 // UI generic component elements
 @import "app/pods/components/ui/cookie-bar/style";
-@import "app/pods/components/ui/is-currently-visible/style";
 @import "app/pods/components/ui/lazy-image/style";
 @import "app/pods/components/ui/link-external/style";
 @import "app/pods/components/ui/link-to-home/style";
+@import "app/pods/components/ui/transition-container/style";
 @import "app/pods/components/ui/video/style";
 
 // Layout specific components

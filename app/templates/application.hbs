@@ -3,7 +3,9 @@
 <ToggleDarkMode />
 
 <Layout::PageSections::PageWrapper>
-  {{liquid-outlet enableGrowth=false class="lf__main content-main"}}
+  <Ui::TransitionContainer>
+    {{outlet}}
+  </Ui::TransitionContainer>
 </Layout::PageSections::PageWrapper>
 
 {{#if this.shouldShowCookieBar}}

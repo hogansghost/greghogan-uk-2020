@@ -1,8 +1,8 @@
 {
   "project": [
     {
-      "uid": 0,
-      "order": 3,
+      "uid": "0",
+      "order": "3",
       "id": "greghogan",
       "name": "Greg Hogan UK",
       "role": "Front-end Developer / Designer",
@@ -162,8 +162,8 @@
         ]
       }
     }, {
-      "uid": 1,
-      "order": 0,
+      "uid": "1",
+      "order": "0",
       "id": "resident-evil",
       "name": "Resident Evil Game",
       "role": "Front-end Developer",
@@ -537,8 +537,8 @@
         ]
       }
     }, {
-      "uid": 2,
-      "order": 1,
+      "uid": "2",
+      "order": "1",
       "id": "teads",
       "name": "Teads",
       "role": "Front-end Developer / Designer",
@@ -1237,8 +1237,8 @@
         ]
       }
     }, {
-      "uid": 3,
-      "order": 2,
+      "uid": "3",
+      "order": "2",
       "id": "movidiam",
       "name": "Movidiam",
       "role": "Senior Front-end Developer",
@@ -1628,9 +1628,6 @@
               }, {
                 "iconSrc": "fa-ember",
                 "title": "Ember CLI"
-              }, {
-                "iconSrc": "fa-ember",
-                "title": "Ember Animation / Liquid Fire"
               }, {
                 "iconSrc": "fa-aws",
                 "title": "AWS"
@@ -2130,8 +2127,8 @@
         ]
       }
     }, {
-      "uid": 4,
-      "order": 4,
+      "uid": "4",
+      "order": "4",
       "id": "loveholidays",
       "name": "loveholidays",
       "role": "Front-end Developer",
@@ -2819,8 +2816,8 @@
         ]
       }
     }, {
-      "uid": 5,
-      "order": 5,
+      "uid": "5",
+      "order": "5",
       "id": "geeiq",
       "name": "Geeiq",
       "role": "Front-end Developer",
