@@ -1,6 +1,8 @@
 .project-content {
   $_self: &;
 
+  overflow: hidden;
+
   &__body {
     margin-right: auto;
     margin-left: auto;

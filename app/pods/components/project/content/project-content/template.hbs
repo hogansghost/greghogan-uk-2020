@@ -19,6 +19,12 @@
         {{/let}}
       {{/if}}
 
+      {{#if (does-equal bodyContent.type "hr")}}
+        {{#let (element bodyContent.type) as |Element|}}
+          <Element data-content-type={{bodyContent.type}} />
+        {{/let}}
+      {{/if}}
+
 
       {{#if (or
         (does-equal bodyContent.type "ul")

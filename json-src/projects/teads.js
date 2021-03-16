@@ -511,6 +511,8 @@ module.exports = {
           }
         ]
       }, {
+        type: 'hr',
+      }, {
         type: 'imageGrid',
         colCount: 2,
         content: [
