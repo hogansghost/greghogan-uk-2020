@@ -3,7 +3,16 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 export default class ScrollPositionService extends Service {
-  @tracked scrollY = 0;
+  @tracked routePosition = {};
+
+  @action
+  storeRoutePosition(routeName) {
+    if (!routeName) {
+      return;
+    }
+
+    this.routePosition[routeName] = window?.scrollY || 0;
+  }
 
   @action
   scrollTo(position = 0) {
@@ -12,15 +21,16 @@ export default class ScrollPositionService extends Service {
     });
   }
 
-  @action
-  scrollToPreviousScrollPosition() {
-    window && window.scrollTo({
-      top: this.scrollY,
-    });
+  @action scrollToTop() {
+    this.scrollTo(0);
   }
 
   @action
-  setScrollY(position) {
-    this.scrollY = position || window?.scrollY || 0;
+  scrollToPreviousScrollPosition(targetRouteName) {
+    if (window && targetRouteName) {
+      window.scrollTo({
+        top: this.routePosition[targetRouteName],
+      });
+    }
   }
 }

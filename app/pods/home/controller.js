@@ -4,6 +4,8 @@ import { action } from '@ember/object';
 import { fireGoogleEvent } from '../../functions/googleTrackingEvents';
 
 export default class HomeController extends Controller {
+  storeScrollPosition = true;
+
   get author() {
     return this.model?.author;
   }

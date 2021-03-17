@@ -7,6 +7,8 @@ const example = require(`${exampleSrcPath}/example.js`);
 
 example.id = 0;
 
-const stringifiedExamples = JSON.stringify({ example });
+const stringifiedExamples = JSON.stringify({
+  example,
+});
 
 fs.writeFileSync(`${examplesOutputPath}/example.json`, stringifiedExamples);

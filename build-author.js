@@ -7,6 +7,8 @@ const author = require(`${authorSrcPath}/author.js`);
 
 author.id = 0;
 
-const stringifiedAuthors = JSON.stringify({ author });
+const stringifiedAuthors = JSON.stringify({
+  author,
+});
 
 fs.writeFileSync(`${authorsOutputPath}/author.json`, stringifiedAuthors);

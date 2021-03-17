@@ -60,8 +60,10 @@ export default class Router extends EmberRouter {
   }
 
   updateScrollPosition(transition) {
-    if (!transition.isAborted && !this.isTransitionTargetHome(transition)) {
-      this.scrollPosition.setScrollY();
+    if (!transition.isAborted) {
+      const routePosition = transition?.from?.name || 0;
+
+      this.scrollPosition.storeRoutePosition(routePosition);
     }
   }
 
@@ -69,7 +71,7 @@ export default class Router extends EmberRouter {
     this.updateScrollPosition(transition);
 
     if (
-      transition?.from?.name &&
+      transition.from &&
       transition?.to?.name !== transition?.from?.name &&
       transition?.to?.name !== this.holdTransition?.to?.name
     ) {
@@ -79,17 +81,21 @@ export default class Router extends EmberRouter {
       transition.abort();
 
       const transitionDelay = new Promise((resolve) => {
-        return later(() => {
-          return resolve();
+        later(() => {
+          resolve();
         }, this.pageTransition.duration);
       })
 
+
       return transitionDelay.then(() => {
         this.holdTransition.retry().then(() => {
-          if (this.isTransitionTargetHome(this.holdTransition)) {
-            scheduleOnce('afterRender', this, this.scrollPosition.scrollToPreviousScrollPosition);
+          const targetRouteName = this.holdTransition.to.name;
+          const scrollToPreviousPosition = (transition?.router?.currentRouteInfos || []).some((routeInfo) => routeInfo?.route?.controller?.storeScrollPosition);
+
+          if (scrollToPreviousPosition) {
+            scheduleOnce('afterRender', this, () => this.scrollPosition.scrollToPreviousScrollPosition(targetRouteName));
           } else {
-            this.scrollPosition.scrollTo();
+            this.scrollPosition.scrollToTop();
           }
 
           this.holdTransition = null;
@@ -107,6 +113,9 @@ export default class Router extends EmberRouter {
 
 Router.map(function() {
   this.route('home', { path: '/' });
-  this.route('not-found', { path: '/*path' });
   this.route('project', { path: 'project/:id' });
+  this.route('not-found');
+
+  // This must remain the last item.
+  this.route('wild-card', { path: '/*path' });
 });

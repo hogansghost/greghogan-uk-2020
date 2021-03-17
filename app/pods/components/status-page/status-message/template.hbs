@@ -15,11 +15,16 @@
     }}
   />
 
-  <div class="status-message__body">
-    <h1>404: Not found</h1>
+  <div class="status-message__content">
+    <div class="status-message__content-header">
+      <h1>{{this.errorCode}}</h1>
+      <h2>{{this.errorMessage}}</h2>
+    </div>
 
-    <p>You look lost, friend. Perhaps the page you're after no longer exists. Perhaps it never existed.</p>
+    <div class="status-message__content-body">
+      <p>You look lost, friend. Perhaps the page you're after no longer exists. Perhaps it never existed.</p>
 
-    <p>Worry not, Why not <LinkTo @route="home">head back home</LinkTo> and see if you can find what you're looking for?</p>
+      <p>Worry not, Why not <LinkTo @route="home">head back home</LinkTo> and see if you can find what you're looking for?</p>
+    </div>
   </div>
 </div>

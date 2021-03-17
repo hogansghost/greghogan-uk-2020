@@ -1,6 +1,16 @@
 import DS from 'ember-data';
 import { Promise } from 'rsvp';
 
+export class ApiError extends Error {
+	statusCode;
+
+	constructor(name, statusCode, message) {
+			super(message);
+			this.name = name;
+			this.statusCode = statusCode;
+	}
+}
+
 export default DS.RESTAdapter.extend({
 	url: null,
 
@@ -17,13 +27,21 @@ export default DS.RESTAdapter.extend({
 	},
 
 	findRecord: function(store, modelClass, id) {
-		return new Promise(async (resolve) => {
+		return new Promise(async (resolve, reject) => {
 			const results = await this.query(store, modelClass, { id });
 			const result = results[modelClass.modelName][0];
 
-			resolve({
-				[modelClass.modelName]: result,
-			});
+			if (result) {
+				resolve({
+					[modelClass.modelName]: result,
+				});
+			} else {
+				const routeName = modelClass.modelName;
+				const errorName = `${routeName}`;
+				const errorMessage = `${errorName} ${id} was not found`;
+
+				reject(new ApiError(errorName, 404, errorMessage));
+			}
 		});
 	},
 
@@ -47,7 +65,6 @@ export default DS.RESTAdapter.extend({
 		return new Promise(async (resolve) => {
 			let response = {};
 			let records = null;
-
 			try {
 				records = await this.findAll(store, modelClass);
 				records = records[modelClass.modelName];
