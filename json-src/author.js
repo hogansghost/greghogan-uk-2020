@@ -89,7 +89,7 @@ module.exports = {
       }
     ]
   },
-  subtitle: 'A creative front-end developer with 5 years of professional experience based in London, enjoys following current trends and experimenting with future technologies of web development.',
+  subtitle: 'A creative front-end developer with over 6 years of professional experience based in Zürich (Switzerland), enjoys following current trends and experimenting with future technologies of web development.',
   description: [
     `I've recently specialised in helping to establish design systems and component libraries working with stake holders and designers across multiple companies now. I have worked extensively on building single page applications with React as well as Ember and Angular frameworks over the last few years, working on ecommerce and social media platforms to project management suites.`,
     `I have a solid background in modern front-end technologies such as ES2019 features in JavaScript as well as working with Sass, utilising the BEM methodology  and working with Webpack in my work-flow to accelerate development. I have a proficient understanding of and experience with building cross-browser and cross-platform compatible solutions with meticulous attention to detail and the desire to get the little things just right.`,
