@@ -77,7 +77,33 @@ module.exports = {
         content: `Tech and responsibilities overview`,
       }, {
         type: 'p',
-        content: `I joined Exeon in February of 2021, working 60% as lead front-end developer.`,
+        content: `I joined Exeon in February of 2021, working 60% as lead front-end developer to aid in building out the frontend for additional features to the platform, as well as working to improve the UI and UX to bring it to the next level.`,
+      }, {
+        type: 'p',
+        content: `As Exeon is a security product, I will be unable to give more explicit details or screenshots of the product. The first project that I undertook was to overhaul the build and release process with improvements to the webpack configuration as well as create demonstrations for technologies we could implement within the application to speed the development process and bring the product more in line with modern practises, such as styled components, CSS variables, CSS grid layout, implementation of Redux, etc.`,
+      }, {
+        type: 'techGrid',
+        content: [
+          {
+            iconSrc: 'fa-react',
+            title: 'React',
+          }, {
+            iconSrc: 'fa-ts',
+            title: 'TypeScript',
+          }, {
+            iconSrc: 'fa-styled-components',
+            title: 'Styled Components',
+          }, {
+            iconSrc: 'fa-redux',
+            title: 'Redux',
+          }, {
+            iconSrc: 'fa-yarn',
+            title: 'Yarn',
+          }, {
+            iconSrc: 'fa-webpack',
+            title: 'Webpack',
+          },
+        ]
       }
     ],
   },

@@ -55,15 +55,11 @@ export default class Router extends EmberRouter {
     }
   }
 
-  isTransitionTargetHome(transition = {}) {
-    return transition?.to?.name === 'home' && transition?.to.name !== transition?.from?.name;
-  }
-
   updateScrollPosition(transition) {
-    if (!transition.isAborted) {
-      const routePosition = transition?.from?.name || 0;
+    const routeName = transition?.from?.name;
 
-      this.scrollPosition.storeRoutePosition(routePosition);
+    if (!transition.isAborted && routeName) {
+      this.scrollPosition.storeRoutePosition(routeName);
     }
   }
 

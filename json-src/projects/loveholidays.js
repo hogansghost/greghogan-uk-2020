@@ -293,17 +293,11 @@ module.exports = {
         type: 'techGrid',
         content: [
           {
-            iconSrc: 'fa-html5',
-            title: 'HTML5',
-          }, {
-            iconSrc: 'fa-css3',
-            title: 'CSS3',
-          }, {
             iconSrc: 'fa-sass',
             title: 'Sass',
           }, {
             iconSrc: 'fa-js',
-            title: 'JavaScript ES2016',
+            title: 'JavaScript',
           }, {
             iconSrc: 'fa-ts',
             title: 'TypeScript',

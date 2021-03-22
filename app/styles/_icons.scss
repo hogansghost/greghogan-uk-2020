@@ -90,6 +90,11 @@
   content: "\f08c";
 }
 
+.fa-webpack::before {
+  @extend .fal;
+  content: "\f49c";
+}
+
 .fa-codepen::before {
   @extend .fab;
   content: "\f1cb";
@@ -163,6 +168,11 @@
 .fa-aws::before {
   @extend .fab;
   content: "\f375";
+}
+
+.fa-node::before {
+  @extend .fab;
+  content: "\f3d3";
 }
 
 .fa-yarn::before {

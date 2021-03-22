@@ -11,7 +11,7 @@ export default class ScrollPositionService extends Service {
       return;
     }
 
-    this.routePosition[routeName] = window?.scrollY || 0;
+    this.routePosition[routeName] = window?.pageYOffset || 0;
   }
 
   @action
@@ -27,10 +27,12 @@ export default class ScrollPositionService extends Service {
 
   @action
   scrollToPreviousScrollPosition(targetRouteName) {
-    if (window && targetRouteName) {
-      window.scrollTo({
-        top: this.routePosition[targetRouteName],
-      });
+    if (targetRouteName) {
+      const targetPosition = this.routePosition[targetRouteName] || 0;
+
+      this.scrollTo(targetPosition);
+    } else {
+      this.scrollToTop();
     }
   }
 }

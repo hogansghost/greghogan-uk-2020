@@ -41,6 +41,7 @@ body {
   font-size: inherit;
   color: $text-color;
   transition: background-color #{$ui-transition-duration-medium};
+  min-height: 120vh;
 }
 
 hr {
