@@ -85,15 +85,6 @@ export default class Router extends EmberRouter {
 
       return transitionDelay.then(() => {
         this.holdTransition.retry().then(() => {
-          const targetRouteName = this.holdTransition.to.name;
-          const scrollToPreviousPosition = (transition?.router?.currentRouteInfos || []).some((routeInfo) => routeInfo?.route?.controller?.storeScrollPosition);
-
-          if (scrollToPreviousPosition) {
-            scheduleOnce('afterRender', this, () => this.scrollPosition.scrollToPreviousScrollPosition(targetRouteName));
-          } else {
-            this.scrollPosition.scrollToTop();
-          }
-
           this.holdTransition = null;
         });
       });
@@ -102,8 +93,24 @@ export default class Router extends EmberRouter {
 
   transitionRouteIn(transition) {
     if (!transition.isAborted && !transition.isActive) {
-      scheduleOnce('afterRender', this, this.pageTransition.setTransitioningEnd);
+      scheduleOnce('afterRender', this, function() {
+        this.determineScrollPositionAfterTransition(transition);
+        this.pageTransition.setTransitioningEnd();
+      });
     }
+  }
+
+  determineScrollPositionAfterTransition(transition) {
+    later(() => {
+      const targetRouteName = transition?.to?.name;
+      const scrollToPreviousPosition = (transition?.router?.currentRouteInfos || []).some((routeInfo) => routeInfo?.route?.controller?.storeScrollPosition);
+
+      if (scrollToPreviousPosition) {
+        this.scrollPosition.scrollToPreviousScrollPosition(targetRouteName);
+      } else {
+        this.scrollPosition.scrollToTop();
+      }
+    });
   }
 }
 
