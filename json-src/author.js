@@ -113,7 +113,7 @@ module.exports = {
     }, {
       label: 'C.V.',
       labelIconClass: 'fa-cv',
-      href: 'https://hogan-cv.s3.amazonaws.com/Greg+Hogan+-+CV.pdf',
+      href: '/GregHogan_CV.pdf',
       target: '_blank',
       type: 'personal',
     }, {

@@ -29,7 +29,7 @@
       height: 5px;
       pointer-events: none;
       background: rgba($black, 0.9);
-      box-shadow: 0 -5px 100px rgba($black, 0.95), 
+      box-shadow: 0 -5px 100px rgba($black, 0.95),
         0 -5px 100px rgba($black, 0.95),
         0 0 50px 5px rgba($black, 0.95),
         0 0 50px rgba($black, 0.65);
@@ -48,7 +48,7 @@
     top: 0;
     left: 0;
   }
-  
+
   &__background-video {
     top: 50%;
     left: 50%;
@@ -75,7 +75,7 @@
     position: relative;
     flex: 0 0 auto;
     margin-top: auto;
-    padding: $ui-content-padding-md $ui-content-padding-md 10vh $ui-content-padding-md;
+    padding: $ui-content-padding-md $ui-content-padding-md 200px $ui-content-padding-md;
     text-align: center;
     z-index: 1;
     font-size: 0.8em;
@@ -106,7 +106,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 auto; 
+    flex: 0 0 auto;
     margin: 0;
     line-height: 1;
     font-size: 0.7em;
@@ -182,7 +182,7 @@
   &__details-title {
     @include heading-formatting;
     font-size: 1.9em;
-    
+
     @include media($media-sm) {
       font-size: 2.5em;
     }
@@ -191,7 +191,7 @@
   &__details-sub-title {
     @include heading-sub-formatting;
     font-size: 1em;
-    
+
     @include media($media-sm) {
       font-size: 1.2em;
     }

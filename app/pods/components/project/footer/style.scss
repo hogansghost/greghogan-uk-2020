@@ -5,7 +5,7 @@
   text-align: center;
   background-color: $color-accent-secondary;
   box-shadow: 0px 0px 22px -3px rgba($black, 0.85), 0px 0px 8px -1px rgba($black, 0.45);
-  margin-top: 22vh;
+  margin-top: 200px;
   @extend %body-copy-formatting;
 
   &__inner {
@@ -13,27 +13,27 @@
     width: $content-width-readable;
     max-width: 100%;
   }
-  
+
 
     &__coffee {
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      min-height: 50vh;
+      min-height: 500px;
     }
-    
+
     &__coffee-body {
       margin: auto;
       flex: 0 1 auto;
       min-width: 0;
       max-width: 100%;
     }
-    
+
     &__coffee-description {
       margin-top: 1em;
     }
-    
+
     &__coffee-images {
       position: relative;
       width: 220px;
@@ -53,7 +53,7 @@
       background: $color-image-background;
       border: 2px solid $white;
       box-shadow: 0px 1px 5px rgba($black, 0.2), 0px 4px 15px -5px rgba($black, 0.2);
-      
+
       &--main {
         top: 0;
         left: 0;
@@ -90,10 +90,10 @@
 
     &__links {
       text-align: center;
-      padding-top: 15vh;
-      padding-bottom: 15vh;
+      padding-top: 10em;
+      padding-bottom: 10em;
     }
-    
+
     &__links-list {
       display: inline-block;
       text-align: left;
@@ -115,7 +115,7 @@
       flex: 0 0 auto;
       padding-right: 0.7em;
     }
-  
+
     &__links-list-item-label {
       flex: 0 1 auto;
       min-width: 0;
