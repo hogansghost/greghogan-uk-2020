@@ -1,10 +1,10 @@
 module.exports = {
   id: 'loveholidays',
   name: 'loveholidays',
-  role: 'Front-end Developer',
+  role: 'Frontend Developer',
   timeframe: {
-    start: '2018',
-    end: '2020',
+    start: 'Nov 2018',
+    end: 'May 2020',
   },
   url: [
     {
@@ -288,7 +288,7 @@ module.exports = {
         content: `Tech and responsibilities overview`,
       }, {
         type: 'p',
-        content: `At Loveholidays, I worked as a part of the "experiments team" as a front-end developer. The experiments team is a sub-division of the main web development team that focused solely on AB experiments to UI and UX tweaks throughout the site. The experiments team was broken down into further sub-divisions (internally referred to as pods), each consisting of a team lead, a QA, a UX designer and two more front-end developers. During my tenure at Loveholidays, I was promoted to pod lead of "Team Vikings" where I was managing the teams’ overall goals per week, assessing new AB experiments technical feasibility with the UX designer as well as tutoring more junior members of the team. The team was also charged with having a weekly "ideas session" to come up with new ideas for experiments that we could roll out the following week once a ticket had been written up after the session.`,
+        content: `At Loveholidays, I worked as a part of the "experiments team" as a frontend developer. The experiments team is a sub-division of the main web development team that focused solely on AB experiments to UI and UX tweaks throughout the site. The experiments team was broken down into further sub-divisions (internally referred to as pods), each consisting of a team lead, a QA, a UX designer and two more frontend developers. During my tenure at Loveholidays, I was promoted to pod lead of "Team Vikings" where I was managing the teams’ overall goals per week, assessing new AB experiments technical feasibility with the UX designer as well as tutoring more junior members of the team. The team was also charged with having a weekly "ideas session" to come up with new ideas for experiments that we could roll out the following week once a ticket had been written up after the session.`,
       }, {
         type: 'techGrid',
         content: [

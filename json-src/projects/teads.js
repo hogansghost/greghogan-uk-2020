@@ -1,7 +1,7 @@
 module.exports = {
   id: 'teads',
   name: 'Teads',
-  role: 'Front-end Developer / Designer',
+  role: 'Frontend Developer / Designer',
   timeframe: {
     start: '2014',
     end: '2014',

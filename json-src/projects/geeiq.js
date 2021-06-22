@@ -1,10 +1,10 @@
 module.exports = {
   id: 'geeiq',
   name: 'Geeiq',
-  role: 'Lead front-end Developer',
+  role: 'Lead frontend Developer',
   timeframe: {
-    start: '2020',
-    end: 'present',
+    start: 'May 2020',
+    end: 'Jun 2021',
   },
   url: [
     {
@@ -288,7 +288,7 @@ module.exports = {
         content: `I joined Geeiq a few weeks before the platform launched helping to clean up the UI components, mostly consisting of removing duplicate CSS via Sass mixins, util classes, etc. as well as a lot of standardisation with Sass vars for spacing, typefaces, font sizes, etc. I also began updating a lot of the of current components templates to an atomic approach component library and design system.`,
       }, {
         type: 'p',
-        content: `Due to the recent launching of the platform, I have been working on implementing new features as they come through the pipe-line on the front-end, using the features requirements to dictate the priority of components I have been building for the component library. As well as filling out the library, I have been working with the project manager and designer to document each of the new components, specifying their appropriate useage as well as ensuring their appearance and overall operation (interactions, accessibility, appearance, etc.) all match the style guide.`,
+        content: `Due to the recent launching of the platform, I have been working on implementing new features as they come through the pipe-line on the frontend, using the features requirements to dictate the priority of components I have been building for the component library. As well as filling out the library, I have been working with the project manager and designer to document each of the new components, specifying their appropriate useage as well as ensuring their appearance and overall operation (interactions, accessibility, appearance, etc.) all match the style guide.`,
       }, {
         type: 'p',
         content: `I have been doing some work to improve the accessibility of the components as well, changing some of the current components back from custom elements to more appropriate HTML elements, although there is, as of writing, still improvements to make as we create more features / update the components to use the library components.`,

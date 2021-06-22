@@ -1,7 +1,7 @@
 module.exports = {
   id: 'resident-evil',
   name: 'Resident Evil Game',
-  role: 'Front-end Developer',
+  role: 'Frontend Developer',
   timeframe: {
     start: '2014',
   },

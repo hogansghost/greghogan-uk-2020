@@ -1,7 +1,7 @@
 module.exports = {
   id: 'movidiam',
   name: 'Movidiam',
-  role: 'Senior Front-end Developer',
+  role: 'Senior frontend Developer',
   timeframe: {
     start: '2014',
     end: '2018',
@@ -285,10 +285,10 @@ module.exports = {
         content: `Tech and responsibilities overview`,
       }, {
         type: 'p',
-        content: `I worked as a front-end developer for Movidiam working from a junior role through to senior over the course of 4 years, managing a small team of varying size as the project progressed. I helped shape the UI and UX of the platform through my experience and understanding of good user experience principals and worked with Sketch and Photoshop to convey these processes. I championed new technologies and methodologies to follow to enable a beautiful and functional interface while keeping the codebase reusable and concise. I worked on areas from email templates, Salesforce pages and the product itself, as well as an internal admin dashboard, all of which were accomplished with technologies such as Ember.js, Ember Data, Docker and other core web-dev technologies. I worked with the back-end developers on a daily basis with REST API's and had some hand in server management with AWS S3 and EC2 instances.`,
+        content: `I worked as a frontend developer for Movidiam working from a junior role through to senior over the course of 4 years, managing a small team of varying size as the project progressed. I helped shape the UI and UX of the platform through my experience and understanding of good user experience principals and worked with Sketch and Photoshop to convey these processes. I championed new technologies and methodologies to follow to enable a beautiful and functional interface while keeping the codebase reusable and concise. I worked on areas from email templates, Salesforce pages and the product itself, as well as an internal admin dashboard, all of which were accomplished with technologies such as Ember.js, Ember Data, Docker and other core web-dev technologies. I worked with the backend developers on a daily basis with REST API's and had some hand in server management with AWS S3 and EC2 instances.`,
       }, {
         type: 'p',
-        content: `From initially being hired as a junior front-end developer, I was quickly promoted to senior front-end developer, managing a small, establishing the codebase standards, implementing the <a href="http://getbem.com/introduction/" target="_blank" rel="noopener noreferrer">BEM</a> naming methodology as well as introducing <a href=" https://sass-lang.com/" target="_blank" rel="noopener noreferrer">Sass</a> to the production pipeline.`,
+        content: `From initially being hired as a junior frontend developer, I was quickly promoted to senior frontend developer, managing a small, establishing the codebase standards, implementing the <a href="http://getbem.com/introduction/" target="_blank" rel="noopener noreferrer">BEM</a> naming methodology as well as introducing <a href=" https://sass-lang.com/" target="_blank" rel="noopener noreferrer">Sass</a> to the production pipeline.`,
       }, {
         type: 'mockupGrid',
         content: [
@@ -352,7 +352,7 @@ module.exports = {
         ]
       }, {
         type: 'p',
-        content: `I worked as a front-end developer for Movidiam working from a junior role through to senior over the course of 4 years, managing a small team of varying size as the project progressed. I helped shape the UI and UX of the platform through my experience and understanding of good user experience principals and worked with Sketch and Photoshop to convey these processes. I championed new technologies and methodologies to follow while keeping the codebase reusable and concise. I worked on areas from email templates, Salesforce pages and the product itself, as well as an internal admin dashboard, all of which were accomplished with technologies such as Ember.js, Ember Data, Docker and other core web-dev technologies. I worked with the back-end developers on a daily basis with REST API's and had some hand in server management with AWS S3 and EC2 instances. Other duties included:`,
+        content: `I worked as a frontend developer for Movidiam working from a junior role through to senior over the course of 4 years, managing a small team of varying size as the project progressed. I helped shape the UI and UX of the platform through my experience and understanding of good user experience principals and worked with Sketch and Photoshop to convey these processes. I championed new technologies and methodologies to follow while keeping the codebase reusable and concise. I worked on areas from email templates, Salesforce pages and the product itself, as well as an internal admin dashboard, all of which were accomplished with technologies such as Ember.js, Ember Data, Docker and other core web-dev technologies. I worked with the backend developers on a daily basis with REST API's and had some hand in server management with AWS S3 and EC2 instances. Other duties included:`,
       }, {
         type: 'ul',
         content: [
@@ -755,7 +755,7 @@ module.exports = {
         content: `As well as the main site, I worked on other projects such as the internal management dashboard (only accessible to our team that allowed them to moderate comments on the site, adjust users tiers, select users work for the community featured pages, create newsletters, etc.) the Salesforce pages that the sales team used for white-papers, etc. as well as email templates for differing functionality (registration emails, notifications as well as newsletter templates).`,
       }, {
         type: 'p',
-        content: `I worked with the lead back-end developer to create a series of basic customisable templates for various sections that could be frequently used together interchangeably to create a range of design layouts. We then created  WYSIWYG interface for the Sales staff to create a complete printout of the markup they could then paste into Salesforce, thus allowing them to create professional pages with a look consistent with the main Movidiam site without the need for technical web development knowledge.`,
+        content: `I worked with the lead backend developer to create a series of basic customisable templates for various sections that could be frequently used together interchangeably to create a range of design layouts. We then created  WYSIWYG interface for the Sales staff to create a complete printout of the markup they could then paste into Salesforce, thus allowing them to create professional pages with a look consistent with the main Movidiam site without the need for technical web development knowledge.`,
       }, {
         type: 'imageGrid',
         colCount: 2,

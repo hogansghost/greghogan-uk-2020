@@ -19,6 +19,7 @@ const sortOrder = [
   'loveholidays',
   'geeiq',
   'exeon',
+  'archlet',
 ];
 
 fs.readdirSync(projectSrcPath).forEach((file) => {

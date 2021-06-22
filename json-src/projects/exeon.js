@@ -1,10 +1,10 @@
 module.exports = {
   id: 'exeon',
   name: 'Exeon Analytics',
-  role: 'Lead front-end Developer',
+  role: 'Lead frontend Developer',
   timeframe: {
-    start: '2021',
-    end: 'present',
+    start: 'Feb 2021',
+    end: 'Jun 2021',
   },
   thumbnail: {
     srcSet: {
@@ -77,7 +77,7 @@ module.exports = {
         content: `Tech and responsibilities overview`,
       }, {
         type: 'p',
-        content: `I joined Exeon in February of 2021, working 60% as lead front-end developer to aid in building out the frontend for additional features to the platform, as well as working to improve the UI and UX to bring it to the next level.`,
+        content: `I joined Exeon in February of 2021, working 60% as lead frontend developer to aid in building out the frontend for additional features to the platform, as well as working to improve the UI and UX to bring it to the next level.`,
       }, {
         type: 'p',
         content: `As Exeon is a security product, I will be unable to give more explicit details or screenshots of the product. The first project that I undertook was to overhaul the build and release process with improvements to the webpack configuration as well as create demonstrations for technologies we could implement within the application to speed the development process and bring the product more in line with modern practises, such as styled components, CSS variables, CSS grid layout, implementation of Redux, etc.`,
